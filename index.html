@@ -1,57 +1,612 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>에스에이치솔루션 | SH Solution</title>
-<meta name="description" content="에스에이치솔루션은 생활에 바로 쓰는 모바일 서비스와 디지털 상품을 만듭니다.">
+<meta name="description" content="에스에이치솔루션(SH Solution)은 작은 불편을 연구해 쓸모 있는 서비스로 답합니다. 토스 앱 안 미니앱, 업무·생활 계산 도구와 템플릿, 생활 상품 온라인 판매.">
+<meta name="theme-color" content="#07090f">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="에스에이치솔루션 | SH Solution">
+<meta property="og:description" content="작은 불편을 연구해 쓸모 있는 서비스로 답합니다. 법령·공식 고시 원문 기준 계산, 개인정보 없이 기기 안에서.">
+<meta property="og:url" content="https://sh-solution.kr/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307090f'/%3E%3Crect x='3' y='3' width='58' height='58' rx='13' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='25' fill='url(%23g)'%3ESH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>try{var t=localStorage.getItem('sh-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "에스에이치솔루션",
+  "alternateName": "SH Solution",
+  "url": "https://sh-solution.kr/",
+  "email": "contact@sh-solution.kr",
+  "foundingDate": "2026",
+  "founder": { "@type": "Person", "name": "최승훈" },
+  "description": "토스 앱 안 미니앱 기획·운영, 업무·생활 계산 도구와 템플릿 등 디지털 상품 판매, 생활 상품 온라인 판매",
+  "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "contact@sh-solution.kr", "availableLanguage": "Korean" }
+}
+</script>
 <style>
-:root{--bg:#fff;--fg:#191f28;--sub:#4e5968;--line:#e5e8eb;--accent:#3182f6;--card:#f9fafb}
-@media (prefers-color-scheme:dark){:root{--bg:#17171c;--fg:#f2f4f6;--sub:#b0b8c1;--line:#2c2c35;--card:#202027}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7}
-.wrap{max-width:880px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-weight:800;font-size:20px;letter-spacing:-.3px}.logo span{color:var(--accent)}
-nav a{color:var(--sub);text-decoration:none;margin-left:18px;font-size:15px}
-.hero{padding:88px 0 64px}.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.3;margin:0 0 16px;letter-spacing:-.8px}
-.hero p{color:var(--sub);font-size:18px;margin:0}
-section{padding:48px 0;border-top:1px solid var(--line)}h2{font-size:24px;margin:0 0 24px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:var(--card);border-radius:16px;padding:24px}.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--sub);font-size:15px}
-dl{display:grid;grid-template-columns:140px 1fr;gap:8px 16px;margin:0;font-size:15px}dt{color:var(--sub)}dd{margin:0}
-footer{border-top:1px solid var(--line);padding:32px 0;color:var(--sub);font-size:13px}footer a{color:var(--sub)}
-@media (max-width:560px){dl{grid-template-columns:1fr}dt{margin-top:8px}nav a{margin-left:12px}}
+:root,[data-theme="dark"]{
+  --bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;
+  --line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);
+  --c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;
+  --glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);
+  --grid:rgba(120,160,255,.10);--hd:rgba(7,9,15,.62);
+  --ill-card:#111627;--ill-line:rgba(255,255,255,.12);--ill-bar:rgba(255,255,255,.07);--ill-text:rgba(255,255,255,.18);
+  --particle:180,220,255;
+}
+[data-theme="light"]{
+  --bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+  --line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);
+  --c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;
+  --glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);
+  --grid:rgba(37,99,235,.09);--hd:rgba(246,248,252,.72);
+  --ill-card:#ffffff;--ill-line:rgba(15,23,42,.10);--ill-bar:#eef2f9;--ill-text:#cfd7e6;
+  --particle:37,99,235;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  line-height:1.65;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .3s,color .3s}
+a{color:inherit}
+svg{display:block;max-width:100%}
+::selection{background:var(--c1);color:#041018}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grad{background:linear-gradient(95deg,var(--c1),var(--c3) 45%,var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* 헤더 */
+.hd{position:fixed;inset:0 0 auto 0;z-index:50;background:transparent;border-bottom:1px solid transparent;transition:background .3s,box-shadow .3s,border-color .3s}
+.hd.scrolled{background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom-color:var(--line);box-shadow:0 10px 30px -18px rgba(0,0,0,.6)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:18px;letter-spacing:-.02em;white-space:nowrap}
+.logo-mark{width:30px;height:30px;flex:none}
+.logo span{color:var(--muted);font-weight:600}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{text-decoration:none;color:var(--sub);font-size:15px;font-weight:500;padding:8px 12px;border-radius:10px;transition:color .2s,background .2s}
+.nav a:hover{color:var(--fg);background:var(--surface)}
+.nav .nav-cta{margin-left:6px;color:var(--fg);border:1px solid var(--line-2);font-weight:600}
+.theme{width:40px;height:40px;margin-left:6px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--sub);display:grid;place-items:center;cursor:pointer;flex:none}
+.theme:hover{color:var(--fg)}
+.theme svg{width:18px;height:18px}
+.theme .sun{display:none}
+[data-theme="light"] .theme .sun{display:block}[data-theme="light"] .theme .moon{display:none}
+
+/* 버튼 */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:54px;padding:0 26px;border-radius:14px;
+  font:inherit;font-size:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .25s,background .25s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:18px;height:18px}
+.btn-primary{color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));background-size:200% 100%;box-shadow:0 0 0 1px rgba(255,255,255,.08) inset,0 10px 30px -10px var(--c1)}
+.btn-primary:hover{background-position:100% 0;box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 12px 36px -8px var(--c2)}
+.btn-ghost{color:var(--fg);background:var(--surface);border:1px solid var(--line-2);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:var(--c1);box-shadow:0 0 24px -6px var(--c1)}
+
+/* 히어로 */
+.hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:center;padding:120px 0 96px;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.aurora{position:absolute;border-radius:50%;will-change:transform}
+.aurora.a1{width:70vmax;height:70vmax;left:-25vmax;top:-35vmax;background:radial-gradient(closest-side,var(--glow-2),transparent);animation:drift1 22s ease-in-out infinite alternate}
+.aurora.a2{width:60vmax;height:60vmax;right:-25vmax;top:-10vmax;background:radial-gradient(closest-side,var(--glow),transparent);animation:drift2 26s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(12vmax,10vmax) scale(1.1)}}
+@keyframes drift2{to{transform:translate(-14vmax,8vmax) scale(.95)}}
+.grid{position:absolute;left:-50%;right:-50%;bottom:-10%;height:62%;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;
+  transform:perspective(520px) rotateX(62deg);transform-origin:50% 100%;
+  -webkit-mask-image:linear-gradient(to top,#000 0%,transparent 85%);mask-image:linear-gradient(to top,#000 0%,transparent 85%);
+  animation:gridmove 4s linear infinite}
+@keyframes gridmove{to{background-position:0 56px}}
+#fx{position:absolute;inset:0;width:100%;height:100%}
+.hero-bg::after{content:"";position:absolute;inset:auto 0 0 0;height:160px;background:linear-gradient(transparent,var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--sub);border:1px solid var(--line-2);background:var(--surface);padding:7px 14px;border-radius:999px;margin:0 0 26px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--c1);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(34,211,238,.6)}80%,100%{box-shadow:0 0 0 10px rgba(34,211,238,0)}}
+.hero h1{font-size:clamp(36px,5.6vw,66px);line-height:1.18;letter-spacing:-.04em;margin:0 0 24px;font-weight:800}
+.type{display:grid}
+.type>*{grid-area:1/1}
+.type .ghost{visibility:hidden}
+.caret{display:inline-block;width:.07em;height:.9em;margin-left:.06em;vertical-align:-.08em;background:var(--c1);box-shadow:0 0 12px var(--c1);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--sub);margin:0 0 20px;max-width:31em}
+.now{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--muted);margin:0 0 36px;min-height:1.7em}
+.now span{white-space:nowrap}.now span::first-letter{color:var(--c1)}
+.now b{color:var(--ink);font-weight:600}
+.now .caret{height:1.05em;width:2px;margin-left:-6px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-ill{position:relative;width:100%;max-width:500px;aspect-ratio:1/1;justify-self:end}
+.hero-ill svg{width:100%;height:100%;overflow:visible}
+.float{animation:float 7s ease-in-out infinite}
+.float.d2{animation-delay:-2.5s}.float.d3{animation-delay:-4.5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.spin{transform-origin:260px 260px;animation:spin 40s linear infinite}
+.spin.rev{animation-duration:60s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scan{animation:scan 3.2s ease-in-out infinite}
+@keyframes scan{0%,100%{transform:translateY(0);opacity:0}15%,85%{opacity:.9}50%{transform:translateY(300px)}}
+
+/* 섹션 공통 */
+section{position:relative;padding:120px 0}
+.sec-head{max-width:660px;margin:0 0 56px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--ink);margin:0 0 14px;letter-spacing:.02em}
+.kicker::before{content:"";width:18px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--c1),var(--c2))}
+h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;margin:0 0 16px;font-weight:800}
+.sec-head p{font-size:17px;color:var(--sub);margin:0}
+.divider{height:1px;max-width:1160px;margin:0 auto;background:linear-gradient(90deg,transparent,var(--line-2),transparent)}
+
+/* 글로우 카드 */
+.glow{position:relative;border-radius:22px;background:var(--surface);border:1px solid var(--line);overflow:hidden;isolation:isolate;transition:transform .3s,border-color .3s}
+.glow::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .35s;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),var(--glow),transparent 45%)}
+.glow::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;opacity:0;transition:opacity .35s;pointer-events:none;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),var(--c1),var(--c2) 40%,transparent 70%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.glow:hover::before,.glow:hover::after{opacity:1}
+.glow:hover{transform:translateY(-3px)}
+.table.glow:hover{transform:none}
+
+/* 원칙 */
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pr{padding:34px 30px}
+.ico{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:26px;color:var(--ink);
+  background:linear-gradient(var(--surface-solid),var(--surface-solid)) padding-box,linear-gradient(135deg,var(--c1),var(--c2)) border-box;border:1px solid transparent;
+  box-shadow:0 0 28px -8px var(--c1)}
+.ico svg{width:26px;height:26px}
+.pr h3,.biz h3{font-size:21px;letter-spacing:-.02em;margin:0 0 10px;font-weight:700}
+.pr p,.biz p{margin:0;color:var(--sub);font-size:16px}
+
+/* 사업 분야 */
+.bizgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.biz{display:flex;flex-direction:column;padding:34px 30px 30px}
+.biz .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
+.biz .num{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;color:var(--muted);letter-spacing:.08em}
+.biz-art{width:64px;height:64px}
+.biz p{margin-bottom:22px}
+.biz ul{list-style:none;margin:auto 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.biz li{font-size:13.5px;font-weight:600;color:var(--sub);border:1px solid var(--line-2);padding:5px 11px;border-radius:999px}
+
+/* 일하는 방식 */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.steps::before{content:"";position:absolute;left:28px;right:28px;top:27px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--c1),var(--c2),transparent) 0 0/40% 100% no-repeat,var(--line);animation:flow 3.6s linear infinite}
+@keyframes flow{from{background-position:-60% 0,0 0}to{background-position:160% 0,0 0}}
+.step{position:relative}
+.step .dot{position:relative;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;margin-bottom:22px;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:700;font-size:16px;color:var(--ink);
+  background:linear-gradient(var(--bg),var(--bg)) padding-box,linear-gradient(135deg,var(--c1),var(--c2)) border-box;border:2px solid transparent;box-shadow:0 0 24px -6px var(--c1)}
+.step h3{font-size:19px;margin:0 0 8px;letter-spacing:-.02em}
+.step p{margin:0;color:var(--sub);font-size:15.5px}
+
+/* 회사 정보 */
+.info{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.table dl{margin:0}
+.table .row{display:grid;grid-template-columns:38% 1fr;border-bottom:1px solid var(--line)}
+.table .row:last-child{border-bottom:0}
+.table dt,.table dd{margin:0;padding:20px 24px}
+.table dt{color:var(--muted);font-weight:600;background:var(--surface)}
+.table dd{font-weight:600}
+.table dd a{color:var(--ink);text-decoration:none}
+.table dd a:hover{text-decoration:underline}
+.pending{display:inline-flex;align-items:center;gap:8px}
+.pending::before{content:"";width:7px;height:7px;border-radius:50%;background:#fbbf24;box-shadow:0 0 10px #fbbf24}
+
+/* 문의 */
+.contact-box{position:relative;overflow:hidden;border-radius:32px;padding:80px 56px;text-align:center;isolation:isolate;
+  background:radial-gradient(80% 120% at 50% 0%,var(--glow-2),transparent 60%),radial-gradient(60% 80% at 50% 100%,var(--glow),transparent 60%),var(--bg-2);
+  border:1px solid var(--line-2)}
+.contact-box::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;
+  -webkit-mask-image:radial-gradient(closest-side,#000,transparent);mask-image:radial-gradient(closest-side,#000,transparent)}
+.contact-box h2{margin-bottom:14px}
+.contact-box p{color:var(--sub);font-size:17px;margin:0 auto 34px;max-width:32em}
+.contact-box .cta{justify-content:center}
+.mail-addr{display:block;margin-top:22px;font-size:15px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+
+/* 푸터 */
+.ft{padding:56px 0 64px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.ft .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.ft .logo{font-size:17px;color:var(--fg)}
+.ft nav{display:flex;gap:20px;flex-wrap:wrap}
+.ft nav a{text-decoration:none;color:var(--sub);font-weight:600}
+.ft nav a:hover{color:var(--fg);text-decoration:underline}
+.ft address{font-style:normal;line-height:1.9}
+.ft address span{white-space:nowrap}
+.ft address span+span::before{content:"";display:inline-block;width:1px;height:11px;background:var(--line-2);margin:0 10px;vertical-align:-1px}
+.ft .copy{margin:16px 0 0}
+
+/* 등장 */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+}
+
+/* 반응형 */
+@media (max-width:960px){
+  .hero{min-height:auto;padding:104px 0 80px}
+  .hero .wrap{grid-template-columns:1fr;gap:12px}
+  .hero-ill{justify-self:center;max-width:380px;order:-1}
+  .principles,.bizgrid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:36px 20px}
+  .steps::before{display:none}
+  .info{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width:760px){
+  .nav a:not(.nav-cta){display:none}
+  section{padding:84px 0}
+  .sec-head{margin-bottom:40px}
+  .contact-box{padding:56px 24px;border-radius:24px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 20px}
+  .hd .wrap{height:60px}
+  .logo span{display:none}
+  .hero{padding:80px 0 56px}
+  .hero-ill{max-width:280px}
+  .cta .btn{flex:1 1 100%}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .step{display:grid;grid-template-columns:56px 1fr;column-gap:18px}
+  .step .dot{margin:0;grid-row:span 2}
+  .pr,.biz{padding:28px 24px}
+  .table .row{grid-template-columns:1fr}
+  .table dt{padding:14px 18px 0;background:none;font-size:13.5px}
+  .table dd{padding:2px 18px 14px}
+  .ft address span{display:block;white-space:normal}
+  .ft address span+span::before{display:none}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="logo">SH <span>Solution</span></div><nav><a href="#about">회사 소개</a><a href="#business">사업</a><a href="#contact">연락처</a></nav></div></header>
-<main>
-<div class="wrap hero">
-<h1>작은 불편을 연구해<br>쓸모 있는 서비스로 답합니다</h1>
-<p>에스에이치솔루션은 생활에 바로 쓰는 모바일 서비스와 디지털 상품을 만듭니다.</p>
-</div>
-<section id="about"><div class="wrap">
-<h2>회사 소개</h2>
-<p>정부 지원 제도 확인, 생활 계산, 일정 안내처럼 누구나 자주 찾지만 알아보기 번거로운 정보를 휴대폰에서 바로 확인할 수 있게 만드는 회사입니다. 법령과 공식 고시 원문을 기준으로 계산하고, 개인정보는 받지 않는 것을 원칙으로 합니다.</p>
-</div></section>
-<section id="business"><div class="wrap">
-<h2>사업 분야</h2>
-<div class="grid">
-<div class="card"><h3>모바일 미니앱</h3><p>토스 앱 안에서 바로 여는 생활·정부지원 정보 서비스를 기획하고 운영합니다.</p></div>
-<div class="card"><h3>디지털 상품</h3><p>업무와 생활에 바로 쓰는 계산·정리 도구와 템플릿을 만들어 판매합니다.</p></div>
-<div class="card"><h3>온라인 판매</h3><p>직접 써 보고 고른 생활 상품을 온라인으로 판매합니다.</p></div>
-</div>
-</div></section>
-<section id="contact"><div class="wrap">
-<h2>회사 정보</h2>
-<dl>
-<dt>상호</dt><dd>에스에이치솔루션 (SH Solution)</dd>
-<dt>대표자</dt><dd>최승훈</dd>
-<dt>사업자등록번호</dt><dd>등록 진행 중</dd>
-<dt>이메일</dt><dd>contact@sh-solution.kr</dd>
-</dl>
-</div></section>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#60a5fa"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+    <linearGradient id="ngh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000" flood-opacity=".28"/></filter>
+  </defs>
+</svg>
+
+<header class="hd" id="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="에스에이치솔루션 처음으로">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>
+      <b>SH Solution</b><span>에스에이치솔루션</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#principles">원칙</a>
+      <a href="#business">사업 분야</a>
+      <a href="#process">일하는 방식</a>
+      <a href="#company">회사 정보</a>
+      <a class="nav-cta" href="#contact">문의하기</a>
+      <button class="theme" type="button" id="theme" aria-label="밝은 화면으로 바꾸기">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="aurora a1"></div><div class="aurora a2"></div>
+      <div class="grid"></div>
+      <canvas id="fx"></canvas>
+    </div>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow rv"><i aria-hidden="true"></i>SH Solution · 2026년 설립</p>
+        <h1 id="hero-title" class="rv d1">
+          <span class="sr">작은 불편을 연구해 쓸모 있는 서비스로 답합니다</span>
+          <span class="type" aria-hidden="true">
+            <span class="ghost">작은 불편을 연구해<br><span class="grad">쓸모 있는 서비스</span>로<br>답합니다<i class="caret"></i></span>
+            <span id="typed">작은 불편을 연구해<br><span class="grad">쓸모 있는 서비스</span>로<br>답합니다<i class="caret"></i></span>
+          </span>
+        </h1>
+        <p class="lead rv d2">제도 확인, 생활 계산, 일정 안내처럼 자주 찾지만 알아보기 번거로운 일을 휴대폰에서 바로 끝낼 수 있게 만듭니다.</p>
+        <p class="now rv d2" aria-hidden="true"><span>&gt; 만드는 것</span><b id="rot">정부지원 제도 확인</b><i class="caret"></i></p>
+        <div class="cta rv d3">
+          <a class="btn btn-primary" href="#business">사업 분야 보기
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn btn-ghost" href="mailto:contact@sh-solution.kr">문의하기</a>
+        </div>
+      </div>
+
+      <div class="hero-ill rv d2" aria-hidden="true">
+        <svg viewBox="0 0 520 520" role="presentation">
+          <g class="spin"><circle cx="260" cy="260" r="232" fill="none" stroke="url(#ng)" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="3 12" stroke-linecap="round"/></g>
+          <g class="spin rev"><circle cx="260" cy="260" r="196" fill="none" stroke="url(#ng)" stroke-opacity=".25" stroke-width="1"/><circle cx="260" cy="64" r="5" fill="#22d3ee"/><circle cx="456" cy="260" r="4" fill="#8b5cf6"/></g>
+          <g filter="url(#soft)">
+            <rect x="150" y="70" width="220" height="380" rx="34" style="fill:var(--ill-card)" stroke="url(#ng)" stroke-opacity=".7" stroke-width="1.5"/>
+            <rect x="228" y="88" width="64" height="7" rx="3.5" style="fill:var(--ill-bar)"/>
+            <rect x="174" y="122" width="104" height="11" rx="5.5" style="fill:var(--ill-text)"/>
+            <rect x="174" y="145" width="166" height="24" rx="8" fill="url(#ng)"/>
+            <rect x="174" y="190" width="172" height="56" rx="14" style="fill:var(--ill-bar)"/>
+            <rect x="190" y="206" width="70" height="8" rx="4" style="fill:var(--ill-text)"/>
+            <rect x="190" y="224" width="108" height="8" rx="4" style="fill:var(--ill-text)" opacity=".6"/>
+            <g style="fill:var(--ill-bar)">
+              <rect x="174" y="262" width="52" height="42" rx="12"/><rect x="234" y="262" width="52" height="42" rx="12"/><rect x="294" y="262" width="52" height="42" rx="12"/>
+              <rect x="174" y="312" width="52" height="42" rx="12"/><rect x="234" y="312" width="52" height="42" rx="12"/>
+            </g>
+            <rect x="294" y="312" width="52" height="42" rx="12" fill="url(#ng)"/>
+            <path d="M311 333h18m-9-9v18" stroke="#041018" stroke-width="3" stroke-linecap="round"/>
+            <rect x="174" y="372" width="172" height="46" rx="14" fill="url(#ng)" opacity=".9"/>
+            <rect x="228" y="391" width="64" height="8" rx="4" fill="#041018" opacity=".7"/>
+            <rect class="scan" x="160" y="104" width="200" height="2" fill="url(#ngh)"/>
+          </g>
+          <g class="float"><g filter="url(#soft)">
+            <rect x="30" y="150" width="150" height="82" rx="20" style="fill:var(--ill-card);stroke:var(--ill-line)" stroke-width="1.5"/>
+            <circle cx="62" cy="191" r="16" fill="#22d3ee" opacity=".16"/>
+            <path d="m55 191 5 5 9-10" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="88" y="175" width="70" height="8" rx="4" style="fill:var(--ill-text)"/>
+            <rect x="88" y="195" width="48" height="8" rx="4" style="fill:var(--ill-text)" opacity=".6"/>
+          </g></g>
+          <g class="float d2"><g filter="url(#soft)">
+            <rect x="340" y="296" width="148" height="120" rx="22" style="fill:var(--ill-card);stroke:var(--ill-line)" stroke-width="1.5"/>
+            <rect x="360" y="316" width="56" height="8" rx="4" style="fill:var(--ill-text)"/>
+            <g style="fill:var(--ill-bar)">
+              <rect x="360" y="338" width="18" height="18" rx="5"/><rect x="384" y="338" width="18" height="18" rx="5"/><rect x="408" y="338" width="18" height="18" rx="5"/><rect x="432" y="338" width="18" height="18" rx="5"/>
+              <rect x="360" y="362" width="18" height="18" rx="5"/><rect x="384" y="362" width="18" height="18" rx="5"/><rect x="432" y="362" width="18" height="18" rx="5"/>
+              <rect x="360" y="386" width="18" height="18" rx="5"/><rect x="384" y="386" width="18" height="18" rx="5"/><rect x="408" y="386" width="18" height="18" rx="5"/>
+            </g>
+            <rect x="408" y="362" width="18" height="18" rx="5" fill="url(#ng)"/>
+            <rect x="432" y="386" width="18" height="18" rx="5" fill="#8b5cf6"/>
+          </g></g>
+          <g class="float d3"><g filter="url(#soft)">
+            <circle cx="420" cy="138" r="36" style="fill:var(--ill-card);stroke:var(--ill-line)" stroke-width="1.5"/>
+            <rect x="407" y="136" width="26" height="21" rx="6" fill="url(#ng)"/>
+            <path d="M412 136v-6a8 8 0 0 1 16 0v6" fill="none" stroke="url(#ng)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="420" cy="146" r="2.5" fill="#041018"/>
+          </g></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles" aria-labelledby="pr-title">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">PRINCIPLES · 원칙</span>
+        <h2 id="pr-title">믿고 쓸 수 있어야<br><span class="grad">쓸모가 있습니다</span></h2>
+        <p>서비스 하나를 만들 때마다 세 가지를 먼저 확인합니다.</p>
+      </div>
+      <div class="principles">
+        <article class="pr glow rv">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="m9 14 2 2 4-4"/></svg></div>
+          <h3>정확함</h3>
+          <p>법령과 공식 고시 원문을 기준으로 계산합니다. 기준이 바뀌면 원문을 다시 확인하고 고칩니다.</p>
+        </article>
+        <article class="pr glow rv d1">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/><rect x="9" y="11" width="6" height="5" rx="1.2"/><path d="M10.5 11V9.5a1.5 1.5 0 0 1 3 0V11"/></svg></div>
+          <h3>개인정보 없음</h3>
+          <p>이름·연락처·주민등록번호를 받지 않습니다. 계산은 이용자의 기기 안에서 처리합니다.</p>
+        </article>
+        <article class="pr glow rv d2">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>바로 쓰는 쉬움</h3>
+          <p>가입이나 긴 설명 없이 필요한 것만 묻고, 결과를 한 화면에서 바로 보여 줍니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <section id="business" aria-labelledby="biz-title">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">BUSINESS · 사업 분야</span>
+        <h2 id="biz-title">생활 가까이에서<br><span class="grad">세 가지 일</span>을 합니다</h2>
+        <p>정보를 확인하는 서비스부터 손에 잡히는 상품까지, 일상의 번거로움을 줄이는 데 집중합니다.</p>
+      </div>
+      <div class="bizgrid">
+        <article class="biz glow rv">
+          <div class="top">
+            <svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="21" y="12" width="22" height="40" rx="6" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M29 46h6" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><rect x="25" y="19" width="14" height="5" rx="2" fill="url(#ng)"/><rect x="25" y="28" width="14" height="9" rx="2" fill="url(#ng)" opacity=".45"/></svg>
+            <span class="num">01</span>
+          </div>
+          <h3>모바일 미니앱</h3>
+          <p>토스 앱 안에서 바로 여는 미니앱을 기획하고 운영합니다. 설치 없이 열어 필요한 것만 확인하고 닫을 수 있습니다.</p>
+          <ul aria-label="주요 분야"><li>정부지원 제도 확인</li><li>생활 계산</li><li>일정 안내</li></ul>
+        </article>
+        <article class="biz glow rv d1">
+          <div class="top">
+            <svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="14" y="16" width="36" height="32" rx="6" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M14 25h36M26 25v23" stroke="url(#ng)" stroke-width="2.6"/><path d="M32 33h11M32 40h8" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round" opacity=".6"/></svg>
+            <span class="num">02</span>
+          </div>
+          <h3>디지털 상품</h3>
+          <p>업무와 생활에 바로 쓰는 계산 도구와 템플릿을 만들어 판매합니다. 내려받아 곧바로 쓸 수 있게 정리합니다.</p>
+          <ul aria-label="주요 분야"><li>업무 계산 도구</li><li>생활 계산 도구</li><li>템플릿</li></ul>
+        </article>
+        <article class="biz glow rv d2">
+          <div class="top">
+            <svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><path d="M17 25h30l-3 24H20z" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linejoin="round"/><path d="M25 25v-3a7 7 0 0 1 14 0v3" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><circle cx="32" cy="37" r="3" fill="url(#ng)"/></svg>
+            <span class="num">03</span>
+          </div>
+          <h3>생활 상품 온라인 판매</h3>
+          <p>일상에서 쓰임이 분명한 생활 상품을 골라 온라인으로 판매합니다.</p>
+          <ul aria-label="주요 분야"><li>생활 상품</li><li>온라인 판매</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <section id="process" aria-labelledby="pc-title">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">PROCESS · 일하는 방식</span>
+        <h2 id="pc-title">조사에서 개선까지,<br><span class="grad">같은 순서</span>로 만듭니다</h2>
+        <p>무엇이 불편한지 먼저 알고, 근거를 확인한 뒤에 만듭니다.</p>
+      </div>
+      <ol class="steps">
+        <li class="step rv"><span class="dot" aria-hidden="true">01</span><h3>조사</h3><p>사람들이 무엇을 자주 찾고, 어디서 막히는지부터 살핍니다.</p></li>
+        <li class="step rv d1"><span class="dot" aria-hidden="true">02</span><h3>원문 확인</h3><p>법령과 공식 고시 원문을 찾아 계산 기준과 조건을 하나씩 확인합니다.</p></li>
+        <li class="step rv d2"><span class="dot" aria-hidden="true">03</span><h3>제작</h3><p>필요한 것만 묻고 결과를 바로 보여 주는 화면으로 만듭니다.</p></li>
+        <li class="step rv d3"><span class="dot" aria-hidden="true">04</span><h3>개선</h3><p>기준이 바뀌거나 불편한 점이 보이면 다시 확인하고 고칩니다.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <section id="company" aria-labelledby="co-title">
+    <div class="wrap info">
+      <div class="sec-head rv" style="margin-bottom:0">
+        <span class="kicker">COMPANY · 회사 정보</span>
+        <h2 id="co-title">에스에이치솔루션</h2>
+        <p>2026년에 설립한 회사입니다. 사업과 서비스에 관한 문의는 이메일로 받습니다.</p>
+      </div>
+      <div class="table glow rv d1">
+        <dl>
+          <div class="row"><dt>상호</dt><dd>에스에이치솔루션 (SH Solution)</dd></div>
+          <div class="row"><dt>대표자</dt><dd>최승훈</dd></div>
+          <div class="row"><dt>설립</dt><dd>2026년</dd></div>
+          <div class="row"><dt>사업자등록번호</dt><dd><span class="pending">등록 진행 중</span></dd></div>
+          <div class="row"><dt>이메일</dt><dd><a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="ct-title" style="padding-top:24px">
+    <div class="wrap">
+      <div class="contact-box rv">
+        <span class="kicker">CONTACT · 문의</span>
+        <h2 id="ct-title">궁금한 점이 있으신가요?</h2>
+        <p>서비스 이용, 제휴, 상품에 관한 문의를 이메일로 보내 주세요. 확인하는 대로 답변드립니다.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:contact@sh-solution.kr">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+            이메일로 문의하기</a>
+          <button class="btn btn-ghost" type="button" id="copy" data-mail="contact@sh-solution.kr">주소 복사</button>
+        </div>
+        <span class="mail-addr">contact@sh-solution.kr</span>
+        <span class="sr" role="status" aria-live="polite" id="copy-status"></span>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap">© 2026 에스에이치솔루션. All rights reserved. · <a href="privacy.html">개인정보처리방침</a></div></footer>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#top" aria-label="에스에이치솔루션 처음으로">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>
+        <b>SH Solution</b>
+      </a>
+      <nav aria-label="하단 메뉴">
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="mailto:contact@sh-solution.kr">문의</a>
+      </nav>
+    </div>
+    <address>
+      <span>상호 에스에이치솔루션</span><span>대표 최승훈</span><span>사업자등록번호 등록 진행 중</span><span>이메일 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a></span>
+    </address>
+    <p class="copy">© 2026 에스에이치솔루션. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document.documentElement,w=window,fx=null;
+  var reduce=w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var hd=document.querySelector('.hd');
+  function sc(){hd.classList.toggle('scrolled',w.scrollY>8)}sc();w.addEventListener('scroll',sc,{passive:true});
+
+  var tb=document.getElementById('theme');
+  function lab(){tb.setAttribute('aria-label',d.getAttribute('data-theme')==='light'?'어두운 화면으로 바꾸기':'밝은 화면으로 바꾸기')}lab();
+  tb.addEventListener('click',function(){var n=d.getAttribute('data-theme')==='light'?'dark':'light';d.setAttribute('data-theme',n);try{localStorage.setItem('sh-theme',n)}catch(e){}lab();if(fx)fx.color()});
+
+  if('IntersectionObserver' in w&&!reduce){
+    d.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.06});
+    [].forEach.call(document.querySelectorAll('.rv'),function(el){io.observe(el)});
+  }
+
+  [].forEach.call(document.querySelectorAll('.glow'),function(c){
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')});
+  });
+
+  /* 타이핑 헤드라인 */
+  var typed=document.getElementById('typed'),CARET='<i class="caret"></i>';
+  if(!reduce&&typed){
+    var tk=typed.innerHTML.replace(CARET,'').match(/<[^>]+>|[\s\S]/g),ti=0;
+    typed.innerHTML=CARET;
+    setTimeout(function step(){
+      do{ti++}while(ti<tk.length&&tk[ti-1].charAt(0)==='<');
+      typed.innerHTML=tk.slice(0,ti).join('')+CARET;
+      if(ti<tk.length)setTimeout(step,tk[ti-1]===' '?30:60);
+    },500);
+  }
+
+  /* 만드는 것 순환 */
+  var rot=document.getElementById('rot'),words=['정부지원 제도 확인','생활 계산','일정 안내','업무 계산 도구','템플릿'];
+  if(!reduce&&rot){
+    var wi=0,ci=words[0].length,del=true;
+    setTimeout(function loop(){
+      if(del){ci--;rot.textContent=words[wi].slice(0,ci);if(ci<=0){del=false;wi=(wi+1)%words.length}setTimeout(loop,40)}
+      else{ci++;rot.textContent=words[wi].slice(0,ci);if(ci>=words[wi].length){del=true;setTimeout(loop,1900)}else setTimeout(loop,90)}
+    },3600);
+  }
+
+  /* 히어로 빛 입자 — 화면 밖이거나 탭이 숨으면 멈춘다 */
+  var cv=document.getElementById('fx');
+  if(cv&&cv.getContext&&!reduce){
+    var ctx=cv.getContext('2d'),P=[],W=0,H=0,dpr=Math.min(w.devicePixelRatio||1,2),run=false,raf=0,mx=-999,my=-999,rgb='180,220,255',vis=true;
+    var color=function(){rgb=getComputedStyle(d).getPropertyValue('--particle').trim()||rgb};
+    var size=function(){var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+      var n=Math.max(18,Math.min(W<600?32:68,Math.round(W*H/16000)));
+      P=[];for(var k=0;k<n;k++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.6+.6,c:Math.random()<.55})};
+    var frame=function(){
+      ctx.clearRect(0,0,W,H);
+      var L=P.length,a,b,p,dx,dy,q,M=120*120;
+      for(a=0;a<L;a++){p=P[a];p.x+=p.vx;p.y+=p.vy;
+        if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+        dx=p.x-mx;dy=p.y-my;q=dx*dx+dy*dy;if(q<22000){p.x+=dx*.012;p.y+=dy*.012}
+        ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fillStyle=p.c?'rgba(34,211,238,.85)':'rgba(139,92,246,.85)';ctx.fill()}
+      ctx.lineWidth=1;
+      for(a=0;a<L;a++)for(b=a+1;b<L;b++){dx=P[a].x-P[b].x;dy=P[a].y-P[b].y;q=dx*dx+dy*dy;
+        if(q<M){ctx.strokeStyle='rgba('+rgb+','+(.22*(1-q/M)).toFixed(3)+')';ctx.beginPath();ctx.moveTo(P[a].x,P[a].y);ctx.lineTo(P[b].x,P[b].y);ctx.stroke()}}
+      raf=requestAnimationFrame(frame)};
+    var start=function(){if(!run&&vis&&!document.hidden){run=true;raf=requestAnimationFrame(frame)}};
+    var stop=function(){run=false;cancelAnimationFrame(raf)};
+    color();size();
+    var rt;w.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(size,200)});
+    var hero=document.querySelector('.hero');
+    hero.addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top},{passive:true});
+    hero.addEventListener('pointerleave',function(){mx=my=-999});
+    if('IntersectionObserver' in w)new IntersectionObserver(function(es){vis=es[0].isIntersecting;vis?start():stop()}).observe(hero);
+    document.addEventListener('visibilitychange',function(){document.hidden?stop():start()});
+    start();
+    fx={color:color};
+  }
+
+  var cb=document.getElementById('copy'),st=document.getElementById('copy-status');
+  if(cb)cb.addEventListener('click',function(){
+    var m=cb.getAttribute('data-mail');
+    function done(ok){cb.textContent=ok?'복사했어요':'주소 복사';st.textContent=ok?'이메일 주소를 복사했습니다':'';if(ok)setTimeout(function(){cb.textContent='주소 복사'},2000)}
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(m).then(function(){done(true)},function(){done(false)});else done(false);
+  });
+})();
+</script>
 </body>
 </html>
