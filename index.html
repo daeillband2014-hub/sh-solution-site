@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>에스에이치솔루션 | SH Solution</title>
-<meta name="description" content="에스에이치솔루션(SH Solution)은 작은 불편을 연구해 쓸모 있는 서비스로 답합니다. 토스 앱 안 미니앱, 업무·생활 계산 도구와 템플릿, 생활 상품 온라인 판매.">
+<meta name="description" content="에스에이치솔루션(SH Solution)은 작은 불편을 연구해 쓸모 있는 서비스로 답합니다. 토스 앱 안 미니앱, 생활 계산 웹서비스, 디지털 템플릿, 모바일 초대장, 생활 상품 판매와 홈페이지·미니앱·업무 자동화 제작 의뢰.">
 <meta name="theme-color" content="#07090f">
 <meta name="color-scheme" content="dark light">
 <link rel="canonical" href="https://sh-solution.kr/">
@@ -29,7 +29,7 @@
   "email": "contact@sh-solution.kr",
   "foundingDate": "2026",
   "founder": { "@type": "Person", "name": "최승훈" },
-  "description": "토스 앱 안 미니앱 기획·운영, 업무·생활 계산 도구와 템플릿 등 디지털 상품 판매, 생활 상품 온라인 판매",
+  "description": "토스 앱 안 미니앱 기획·운영, 생활 계산기·정보 웹서비스, 디지털 템플릿·업무 도구, 모바일 초대장, 생활 상품 온라인 판매, 소상공인 홈페이지·토스 미니앱·업무 자동화·공공데이터 서비스 제작 의뢰",
   "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "contact@sh-solution.kr", "availableLanguage": "Korean" }
 }
 </script>
@@ -168,7 +168,9 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
 .pr p,.biz p{margin:0;color:var(--sub);font-size:16px}
 
 /* 사업 분야 */
-.bizgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bizgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.bizgrid>*{grid-column:span 2}
+.bizgrid>:nth-child(n+4){grid-column:span 3}
 .biz{display:flex;flex-direction:column;padding:34px 30px 30px}
 .biz .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
 .biz .num{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;color:var(--muted);letter-spacing:.08em}
@@ -176,6 +178,24 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
 .biz p{margin-bottom:22px}
 .biz ul{list-style:none;margin:auto 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .biz li{font-size:13.5px;font-weight:600;color:var(--sub);border:1px solid var(--line-2);padding:5px 11px;border-radius:999px}
+.biz h3{font-size:19px}
+.biz-group{display:flex;align-items:center;gap:14px;margin:0 0 20px;font-size:15px;font-weight:700;color:var(--fg)}
+.biz-group span{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);white-space:nowrap}
+.biz-group span::before{content:"";width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.biz-group i{flex:1;height:1px;background:linear-gradient(90deg,var(--line-2),transparent)}
+.biz-group a{font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap}
+.biz-group a:hover{text-decoration:underline}
+.bizgrid+.biz-group{margin-top:56px}
+.biz-cta{text-decoration:none;color:inherit;background:radial-gradient(120% 100% at 100% 0%,var(--glow-2),transparent 60%),radial-gradient(100% 100% at 0% 100%,var(--glow),transparent 60%),var(--surface);border-color:var(--line-2)}
+.biz-cta-btn{margin-top:auto;font-weight:700;color:var(--ink)}
+.biz-cta:hover .biz-cta-btn{text-decoration:underline}
+.cm-box{margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 32px;border-radius:22px;border:1px solid var(--line-2);
+  background:radial-gradient(80% 140% at 100% 0%,var(--glow-2),transparent 60%),radial-gradient(60% 120% at 0% 100%,var(--glow),transparent 60%),var(--bg-2)}
+.cm-box h3{margin:0 0 6px;font-size:20px;letter-spacing:-.02em}
+.cm-box p{margin:0;color:var(--sub);font-size:15.5px}
+.cm-box .btn{flex:none}
+.dash-flow{animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-18}}
 
 /* 일하는 방식 */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
@@ -366,7 +386,10 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
   .hero{min-height:auto;padding:104px 0 80px}
   .hero .wrap{grid-template-columns:1fr;gap:12px}
   .hero-ill{justify-self:center;max-width:380px;order:-1}
-  .principles,.bizgrid{grid-template-columns:1fr}
+  .principles{grid-template-columns:1fr}
+  .bizgrid{grid-template-columns:1fr 1fr}
+  .bizgrid>*,.bizgrid>:nth-child(n+4){grid-column:auto}
+  .bizgrid>:last-child:nth-child(odd){grid-column:1/-1}
   .steps{grid-template-columns:1fr 1fr;gap:36px 20px}
   .steps::before{display:none}
   .info{grid-template-columns:1fr;gap:32px}
@@ -407,6 +430,10 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
   .stage::before{top:30px;left:-29px}
 }
 @media (max-width:680px){
+  .bizgrid{grid-template-columns:1fr}
+  .bizgrid>:last-child:nth-child(odd){grid-column:auto}
+  .biz-group a{display:none}
+  .cm-box{flex-direction:column;align-items:stretch;padding:24px}
   .svc{grid-template-columns:1fr}
   .svc .card,.svc .card.wide,.svc .card:last-child{grid-column:auto}
   .pipe{grid-template-columns:1fr;gap:26px}
@@ -450,6 +477,7 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#business">사업 분야</a>
       <a href="#services">서비스</a>
+      <a href="#commission">의뢰</a>
       <a href="#demo">직접 써 보기</a>
       <a href="#how">만드는 방식</a>
       <a href="#faq">자주 묻는 질문</a>
@@ -545,8 +573,8 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
       <ul aria-hidden="true"><li>정부지원금</li><li>근로장려금</li><li>자녀장려금</li><li>국민연금</li><li>기초연금</li><li>세금 계산</li><li>연말정산</li><li>생활 일정</li><li>건강검진</li><li>국가장학금</li><li>지역화폐</li><li>에너지바우처</li></ul>
     </div>
     <div class="mq-track rev" aria-hidden="true">
-      <ul><li>주휴수당</li><li>퇴직금</li><li>실업급여</li><li>만 나이</li><li>D-day</li><li>최저임금</li><li>육아휴직</li><li>청년 지원</li><li>업무 계산 도구</li><li>템플릿</li><li>생활 상품</li><li>신청 일정</li></ul>
-      <ul><li>주휴수당</li><li>퇴직금</li><li>실업급여</li><li>만 나이</li><li>D-day</li><li>최저임금</li><li>육아휴직</li><li>청년 지원</li><li>업무 계산 도구</li><li>템플릿</li><li>생활 상품</li><li>신청 일정</li></ul>
+      <ul><li>주휴수당</li><li>퇴직금</li><li>실업급여</li><li>만 나이</li><li>D-day</li><li>최저임금</li><li>육아휴직</li><li>청년 지원</li><li>홈페이지 제작</li><li>업무 자동화</li><li>모바일 청첩장</li><li>공공데이터</li><li>템플릿</li><li>생활 상품</li></ul>
+      <ul><li>주휴수당</li><li>퇴직금</li><li>실업급여</li><li>만 나이</li><li>D-day</li><li>최저임금</li><li>육아휴직</li><li>청년 지원</li><li>홈페이지 제작</li><li>업무 자동화</li><li>모바일 청첩장</li><li>공공데이터</li><li>템플릿</li><li>생활 상품</li></ul>
     </div>
   </div>
 
@@ -583,37 +611,76 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
     <div class="wrap">
       <div class="sec-head rv">
         <span class="kicker">BUSINESS · 사업 분야</span>
-        <h2 id="biz-title">생활 가까이에서<br><span class="grad">세 가지 일</span>을 합니다</h2>
-        <p>정보를 확인하는 서비스부터 손에 잡히는 상품까지, 일상의 번거로움을 줄이는 데 집중합니다.</p>
+        <h2 id="biz-title">직접 만드는 서비스와<br><span class="grad">맡겨 주시는 제작</span></h2>
+        <p>생활에 바로 쓰는 서비스를 직접 만들어 운영하고, 그 과정에서 쌓은 방식으로 제작·개발 의뢰도 받습니다.</p>
       </div>
+
+      <div class="biz-group rv"><span>자체 서비스</span><i aria-hidden="true"></i></div>
       <div class="bizgrid">
         <article class="biz glow rv">
-          <div class="top">
-            <svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="21" y="12" width="22" height="40" rx="6" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M29 46h6" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><rect x="25" y="19" width="14" height="5" rx="2" fill="url(#ng)"/><rect x="25" y="28" width="14" height="9" rx="2" fill="url(#ng)" opacity=".45"/></svg>
-            <span class="num">01</span>
-          </div>
-          <h3>모바일 미니앱</h3>
-          <p>토스 앱 안에서 바로 여는 미니앱을 기획하고 운영합니다. 설치 없이 열어 필요한 것만 확인하고 닫을 수 있습니다.</p>
-          <ul aria-label="주요 분야"><li>정부지원 제도 확인</li><li>생활 계산</li><li>일정 안내</li></ul>
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="22" y="12" width="20" height="40" rx="6" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M29 46h6" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><rect x="26" y="19" width="12" height="5" rx="2" fill="url(#ng)"/><rect x="26" y="28" width="12" height="9" rx="2" fill="url(#ng)" opacity=".45"/></svg><span class="num">01</span></div>
+          <h3>모바일 미니앱 기획·운영</h3>
+          <p>토스 앱 안에서 바로 여는 미니앱을 기획하고 운영합니다. 정부지원 제도 확인·생활 계산·일정 안내가 중심입니다.</p>
+          <ul aria-label="주요 내용"><li>정부지원 제도 확인</li><li>생활 계산</li><li>일정 안내</li></ul>
         </article>
         <article class="biz glow rv d1">
-          <div class="top">
-            <svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="14" y="16" width="36" height="32" rx="6" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M14 25h36M26 25v23" stroke="url(#ng)" stroke-width="2.6"/><path d="M32 33h11M32 40h8" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round" opacity=".6"/></svg>
-            <span class="num">02</span>
-          </div>
-          <h3>디지털 상품</h3>
-          <p>업무와 생활에 바로 쓰는 계산 도구와 템플릿을 만들어 판매합니다. 내려받아 곧바로 쓸 수 있게 정리합니다.</p>
-          <ul aria-label="주요 분야"><li>업무 계산 도구</li><li>생활 계산 도구</li><li>템플릿</li></ul>
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="12" y="16" width="40" height="32" rx="5" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M12 24h40" stroke="url(#ng)" stroke-width="2.6"/><circle cx="17" cy="20" r="1.4" fill="#22d3ee"/><circle cx="22" cy="20" r="1.4" fill="#60a5fa"/><path d="M20 32h8M24 28v8M36 32h8M36 40h8" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/></svg><span class="num">02</span></div>
+          <h3>생활 계산기·정보 웹서비스</h3>
+          <p>급여·나이·기간처럼 자주 찾는 계산과 생활 정보를 웹에서도 바로 쓸 수 있게 만듭니다.</p>
+          <ul aria-label="주요 내용"><li>생활 계산기</li><li>정보 안내 웹</li></ul>
         </article>
         <article class="biz glow rv d2">
-          <div class="top">
-            <svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><path d="M17 25h30l-3 24H20z" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linejoin="round"/><path d="M25 25v-3a7 7 0 0 1 14 0v3" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><circle cx="32" cy="37" r="3" fill="url(#ng)"/></svg>
-            <span class="num">03</span>
-          </div>
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="14" y="16" width="36" height="32" rx="6" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M14 25h36M26 25v23" stroke="url(#ng)" stroke-width="2.6"/><path d="M32 33h11M32 40h8" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round" opacity=".6"/></svg><span class="num">03</span></div>
+          <h3>디지털 템플릿·업무 도구</h3>
+          <p>업무와 생활에서 반복되는 계산·정리를 내려받아 바로 쓰는 템플릿과 도구로 만들어 판매합니다.</p>
+          <ul aria-label="주요 내용"><li>업무 계산 도구</li><li>템플릿</li></ul>
+        </article>
+        <article class="biz glow rv">
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="13" y="22" width="38" height="26" rx="4" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="m13 24 19 13 19-13" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linejoin="round"/><path d="M32 15.5c-1.6-2.4-5.6-1.5-5.2 1.5.3 2 2.8 3.4 5.2 5 2.4-1.6 4.9-3 5.2-5 .4-3-3.6-3.9-5.2-1.5z" fill="url(#ng)"/></svg><span class="num">04</span></div>
+          <h3>모바일 초대장(청첩장) 서비스</h3>
+          <p>결혼식·돌잔치 같은 행사 안내를 휴대폰으로 보기 좋게 전하는 모바일 초대장을 만듭니다.</p>
+          <ul aria-label="주요 내용"><li>모바일 청첩장</li><li>행사 초대장</li></ul>
+        </article>
+        <article class="biz glow rv d1">
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><path d="M17 25h30l-3 24H20z" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linejoin="round"/><path d="M25 25v-3a7 7 0 0 1 14 0v3" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><circle cx="32" cy="37" r="3" fill="url(#ng)"/></svg><span class="num">05</span></div>
           <h3>생활 상품 온라인 판매</h3>
           <p>일상에서 쓰임이 분명한 생활 상품을 골라 온라인으로 판매합니다.</p>
-          <ul aria-label="주요 분야"><li>생활 상품</li><li>온라인 판매</li></ul>
+          <ul aria-label="주요 내용"><li>생활 상품</li><li>온라인 판매</li></ul>
         </article>
+      </div>
+
+      <div class="biz-group rv"><span>제작·개발 의뢰</span><i aria-hidden="true"></i><a href="#commission">의뢰 절차 보기 →</a></div>
+      <div class="bizgrid">
+        <article class="biz glow rv">
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><path d="M14 30 32 16l18 14" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="28" width="28" height="20" rx="3" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M23 35h18M23 41h10" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg><span class="num">06</span></div>
+          <h3>소상공인 홈페이지·랜딩페이지 제작</h3>
+          <p>가게와 작은 회사를 위한 홈페이지·랜딩페이지를 휴대폰에서 잘 보이게 만듭니다.</p>
+          <ul aria-label="주요 내용"><li>홈페이지</li><li>랜딩페이지</li><li>모바일 대응</li></ul>
+        </article>
+        <article class="biz glow rv d1">
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><rect x="18" y="12" width="20" height="40" rx="6" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M25 46h6" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><path d="m43 26 6 6-6 6" fill="none" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="m24 25 3 3 5-6" fill="none" stroke="#22d3ee" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="num">07</span></div>
+          <h3>토스 미니앱 개발 대행</h3>
+          <p>미니앱을 직접 운영하며 익힌 방식으로 기획부터 개발·검수·출시까지 함께 진행합니다.</p>
+          <ul aria-label="주요 내용"><li>기획</li><li>개발</li><li>검수·출시</li></ul>
+        </article>
+        <article class="biz glow rv d2">
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><circle cx="32" cy="32" r="8" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M32 14v6M32 44v6M14 32h6M44 32h6M19.3 19.3l4.2 4.2M40.5 40.5l4.2 4.2M19.3 44.7l4.2-4.2M40.5 23.5l4.2-4.2" stroke="url(#ng)" stroke-width="2.6" stroke-linecap="round"/><circle cx="32" cy="32" r="2.6" fill="#22d3ee"/></svg><span class="num">08</span></div>
+          <h3>업무 자동화 도구 개발</h3>
+          <p>반복되는 데이터 수집, 보고서 정리, 알림 보내기를 자동으로 돌아가는 도구로 만듭니다.</p>
+          <ul aria-label="주요 내용"><li>데이터 수집</li><li>보고서</li><li>알림 자동화</li></ul>
+        </article>
+        <article class="biz glow rv">
+          <div class="top"><svg class="biz-art" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="18" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="1.5"/><ellipse cx="32" cy="19" rx="14" ry="5" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M18 19v13c0 2.8 6.3 5 14 5s14-2.2 14-5V19" fill="none" stroke="url(#ng)" stroke-width="2.6"/><path d="M18 32v13c0 2.8 6.3 5 14 5s14-2.2 14-5V32" fill="none" stroke="url(#ng)" stroke-width="2.6" opacity=".6"/></svg><span class="num">09</span></div>
+          <h3>공공데이터 활용 서비스 개발</h3>
+          <p>공공기관이 공개한 데이터를 받아 누구나 쓰기 쉬운 조회·안내 서비스로 만듭니다.</p>
+          <ul aria-label="주요 내용"><li>공공데이터 연동</li><li>조회·안내 서비스</li></ul>
+        </article>
+        <a class="biz biz-cta glow rv d1" href="mailto:contact@sh-solution.kr?subject=%5B%EC%9D%98%EB%A2%B0%5D%20">
+          <span class="kicker" style="margin-bottom:10px">REQUEST · 의뢰</span>
+          <h3>만들고 싶은 것이 있으신가요?</h3>
+          <p>무엇을 만들고 싶은지 편하게 적어 보내 주세요. 범위를 함께 정한 뒤 견적을 안내합니다.</p>
+          <span class="biz-cta-btn">의뢰 메일 보내기 →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -731,6 +798,76 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
           <h3>생활 상품</h3>
           <p>일상에서 쓰임이 분명한 생활 상품을 골라 온라인으로 판매합니다.</p>
         </article>
+        <article class="card glow wide rv">
+          <div class="mock" aria-hidden="true">
+            <svg viewBox="0 0 320 180">
+              <rect x="20" y="16" width="200" height="150" rx="10" style="fill:var(--ill-card);stroke:var(--ill-line)"/>
+              <rect x="20" y="16" width="200" height="16" rx="8" style="fill:var(--ill-bar)"/>
+              <circle cx="30" cy="24" r="2.5" fill="#22d3ee"/><circle cx="38" cy="24" r="2.5" fill="#60a5fa"/><circle cx="46" cy="24" r="2.5" fill="#8b5cf6"/>
+              <rect x="34" y="44" width="100" height="10" rx="5" style="fill:var(--ill-text)"/>
+              <rect x="34" y="60" width="70" height="7" rx="3.5" style="fill:var(--ill-bar)"/>
+              <rect x="34" y="76" width="56" height="16" rx="8" fill="url(#ng)"/>
+              <rect x="146" y="42" width="60" height="52" rx="8" fill="url(#ng)" opacity=".35"/>
+              <rect x="34" y="104" width="54" height="48" rx="8" style="fill:var(--ill-bar)"/><rect x="94" y="104" width="54" height="48" rx="8" style="fill:var(--ill-bar)"/><rect x="154" y="104" width="54" height="48" rx="8" style="fill:var(--ill-bar)"/>
+              <rect x="236" y="30" width="66" height="136" rx="14" style="fill:var(--ill-card)" stroke="url(#ng)" stroke-width="1.5"/>
+              <rect x="246" y="48" width="46" height="8" rx="4" style="fill:var(--ill-text)"/>
+              <rect x="246" y="62" width="46" height="34" rx="6" fill="url(#ng)" opacity=".35"/>
+              <rect x="246" y="104" width="46" height="10" rx="5" fill="url(#ng)"/>
+              <rect x="246" y="122" width="46" height="26" rx="6" style="fill:var(--ill-bar)"/>
+            </svg>
+          </div>
+          <span class="tag">WEBSITE · 의뢰</span>
+          <h3>홈페이지·랜딩페이지 제작</h3>
+          <p>가게·회사 소개와 문의 연결이 한 화면에서 끝나도록, PC와 휴대폰 모두에서 보기 좋게 만듭니다.</p>
+        </article>
+        <article class="card glow wide rv d1">
+          <div class="mock" aria-hidden="true">
+            <svg viewBox="0 0 320 180">
+              <rect x="20" y="40" width="70" height="100" rx="12" style="fill:var(--ill-card);stroke:var(--ill-line)"/>
+              <ellipse cx="55" cy="62" rx="20" ry="6" fill="none" stroke="url(#ng)" stroke-width="2"/><path d="M35 62v40c0 3.3 9 6 20 6s20-2.7 20-6V62" fill="none" stroke="url(#ng)" stroke-width="2"/>
+              <rect x="30" y="118" width="50" height="8" rx="4" style="fill:var(--ill-text)"/>
+              <rect x="125" y="56" width="70" height="68" rx="34" style="fill:var(--ill-card)" stroke="url(#ng)" stroke-width="1.5"/>
+              <g class="spin" style="transform-origin:160px 90px"><circle cx="160" cy="90" r="16" fill="none" stroke="url(#ng)" stroke-width="3" stroke-dasharray="6 6"/></g>
+              <circle cx="160" cy="90" r="5" fill="#22d3ee"/>
+              <rect x="230" y="26" width="70" height="56" rx="10" style="fill:var(--ill-card);stroke:var(--ill-line)"/>
+              <rect x="240" y="60" width="8" height="14" rx="2" fill="#22d3ee"/><rect x="252" y="50" width="8" height="24" rx="2" fill="#60a5fa"/><rect x="264" y="42" width="8" height="32" rx="2" fill="#8b5cf6"/><rect x="276" y="54" width="8" height="20" rx="2" fill="#22d3ee"/>
+              <rect x="230" y="98" width="70" height="56" rx="10" style="fill:var(--ill-card);stroke:var(--ill-line)"/>
+              <path d="M258 112a7 7 0 0 1 14 0v6l3 5h-20l3-5z" fill="none" stroke="url(#ng)" stroke-width="2" stroke-linejoin="round"/><circle class="blink-dot" cx="276" cy="110" r="4" fill="#8b5cf6"/>
+              <rect x="246" y="134" width="38" height="7" rx="3.5" style="fill:var(--ill-text)"/>
+              <path d="M90 90h35M195 76l35-22M195 104l35 22" stroke="url(#ng)" stroke-width="2" stroke-dasharray="4 5" class="dash-flow"/>
+            </svg>
+          </div>
+          <span class="tag">AUTOMATION · 의뢰</span>
+          <h3>업무 자동화·공공데이터 서비스</h3>
+          <p>데이터를 모으고, 보고서로 정리하고, 필요할 때 알림을 보내는 반복 업무를 자동으로 돌아가게 만듭니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <section id="commission" aria-labelledby="cm-title">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">REQUEST · 제작·개발 의뢰</span>
+        <h2 id="cm-title">필요한 것을 말씀해 주시면<br><span class="grad">함께 범위를 정해</span> 만듭니다</h2>
+        <p>홈페이지·랜딩페이지, 토스 미니앱, 업무 자동화 도구, 공공데이터 활용 서비스 제작을 의뢰받습니다.</p>
+      </div>
+      <ol class="steps">
+        <li class="step rv"><span class="dot" aria-hidden="true">01</span><h3>문의</h3><p>만들고 싶은 것과 쓰려는 곳을 메일로 편하게 보내 주세요.</p></li>
+        <li class="step rv d1"><span class="dot" aria-hidden="true">02</span><h3>범위·견적 협의</h3><p>꼭 필요한 기능과 일정을 함께 정하고, 그에 맞는 견적을 안내합니다.</p></li>
+        <li class="step rv d2"><span class="dot" aria-hidden="true">03</span><h3>제작</h3><p>정한 범위대로 만들고, 중간 결과를 보여 드리며 맞춰 갑니다.</p></li>
+        <li class="step rv d3"><span class="dot" aria-hidden="true">04</span><h3>납품·관리</h3><p>완성본을 전달하고, 이후 수정이나 관리가 필요하면 협의해 이어 갑니다.</p></li>
+      </ol>
+      <div class="cm-box rv">
+        <div>
+          <h3>가격과 기간은 문의 후 안내합니다</h3>
+          <p>만들려는 범위에 따라 달라서, 내용을 확인한 뒤 따로 안내드립니다. 메일 제목에 [의뢰]를 붙여 주세요.</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:contact@sh-solution.kr?subject=%5B%EC%9D%98%EB%A2%B0%5D%20">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+          의뢰 메일 보내기</a>
       </div>
     </div>
   </section>
@@ -946,6 +1083,8 @@ h2{font-size:clamp(28px,3.8vw,44px);line-height:1.28;letter-spacing:-.035em;marg
         <details class="rv"><summary>어디에서 쓸 수 있나요?</summary><div class="a"><p>미니앱은 토스 앱 안에서 열어 쓸 수 있습니다. 따로 설치하지 않아도 됩니다.</p></div></details>
         <details class="rv"><summary>법이나 기준이 바뀌면 어떻게 하나요?</summary><div class="a"><p>바뀐 원문을 다시 확인하고 계산 규칙과 화면을 고칩니다. 반영 전에 다른 결과를 보셨다면 메일로 알려 주세요.</p></div></details>
         <details class="rv"><summary>틀린 내용을 발견했어요.</summary><div class="a"><p>어떤 화면에서 어떤 값을 넣었는지 함께 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a>로 보내 주시면 원문과 대조해 확인합니다.</p></div></details>
+        <details class="rv"><summary>홈페이지나 미니앱 제작을 맡길 수 있나요?</summary><div class="a"><p>네. 소상공인 홈페이지·랜딩페이지, 토스 미니앱 개발(기획부터 검수·출시까지), 업무 자동화 도구, 공공데이터 활용 서비스 제작을 의뢰받습니다. 메일 제목에 [의뢰]를 붙여 <a href="mailto:contact@sh-solution.kr?subject=%5B%EC%9D%98%EB%A2%B0%5D%20">contact@sh-solution.kr</a>로 보내 주세요.</p></div></details>
+        <details class="rv"><summary>제작 비용과 기간은 어떻게 되나요?</summary><div class="a"><p>만들려는 범위에 따라 달라서 미리 정해 두지 않았습니다. 문의 내용을 확인한 뒤 범위를 함께 정하고, 그에 맞춰 비용과 기간을 안내합니다.</p></div></details>
         <details class="rv"><summary>제휴나 협업 문의는 어디로 하나요?</summary><div class="a"><p>아래 「제휴·협업」의 메일 버튼으로 보내 주세요. 제목에 [제휴]를 붙여 주시면 빠르게 확인합니다.</p></div></details>
       </div>
     </div>
