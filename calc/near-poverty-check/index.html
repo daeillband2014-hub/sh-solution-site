@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>차상위계층 확인 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="가구원 수, 월 소득, 재산과 부채를 넣으면 2026년 기준 중위소득 50% 선과 비교해 차상위계층에 해당할 가능성을 보수적·유리한 두 가지 소득인정액으로 바로 판정합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/near-poverty-check/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="차상위계층 확인 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="가구원 수, 월 소득, 재산과 부채를 넣으면 2026년 기준 중위소득 50% 선과 비교해 차상위계층에 해당할 가능성을 보수적·유리한 두 가지 소득인정액으로 바로 판정합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/near-poverty-check/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "차상위계층 기준은 정확히 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "국민기초생활 보장법 시행령 제3조에 따라 기초생활 수급자가 아니면서 소득인정액이 기준 중위소득의 100분의 50 이하인 사람을 말해요. 2026년 1인 가구는 월 1,282,119원, 4인 가구는 월 3,247,369원이 기준선이에요."}}, {"@type": "Question", "name": "월급이 기준선보다 조금 높은데 가능성이 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "근로·사업소득은 실제 조사에서 일정 비율을 공제하고 계산해요. 이 계산기의 「경계선」 판정이 바로 그런 경우라 주민센터에 신청해 정확한 소득인정액을 확인해 보는 것이 좋아요."}}, {"@type": "Question", "name": "집이 있으면 차상위가 될 수 없나요?", "acceptedAnswer": {"@type": "Answer", "text": "그렇지 않아요. 재산에서 지역별 기본재산액과 부채를 뺀 나머지만 월 환산율을 곱해 소득에 더해요. 그 외 지역은 5,300만원, 서울은 9,900만원까지는 환산액이 0원이에요."}}, {"@type": "Question", "name": "입력한 소득과 재산은 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.big .v.t{font-size:clamp(28px,8.4vw,38px)}
+.big.ok{border-color:rgba(52,211,153,.45)}.big.ok .s{color:#10b981}
+.big.mid{border-color:rgba(251,191,36,.5)}
+.big.no{background:linear-gradient(135deg,rgba(248,113,113,.13),transparent);border-color:rgba(248,113,113,.4)}
+.chk{display:flex;flex-wrap:wrap;gap:8px}
+.chk label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:15px;background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;margin:0;cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--c1)}
+.inp input[type=date]{text-align:right;font-size:17px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.yrs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.yrs .inp{height:50px;padding:0 10px}.yrs .inp input{font-size:17px;text-align:center}
+.rl{margin:12px 0 0;padding-left:18px}.rl li{font-size:14px;color:var(--sub);margin:4px 0}
+.st{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:4px;vertical-align:1px}
+.st.ok{background:rgba(52,211,153,.16);color:#10b981}.st.check{background:rgba(251,191,36,.18);color:#d97706}.st.no{background:var(--line);color:var(--muted)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tw table{font-size:14px;min-width:0}.tw td,.tw th{padding:10px 4px}.tw td:first-child{word-break:break-all}
+tr.grp td{background:var(--bg-2);font-weight:800;color:var(--fg)}
+[hidden]{display:none!important}
+.yrs>*,.row2>*{min-width:0}.inp input{width:100%}
+article td.n{white-space:normal}.tw td.n{white-space:nowrap}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2026년 기준 중위소득 반영</span><h1>차상위계층 확인 계산기</h1><p>우리 집 소득과 재산을 넣으면 소득인정액을 어림해 기준 중위소득 50% 선 안에 드는지 알려 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="n">가구원 수</label><small>주민등록상 함께 사는 가족 수</small><div class="inp"><select id="n"><option value="1">1인 가구</option><option value="2" selected>2인 가구</option><option value="3">3인 가구</option><option value="4">4인 가구</option><option value="5">5인 가구</option><option value="6">6인 가구</option><option value="7">7인 가구</option><option value="8">8인 이상(8인)</option></select><span>▾</span></div></div><div class="field"><label for="region">사는 곳</label><small>지역마다 기본재산액(재산에서 빼 주는 금액)이 달라요</small><div class="inp"><select id="region"><option value="seoul">서울</option><option value="gyeonggi">경기</option><option value="metro">광역시·세종·창원</option><option value="other" selected>그 외 지역</option></select><span>▾</span></div></div><div class="field"><label for="work">근로·사업 소득</label><small>가구 전체의 월 근로소득과 사업소득 합계</small><div class="inp"><input id="work" class="num" inputmode="numeric" autocomplete="off" value="2500000" aria-label="근로·사업 소득"><span>원/월</span></div></div><div class="field"><label for="other">그 밖의 소득</label><small>연금·이자·임대료·정기적인 용돈 등 월 합계</small><div class="inp"><input id="other" class="num" inputmode="numeric" autocomplete="off" value="0" aria-label="그 밖의 소득"><span>원/월</span></div></div><div class="field"><label for="gen">일반재산</label><small>집·전세보증금·토지 등 (금융재산 제외)</small><div class="inp"><input id="gen" class="num" inputmode="numeric" autocomplete="off" value="0" aria-label="일반재산"><span>원</span></div></div><div class="field"><label for="fin">금융재산</label><small>예금·적금·주식·보험 해약환급금 등</small><div class="inp"><input id="fin" class="num" inputmode="numeric" autocomplete="off" value="0" aria-label="금융재산"><span>원</span></div></div><div class="field"><label for="debt">부채</label><small>금융회사 대출·임대보증금 등</small><div class="inp"><input id="debt" class="num" inputmode="numeric" autocomplete="off" value="0" aria-label="부채"><span>원</span></div></div><button class="go" type="submit">판정하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>차상위계층은 「기초생활 수급자는 아니지만 소득인정액이 <strong>기준 중위소득의 50% 이하</strong>인 가구」를 말해요. 그래서 이 계산기는 두 가지를 구해 비교합니다. 하나는 가구원 수에 맞는 50% 선, 다른 하나는 우리 집의 소득인정액이에요.</p>
+<table><thead><tr><th>가구원 수</th><th class="n">2026 기준 중위소득</th><th class="n">50% 선</th></tr></thead><tbody>
+<tr><td>1인</td><td class="n">2,564,238원</td><td class="n">1,282,119원</td></tr><tr><td>2인</td><td class="n">4,199,292원</td><td class="n">2,099,646원</td></tr>
+<tr><td>3인</td><td class="n">5,359,036원</td><td class="n">2,679,518원</td></tr><tr><td>4인</td><td class="n">6,494,738원</td><td class="n">3,247,369원</td></tr>
+<tr><td>5인</td><td class="n">7,556,719원</td><td class="n">3,778,359원</td></tr><tr><td>6인</td><td class="n">8,555,952원</td><td class="n">4,277,976원</td></tr>
+<tr><td>7인</td><td class="n">9,515,150원</td><td class="n">4,757,575원</td></tr></tbody></table>
+<p>8인 이상은 한 명 늘 때마다 중위소득에 959,198원을 더해요. 50% 선은 원 단위 아래를 버린 값입니다.</p>
+<h3>소득인정액 = 소득 + 재산의 소득환산액</h3>
+<p>재산은 그대로 더하지 않고 「한 달 소득」으로 바꿔서 더해요. 일반재산에서 지역별 기본재산액(서울 9,900만원, 경기 8,000만원, 광역시·세종·창원 7,700만원, 그 외 5,300만원)과 부채를 먼저 빼고, 남은 금액에 월 환산율을 곱합니다. 일반재산이 기본재산액보다 적으면 모자란 만큼을 금융재산에서 더 빼 줘요.</p>
+<table><thead><tr><th>재산 종류</th><th class="n">월 환산율</th></tr></thead><tbody>
+<tr><td>일반재산(주거용 제외)</td><td class="n">4.17%</td></tr><tr><td>주거용 재산</td><td class="n">1.04%</td></tr><tr><td>금융재산</td><td class="n">6.26%</td></tr></tbody></table>
+<p>실제 조사에서는 근로·사업소득의 일부를 공제하고 집·전세금은 주거용 환산율을 쓰는데, 공제 비율과 주거용 한도는 확정하지 못해 결과를 <strong>두 갈래</strong>로 보여 드려요. 공제 없이 일반재산 4.17%를 쓴 「보수적인 값」과, 근로소득 30% 공제·1.04%를 쓴 「유리한 값」입니다. 보수적인 값이 50% 선 안이면 가능성 높음, 유리한 값만 안이면 경계선, 둘 다 넘으면 어려움으로 판정해요.</p>
+<div class="ex"><p><strong>예시: 1인 가구, 근로소득 월 160만원, 재산 없음</strong></p>
+<p>1인 가구 50% 선은 1,282,119원이에요. 공제 없이 보면 소득인정액 1,600,000원으로 선을 넘습니다.</p>
+<p>근로소득 30%를 공제하면 1,600,000 × 0.7 = 1,120,000원으로 선 안에 들어와요. 그래서 판정은 <strong>경계선</strong>입니다.</p>
+<p>재산 예시: 서울에 1억 5천만원짜리 집, 대출 3천만원이면 (1억5천 − 9,900만 − 3천만) × 4.17% = <strong>월 875,700원</strong>이 소득으로 더해져요.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>신청은 주소지 주민센터에서</h3>
+<p>차상위 여부는 스스로 정하는 게 아니라 읍·면·동 주민센터에 신청한 뒤 소득·재산 조사를 거쳐 확인돼요. 차상위 본인부담경감, 자활사업 참여처럼 받고 싶은 지원을 말하면 담당자가 해당 사업의 선정 절차로 안내합니다. 이 계산기의 결과는 신청 전에 「해 볼 만한지」 가늠하는 용도로 쓰세요.</p>
+<h3>수급자 기준과 헷갈리지 마세요</h3>
+<p>법에서 차상위계층은 「수급권자가 아닌」 사람만 가리켜요. 소득인정액이 의료급여 선정기준(중위소득 40%)보다 낮다면 차상위가 아니라 기초생활 수급 대상이 될 수 있어요. 계산 결과에 40% 안내가 뜨면 수급 신청부터 상담해 보는 게 순서입니다.</p>
+<h3>차상위로 받을 수 있는 대표 지원</h3>
+<ul><li>건강보험 본인부담 경감: 희귀·중증난치질환자, 6개월 이상 치료가 필요한 만성질환자, 18세 미만 아동 등이 공단 인정을 받으면 병원비 부담이 줄어요.</li>
+<li>자활급여와 지역자활센터의 교육·상담·취업 알선</li>
+<li>자산형성지원(저축 매칭)과 고용지원서비스 연계</li></ul>
+<p>각 사업마다 따로 신청해야 하고 요건이 조금씩 다르니, 차상위로 확인된 뒤에도 사업별 안내를 꼭 확인하세요.</p>
+<h3>자주 하는 실수</h3>
+<p>첫째, 월급만 넣고 재산을 빼먹는 경우예요. 예금 1억원이 있으면 기본재산액을 빼고도 한 달에 수십만 원이 소득으로 잡혀 결과가 완전히 달라집니다. 둘째, 가구원 수를 실제보다 적게 고르는 경우예요. 가구원이 한 명 늘면 기준선이 크게 올라가니 주민등록상 함께 사는 가족을 정확히 세세요. 셋째, 대출을 부채 칸에 넣지 않는 경우예요. 금융회사 대출과 임대보증금은 재산에서 빼 주므로 꼭 입력하세요.</p>
+<p>자동차, 부양의무자, 가구 특성별 지출 공제는 이 계산에 들어 있지 않아요. 차가 있거나 소득이 들쭉날쭉하다면 결과를 「대략적인 위치」로만 보고 주민센터 상담으로 확정하세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>차상위계층 기준은 정확히 무엇인가요?</summary><p>국민기초생활 보장법 시행령 제3조에 따라 기초생활 수급자가 아니면서 소득인정액이 기준 중위소득의 100분의 50 이하인 사람을 말해요. 2026년 1인 가구는 월 1,282,119원, 4인 가구는 월 3,247,369원이 기준선이에요.</p></details><details><summary>월급이 기준선보다 조금 높은데 가능성이 있나요?</summary><p>근로·사업소득은 실제 조사에서 일정 비율을 공제하고 계산해요. 이 계산기의 「경계선」 판정이 바로 그런 경우라 주민센터에 신청해 정확한 소득인정액을 확인해 보는 것이 좋아요.</p></details><details><summary>집이 있으면 차상위가 될 수 없나요?</summary><p>그렇지 않아요. 재산에서 지역별 기본재산액과 부채를 뺀 나머지만 월 환산율을 곱해 소득에 더해요. 그 외 지역은 5,300만원, 서울은 9,900만원까지는 환산액이 0원이에요.</p></details><details><summary>입력한 소득과 재산은 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>국민기초생활 보장법 제2조제9호·제10호, 제6조의3제2항 — 소득인정액과 차상위계층 정의 — <a href="https://www.law.go.kr/법령/국민기초생활보장법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국민기초생활 보장법 시행령 제3조(차상위계층: 기준 중위소득 100분의 50 이하), 제5조의2제11호, 제5조의4 — <a href="https://www.law.go.kr/법령/국민기초생활보장법시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>보건복지부 고시 제2025-135호 「2026년 기준 중위소득 및 생계·의료급여 선정기준과 최저보장수준」 — <a href="https://www.law.go.kr/행정규칙/2026년기준중위소득및생계·의료급여선정기준과최저보장수준" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>보건복지부 고시 제2019-188호 「국민기초생활 보장법상 재산의 소득환산율 고시」 제2조 — <a href="https://www.law.go.kr/행정규칙/국민기초생활보장법상재산의소득환산율고시" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>보건복지부 고시 제2025-204호 「자동차의 재산가액 산정기준과 재산가액에서 차감하는 기본재산액 및 부채」 별표3 — <a href="https://www.law.go.kr/행정규칙/자동차의재산가액산정기준과재산가액에서차감하는기본재산액및부채" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 15일 법제처 국가법령정보센터 원문 확인(2026년 1월 1일 시행 고시 기준). 차상위 전용 기본재산액·환산율은 고시를 확인하지 못해 수급자 기준값을 빌려 쓴 추정입니다.</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+
+var MEDIAN_2026={1:2564238,2:4199292,3:5359036,4:6494738,5:7556719,6:8555952,7:9515150};var STEP_8PLUS=959198;
+var RATE={home:0.0104,gen:0.0417,fin:0.0626};var BASIC={seoul:99000000,gyeonggi:80000000,metro:77000000,other:53000000};var WORK_DEDUCT_MAX=0.3;
+function median(n){n=Math.max(1,Math.floor(n||1));if(n<=7)return MEDIAN_2026[n];return MEDIAN_2026[7]+STEP_8PLUS*(n-7)}
+function line50(n){return Math.floor(median(n)*0.5)}
+function line40(n){return Math.floor(median(n)*0.4)}
+function assetIncome(gen,fin,debt,region,genRate){gen=Math.max(0,gen||0);fin=Math.max(0,fin||0);debt=Math.max(0,debt||0);
+ var g=gen-(BASIC[region]||BASIC.other)-debt,f=fin;if(g<0){f=Math.max(0,fin+g);g=0}
+ return Math.floor(g*(genRate==null?RATE.gen:genRate)+f*RATE.fin)}
+function judge(p){var n=Math.max(1,Math.floor(p.n||1));var work=Math.max(0,p.work||0),other=Math.max(0,p.other||0);
+ var asHi=assetIncome(p.gen,p.fin,p.debt,p.region,RATE.gen);var asLo=assetIncome(p.gen,p.fin,p.debt,p.region,RATE.home);
+ var hi=work+other+asHi;var lo=Math.floor(work*(1-WORK_DEDUCT_MAX))+other+asLo;var L=line50(n),M=median(n);
+ var kind=hi<=L?'high':(lo<=L?'edge':'hard');
+ return {n:n,median:M,line:L,line40:line40(n),hi:hi,lo:lo,asHi:asHi,asLo:asLo,pctHi:hi/M*100,pctLo:lo/M*100,kind:kind,maybeRecipient:lo<=line40(n)}}
+function compute(){var r=judge({n:parseInt(N('n'),10),work:N('work'),other:N('other'),gen:N('gen'),fin:N('fin'),debt:N('debt'),region:N('region')});
+ var T={high:['가능성 높음','ok','재산을 보수적으로 셈해도 50% 선 안이에요'],edge:['경계선','mid','근로소득 공제·주거용 재산 환산율을 유리하게 적용하면 50% 선 안이에요'],hard:['어려움','no','가장 유리하게 셈해도 50% 선을 넘어요']}[r.kind];
+ return {label:r.n+'인 가구 차상위 해당 가능성',big:T[0],txt:1,state:T[1],interp:T[2],head:['항목','월 금액'],
+ rows:[['기준 중위소득 ('+r.n+'인)',won(r.median)+'원'],['차상위 기준선 (중위소득 50%)',won(r.line)+'원',1],
+ ['재산 소득환산액 (일반재산 4.17%)',won(r.asHi)+'원'],['소득인정액 · 보수적으로',won(r.hi)+'원'],
+ ['재산 소득환산액 (주거용 1.04%로 가정)',won(r.asLo)+'원'],['소득인정액 · 유리하게',won(r.lo)+'원']],
+ list:['보수적 값은 중위소득의 '+r.pctHi.toFixed(1)+'%, 유리한 값은 '+r.pctLo.toFixed(1)+'%예요.','유리한 값은 근로·사업소득에서 최대 30%를 공제한 가정이에요.'],
+ note:r.maybeRecipient?'유리하게 본 소득인정액이 의료급여 선정기준(중위소득 40%, '+won(r.line40)+'원) 이하예요. 이 경우 차상위가 아니라 기초생활 수급자에 해당할 수 있으니 주민센터에서 수급 신청부터 상담해 보세요.':'차상위 전용 재산 기준이 따로 확인되지 않아 수급자 기준값을 빌려 쓴 간이 추정이에요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'').slice(0,12);i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+Array.prototype.forEach.call(document.querySelectorAll('input.yr'),function(i){i.addEventListener('input',function(){var v=i.value.replace(/\D/g,'').slice(0,4);if(v!==i.value)i.value=v})});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big'+(r.state?' '+r.state:'')+'"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.txt?' t':'')+'">'+esc(r.big)+(r.unit?'<small>'+esc(r.unit)+'</small>':'')+'</div><div class="s">'+esc(r.interp)+'</div></div>';
+ var hd=r.head||['항목','금액'];
+ h+='<table><thead><tr><th>'+esc(hd[0])+'</th><th class="n">'+esc(hd[1])+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]===1?' class="tot"':'')+'><td>'+esc(x[0])+(x[3]?' <span class="st '+x[3][0]+'">'+esc(x[3][1])+'</span>':'')+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>';
+ if(r.list&&r.list.length){h+='<ul class="rl">';r.list.forEach(function(t){h+='<li>'+esc(t)+'</li>'});h+='</ul>'}
+ h+=(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+
+
+render();
+</script>
+</body>
+</html>

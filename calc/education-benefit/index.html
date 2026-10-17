@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>교육급여 대상 확인 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="가구원 수와 학생의 학교급, 월 소득인정액을 넣으면 2026년 교육급여 선정기준(중위소득 50%) 이내인지 판정하고 초·중·고 교육활동지원비와 고등학생 수업료·교과서 지원을 보여 줍니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/education-benefit/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="교육급여 대상 확인 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="가구원 수와 학생의 학교급, 월 소득인정액을 넣으면 2026년 교육급여 선정기준(중위소득 50%) 이내인지 판정하고 초·중·고 교육활동지원비와 고등학생 수업료·교과서 지원을 보여 줍니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/education-benefit/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "2026년 교육급여 선정기준은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "교육부고시 제2025-34호에 따라 기준 중위소득의 50%로, 4인 가구는 월 3,247,369원, 3인 가구는 월 2,679,518원이에요. 소득인정액이 이 금액 이하이면 대상이에요."}}, {"@type": "Question", "name": "교육활동지원비는 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년 3월 1일부터 초등학생 연 502,000원, 중학생 연 699,000원, 고등학생 연 860,000원이에요. 고등학생은 교과서와 입학금·수업료도 지원받아요."}}, {"@type": "Question", "name": "조부모님 재산이 많아도 받을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "교육급여는 부양의무자 기준을 적용하지 않아서 따로 사는 조부모님의 소득·재산은 따지지 않아요. 우리 가구의 소득인정액만 봅니다."}}, {"@type": "Question", "name": "입력한 소득이 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.big .v.t{font-size:clamp(28px,8.4vw,38px)}
+.big.ok{border-color:rgba(52,211,153,.45)}.big.ok .s{color:#10b981}
+.big.mid{border-color:rgba(251,191,36,.5)}
+.big.no{background:linear-gradient(135deg,rgba(248,113,113,.13),transparent);border-color:rgba(248,113,113,.4)}
+.chk{display:flex;flex-wrap:wrap;gap:8px}
+.chk label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:15px;background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;margin:0;cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--c1)}
+.inp input[type=date]{text-align:right;font-size:17px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.yrs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.yrs .inp{height:50px;padding:0 10px}.yrs .inp input{font-size:17px;text-align:center}
+.rl{margin:12px 0 0;padding-left:18px}.rl li{font-size:14px;color:var(--sub);margin:4px 0}
+.st{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:4px;vertical-align:1px}
+.st.ok{background:rgba(52,211,153,.16);color:#10b981}.st.check{background:rgba(251,191,36,.18);color:#d97706}.st.no{background:var(--line);color:var(--muted)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tw table{font-size:14px;min-width:0}.tw td,.tw th{padding:10px 4px}.tw td:first-child{word-break:break-all}
+tr.grp td{background:var(--bg-2);font-weight:800;color:var(--fg)}
+[hidden]{display:none!important}
+.yrs>*,.row2>*{min-width:0}.inp input{width:100%}
+article td.n{white-space:normal}.tw td.n{white-space:nowrap}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2026년 교육부 고시 기준</span><h1>교육급여 대상 확인 계산기</h1><p>가구원 수와 소득인정액으로 2026년 교육급여 대상인지, 학생이 얼마를 받는지 바로 확인해요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="size">가구원 수</label><small>주민등록상 같은 가구로 보는 사람 수</small><div class="inp"><select id="size"><option value="1">1인 가구</option><option value="2">2인 가구</option><option value="3">3인 가구</option><option value="4" selected>4인 가구</option><option value="5">5인 가구</option><option value="6">6인 가구</option><option value="7">7인 가구</option><option value="8">8인 가구</option><option value="9">9인 가구</option><option value="10">10인 가구</option></select><span>▾</span></div></div><div class="field"><label for="level">학생의 학교급</label><small>학교급마다 지원 항목과 금액이 달라요</small><div class="inp"><select id="level"><option value="e">초등학생</option><option value="m" selected>중학생</option><option value="h">고등학생</option></select><span>▾</span></div></div><div class="field"><label for="inc">월 소득인정액</label><small>소득평가액 + 재산의 소득환산액. 모르면 대략적인 월 소득</small><div class="inp"><input id="inc" class="num" inputmode="numeric" autocomplete="off" value="2500000" aria-label="월 소득인정액"><span>원/월</span></div></div><button class="go" type="submit">확인하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>교육급여는 소득인정액이 가구원 수별 <strong>선정기준 이하</strong>인 가구의 학생에게 지급돼요. 2026년 선정기준은 기준 중위소득의 50%로, 교육부 고시에 가구원 수별 금액이 정해져 있습니다. 계산기는 입력한 소득인정액을 이 표와 비교해 대상 여부를 정하고, 대상이면 학교급에 맞는 지원 항목을 보여 줘요.</p>
+<table><thead><tr><th>가구원 수</th><th class="n">월 선정기준</th></tr></thead><tbody>
+<tr><td>1인</td><td class="n">1,282,119원</td></tr><tr><td>2인</td><td class="n">2,099,646원</td></tr><tr><td>3인</td><td class="n">2,679,518원</td></tr>
+<tr><td>4인</td><td class="n">3,247,369원</td></tr><tr><td>5인</td><td class="n">3,778,360원</td></tr><tr><td>6인</td><td class="n">4,277,976원</td></tr>
+<tr><td>7인</td><td class="n">4,757,575원</td></tr></tbody></table>
+<p>8인 이상은 한 명 늘 때마다 479,599원을 더해요.</p>
+<h3>학교급별 지원 내용 (최저보장수준, 2026년 3월 1일 시행)</h3>
+<table><thead><tr><th>학교급</th><th class="n">교육활동지원비(연 1회)</th></tr></thead><tbody>
+<tr><td>초등학생</td><td class="n">502,000원</td></tr><tr><td>중학생</td><td class="n">699,000원</td></tr><tr><td>고등학생</td><td class="n">860,000원</td></tr></tbody></table>
+<p>고등학생은 교육활동지원비에 더해 정규 교육과정 교과서 전체, 학교장이 고지한 입학금과 수업료 전액을 지원받아요. 입학금은 입학할 때 한 번, 수업료는 분기마다 지원됩니다. 교육활동지원비는 학용품·부교재 등 학습에 쓰라고 현금으로 한 해에 한 번 주는 돈이에요.</p>
+<div class="ex"><p><strong>예시: 4인 가구, 중학생 자녀, 월 소득인정액 250만원</strong></p>
+<p>4인 가구 선정기준은 월 3,247,369원이에요. 2,500,000원은 기준보다 747,369원 낮아 <strong>대상</strong>입니다.</p>
+<p>중학생 교육활동지원비 <strong>연 699,000원</strong>을 받을 수 있어요. 같은 가구에 고등학생이 있다면 그 학생은 860,000원과 교과서·입학금·수업료를 따로 받습니다.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>소득인정액은 월급과 달라요</h3>
+<p>선정기준과 비교하는 금액은 월급이 아니라 소득인정액이에요. 근로·사업소득 등에서 일부를 공제한 소득평가액에, 집·예금·자동차 같은 재산을 월 소득으로 바꾼 금액을 더한 값입니다. 월급만 보면 기준 안인데 예금이 많아서 넘어가는 경우도, 반대로 월급은 조금 넘지만 공제 덕분에 안으로 들어오는 경우도 있어요. 정확한 금액은 신청 후 주민센터 조사로 확정됩니다.</p>
+<h3>부양의무자 기준이 없어요</h3>
+<p>교육급여는 국민기초생활 보장법 제12조의2에 따라 부양의무자 기준을 적용하지 않아요. 따로 사는 조부모나 성인 자녀의 소득·재산은 따지지 않으니, 그 때문에 포기했던 가정도 다시 확인해 볼 만해요.</p>
+<h3>신청은 주소지 주민센터에서</h3>
+<p>교육급여는 신청해야 조사가 시작돼요. 주소지 읍·면·동 주민센터에 학생이 다니는 학교와 가구 상황을 알리고 신청 방법을 안내받으세요. 조사 결과 소득인정액이 선정기준 안으로 확인되면 그때부터 지원이 이뤄집니다. 이 계산기의 판정은 신청 전에 가능성을 가늠해 보는 용도예요.</p>
+<h3>자녀마다 따로 받아요</h3>
+<p>교육급여는 가구가 아니라 학생 한 명 한 명에게 지급돼요. 초등학생과 고등학생이 함께 있다면 각자 학교급 금액을 받습니다. 계산기는 한 학생씩 보여 주니, 학교급을 바꿔 가며 확인하세요.</p>
+<h3>자주 하는 실수</h3>
+<p>가구원 수를 줄여 잡는 경우가 많아요. 주민등록상 함께 사는 가족은 모두 가구원이고, 한 명이 늘 때마다 기준이 50만원 안팎 올라갑니다. 또 학교 밖 청소년이나 대안학교 학생은 지원 방식이 다를 수 있으니 주민센터에 따로 물어보세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>2026년 교육급여 선정기준은 얼마인가요?</summary><p>교육부고시 제2025-34호에 따라 기준 중위소득의 50%로, 4인 가구는 월 3,247,369원, 3인 가구는 월 2,679,518원이에요. 소득인정액이 이 금액 이하이면 대상이에요.</p></details><details><summary>교육활동지원비는 얼마인가요?</summary><p>2026년 3월 1일부터 초등학생 연 502,000원, 중학생 연 699,000원, 고등학생 연 860,000원이에요. 고등학생은 교과서와 입학금·수업료도 지원받아요.</p></details><details><summary>조부모님 재산이 많아도 받을 수 있나요?</summary><p>교육급여는 부양의무자 기준을 적용하지 않아서 따로 사는 조부모님의 소득·재산은 따지지 않아요. 우리 가구의 소득인정액만 봅니다.</p></details><details><summary>입력한 소득이 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>교육부고시 제2025-34호 「2026년 교육급여의 선정기준 및 최저보장수준」(2025. 12. 17. 전부개정, 2026. 1. 1. 시행, 최저보장수준은 2026. 3. 1. 시행) — <a href="https://www.law.go.kr/행정규칙/2026년교육급여의선정기준및최저보장수준" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국민기초생활 보장법 제6조·제12조·제12조의2(교육급여의 적용기준 등) — <a href="https://www.law.go.kr/법령/국민기초생활보장법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 행정규칙 원문 확인.</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+
+var LINE={1:1282119,2:2099646,3:2679518,4:3247369,5:3778360,6:4277976,7:4757575};var LINE_ADD=479599;
+function lineOf(n){n=Math.max(1,Math.floor(n));return n<=7?LINE[n]:LINE[7]+(n-7)*LINE_ADD}
+var SUPPORT={e:502000,m:699000,h:860000};var LVN={e:'초등학생',m:'중학생',h:'고등학생'};
+function judge(p){var line=lineOf(p.size);var inc=Math.max(0,Number(p.income)||0);var ok=inc<=line;
+ var items=[{key:'act',title:'교육활동지원비',text:SUPPORT[p.level].toLocaleString('ko-KR')+'원',when:'연 1회'}];
+ if(p.level==='h'){items.push({key:'book',title:'교과서',text:'정규 교육과정 교과서 전체',when:'연 1회'});items.push({key:'fee',title:'입학금·수업료',text:'학교장 고지액 전액',when:'입학 시·분기별'})}
+ return {ok:ok,line:line,income:inc,gap:line-inc,ratio:line?inc/line:0,items:items,cash:ok?SUPPORT[p.level]:0}}
+function compute(){var lv=N('level'),sz=parseInt(N('size'),10);var r=judge({size:sz,level:lv,income:N('inc')});
+ var rows=[['선정기준 ('+sz+'인 가구)',won(r.line)+'원'],['내 소득인정액',won(r.income)+'원'],[r.ok?'기준까지 여유':'기준 초과',won(Math.abs(r.gap))+'원',1]];
+ r.items.forEach(function(it){rows.push([it.title+' ('+it.when+')',it.text,0,r.ok?['ok','지원']:['no','대상 아님']])});
+ return r.ok?{label:LVN[lv]+' 교육활동지원비',big:won(r.cash),unit:'원',state:'ok',interp:'선정기준 이내예요 · 연 1회 지급'+(lv==='h'?' + 교과서·입학금·수업료':''),rows:rows,
+  note:'소득인정액이 선정기준의 '+Math.round(r.ratio*100)+'% 수준이에요. 실제 선정은 주민센터의 소득·재산 조사로 정해져요.'}
+ :{label:'2026년 교육급여',big:'해당 안 됨',txt:1,state:'no',interp:'선정기준보다 '+won(-r.gap)+'원 많아요',rows:rows,note:'소득인정액이 선정기준 이하일 때만 받을 수 있어요. 재산을 뺀 소득만 넣었다면 실제 소득인정액은 더 높을 수 있어요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'').slice(0,12);i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+Array.prototype.forEach.call(document.querySelectorAll('input.yr'),function(i){i.addEventListener('input',function(){var v=i.value.replace(/\D/g,'').slice(0,4);if(v!==i.value)i.value=v})});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big'+(r.state?' '+r.state:'')+'"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.txt?' t':'')+'">'+esc(r.big)+(r.unit?'<small>'+esc(r.unit)+'</small>':'')+'</div><div class="s">'+esc(r.interp)+'</div></div>';
+ var hd=r.head||['항목','금액'];
+ h+='<table><thead><tr><th>'+esc(hd[0])+'</th><th class="n">'+esc(hd[1])+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]===1?' class="tot"':'')+'><td>'+esc(x[0])+(x[3]?' <span class="st '+x[3][0]+'">'+esc(x[3][1])+'</span>':'')+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>';
+ if(r.list&&r.list.length){h+='<ul class="rl">';r.list.forEach(function(t){h+='<li>'+esc(t)+'</li>'});h+='</ul>'}
+ h+=(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+
+
+render();
+</script>
+</body>
+</html>

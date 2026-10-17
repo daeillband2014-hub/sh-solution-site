@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>의료급여 본인부담금 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="의료급여 1종·2종 수급권자가 의원·병원·상급종합병원·약국·보건소에서 외래, 입원, CT·MRI를 받을 때 내는 본인부담금을 의료급여법 시행령 별표 1 기준으로 계산합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/medical-aid-copay/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="의료급여 본인부담금 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="의료급여 1종·2종 수급권자가 의원·병원·상급종합병원·약국·보건소에서 외래, 입원, CT·MRI를 받을 때 내는 본인부담금을 의료급여법 시행령 별표 1 기준으로 계산합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/medical-aid-copay/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "2종인데 병원 외래가 왜 정액이 아니라 비율인가요?", "acceptedAnswer": {"@type": "Answer", "text": "의료급여법 시행령 별표 1에서 2종의 병원·종합병원·상급종합병원 외래는 급여비용의 15%로 정하고 있어요. 의원 외래와 2차 기관의 고시 만성질환 외래만 1,000원 정액이에요."}}, {"@type": "Question", "name": "1종은 입원하면 정말 돈을 안 내나요?", "acceptedAnswer": {"@type": "Answer", "text": "급여 항목은 의료급여기금이 전부 부담해요. 다만 식대 일부, 상급병실 차액 같은 비급여 비용은 따로 낼 수 있어요."}}, {"@type": "Question", "name": "진료비가 1,000원보다 적으면 어떻게 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "정액 본인부담보다 급여비용이 적으면 진료비 전부만 내면 돼요. 계산기에 급여비용을 넣으면 자동으로 반영돼요."}}, {"@type": "Question", "name": "입력한 내용이 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+.big .v.t{font-size:clamp(22px,6.4vw,30px);line-height:1.35;margin:8px 0}
+.big.ok .v.t{color:var(--ink)}.big.no{background:linear-gradient(135deg,rgba(248,113,113,.12),transparent)}
+.big.no .v.t{color:#f87171}[data-theme="light"] .big.no .v.t{color:#b91c1c}
+.inp input[type=date]{text-align:right;font-size:17px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}.two .inp{padding:0 10px}.two .inp input{font-size:17px}
+.two .field{margin-bottom:16px}
+.pill{display:inline-block;font-size:12px;font-weight:800;padding:2px 8px;border-radius:999px;background:var(--glow);color:var(--ink);white-space:nowrap}
+.pill.x{background:var(--line);color:var(--muted)}
+td small{display:block;color:var(--muted);font-size:13px;font-weight:500}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2026년 의료급여법 시행령 기준</span><h1>의료급여 본인부담금 계산기</h1><p>의료급여 1종·2종 수급자가 병원·약국에서 실제로 내는 돈을 진료 기관과 진료 형태별로 바로 알려 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="grade">의료급여 구분</label><small>수급자 증명서나 진료비 영수증에 적힌 종별</small><div class="inp"><select id="grade"><option value="1">1종 수급권자</option><option value="2" selected>2종 수급권자</option></select><span>▾</span></div></div><div class="field"><label for="place">진료 기관</label><small>처방전으로 약을 사는 경우는 「약국」</small><div class="inp"><select id="place"><option value="c1">의원·보건의료원 (1차)</option><option value="c2" selected>병원·종합병원 (2차)</option><option value="c3">상급종합병원 (3차)</option><option value="ph">약국 (처방전 1매)</option><option value="hc">보건소·보건지소·보건진료소</option></select><span>▾</span></div></div><div class="field"><label for="care">진료 형태</label><small>만성질환 외래는 2종이 병원·종합병원에서 고시 만성질환으로 진료받는 경우</small><div class="inp"><select id="care"><option value="out" selected>외래 진료</option><option value="ct">CT·MRI·PET 촬영</option><option value="in">입원 진료</option><option value="chronic">만성질환 외래 (2종·2차)</option></select><span>▾</span></div></div><div class="field"><label for="free">본인부담 면제 대상인가요?</label><small>1종: 18세 미만·임산부·고시 중증질환·희귀난치·결핵 등 / 2종: 고시 중증질환</small><div class="inp"><select id="free"><option value="0" selected>아니에요</option><option value="1">면제 대상이에요</option></select><span>▾</span></div></div><div class="field"><label for="total">급여비용 총액</label><small>진료비 영수증의 급여 항목 합계. 모르면 0으로 두세요</small><div class="inp"><input id="total" class="num" inputmode="numeric" autocomplete="off" value="50,000" aria-label="급여비용 총액"><span>원</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card how"><h2>이렇게 계산해요</h2><p>의료급여는 진료비 대부분을 <strong>의료급여기금</strong>이 내고, 수급권자는 정해진 일부만 냅니다. 얼마를 내는지는 세 가지로 갈려요. 첫째 <strong>1종인지 2종인지</strong>, 둘째 <strong>어느 단계 기관에서 진료받았는지</strong>(의원은 1차, 병원·종합병원은 2차, 상급종합병원은 3차), 셋째 <strong>외래·입원·CT 같은 진료 형태</strong>입니다. 이 계산기는 의료급여법 시행령 [별표 1]의 표를 그대로 옮겨, 고른 조합에 맞는 줄을 찾아 금액을 냅니다.</p>
+<table><thead><tr><th>구분</th><th class="n">1종</th><th class="n">2종</th></tr></thead><tbody>
+<tr><td>의원 외래</td><td class="n">1,000원</td><td class="n">1,000원</td></tr>
+<tr><td>병원·종합병원 외래</td><td class="n">1,500원</td><td class="n">15%</td></tr>
+<tr><td>상급종합병원 외래</td><td class="n">2,000원</td><td class="n">15%</td></tr>
+<tr><td>2차 기관 만성질환 외래(고시 질환)</td><td class="n">1,500원</td><td class="n">1,000원</td></tr>
+<tr><td>CT·MRI·PET</td><td class="n">5%</td><td class="n">15%</td></tr>
+<tr><td>입원</td><td class="n">없음</td><td class="n">10%</td></tr>
+<tr><td>약국(처방전 1매)</td><td class="n">500원</td><td class="n">500원</td></tr>
+<tr><td>보건소·보건지소·보건진료소</td><td class="n">없음</td><td class="n">없음</td></tr></tbody></table>
+<p>정액(원)으로 적힌 칸은 진료비가 얼마든 방문 한 번에 그 금액만 냅니다. 다만 진료비 자체가 정액보다 적으면 진료비만큼만 내요. 비율(%)로 적힌 칸은 <strong>급여비용 총액 × 비율</strong>을 원 단위에서 반올림해 계산합니다. 면제 대상에 해당하면 기관과 관계없이 급여 항목 본인부담이 없어요.</p>
+<div class="ex"><p><strong>예시: 2종 수급권자가 동네 병원에서 외래 진료, 급여비용 50,000원</strong></p>
+<p>2종의 병원 외래는 비율 부담이라 50,000원 × 15% = <strong>7,500원</strong>을 내고, 나머지 42,500원은 의료급여기금이 냅니다.</p>
+<p>같은 사람이 의원에 갔다면 정액 1,000원, 1종이 같은 병원에 갔다면 정액 1,500원이에요.</p></div></article>
+<article class="card tips"><h2>알아두면 좋은 점</h2><h3>1차 기관부터 가는 것이 원칙이에요</h3>
+<p>의료급여는 의원(1차)에서 먼저 진료받고, 필요할 때 의뢰서를 받아 병원(2차), 상급종합병원(3차)으로 옮기는 단계 진료가 기본입니다. 의뢰 없이 바로 큰 병원에 가면 급여가 인정되지 않아 진료비를 모두 낼 수 있으니, 응급이 아니라면 동네 의원에서 시작하세요.</p>
+<h3>비급여 항목은 이 계산에 들어가지 않아요</h3>
+<p>표에 나온 본인부담은 <strong>급여 항목</strong>에 대한 것이에요. 상급병실 차액, 일부 검사·주사처럼 의료급여가 적용되지 않는 비급여 비용은 따로 전액 냅니다. 영수증에서 급여와 비급여 칸을 나눠 보고 급여 합계만 넣어야 계산이 맞아요.</p>
+<h3>면제 대상인지 꼭 확인하세요</h3>
+<p>1종 중 18세 미만 아동, 임산부, 고시된 중증질환·희귀난치성질환·결핵 환자 등은 본인부담 면제 대상입니다. 2종도 고시 중증질환이 있으면 면제돼요. 면제 등록이 안 되어 있으면 창구에서 일반 기준으로 받으니, 주민센터나 진료 기관에 등록 여부를 물어보세요.</p>
+<h3>약값은 처방전 단위로 계산돼요</h3>
+<p>약국에서는 약 종류나 일수와 관계없이 처방전 한 장에 500원입니다. 같은 날 여러 진료과에서 처방전을 받으면 장수만큼 내요.</p>
+<h3>보건소는 부담이 없어요</h3>
+<p>보건소, 보건지소, 보건진료소에서 받는 급여 진료는 종별과 관계없이 본인부담이 없습니다. 예방접종이나 만성질환 관리처럼 보건소에서 할 수 있는 진료는 활용해 볼 만해요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>2종인데 병원 외래가 왜 정액이 아니라 비율인가요?</summary><p>의료급여법 시행령 별표 1에서 2종의 병원·종합병원·상급종합병원 외래는 급여비용의 15%로 정하고 있어요. 의원 외래와 2차 기관의 고시 만성질환 외래만 1,000원 정액이에요.</p></details><details><summary>1종은 입원하면 정말 돈을 안 내나요?</summary><p>급여 항목은 의료급여기금이 전부 부담해요. 다만 식대 일부, 상급병실 차액 같은 비급여 비용은 따로 낼 수 있어요.</p></details><details><summary>진료비가 1,000원보다 적으면 어떻게 되나요?</summary><p>정액 본인부담보다 급여비용이 적으면 진료비 전부만 내면 돼요. 계산기에 급여비용을 넣으면 자동으로 반영돼요.</p></details><details><summary>입력한 내용이 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>의료급여법 제9조제2항 — 제1차·제2차·제3차 의료급여기관 구분 — <a href="https://www.law.go.kr/법령/의료급여법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>의료급여법 시행령(대통령령 제35932호) 제13조제5항, [별표 1] 의료급여기금에서 부담하는 급여비용의 범위 — <a href="https://www.law.go.kr/법령/의료급여법시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 국가법령정보센터 원문 확인(2025년 12월 23일 개정, 2026년 1월 1일 시행본).</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+/*LOGIC*/
+/* ───────── 의료급여 본인부담 확인 — 판정(순수 함수, SDK 없음) ─────────
+   확인일 2026-10-16. 참고용 — 실제 본인부담금은 의료급여기관이 청구한다.
+   [법] 의료급여법 시행령(대통령령 제35932호, 2025.12.23 일부개정, 2026.1.1 시행)
+        제13조(급여비용의 부담) 제5항, [별표 1] 의료급여기금에서 부담하는 급여비용의 범위 — 국가법령정보센터
+   기관: 법 제9조제2항 제1차(의원 등)·제2차(병원·종합병원)·제3차(상급종합병원). */
+
+/* place: c1 의원(1차) / c2 병원·종합병원(2차) / c3 상급종합병원(3차) / ph 약국(처방전) / hc 보건소
+   care : out 외래 / ct CT·MRI·PET / in 입원 / chronic (2종 2차, 고시 만성질환 외래)
+   grade: 1 | 2,  free: 면제 대상(1종: 18세 미만·임산부·고시 중증·희귀난치·결핵 등 / 2종: 고시 중증질환)
+   total: 급여비용총액(원, 선택) */
+var FIX1 = { c1: 1000, c2: 1500, c3: 2000 };
+var RX = 500;
+
+function judge(p) {
+  var g = p.grade, pl = p.place, c = p.care, tot = Math.max(0, p.total || 0);
+  var r = { kind: 'fixed', amount: 0, rate: 0, rule: '', note: '' };
+  if (pl === 'hc') { r.kind = 'free'; r.rule = '보건소·보건지소·보건진료소 진료는 급여비용 전부를 기금에서 부담해요'; return r; }
+  if (p.free) {
+    r.kind = 'free';
+    r.rule = g === 1 ? '1종 중 18세 미만·임산부·고시 중증질환 등은 급여비용 전부를 기금에서 부담해요'
+      : '2종 중 고시 중증질환을 가진 사람은 급여비용 전부를 기금에서 부담해요';
+    return r;
+  }
+  if (pl === 'ph') { r.amount = RX; r.rule = '처방전 1매당 500원'; return cap(r, tot); }
+  if (g === 1) {
+    if (c === 'in') { r.kind = 'free'; r.rule = '1종 입원진료는 급여비용 전부를 기금에서 부담해요'; return r; }
+    if (c === 'ct') { r.kind = 'rate'; r.rate = 5; r.rule = 'CT·MRI·PET 등은 급여비용의 5%'; return rate(r, tot); }
+    r.amount = FIX1[pl]; r.rule = '외래 1회 방문당 ' + comma(r.amount) + '원'; return cap(r, tot);
+  }
+  if (c === 'in') { r.kind = 'rate'; r.rate = 10; r.rule = '2종 입원진료는 급여비용의 10%'; return rate(r, tot); }
+  if (c === 'ct') { r.kind = 'rate'; r.rate = 15; r.rule = 'CT·MRI·PET 등은 급여비용의 15%'; return rate(r, tot); }
+  if (pl === 'c1' || (pl === 'c2' && c === 'chronic')) { r.amount = 1000; r.rule = '외래 1회 방문당 1,000원'; return cap(r, tot); }
+  r.kind = 'rate'; r.rate = 15; r.rule = '외래진료는 급여비용의 15%'; return rate(r, tot);
+}
+function cap(r, tot) { if (tot && tot < r.amount) { r.amount = tot; r.note = '진료비가 본인부담금보다 적어 진료비 전부를 내요'; } return r; }
+function rate(r, tot) { r.amount = tot ? Math.round(tot * r.rate / 100) : 0; return r; }
+function comma(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+/*END*/
+
+var PL={c1:'의원 (1차)',c2:'병원·종합병원 (2차)',c3:'상급종합병원 (3차)',ph:'약국',hc:'보건소'};
+var CA={out:'외래',ct:'CT·MRI·PET',in:'입원',chronic:'만성질환 외래'};
+function compute(){var p={grade:+V('grade'),place:V('place'),care:V('care'),free:V('free')==='1',total:N('total')};
+ var j=judge(p),tot=p.total,amt=j.amount;
+ var how=j.kind==='free'?'전액 면제':j.kind==='rate'?'급여비용의 '+j.rate+'%':'정액 '+won(amt)+'원';
+ var rows=[['의료급여 구분',p.grade+'종'],['진료 기관',PL[p.place]],['진료 형태',(p.place==='ph'||p.place==='hc')?'-':CA[p.care]],['부담 방식',how]];
+ if(tot)rows.push(['급여비용 총액',won(tot)+'원']);
+ rows.push(['내가 내는 돈',won(j.kind==='free'?0:amt)+'원',1]);
+ if(tot)rows.push(['의료급여기금이 내는 돈',won(Math.max(0,tot-(j.kind==='free'?0:amt)))+'원',1]);
+ var r={label:'예상 본인부담금',h2:'내용',rows:rows,note:j.rule+(j.note?'. '+j.note:'')+'.'};
+ if(j.kind==='free'){r.big='0';r.unit='원';r.interp='급여 항목은 내 돈 없이 기금이 모두 부담해요';}
+ else if(j.kind==='rate'&&!tot){r.big=String(j.rate);r.unit='%';r.interp='급여비용 총액을 넣으면 금액으로 바꿔 드려요';}
+ else{r.big=won(amt);r.unit='원';r.interp=tot?'진료비의 약 '+(Math.round(amt/tot*1000)/10)+'%를 내요':'방문 1회 기준 정액이에요';}
+ return r}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function V(id){return document.getElementById(id).value}
+function N(id){var v=parseInt(String(V(id)).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'');i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big'+(r.cls?' '+r.cls:'')+'"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.unit?'':' t')+'">'+esc(r.big)+(r.unit?'<small>'+esc(r.unit)+'</small>':'')+'</div><div class="s">'+esc(r.interp)+'</div></div>';
+ h+='<table><thead><tr><th>'+esc(r.h1||'항목')+'</th><th class="n">'+esc(r.h2||'금액')+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]?' class="tot"':'')+'><td>'+esc(x[0])+(x[3]?'<small>'+esc(x[3])+'</small>':'')+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>'+(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+Array.prototype.forEach.call(document.querySelectorAll('#calcForm select'),function(s){s.addEventListener('change',render)});
+render();
+
+</script>
+</body>
+</html>

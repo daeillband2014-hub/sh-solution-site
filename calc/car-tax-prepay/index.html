@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>자동차세 연납 할인 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="배기량과 최초 등록 연도로 2027년 자동차세 연세액, 차령 경감, 지방교육세를 계산하고 1월·3월·6월·9월 연납 때 아끼는 금액을 지방세법 기준으로 비교합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/car-tax-prepay/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="자동차세 연납 할인 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="배기량과 최초 등록 연도로 2027년 자동차세 연세액, 차령 경감, 지방교육세를 계산하고 1월·3월·6월·9월 연납 때 아끼는 금액을 지방세법 기준으로 비교합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/car-tax-prepay/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "2027년 연납은 언제 신청하나요?", "acceptedAnswer": {"@type": "Answer", "text": "지방세법상 연세액을 한꺼번에 내는 기간은 1월·3월·6월·9월의 각 16일부터 말일까지예요. 공제가 가장 큰 때는 1월 16일~31일입니다."}}, {"@type": "Question", "name": "전기차도 연납 할인이 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 전기·수소차는 연세액 10만원에 지방교육세 3만원이 붙고, 같은 공식으로 공제돼요. 1월에 내면 5,947원을 아낍니다."}}, {"@type": "Question", "name": "차령은 어떻게 세나요?", "acceptedAnswer": {"@type": "Answer", "text": "최초 등록이 1~6월이면 과세연도 − 등록 연도 + 1년이에요. 7~12월 등록이면 제1기분은 1년 적게, 제2기분은 같은 방식으로 셉니다. 3년 차부터 해마다 5%씩 깎이고 12년 차에서 멈춰요."}}, {"@type": "Question", "name": "고지서 금액과 다르게 나와요.", "acceptedAnswer": {"@type": "Answer", "text": "지자체가 조례로 세율을 올렸거나 차종 구분이 다르면 차이가 날 수 있어요. 최종 금액은 위택스나 시·군·구 고지서를 기준으로 하세요."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.grid2 .field{min-width:0}
+.it{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.it .nm{flex:1;min-width:0;font-weight:700;font-size:15px}
+.it .nm small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.it .inp{width:128px;height:46px;flex:none}
+.it .inp input{font-size:17px}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15px}
+.chk input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--c1);flex:none}
+.chk span{flex:1}
+.grp{font-weight:800;font-size:15px;margin:18px 0 4px}
+.big .v.t{font-size:clamp(28px,8vw,38px)}
+td.ok{color:var(--ink)}
+td.no{color:#f87171}
+[data-theme="light"] td.no{color:#dc2626}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2027년 1월 연납 기준</span><h1>자동차세 연납 할인 계산기</h1><p>배기량과 처음 등록한 해만 넣으면 2027년 자동차세를 미리 낼 때 1월·3월·6월·9월에 각각 얼마를 아끼는지 비교해 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="fuel">연료</label><small>전기·수소차는 배기량과 관계없이 연 10만원</small><div class="inp"><select id="fuel"><option value="ice">휘발유·경유·LPG</option><option value="ev">전기·수소 등 그 밖의 승용</option></select><span>▾</span></div></div><div class="field"><label for="cc">배기량</label><small>자동차등록증의 배기량(cc)</small><div class="inp"><input id="cc" class="num" inputmode="numeric" autocomplete="off" value="1,598"><span>cc</span></div></div><div class="grid2"><div class="field"><label for="reg">최초 등록 연도</label><div class="inp"><select id="reg"><option value="2027">2027년</option><option value="2026">2026년</option><option value="2025">2025년</option><option value="2024">2024년</option><option value="2023">2023년</option><option value="2022">2022년</option><option value="2021" selected>2021년</option><option value="2020">2020년</option><option value="2019">2019년</option><option value="2018">2018년</option><option value="2017">2017년</option><option value="2016">2016년</option><option value="2015">2015년</option><option value="2014">2014년</option><option value="2013">2013년</option><option value="2012">2012년</option><option value="2011">2011년</option><option value="2010">2010년</option><option value="2009">2009년 이전</option></select><span>▾</span></div></div><div class="field"><label for="half">등록한 달</label><div class="inp"><select id="half"><option value="1">1~6월</option><option value="2">7~12월</option></select><span>▾</span></div></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>자동차세는 원래 6월(제1기분)과 12월(제2기분)에 반씩 나눠 냅니다. 이걸 연초에 한꺼번에 내면 남은 기간만큼 이자를 쳐서 깎아 주는 게 <strong>연납 공제</strong>예요. 계산은 세 단계로 이뤄집니다.</p>
+<h3>1단계 — 기본 연세액</h3><p>비영업용 승용차는 배기량 1cc당 세액이 정해져 있어요. 1,000cc 이하는 80원, 1,600cc 이하는 140원, 1,600cc를 넘으면 200원입니다. 전기차·수소차처럼 배기량이 없는 그 밖의 승용차는 1년 10만원이에요.</p>
+<h3>2단계 — 차령 경감</h3><p>차령이 3년 이상이면 기분마다 「연세액의 절반 − 절반 × 5% × (차령 − 2)」로 깎아요. 12년을 넘으면 12년으로 봐서 최대 50%까지 줄어듭니다. 차령은 처음 등록한 해부터 세는데, 1~6월에 등록했다면 2027 − 등록 연도 + 1, 7~12월에 등록했다면 제1기분은 한 해 덜 쳐요.</p>
+<h3>3단계 — 언제 내느냐에 따른 공제</h3>
+<table><thead><tr><th>납부 기간</th><th class="n">공제 계산</th></tr></thead><tbody>
+<tr><td>1월 16일 ~ 31일</td><td class="n">연세액 × 334/365 × 5%</td></tr>
+<tr><td>3월 16일 ~ 31일</td><td class="n">연세액 × 275/365 × 5%</td></tr>
+<tr><td>6월 16일 ~ 30일</td><td class="n">제2기분 × 5%</td></tr>
+<tr><td>9월 16일 ~ 30일</td><td class="n">제2기분 × 92/184 × 5%</td></tr></tbody></table>
+<p>일수는 각 납부기한 다음 날부터 12월 31일까지이고, 2027년은 평년이라 365일로 나눠요. 여기에 자동차세의 30%인 지방교육세도 같은 비율로 줄어드니, 실제로 아끼는 돈은 공제액 × 1.3이 됩니다.</p>
+<div class="ex"><p><strong>예시: 1,598cc 휘발유차, 2021년 3월 등록</strong></p>
+<p>기본 연세액은 1,598 × 140원 = 223,720원. 2027년 차령은 7년이라 기분마다 111,860원에서 25%를 빼 83,895원, 1년 자동차세는 167,790원이에요. 지방교육세 50,337원을 더하면 원래 낼 돈은 218,127원입니다.</p>
+<p>1월에 내면 공제액은 167,790 × 334/365 × 5% = 7,676원, 지방교육세 몫까지 <strong>9,978원을 아껴요</strong>. 3월엔 8,216원, 6월엔 5,452원, 9월엔 2,726원으로 줄어듭니다.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>1월이 가장 이득인 이유</h3><p>공제는 미리 내는 기간에 비례해요. 1월에 내면 1년 중 334일치 이자를 쳐 주지만 3월엔 275일, 9월엔 제2기분 몫만 남아요. 같은 차라도 1월과 9월의 차이가 3배 넘게 벌어지니, 매년 1월 16일에서 31일 사이를 달력에 표시해 두는 게 좋아요.</p>
+<h3>이자율 5%는 법으로 정해져 있어요</h3><p>예전엔 연납 할인율이 10%였다가 단계적으로 내려 지금은 지방세법 시행령에서 이자율을 100분의 5로 정하고 있어요. 그래서 실제 할인 폭은 연세액의 약 4.6% 정도가 상한입니다.</p>
+<h3>연세액이 10만원 이하라면</h3><p>경차처럼 1년 자동차세가 10만원 이하인 차는 시·군·구가 6월 정기분 때 1년치를 한꺼번에 부과하면서 제2기분 세액의 5%를 빼 줄 수 있어요. 이 경우 따로 연납을 신청하지 않아도 6월 고지서에 반영되니 고지서를 꼼꼼히 확인하세요.</p>
+<h3>차를 팔거나 폐차하면</h3><p>연납 후 중간에 차를 넘기거나 말소하면 남은 기간 세금은 일할로 돌려받는 구조예요. 미리 냈다고 손해 보는 일은 없으니 차를 바꿀 계획이 있어도 연납을 망설일 필요는 크지 않아요. 구체적인 환급 금액은 해당 시·군·구에서 정합니다.</p>
+<h3>지역마다 고지서가 다를 수 있어요</h3><p>지방세법은 조례로 표준세율의 50%까지 올릴 수 있게 하고 있어요. 이 계산기는 표준세율 기준이라 세율을 바꾼 지역이라면 고지서 금액과 차이가 납니다. 또 영업용·승합·화물차는 세율 체계가 달라 이 계산 대상이 아니에요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>2027년 연납은 언제 신청하나요?</summary><p>지방세법상 연세액을 한꺼번에 내는 기간은 1월·3월·6월·9월의 각 16일부터 말일까지예요. 공제가 가장 큰 때는 1월 16일~31일입니다.</p></details><details><summary>전기차도 연납 할인이 되나요?</summary><p>네. 전기·수소차는 연세액 10만원에 지방교육세 3만원이 붙고, 같은 공식으로 공제돼요. 1월에 내면 5,947원을 아낍니다.</p></details><details><summary>차령은 어떻게 세나요?</summary><p>최초 등록이 1~6월이면 과세연도 − 등록 연도 + 1년이에요. 7~12월 등록이면 제1기분은 1년 적게, 제2기분은 같은 방식으로 셉니다. 3년 차부터 해마다 5%씩 깎이고 12년 차에서 멈춰요.</p></details><details><summary>고지서 금액과 다르게 나와요.</summary><p>지자체가 조례로 세율을 올렸거나 차종 구분이 다르면 차이가 날 수 있어요. 최종 금액은 위택스나 시·군·구 고지서를 기준으로 하세요.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>지방세법 제127조제1항 — 비영업용 승용 cc당 80원·140원·200원, 차령 경감 계산식, 그 밖의 승용 10만원 / 제3항 — 조례로 50%까지 가감 — <a href="https://www.law.go.kr/법령/지방세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>지방세법 제128조제1항·제3항·제4항 — 납기, 연세액 일시 납부 공제 계산식, 10만원 이하 일괄 부과</li><li>지방세법 제151조제1항제7호 — 지방교육세는 자동차세액의 100분의 30</li><li>지방세법 시행령 제122조제2항(차령 계산), 제125조제6항(이자율 100분의 5) — <a href="https://www.law.go.kr/법령/지방세법시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 원문 확인. 과세연도 2027년 기준.</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+var RATE = 0.05;
+var EDU = 0.3;
+var EV_TAX = 100000;
+
+function ccRate(cc) { return cc <= 1000 ? 80 : cc <= 1600 ? 140 : 200; }
+function leap(y) { return (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0; }
+
+var WINDOWS = [
+  { k: 'jan', label: '1월', range: '1월 16일 ~ 31일' },
+  { k: 'mar', label: '3월', range: '3월 16일 ~ 31일' },
+  { k: 'jun', label: '6월', range: '6월 16일 ~ 30일' },
+  { k: 'sep', label: '9월', range: '9월 16일 ~ 30일' }
+];
+
+function age(y, regYear, half2, part) {
+  return y - regYear + (half2 && part === 1 ? 0 : 1);
+}
+function partTax(A, n) {
+  var m = Math.min(Math.max(n, 2), 12);
+  return Math.floor(A / 2 - (A / 2 * 5 / 100) * (m - 2));
+}
+
+
+function calc(inp) {
+  var y = inp.year;
+  var diy = leap(y) ? 366 : 365;
+  var A, s1, s2, n1 = 0, n2 = 0;
+  if (inp.ev) { A = EV_TAX; s1 = A / 2; s2 = A / 2; }
+  else {
+    A = Math.floor(inp.cc * ccRate(inp.cc));
+    n1 = age(y, inp.regYear, inp.half2, 1);
+    n2 = age(y, inp.regYear, inp.half2, 2);
+    s1 = partTax(A, n1); s2 = partTax(A, n2);
+  }
+  var T = s1 + s2;
+  var febEnd = 31 + (leap(y) ? 29 : 28);
+  var days = { jan: diy - 31, mar: diy - (febEnd + 31), sep: 92 };
+  var ded = {
+    jan: Math.floor(T * days.jan / diy * RATE),
+    mar: Math.floor(T * days.mar / diy * RATE),
+    jun: Math.floor(s2 * RATE),
+    sep: Math.floor(s2 * days.sep / 184 * RATE)
+  };
+  var rows = WINDOWS.map(function (w) {
+    var d = ded[w.k];
+    return { k: w.k, label: w.label, range: w.range, ded: d, save: Math.floor(d * (1 + EDU)), days: days[w.k] || 0 };
+  });
+  return {
+    year: y, diy: diy, A: A, s1: s1, s2: s2, n1: n1, n2: n2, T: T,
+    edu: Math.floor(T * EDU), total: T + Math.floor(T * EDU),
+    rows: rows, small: T <= 100000
+  };
+}
+
+function compute(){var ev=N('fuel')==='ev',cc=N('cc');
+if(!ev&&!cc)return {label:'1월 연납 시 아끼는 돈',big:'0',unit:'원',interp:'배기량을 넣어 주세요',rows:[]};
+var r=calc({ev:ev,cc:cc,regYear:parseInt(N('reg'),10),half2:N('half')==='2',year:2027});var j=r.rows[0];
+var rows=[];if(ev)rows.push(['기본 연세액 (그 밖의 승용)',won(r.A)+'원']);else rows.push(['기본 연세액 ('+won(cc)+'cc × '+ccRate(cc)+'원)',won(r.A)+'원']);
+rows.push(['제1기분'+(ev?'':' (차령 '+r.n1+'년)'),won(r.s1)+'원']);rows.push(['제2기분'+(ev?'':' (차령 '+r.n2+'년)'),won(r.s2)+'원']);
+rows.push(['자동차세 1년',won(r.T)+'원',1]);rows.push(['지방교육세 (30%)',won(r.edu)+'원']);rows.push(['원래 낼 돈 합계',won(r.total)+'원',1]);
+r.rows.forEach(function(w){rows.push([w.label+' 연납 시 아끼는 돈 ('+w.range+')',won(w.save)+'원'])});
+rows.push(['1월에 내면 낼 돈',won(r.total-j.save)+'원',1]);
+return {label:'2027년 1월에 연납하면 아끼는 돈',big:won(j.save),unit:'원',interp:'1년 세금 '+won(r.total)+'원의 약 '+(r.total?Math.round(j.save/r.total*1000)/10:0)+'%예요',rows:rows,
+note:(r.small?'연세액이 10만원 이하라 시·군·구가 6월에 1년치를 한 번에 부과하면서 제2기분의 5%를 빼 줄 수도 있어요(지방세법 제128조제4항). ':'')+'아끼는 돈은 연납 공제액에 지방교육세 30% 몫을 더한 값이에요. 조례로 세율을 올린 지역은 고지서가 다를 수 있어요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+function D(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[^0-9.]/g,''));return isFinite(v)?v:0}
+function C(id){return !!document.getElementById(id).checked}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'');i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+Array.prototype.forEach.call(document.querySelectorAll('input.dec'),function(i){
+ function fm(){var v=i.value.replace(/[^0-9.]/g,''),k=v.indexOf('.');if(k>=0)v=v.slice(0,k+1)+v.slice(k+1).replace(/\./g,'').slice(0,2);var a=v.split('.');a[0]=a[0].replace(/^0+(?=\d)/,'');if(a[0])a[0]=Number(a[0]).toLocaleString('en-US');i.value=a.join('.')}
+ i.addEventListener('input',fm);fm()});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.text?' t':'')+'">'+esc(r.big)+'<small>'+esc(r.unit||'')+'</small></div><div class="s">'+esc(r.interp)+'</div></div>';
+ h+='<table><thead><tr><th>'+esc(r.h1||'항목')+'</th><th class="n">'+esc(r.h2||'금액')+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){var c=x[2]===1?' class="tot"':'';var tc=x[2]==='ok'?' ok':x[2]==='no'?' no':'';h+='<tr'+c+'><td>'+esc(x[0])+'</td><td class="n'+tc+'">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>'+(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+render();
+
+</script>
+</body>
+</html>

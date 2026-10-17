@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>해산급여·장제급여 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="기초생활 수급자가 출산하거나 사망했을 때 받는 해산급여(아이 1명당 70만원)와 장제급여(1구당 80만원)의 대상 여부, 받을 금액, 신청 시작일과 참고 기한을 바로 계산합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/birth-funeral-benefit/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="해산급여·장제급여 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="기초생활 수급자가 출산하거나 사망했을 때 받는 해산급여(아이 1명당 70만원)와 장제급여(1구당 80만원)의 대상 여부, 받을 금액, 신청 시작일과 참고 기한을 바로 계산합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/birth-funeral-benefit/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "해산급여는 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년 기초생활보장 사업안내 기준 아이 1명당 700,000원을 현금으로 받아요. 쌍둥이면 1,400,000원처럼 아이 수만큼 더해져요."}}, {"@type": "Question", "name": "교육급여만 받는데 해산급여를 받을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "받을 수 없어요. 국민기초생활 보장법 제13조와 제14조는 생계·주거·의료급여 중 하나 이상을 받는 수급자만 대상으로 정하고 있어요."}}, {"@type": "Question", "name": "출산 전에 미리 신청할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 출산 예정일 4주 전부터 의사 소견서나 진단서, 산모수첩으로 예정일을 확인받고 신청할 수 있어요."}}, {"@type": "Question", "name": "장제급여는 누가 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "사망한 수급자의 장례를 실제로 치른 사람이 받아요. 1구당 800,000원이며 장례 절차를 진행했다는 증빙서류가 필요해요."}}, {"@type": "Question", "name": "입력한 정보가 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.big .v.t{font-size:clamp(28px,8.4vw,38px)}
+.big.ok{border-color:rgba(52,211,153,.45)}.big.ok .s{color:#10b981}
+.big.mid{border-color:rgba(251,191,36,.5)}
+.big.no{background:linear-gradient(135deg,rgba(248,113,113,.13),transparent);border-color:rgba(248,113,113,.4)}
+.chk{display:flex;flex-wrap:wrap;gap:8px}
+.chk label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:15px;background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;margin:0;cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--c1)}
+.inp input[type=date]{text-align:right;font-size:17px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.yrs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.yrs .inp{height:50px;padding:0 10px}.yrs .inp input{font-size:17px;text-align:center}
+.rl{margin:12px 0 0;padding-left:18px}.rl li{font-size:14px;color:var(--sub);margin:4px 0}
+.st{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:4px;vertical-align:1px}
+.st.ok{background:rgba(52,211,153,.16);color:#10b981}.st.check{background:rgba(251,191,36,.18);color:#d97706}.st.no{background:var(--line);color:var(--muted)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tw table{font-size:14px;min-width:0}.tw td,.tw th{padding:10px 4px}.tw td:first-child{word-break:break-all}
+tr.grp td{background:var(--bg-2);font-weight:800;color:var(--fg)}
+[hidden]{display:none!important}
+.yrs>*,.row2>*{min-width:0}.inp input{width:100%}
+article td.n{white-space:normal}.tw td.n{white-space:nowrap}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2026년 기초생활보장 사업안내 기준</span><h1>해산급여·장제급여 계산기</h1><p>받고 있는 급여와 출산·사망 여부를 고르면 해산급여·장제급여를 받을 수 있는지, 얼마인지 알려 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="kind">어떤 일인가요?</label><div class="inp"><select id="kind"><option value="birth" selected>출산 (출산 예정 포함)</option><option value="death">수급자 사망 (장례)</option></select><span>▾</span></div></div><div class="field"><label>지금 받고 있는 급여</label><small>해당하는 것을 모두 고르세요</small><div class="chk"><label><input type="checkbox" name="types" value="living" checked>생계급여</label><label><input type="checkbox" name="types" value="medical">의료급여</label><label><input type="checkbox" name="types" value="housing">주거급여</label><label><input type="checkbox" name="types" value="edu">교육급여</label></div></div><div id="fc"><div class="field"><label for="children">태어난(태어날) 아이 수</label><small>쌍둥이면 2명</small><div class="inp"><select id="children"><option value="1" selected>1명</option><option value="2">2명</option><option value="3">3명</option><option value="4">4명</option><option value="5">5명</option></select><span>▾</span></div></div></div><div class="field"><label for="dt" id="dtl">출산일 또는 출산 예정일</label><small>선택 사항 · 넣으면 신청 시작일과 참고 기한을 계산해요</small><div class="inp"><input id="dt" type="date" aria-label="날짜"><span></span></div></div><button class="go" type="submit">확인하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>해산급여와 장제급여는 국민기초생활 보장법이 정한 일곱 가지 급여 중 두 가지예요. 법은 <strong>생계·주거·의료급여 중 하나 이상을 받는 수급자</strong>에게만 두 급여를 준다고 정하고 있어서, 계산기는 먼저 받고 있는 급여를 보고 대상인지 가립니다. 금액은 법령이 아니라 보건복지부 「2026년 국민기초생활보장 사업안내」에 정해져 있어요.</p>
+<table><thead><tr><th>구분</th><th>지급 사유</th><th class="n">금액</th></tr></thead><tbody>
+<tr><td>해산급여</td><td>수급자의 출산(출산 예정 포함)</td><td class="n">아이 1명당 700,000원</td></tr>
+<tr><td>장제급여</td><td>수급자의 사망</td><td class="n">1구당 800,000원</td></tr></tbody></table>
+<p>해산급여는 태어난 아이 수만큼 곱해요. 쌍둥이면 1,400,000원, 세쌍둥이면 2,100,000원입니다. 장제급여는 사망한 수급자 한 사람에 대해 정액 800,000원이며, 실제로 장례를 치른 사람에게 지급돼요.</p>
+<h3>날짜 계산</h3>
+<p>출산 예정일을 넣으면 예정일 4주(28일) 전 날짜를 신청 시작일로 보여 줘요. 사업안내에 「출산예정자는 출산예정일 4주 전부터 신청 가능」이라고 적혀 있기 때문이에요. 이미 지난 날짜를 넣으면 며칠 지났는지와 함께 참고 기한을 보여 드려요. 법령과 사업안내에는 일반 수급자의 신청 기한이 따로 없어서, 지방재정법의 금전채권 소멸시효 5년을 「늦어도 이때까지」라는 참고선으로만 씁니다.</p>
+<div class="ex"><p><strong>예시: 의료급여 수급자가 쌍둥이를 출산 예정(예정일 12월 1일), 오늘 10월 15일</strong></p>
+<p>의료급여를 받고 있으니 대상이에요. 금액은 700,000원 × 2명 = <strong>1,400,000원</strong>.</p>
+<p>예정일 4주 전인 11월 3일부터 신청할 수 있어서 19일 뒤(D-19)부터 신청 가능합니다.</p>
+<p>장제급여 예시: 주거·교육급여를 받던 분이 돌아가셨다면 주거급여 덕분에 대상이고, 장례를 치른 가족이 800,000원을 받아요.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>교육급여만 받으면 대상이 아니에요</h3>
+<p>가장 많이 헷갈리는 부분이에요. 사업안내에 「교육급여만 받는 수급자는 급여 대상이 아니다」라고 분명히 적혀 있어요. 반대로 주거급여 하나만 받아도 대상이 되니, 우리 집이 어떤 급여를 받고 있는지 먼저 확인하세요. 수급자 증명서나 주민센터 문의로 알 수 있어요.</p>
+<h3>해산급여 신청 서류</h3>
+<p>시행규칙에 따라 해산급여 신청서에는 출생증명서를 붙여야 하는데, 출생신고를 했다면 출생신고로 대신할 수 있어요. 출산 전에 미리 신청할 때는 의사 소견서나 진단서, 산모수첩으로 예정일을 확인합니다. 사산·유산의 경우에도 의사·한의사·조산사의 사실확인서를 첨부해 신청할 수 있어요. 긴급복지지원으로 해산비를 이미 받았다면 해산급여는 겹쳐 받을 수 없습니다.</p>
+<h3>장제급여 신청 서류</h3>
+<p>장제급여는 시장·군수·구청장에게 신청서를 내요. 사망신고로 사망신고서를 갈음할 수 있고, 검안·운반·화장·매장 같은 장례 절차를 실제로 진행했다는 증빙서류를 함께 내야 합니다. 장례식장 영수증이나 화장 증명 같은 서류를 버리지 말고 챙겨 두세요.</p>
+<h3>어디서, 얼마나 빨리</h3>
+<p>2022년 9월부터 주소지와 상관없이 전국 어디서나 신청할 수 있어요. 처리 기간은 신청일로부터 4일 이내가 원칙이라, 서류만 갖추면 비교적 빨리 받을 수 있습니다. 출산 직후나 장례 중에는 경황이 없으니 가족 중 한 사람이 미리 서류를 챙기는 게 좋아요.</p>
+<h3>자주 하는 실수</h3>
+<p>기한이 없다고 미뤄 두다가 잊어버리는 경우가 많아요. 법에 기한이 없다는 것이 영원히 받을 수 있다는 뜻은 아니니, 출산·장례 후 가능한 한 빨리 신청하세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>해산급여는 얼마인가요?</summary><p>2026년 기초생활보장 사업안내 기준 아이 1명당 700,000원을 현금으로 받아요. 쌍둥이면 1,400,000원처럼 아이 수만큼 더해져요.</p></details><details><summary>교육급여만 받는데 해산급여를 받을 수 있나요?</summary><p>받을 수 없어요. 국민기초생활 보장법 제13조와 제14조는 생계·주거·의료급여 중 하나 이상을 받는 수급자만 대상으로 정하고 있어요.</p></details><details><summary>출산 전에 미리 신청할 수 있나요?</summary><p>네. 출산 예정일 4주 전부터 의사 소견서나 진단서, 산모수첩으로 예정일을 확인받고 신청할 수 있어요.</p></details><details><summary>장제급여는 누가 받나요?</summary><p>사망한 수급자의 장례를 실제로 치른 사람이 받아요. 1구당 800,000원이며 장례 절차를 진행했다는 증빙서류가 필요해요.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>국민기초생활 보장법 제7조제1항, 제13조제1항(해산급여), 제14조제1항·제2항(장제급여) — <a href="https://www.law.go.kr/법령/국민기초생활보장법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국민기초생활 보장법 시행규칙 제17조제3항, 제18조제1항 — 신청서와 첨부 서류 — <a href="https://www.law.go.kr/법령/국민기초생활보장법시행규칙" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>보건복지부 「2026년 국민기초생활보장 사업안내」 254~256쪽 — 해산급여 1인당 700천원, 장제급여 1구당 800천원, 출산예정일 4주 전 신청</li><li>지방재정법 제82조 — 금전채권 소멸시효 5년(참고선으로만 사용) — <a href="https://www.law.go.kr/법령/지방재정법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 15일 법령 원문과 보건복지부 사업안내 원문 확인.</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+
+var BIRTH_PER_CHILD=700000,FUNERAL_PER_PERSON=800000,PRE_APPLY_DAYS=28,LIMIT_YEARS=5;
+function qualifies(t){t=t||[];return t.indexOf('living')>=0||t.indexOf('medical')>=0||t.indexOf('housing')>=0}
+function reasonOf(t){t=t||[];if(qualifies(t))return 'ok';if(t.indexOf('edu')>=0)return 'eduOnly';return 'none'}
+function childCount(c){return Math.max(1,Math.min(10,parseInt(c,10)||1))}
+function amountOf(kind,children){return kind==='birth'?BIRTH_PER_CHILD*childCount(children):FUNERAL_PER_PERSON}
+function dayNum(d){return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/86400000)}
+function parseDate(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s||''));if(!m)return null;var d=new Date(+m[1],+m[2]-1,+m[3]);return d.getMonth()===+m[2]-1?d:null}
+function fmt(d){return d.getFullYear()+'.'+(d.getMonth()+1)+'.'+d.getDate()+'.'}
+function deadline(kind,dateStr,today){var ev=parseDate(dateStr);if(!ev)return null;var lim=new Date(ev.getFullYear()+LIMIT_YEARS,ev.getMonth(),ev.getDate());
+ var t=dayNum(today),e=dayNum(ev);var r={event:ev,limit:lim,left:dayNum(lim)-t,since:t-e,future:e>t,openIn:0,open:null,invalid:false};
+ if(kind==='birth'&&r.future){r.open=new Date(ev.getFullYear(),ev.getMonth(),ev.getDate()-PRE_APPLY_DAYS);r.openIn=Math.max(0,dayNum(r.open)-t)}
+ if(kind==='death'&&r.future)r.invalid=true;return r}
+function judge(inp,today){var reason=reasonOf(inp.types),ok=reason==='ok';var n=inp.kind==='birth'?childCount(inp.children):1;
+ return {ok:ok,reason:reason,kind:inp.kind,n:n,amount:ok?amountOf(inp.kind,n):0,unit:inp.kind==='birth'?BIRTH_PER_CHILD:FUNERAL_PER_PERSON,dl:deadline(inp.kind,inp.date,today||new Date())}}
+function syncKind(){var b=N('kind')==='birth';document.getElementById('fc').hidden=!b;document.getElementById('dtl').textContent=b?'출산일 또는 출산 예정일':'사망일'}
+function compute(){syncKind();var types=[];Array.prototype.forEach.call(document.querySelectorAll('input[name=types]:checked'),function(c){types.push(c.value)});
+ var kind=N('kind');var r=judge({types:types,kind:kind,children:N('children'),date:document.getElementById('dt').value},new Date());
+ var nm=kind==='birth'?'해산급여':'장제급여';
+ var rows=[['대상 조건','생계·의료·주거급여 중 1개 이상'],['받고 있는 급여',types.length?types.map(function(t){return {living:'생계',medical:'의료',housing:'주거',edu:'교육'}[t]}).join('·'):'없음',0,r.ok?['ok','충족']:['no','미충족']],
+  [kind==='birth'?'아이 1명당':'1구당',won(r.unit)+'원'],[kind==='birth'?'아이 수':'인원',r.n+(kind==='birth'?'명':'구')],[nm+' 합계',won(r.amount)+'원',1]];
+ var list=[],d=r.dl;
+ if(d){if(d.invalid)list.push('사망일이 오늘보다 뒤예요. 날짜를 다시 확인해 주세요.');
+  else if(kind==='birth'&&d.future)list.push('출산 예정일 4주 전인 '+fmt(d.open)+'부터 신청할 수 있어요'+(d.openIn?' (D-'+d.openIn+')':' (지금 신청 가능)')+'.');
+  else{list.push((kind==='birth'?'출산':'사망')+' 후 '+d.since+'일 지났어요.');list.push('법령에 신청 기한은 따로 없지만, 금전채권 소멸시효 5년을 참고선으로 보면 '+fmt(d.limit)+'까지예요 (D-'+d.left+').')}}
+ list.push(kind==='birth'?'긴급복지지원 해산비와는 겹쳐 받을 수 없어요.':'실제로 장례를 치른 사람에게 지급되고, 장례 절차를 진행한 증빙서류가 필요해요.');
+ if(r.ok)return {label:nm+' 예상 금액',big:won(r.amount),unit:'원',state:'ok',interp:kind==='birth'?(r.n>1?'아이 '+r.n+'명 × 70만원이에요':'아이 1명 기준 70만원이에요'):'수급자 1구당 80만원이에요',rows:rows,list:list,note:'주소지와 관계없이 전국 시·군·구(읍·면·동)에서 신청할 수 있고, 신청일로부터 4일 이내 처리가 원칙이에요.'};
+ return {label:nm,big:'해당 안 됨',txt:1,state:'no',interp:r.reason==='eduOnly'?'교육급여만 받는 경우는 대상이 아니에요':'생계·의료·주거급여 중 하나 이상을 받아야 해요',rows:rows,list:list,
+  note:'긴급한 상황이라면 주민센터에 긴급복지지원(해산비·장제비)을 따로 문의해 보세요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'').slice(0,12);i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+Array.prototype.forEach.call(document.querySelectorAll('input.yr'),function(i){i.addEventListener('input',function(){var v=i.value.replace(/\D/g,'').slice(0,4);if(v!==i.value)i.value=v})});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big'+(r.state?' '+r.state:'')+'"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.txt?' t':'')+'">'+esc(r.big)+(r.unit?'<small>'+esc(r.unit)+'</small>':'')+'</div><div class="s">'+esc(r.interp)+'</div></div>';
+ var hd=r.head||['항목','금액'];
+ h+='<table><thead><tr><th>'+esc(hd[0])+'</th><th class="n">'+esc(hd[1])+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]===1?' class="tot"':'')+'><td>'+esc(x[0])+(x[3]?' <span class="st '+x[3][0]+'">'+esc(x[3][1])+'</span>':'')+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>';
+ if(r.list&&r.list.length){h+='<ul class="rl">';r.list.forEach(function(t){h+='<li>'+esc(t)+'</li>'});h+='</ul>'}
+ h+=(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+
+document.getElementById('kind').addEventListener('change',render);
+render();
+</script>
+</body>
+</html>

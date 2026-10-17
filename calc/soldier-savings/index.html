@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>장병내일준비적금 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="군별 복무기간과 입대일, 은행별 월 납입액, 금리를 넣으면 장병내일준비적금 원금, 정부 매칭지원금 100%, 단리 이자를 더한 전역 때 만기 금액을 한 번에 계산합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/soldier-savings/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="장병내일준비적금 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="군별 복무기간과 입대일, 은행별 월 납입액, 금리를 넣으면 장병내일준비적금 원금, 정부 매칭지원금 100%, 단리 이자를 더한 전역 때 만기 금액을 한 번에 계산합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/soldier-savings/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "장병내일준비적금 한도는 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2025년 1월 1일 이후 납입분부터 은행 한 곳당 월 30만원, 모든 금융회사 합계 월 55만원까지 넣을 수 있어요."}}, {"@type": "Question", "name": "정부 매칭지원금은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "전역할 때 내가 넣은 원금의 100%를 매칭지원금으로 더해 받는 것으로 계산했어요. 18개월 동안 월 55만원을 넣으면 원금 990만원에 매칭 990만원이에요."}}, {"@type": "Question", "name": "이자에 세금이 붙나요?", "acceptedAnswer": {"@type": "Answer", "text": "조세특례제한법 제91조의19에 따라 비과세예요. 다만 2026년 12월 31일까지 가입한 적금이 대상이고, 2029년까지 연장안은 국회 심의 중이에요."}}, {"@type": "Question", "name": "이미 복무 중인데 지금 가입하면 얼마나 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "입대일을 넣으면 오늘부터 전역일까지 남은 꽉 찬 개월 수로만 계산해 드려요. 남은 기간이 짧을수록 원금과 매칭이 함께 줄어요."}}, {"@type": "Question", "name": "입력한 정보가 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.big .v.t{font-size:clamp(28px,8.4vw,38px)}
+.big.ok{border-color:rgba(52,211,153,.45)}.big.ok .s{color:#10b981}
+.big.mid{border-color:rgba(251,191,36,.5)}
+.big.no{background:linear-gradient(135deg,rgba(248,113,113,.13),transparent);border-color:rgba(248,113,113,.4)}
+.chk{display:flex;flex-wrap:wrap;gap:8px}
+.chk label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:15px;background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;margin:0;cursor:pointer}
+.chk input{width:18px;height:18px;accent-color:var(--c1)}
+.inp input[type=date]{text-align:right;font-size:17px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.yrs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.yrs .inp{height:50px;padding:0 10px}.yrs .inp input{font-size:17px;text-align:center}
+.rl{margin:12px 0 0;padding-left:18px}.rl li{font-size:14px;color:var(--sub);margin:4px 0}
+.st{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:4px;vertical-align:1px}
+.st.ok{background:rgba(52,211,153,.16);color:#10b981}.st.check{background:rgba(251,191,36,.18);color:#d97706}.st.no{background:var(--line);color:var(--muted)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tw table{font-size:14px;min-width:0}.tw td,.tw th{padding:10px 4px}.tw td:first-child{word-break:break-all}
+tr.grp td{background:var(--bg-2);font-weight:800;color:var(--fg)}
+[hidden]{display:none!important}
+.yrs>*,.row2>*{min-width:0}.inp input{width:100%}
+article td.n{white-space:normal}.tw td.n{white-space:nowrap}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2026년 납입 한도 월 55만원</span><h1>장병내일준비적금 계산기</h1><p>입대일과 매달 넣을 금액을 정하면 전역할 때 원금·정부 매칭·이자를 합쳐 얼마를 받는지 보여 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="branch">군</label><small>복무기간: 육군·해병대 18개월, 해군 20개월, 공군 21개월</small><div class="inp"><select id="branch"><option value="army" selected>육군</option><option value="marine">해병대</option><option value="navy">해군</option><option value="air">공군</option></select><span>▾</span></div></div><div class="field"><label for="kind">기준 날짜</label><div class="inp"><select id="kind"><option value="enlist" selected>입대일로 계산</option><option value="discharge">전역 예정일로 계산</option></select><span>▾</span></div></div><div class="field"><label for="dt">날짜</label><small>이미 복무 중이면 오늘부터 남은 개월만 셉니다</small><div class="inp"><input id="dt" type="date" aria-label="날짜"><span></span></div></div><div class="row2"><div class="field"><label for="b1">은행 1 월 납입</label><small>은행당 30만원까지</small><div class="inp"><input id="b1" class="num" inputmode="numeric" autocomplete="off" value="30" aria-label="은행 1 월 납입"><span>만원</span></div></div><div class="field"><label for="b2">은행 2 월 납입</label><small>합계 55만원까지</small><div class="inp"><input id="b2" class="num" inputmode="numeric" autocomplete="off" value="25" aria-label="은행 2 월 납입"><span>만원</span></div></div></div><div class="field"><label for="rate">연 금리</label><small>가입 은행의 적금 금리 (비우면 이자 없이 계산)</small><div class="inp"><input id="rate" inputmode="decimal" autocomplete="off" value="5" aria-label="연 금리"><span>%</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>장병내일준비적금은 현역병 등이 복무하는 동안 매달 적금을 넣으면, 전역할 때 <strong>내가 넣은 원금 + 정부 매칭지원금 + 은행 이자</strong>를 함께 받는 제도예요. 계산기는 세 덩어리를 차례로 구해 더합니다.</p>
+<table><thead><tr><th>항목</th><th class="n">기준</th></tr></thead><tbody>
+<tr><td>납입 한도</td><td class="n">은행당 월 30만원, 합계 월 55만원</td></tr>
+<tr><td>정부 매칭지원금</td><td class="n">납입 원금의 100%</td></tr>
+<tr><td>이자</td><td class="n">일반 적금 단리, 비과세</td></tr>
+<tr><td>복무기간</td><td class="n">육군·해병대 18 · 해군 20 · 공군 21개월</td></tr></tbody></table>
+<p><strong>납입 개월</strong>은 입대일에 복무기간을 더해 전역일(하루 전)을 구한 뒤, 오늘 또는 입대일 중 늦은 날부터 전역일까지 꽉 찬 개월 수로 셉니다. 이미 복무 중이라면 남은 개월만 들어가요. 전역 예정일로 고르면 오늘부터 전역일까지를 세고, 어느 쪽이든 복무기간을 넘지 않아요.</p>
+<p><strong>이자</strong>는 적금의 일반적인 단리 방식으로, 첫 달 넣은 돈은 n개월치, 마지막 달 넣은 돈은 1개월치 이자가 붙어요. 식으로 쓰면 월 납입액 × 연 금리 ÷ 12 × n(n+1) ÷ 2이고, 원 단위 아래는 버립니다. 비과세라 이자소득세를 빼지 않아요.</p>
+<p>은행 한 곳에 30만원을 넘게 넣거나 두 곳 합계가 55만원을 넘으면 한도에 맞춰 자동으로 줄이고 안내 문구를 보여 드려요.</p>
+<div class="ex"><p><strong>예시: 육군 18개월, 은행 두 곳 30만 + 25만원, 연 5%</strong></p>
+<p>원금 550,000원 × 18개월 = 9,900,000원, 정부 매칭도 9,900,000원이에요.</p>
+<p>이자는 550,000 × 0.05 ÷ 12 × (18 × 19 ÷ 2) = 550,000 × 0.05 ÷ 12 × 171 = 391,875원.</p>
+<p>만기 합계 9,900,000 + 9,900,000 + 391,875 = <strong>20,191,875원</strong>. 한 곳에 30만원만 넣으면 원금 540만, 매칭 540만, 이자 213,750원으로 11,013,750원이에요.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>2026년 병 봉급과 비교해 보세요</h3>
+<p>2026년 병 봉급은 이병 75만원, 일병 90만원, 상병 120만원, 병장 150만원이에요. 한도인 월 55만원을 채우면 이병 때는 봉급의 73%를 저축하는 셈이라 부담이 클 수 있어요. 처음엔 한 곳만 넣다가 진급해서 봉급이 오르면 두 번째 은행을 늘리는 식으로 계획해도 됩니다. 결과 화면에서 봉급 대비 비율을 함께 보여 드려요.</p>
+<h3>매칭지원금은 원금에 비례해요</h3>
+<p>정부 매칭은 내가 실제로 넣은 원금의 100%라, 중간에 납입을 거르면 그만큼 매칭도 줄어요. 만기 금액을 최대로 만들려면 입대 직후부터 빠짐없이 넣는 게 가장 확실합니다. 이 계산기는 매달 같은 금액을 넣는다고 가정하니, 금액을 바꿀 계획이라면 결과를 대략적인 목표치로 보세요.</p>
+<h3>비과세 기한 확인</h3>
+<p>조세특례제한법상 이자 비과세는 2026년 12월 31일까지 가입한 적금에 적용돼요. 정부가 2029년까지 연장을 제안해 국회에서 심의 중이지만 아직 통과되지 않았으니, 2027년 이후 가입 예정이라면 그때의 법 개정 여부를 확인하세요.</p>
+<h3>금리는 은행마다 달라요</h3>
+<p>장병내일준비적금은 여러 은행이 취급하고 은행마다 기본금리와 우대금리가 달라요. 두 곳에 나눠 넣을 수 있으니 금리가 높은 곳 두 군데를 고르는 게 유리합니다. 계산기에는 두 은행 금리를 하나로 넣게 되어 있으니, 금리가 다르면 평균에 가까운 값을 넣어 보세요.</p>
+<h3>자주 하는 실수</h3>
+<p>「매칭지원금이 이자처럼 매달 쌓인다」고 생각하는 경우가 있는데, 매칭은 이자가 붙는 돈이 아니라 원금과 같은 금액을 더해 주는 방식으로 계산했어요. 또 상근예비역·사회복무요원은 복무기간이 달라 이 계산기에 넣지 않았어요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>장병내일준비적금 한도는 얼마인가요?</summary><p>2025년 1월 1일 이후 납입분부터 은행 한 곳당 월 30만원, 모든 금융회사 합계 월 55만원까지 넣을 수 있어요.</p></details><details><summary>정부 매칭지원금은 얼마인가요?</summary><p>전역할 때 내가 넣은 원금의 100%를 매칭지원금으로 더해 받는 것으로 계산했어요. 18개월 동안 월 55만원을 넣으면 원금 990만원에 매칭 990만원이에요.</p></details><details><summary>이자에 세금이 붙나요?</summary><p>조세특례제한법 제91조의19에 따라 비과세예요. 다만 2026년 12월 31일까지 가입한 적금이 대상이고, 2029년까지 연장안은 국회 심의 중이에요.</p></details><details><summary>이미 복무 중인데 지금 가입하면 얼마나 받나요?</summary><p>입대일을 넣으면 오늘부터 전역일까지 남은 꽉 찬 개월 수로만 계산해 드려요. 남은 기간이 짧을수록 원금과 매칭이 함께 줄어요.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>조세특례제한법 제91조의19(장병내일준비적금에 대한 비과세) — <a href="https://www.law.go.kr/법령/조세특례제한법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>공무원보수규정 별표 — 2026년 병 봉급(이병 75만·일병 90만·상병 120만·병장 150만원) — <a href="https://www.law.go.kr/법령/공무원보수규정" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>병역법 제18조(현역의 복무), 제19조 — 복무기간 단축 운영(병무청 안내: 육군·해병대 18개월, 해군 20개월, 공군 21개월) — <a href="https://www.law.go.kr/법령/병역법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 11일 원문 대조. 납입 한도는 2025년 1월 1일 이후 납입분 기준입니다.</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+
+var PER_BANK_MAX=30,TOTAL_MAX=55,MATCH_RATE=1,RATE_MAX=20;
+var BRANCHES=[{key:'army',label:'육군',months:18},{key:'marine',label:'해병대',months:18},{key:'navy',label:'해군',months:20},{key:'air',label:'공군',months:21}];
+function serviceMonths(k){for(var i=0;i<BRANCHES.length;i++)if(BRANCHES[i].key===k)return BRANCHES[i].months;return null}
+function branchLabel(k){for(var i=0;i<BRANCHES.length;i++)if(BRANCHES[i].key===k)return BRANCHES[i].label;return ''}
+var PAY_2026=[['이병',750000],['일병',900000],['상병',1200000],['병장',1500000]];
+var TAX_FREE_TEXT='비과세는 2026년 12월 31일까지 가입분(정부가 2029년까지 연장을 제안해 국회 심의 중)';
+function sanitizeRate(s){var v=String(s==null?'':s).replace(/[^0-9.]/g,'');var i=v.indexOf('.');if(i>=0)v=v.slice(0,i+1)+v.slice(i+1).replace(/\./g,'').slice(0,2);v=v.replace(/^0+(?=\d)/,'');if(v.charAt(0)==='.')v='0'+v;return v.slice(0,5)}
+function toRate(s){var v=sanitizeRate(s);if(v===''||v==='0.')return null;var r=parseFloat(v);if(!(r>0))return null;return Math.min(r,RATE_MAX)}
+function clampDeposits(b1,b2){b1=Math.max(0,Math.floor(b1||0));b2=Math.max(0,Math.floor(b2||0));var notes=[];
+ if(b1>PER_BANK_MAX){notes.push('은행 1은 월 '+PER_BANK_MAX+'만원까지라 '+PER_BANK_MAX+'만원으로 맞췄어요');b1=PER_BANK_MAX}
+ if(b2>PER_BANK_MAX){notes.push('은행 2는 월 '+PER_BANK_MAX+'만원까지라 '+PER_BANK_MAX+'만원으로 맞췄어요');b2=PER_BANK_MAX}
+ if(b1+b2>TOTAL_MAX){b2=TOTAL_MAX-b1;notes.push('두 곳 합계는 월 '+TOTAL_MAX+'만원까지라 은행 2를 '+b2+'만원으로 맞췄어요')}
+ return {b1:b1,b2:b2,total:b1+b2,notes:notes,cut:notes.length>0}}
+function day0(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate())}
+function parseYmd(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s||''));if(!m)return null;var d=new Date(+m[1],+m[2]-1,+m[3]);if(d.getFullYear()!==+m[1]||d.getMonth()!==+m[2]-1||d.getDate()!==+m[3])return null;return d}
+function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function ymdText(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'}
+function addMonths(d,n){var y=d.getFullYear(),m=d.getMonth()+n,day=d.getDate();var last=new Date(y,m+1,0).getDate();return new Date(y,m,Math.min(day,last))}
+function addDays(d,n){return new Date(d.getFullYear(),d.getMonth(),d.getDate()+n)}
+function monthsBetween(a,b){var n=(b.getFullYear()-a.getFullYear())*12+(b.getMonth()-a.getMonth());if(b.getDate()<a.getDate())n--;return Math.max(0,n)}
+function d0max(a,b){return a.getTime()>=b.getTime()?a:b}
+function savingMonths(kind,dateStr,branch,today){var N_=serviceMonths(branch);var d=parseYmd(dateStr);if(!N_||!d)return {ok:false,months:0,discharge:null};
+ today=day0(today||new Date());var endEx,discharge;if(kind==='enlist'){endEx=addMonths(d,N_);discharge=addDays(endEx,-1)}else{discharge=d;endEx=addDays(d,1)}
+ var start=d0max(today,kind==='enlist'?d:today);var months=Math.min(N_,monthsBetween(start,endEx));return {ok:true,months:months,discharge:discharge,service:N_}}
+function simpleInterest(w,months,r){if(!r||!(r>0)||months<=0||w<=0)return 0;return Math.floor(w*(r/100)/12*months*(months+1)/2)}
+function maturity(man,months,r){var monthly=Math.max(0,man)*10000;months=Math.max(0,months|0);var principal=monthly*months;var match=Math.floor(principal*MATCH_RATE);var interest=simpleInterest(monthly,months,r);
+ return {monthly:monthly,months:months,principal:principal,match:match,interest:interest,total:principal+match+interest,base:principal+match}}
+function payRatio(man,pay){if(!pay)return 0;return Math.round(man*10000/pay*100)}
+function compute(){var c=clampDeposits(N('b1'),N('b2'));var br=N('branch');var s=savingMonths(N('kind'),document.getElementById('dt').value,br,new Date());
+ var rate=toRate(document.getElementById('rate').value);var m=maturity(c.total,s.ok?s.months:0,rate);
+ var list=c.notes.slice();
+ if(s.ok)list.push(branchLabel(br)+' 복무 '+s.service+'개월 · 전역 '+ymdText(s.discharge)+' 기준으로 '+s.months+'개월 납입으로 셌어요.');else list.push('날짜를 넣어 주세요.');
+ list.push('월 '+c.total+'만원은 이병 봉급의 '+payRatio(c.total,PAY_2026[0][1])+'%, 병장 봉급의 '+payRatio(c.total,PAY_2026[3][1])+'%예요.');
+ list.push(TAX_FREE_TEXT+'.');
+ return {label:'전역 때 받는 예상 금액',big:won(m.total),unit:'원',state:m.total?'ok':'',interp:m.months?'내 돈 '+won(m.principal)+'원이 약 '+(m.principal?(m.total/m.principal).toFixed(2):'0')+'배가 돼요':'납입할 개월이 남아 있지 않아요',
+ rows:[['월 납입액 (은행 1 + 2)',won(m.monthly)+'원'],['납입 개월',m.months+'개월'],['내가 넣은 원금',won(m.principal)+'원'],['정부 매칭지원금 (원금의 100%)',won(m.match)+'원'],['이자 (단리 '+(rate||0)+'%, 비과세)',won(m.interest)+'원'],['만기 합계',won(m.total)+'원',1]],
+ list:list,note:'정부 매칭은 넣은 원금의 100%로 계산했어요. 실제 금액은 납입 실적과 지원 기준에 따라 정해져요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'').slice(0,12);i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+Array.prototype.forEach.call(document.querySelectorAll('input.yr'),function(i){i.addEventListener('input',function(){var v=i.value.replace(/\D/g,'').slice(0,4);if(v!==i.value)i.value=v})});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big'+(r.state?' '+r.state:'')+'"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.txt?' t':'')+'">'+esc(r.big)+(r.unit?'<small>'+esc(r.unit)+'</small>':'')+'</div><div class="s">'+esc(r.interp)+'</div></div>';
+ var hd=r.head||['항목','금액'];
+ h+='<table><thead><tr><th>'+esc(hd[0])+'</th><th class="n">'+esc(hd[1])+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]===1?' class="tot"':'')+'><td>'+esc(x[0])+(x[3]?' <span class="st '+x[3][0]+'">'+esc(x[3][1])+'</span>':'')+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>';
+ if(r.list&&r.list.length){h+='<ul class="rl">';r.list.forEach(function(t){h+='<li>'+esc(t)+'</li>'});h+='</ul>'}
+ h+=(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+
+(function(){var dt=document.getElementById('dt');if(!dt.value)dt.value=ymd(new Date());
+var rt=document.getElementById('rate');rt.addEventListener('input',function(){var v=sanitizeRate(rt.value);if(v!==rt.value)rt.value=v});
+Array.prototype.forEach.call(document.querySelectorAll('#b1,#b2'),function(i){i.addEventListener('input',function(){i.value=i.value.replace(/\D/g,'').slice(0,3)})})})();
+render();
+</script>
+</body>
+</html>

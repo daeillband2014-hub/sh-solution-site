@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>해외직구 관세 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="해외직구 물품가격이 면세한도(일반 150달러, 미국 목록통관 200달러) 안인지 확인하고, 넘으면 관세와 부가가치세 10%를 관세법·부가가치세법 기준으로 계산합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/direct-purchase-customs/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="해외직구 관세 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="해외직구 물품가격이 면세한도(일반 150달러, 미국 목록통관 200달러) 안인지 확인하고, 넘으면 관세와 부가가치세 10%를 관세법·부가가치세법 기준으로 계산합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/direct-purchase-customs/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "면세한도는 배송비를 포함하나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요. 면세한도와 비교하는 물품가격에서 한국까지의 배송비는 빠져요. 세금을 매길 때만 과세가격에 더합니다."}}, {"@type": "Question", "name": "150달러를 조금 넘으면 넘은 만큼만 세금을 내나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요. 한도를 넘으면 물건값과 배송비 전체에 관세와 부가세가 붙어요."}}, {"@type": "Question", "name": "미국은 왜 200달러인가요?", "acceptedAnswer": {"@type": "Answer", "text": "한미 FTA에 따른 특송물품 통관 특례로, 목록통관 대상인 일반 생활용품은 200달러까지 수입신고를 생략할 수 있기 때문이에요."}}, {"@type": "Question", "name": "관세율은 정확한가요?", "acceptedAnswer": {"@type": "Answer", "text": "관세율은 품목번호와 FTA 협정세율에 따라 달라 이 계산기는 대표 세율로 어림해요. 정확한 세율은 관세청 품목분류를 확인하세요."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.grid2 .field{min-width:0}
+.it{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.it .nm{flex:1;min-width:0;font-weight:700;font-size:15px}
+.it .nm small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.it .inp{width:128px;height:46px;flex:none}
+.it .inp input{font-size:17px}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15px}
+.chk input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--c1);flex:none}
+.chk span{flex:1}
+.grp{font-weight:800;font-size:15px;margin:18px 0 4px}
+.big .v.t{font-size:clamp(28px,8vw,38px)}
+td.ok{color:var(--ink)}
+td.no{color:#f87171}
+[data-theme="light"] td.no{color:#dc2626}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">면세한도 150·200달러</span><h1>해외직구 관세·면세한도 계산기</h1><p>물건값과 배송비를 달러로 넣으면 면세한도 안인지 확인하고, 넘는다면 관세와 부가세를 얼마나 내야 하는지 어림해 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="grid2"><div class="field"><label for="country">보내는 나라</label><div class="inp"><select id="country"><option value="us">미국</option><option value="etc">그 밖의 나라</option></select><span>▾</span></div></div><div class="field"><label for="listOk">물건 종류</label><div class="inp"><select id="listOk"><option value="1">일반 생활용품</option><option value="0">건강식품·의약품 등</option></select><span>▾</span></div></div></div><div class="field"><label for="price">물건값</label><small>배송비를 뺀 상품 가격(세금·할인 반영)</small><div class="inp"><input id="price" class="dec" inputmode="decimal" autocomplete="off" value="250"><span>달러</span></div></div><div class="field"><label for="ship">한국까지 배송비</label><div class="inp"><input id="ship" class="dec" inputmode="decimal" autocomplete="off" value="20"><span>달러</span></div></div><div class="grid2"><div class="field"><label for="fx">환율 (1달러당)</label><div class="inp"><input id="fx" class="num" inputmode="numeric" autocomplete="off" value="1,400"><span>원</span></div></div><div class="field"><label for="duty">관세율(추정)</label><div class="inp"><select id="duty"><option value="gen">일반 8%</option><option value="cloth">옷·신발·가방 13%</option><option value="it">전자기기 0%</option></select><span>▾</span></div></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>해외직구 세금 계산은 두 단계예요. 먼저 <strong>면세한도 안인지</strong>를 보고, 넘었다면 <strong>관세와 부가가치세</strong>를 계산합니다.</p>
+<h3>1단계 — 면세한도 비교</h3><p>자가사용 소액물품은 물품가격이 <strong>미화 150달러 이하</strong>면 관세가 면제돼요. 미국에서 특송으로 들어오는 일반 생활용품은 한미 FTA 특례로 <strong>200달러</strong>까지 목록통관이 됩니다. 건강식품·의약품처럼 목록통관에서 빠지는 물건은 미국발이어도 150달러 기준이에요. 이때 비교하는 물품가격에는 한국까지 오는 배송비가 들어가지 않아요.</p>
+<h3>2단계 — 세금 계산</h3>
+<table><thead><tr><th>항목</th><th class="n">계산</th></tr></thead><tbody>
+<tr><td>과세가격</td><td class="n">(물건값 + 배송비) × 환율</td></tr><tr><td>관세</td><td class="n">과세가격 × 관세율</td></tr>
+<tr><td>관세 1만원 미만</td><td class="n">걷지 않음</td></tr><tr><td>부가가치세</td><td class="n">(과세가격 + 관세) × 10%</td></tr></tbody></table>
+<p>한도를 넘으면 넘은 부분만이 아니라 <strong>전체 금액</strong>에 세금이 붙는다는 점이 핵심이에요. 관세율은 실제로 관세율표의 품목번호와 FTA 협정세율로 정해지는데, 여기서는 일반 8%, 옷·신발·가방 13%, 전자기기 0%로 골라 어림합니다. 환율도 관세청이 매주 고시하는 과세환율이 실제 기준이니 비슷한 값을 넣어 주세요.</p>
+<div class="ex"><p><strong>예시: 미국 외 나라에서 300달러 물건, 배송비 20달러, 환율 1,400원, 일반 8%</strong></p>
+<p>300달러는 150달러를 넘으니 과세 대상이에요. 과세가격은 (300 + 20) × 1,400 = 448,000원, 관세는 448,000 × 8% = 35,840원입니다.</p>
+<p>부가세는 (448,000 + 35,840) × 10% = 48,384원. 합치면 <strong>84,224원</strong>을 더 내야 해요.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>배송비는 한도 비교에서 빠져요</h3><p>관세법 시행규칙은 면세 기준인 물품가격에서 수입항까지의 운임·보험료를 빼도록 하고 있어요. 그래서 140달러 물건에 배송비 30달러가 붙어도 면세한도 150달러 안입니다. 다만 쇼핑몰이 배송비를 상품 가격에 섞어 표시해 구분이 안 되면 포함한 금액으로 봐요. 반대로 한도를 넘어 세금을 매길 때는 배송비까지 과세가격에 들어갑니다.</p>
+<h3>나눠 사면 합쳐질 수 있어요</h3><p>한도를 피하려고 여러 번 나눠 주문해도, 반복·분할 수입으로 보는 기준에 걸리면 합쳐서 과세될 수 있어요. 같은 날 같은 나라에서 들어오는 물건은 특히 조심하세요. 구체적 합산 기준은 관세청장이 정하니 통관 진행 상황을 확인하는 게 좋아요.</p>
+<h3>미국 200달러는 조건이 있어요</h3><p>200달러 한도는 한미 FTA에 따른 특송물품 통관 특례에 해당할 때만 적용돼요. 건강기능식품·의약품처럼 목록통관 배제 대상은 미국발이어도 정식 수입신고를 해야 하고 한도는 150달러예요.</p>
+<h3>술·담배·향수는 별도 세금</h3><p>주류, 담배, 향수, 고가 시계 같은 물건은 개별소비세·주세·교육세 등이 따로 붙어 이 계산보다 세금이 커요. 이 계산기는 관세와 부가세만 다룹니다.</p>
+<h3>관세 1만원 미만은 면제</h3><p>세액이 1만원 미만이면 세관이 걷지 않아요. 전자기기처럼 관세율이 0%인 물건은 부가세만 나오고요. 이 계산기는 1만원 미만 규정을 관세에만 적용했어요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>면세한도는 배송비를 포함하나요?</summary><p>아니요. 면세한도와 비교하는 물품가격에서 한국까지의 배송비는 빠져요. 세금을 매길 때만 과세가격에 더합니다.</p></details><details><summary>150달러를 조금 넘으면 넘은 만큼만 세금을 내나요?</summary><p>아니요. 한도를 넘으면 물건값과 배송비 전체에 관세와 부가세가 붙어요.</p></details><details><summary>미국은 왜 200달러인가요?</summary><p>한미 FTA에 따른 특송물품 통관 특례로, 목록통관 대상인 일반 생활용품은 200달러까지 수입신고를 생략할 수 있기 때문이에요.</p></details><details><summary>관세율은 정확한가요?</summary><p>관세율은 품목번호와 FTA 협정세율에 따라 달라 이 계산기는 대표 세율로 어림해요. 정확한 세율은 관세청 품목분류를 확인하세요.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>관세법 제94조제4호(소액물품 면세), 제30조제1항제6호(운임 등), 제40조(징수 하한) — <a href="https://www.law.go.kr/법령/관세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>관세법 시행령 제37조제1항 — 1만원 미만 미징수 — <a href="https://www.law.go.kr/법령/관세법시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>관세법 시행규칙 제45조제2항제1호 — 미화 150달러 이하 자가사용 물품 — <a href="https://www.law.go.kr/법령/관세법시행규칙" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>특송물품 수입통관 사무처리에 관한 고시(관세청 고시 제2026-56호) 제9조제1항제1호·제2항 — 미국 200달러, 목록통관 배제 — <a href="https://www.law.go.kr/행정규칙/특송물품수입통관사무처리에관한고시" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>부가가치세법 제29조제2항(수입 과세표준), 제30조(세율 10%) — <a href="https://www.law.go.kr/법령/부가가치세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 15일 법제처 국가법령정보 원문 확인(관세법 2026. 10. 2., 고시 2026. 9. 30. 시행본).</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+var LIMIT_BASE = 150;  
+var LIMIT_US = 200;    
+var VAT_RATE = 0.10;   
+var MIN_COLLECT = 10000; 
+var DUTY_OPTS = [
+  { k: 'gen', label: '일반 물품', rate: 0.08 },
+  { k: 'cloth', label: '옷·신발·가방', rate: 0.13 },
+  { k: 'it', label: '전자기기', rate: 0 }
+];
+
+function toNum(s) { var n = parseFloat(String(s == null ? '' : s).replace(/,/g, '')); return isFinite(n) && n > 0 ? n : 0; }
+function sanitize(s) { var v = String(s).replace(/[^0-9.]/g, ''); var i = v.indexOf('.'); if (i >= 0) v = v.slice(0, i + 1) + v.slice(i + 1).replace(/\./g, ''); return v.slice(0, 9); }
+
+
+function limitOf(country, listOk) { return country === 'us' && listOk ? LIMIT_US : LIMIT_BASE; }
+
+function calc(i) {
+  var price = toNum(i.price), ship = toNum(i.ship), fx = toNum(i.fx);
+  var limit = limitOf(i.country, i.listOk);
+  var free = price <= limit;
+  var opt = DUTY_OPTS.filter(function (o) { return o.k === i.duty; })[0] || DUTY_OPTS[0];
+  var r = { price: price, ship: ship, fx: fx, limit: limit, free: free, rate: opt.rate, rateLabel: opt.label, over: Math.max(0, price - limit), dutyRaw: 0 };
+  if (free) { r.cif = 0; r.duty = 0; r.vat = 0; r.total = 0; return r; }
+  var cif = Math.round((price + ship) * fx);          
+  var duty = Math.floor(cif * opt.rate);
+  r.dutyRaw = duty;
+  if (duty < MIN_COLLECT) duty = 0;                    
+  var vat = Math.floor((cif + duty) * VAT_RATE);       
+  r.cif = cif; r.duty = duty; r.vat = vat; r.total = duty + vat;
+  return r;
+}
+
+function compute(){var i={country:N('country'),listOk:N('listOk')==='1',price:D('price'),ship:D('ship'),fx:N('fx'),duty:N('duty')};var r=calc(i);
+var usd=function(n){return n.toLocaleString('en-US',{maximumFractionDigits:2})};
+var rows=[['면세한도','$'+r.limit],['물건값 (배송비 제외)','$'+usd(r.price)]];
+if(r.free){rows.push(['한도까지 남은 금액','$'+usd(r.limit-r.price),1]);
+return {label:'면세한도 안이에요',big:'0',unit:'원',interp:'물건값이 $'+r.limit+' 이하라 관세·부가세가 없어요',rows:rows,note:'같은 날 들어오는 여러 건은 합쳐서 볼 수 있어요. 술·담배·향수 등은 따로 세금이 붙을 수 있어요.'}}
+rows.push(['한도 초과액','$'+usd(r.over)]);rows.push(['과세가격 (물건값+배송비) × '+won(r.fx)+'원',won(r.cif)+'원']);
+rows.push(['관세 ('+r.rateLabel+' '+Math.round(r.rate*100)+'%)',won(r.duty)+'원']);rows.push(['부가가치세 10%',won(r.vat)+'원']);rows.push(['내야 할 세금 합계',won(r.total)+'원',1]);
+var note=(r.dutyRaw>0&&r.duty===0?'관세가 '+won(r.dutyRaw)+'원으로 1만원 미만이라 걷지 않아요. ':'')+'관세율은 품목·FTA에 따라 달라지는 참고용 추정이에요.';
+return {label:'예상 세금 (관세+부가세)',big:won(r.total),unit:'원',interp:'면세한도 '+r.limit+'달러를 '+usd(r.over)+'달러 넘었어요. 한도를 넘으면 전체 금액에 과세돼요',rows:rows,note:note}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+function D(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[^0-9.]/g,''));return isFinite(v)?v:0}
+function C(id){return !!document.getElementById(id).checked}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'');i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+Array.prototype.forEach.call(document.querySelectorAll('input.dec'),function(i){
+ function fm(){var v=i.value.replace(/[^0-9.]/g,''),k=v.indexOf('.');if(k>=0)v=v.slice(0,k+1)+v.slice(k+1).replace(/\./g,'').slice(0,2);var a=v.split('.');a[0]=a[0].replace(/^0+(?=\d)/,'');if(a[0])a[0]=Number(a[0]).toLocaleString('en-US');i.value=a.join('.')}
+ i.addEventListener('input',fm);fm()});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.text?' t':'')+'">'+esc(r.big)+'<small>'+esc(r.unit||'')+'</small></div><div class="s">'+esc(r.interp)+'</div></div>';
+ h+='<table><thead><tr><th>'+esc(r.h1||'항목')+'</th><th class="n">'+esc(r.h2||'금액')+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){var c=x[2]===1?' class="tot"':'';var tc=x[2]==='ok'?' ok':x[2]==='no'?' no':'';h+='<tr'+c+'><td>'+esc(x[0])+'</td><td class="n'+tc+'">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>'+(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+render();
+
+</script>
+</body>
+</html>

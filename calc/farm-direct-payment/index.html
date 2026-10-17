@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>공익직불금 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="진흥지역 논·밭, 진흥지역 밖 논·밭 면적과 소농 요건으로 2026년 기본형 공익직불금(소농 130만원, 면적직불 구간 단가)을 법령과 농식품부 공고 기준으로 계산합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/farm-direct-payment/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="공익직불금 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="진흥지역 논·밭, 진흥지역 밖 논·밭 면적과 소농 요건으로 2026년 기본형 공익직불금(소농 130만원, 면적직불 구간 단가)을 법령과 농식품부 공고 기준으로 계산합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/farm-direct-payment/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "소농직불금은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년 기준 농가당 130만원이에요. 시행령 제8조에 정해진 금액입니다."}}, {"@type": "Question", "name": "면적이 5,000㎡를 넘으면 소농직불을 못 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "요건을 모두 갖췄고 면적직불 계산액이 130만원보다 적다면 소농직불을 선택해 신청할 수 있어요. 예를 들어 진흥지역 밖 밭 6,000㎡는 면적직불 90만원이라 소농을 고를 수 있어요."}}, {"@type": "Question", "name": "직불금은 언제 들어오나요?", "acceptedAnswer": {"@type": "Answer", "text": "농식품부 시행지침상 9월 30일 대상자 확정, 10월 금액 산정을 거쳐 11~12월에 지급돼요."}}, {"@type": "Question", "name": "평으로 넣어도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 면적 단위를 평으로 바꾸면 1평 = 400/121㎡(약 3.3058㎡)로 환산해 계산해요."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.grid2 .field{min-width:0}
+.it{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.it .nm{flex:1;min-width:0;font-weight:700;font-size:15px}
+.it .nm small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.it .inp{width:128px;height:46px;flex:none}
+.it .inp input{font-size:17px}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15px}
+.chk input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--c1);flex:none}
+.chk span{flex:1}
+.grp{font-weight:800;font-size:15px;margin:18px 0 4px}
+.big .v.t{font-size:clamp(28px,8vw,38px)}
+td.ok{color:var(--ink)}
+td.no{color:#f87171}
+[data-theme="light"] td.no{color:#dc2626}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2026년 지급단가</span><h1>공익직불금 계산기 (소농·면적직불)</h1><p>농지 면적과 구분을 넣고 소농 요건을 체크하면 2026년 기본형 공익직불금을 소농직불 130만원과 면적직불 중 어느 쪽으로 얼마 받는지 계산해 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="unit">면적 단위</label><div class="inp"><select id="unit"><option value="m2">제곱미터(㎡)</option><option value="py">평</option></select><span>▾</span></div></div><div class="field"><label for="a_jin">진흥지역 안 논·밭</label><div class="inp"><input id="a_jin" class="num" inputmode="numeric" autocomplete="off" value=""><span></span></div></div><div class="field"><label for="a_non">진흥지역 밖 논</label><div class="inp"><input id="a_non" class="num" inputmode="numeric" autocomplete="off" value="4,000"><span></span></div></div><div class="field"><label for="a_bat">진흥지역 밖 밭</label><div class="inp"><input id="a_bat" class="num" inputmode="numeric" autocomplete="off" value=""><span></span></div></div><p class="grp">소농 요건 (모두 맞으면 체크)</p><label class="chk"><input type="checkbox" id="r_farm3" checked><span>농업에 계속해서 3년 이상 종사했어요</span></label><label class="chk"><input type="checkbox" id="r_live3" checked><span>농촌지역에 계속해서 3년 이상 살았어요</span></label><label class="chk"><input type="checkbox" id="r_inc20" checked><span>농가 구성원 각각 농업 외 종합소득이 2천만원 미만이에요</span></label><label class="chk"><input type="checkbox" id="r_inc45" checked><span>구성원 전체의 종합소득 합이 4천5백만원 미만이에요</span></label><label class="chk"><input type="checkbox" id="r_biz" checked><span>축산업 소득 5천6백만원 미만, 시설재배업 소득 3천8백만원 미만이에요</span></label><label class="chk"><input type="checkbox" id="r_own" checked><span>구성원이 가진 농지가 1만5천5백㎡ 미만이에요</span></label><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>기본형 공익직불금은 <strong>소농직불금</strong>과 <strong>면적직불금</strong> 두 가지예요. 작은 농가가 요건을 모두 갖추면 면적과 상관없이 농가당 130만원을 받고, 그 밖에는 경작 면적에 구간별 단가를 곱해 받습니다.</p>
+<h3>소농직불금 — 농가당 130만원</h3><p>지급대상 농지 면적의 합이 5,000㎡ 이하이고, 영농 3년·농촌 거주 3년, 농업 외 종합소득(각자 2천만원 미만, 합계 4천5백만원 미만), 축산·시설재배 소득, 소유 농지 1만5천5백㎡ 미만 요건을 모두 갖춰야 해요. 면적이 5,000㎡를 조금 넘더라도 요건을 다 갖췄고 면적직불 계산액이 130만원보다 적으면 소농직불을 골라 신청할 수 있어요.</p>
+<h3>면적직불금 — 구간별 단가</h3>
+<table><thead><tr><th>구분 (원/㎡)</th><th class="n">2ha 이하 / 2~6ha / 6ha 초과</th></tr></thead><tbody>
+<tr><td>진흥지역 안 논·밭</td><td class="n">215 / 207 / 198</td></tr><tr><td>진흥지역 밖 논</td><td class="n">187 / 179 / 170</td></tr>
+<tr><td>진흥지역 밖 밭</td><td class="n">150 / 143 / 136</td></tr></tbody></table>
+<p>공고 단가는 ha당 만원 단위(예: 215만원/ha)인데 ㎡로 바꾸면 그대로 원 단위가 돼요. 여러 구분의 농지가 섞여 있으면 진흥지역 안 → 진흥지역 밖 논 → 진흥지역 밖 밭 순서로 면적을 쌓아 구간을 정합니다. 농업인 1명당 30ha까지만 계산하고, 1,000㎡ 미만이면 지급 대상이 아니에요. 평으로 넣으면 1평 = 400/121㎡로 바꿔 계산해요.</p>
+<div class="ex"><p><strong>예시: 진흥지역 밖 논 4,000㎡(약 1,210평)</strong></p>
+<p>소농 요건을 모두 갖췄다면 면적이 5,000㎡ 이하라 <strong>소농직불금 130만원</strong>이에요.</p>
+<p>거주 3년 요건 하나만 빠져도 면적직불로 계산돼 4,000㎡ × 187원 = 748,000원이 됩니다. 요건 하나에 55만원 넘게 차이 나는 셈이에요.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>신청은 매년 봄에 해요</h3><p>2026년 등록신청은 3월 1일부터 5월 31일까지였어요. 농식품부 시행지침에 따르면 1월 공고 뒤 3~5월에 신청을 받고, 6월에 등록증을 내준 뒤 6~9월 이행 점검을 거쳐 9월 30일에 대상자를 확정해요. 10월에 금액을 산정하고 <strong>11~12월에 지급</strong>하는 흐름이라, 올해 신청했다면 연말 입금을 기다리면 됩니다.</p>
+<h3>소농 요건은 하나만 빠져도 끝</h3><p>소농직불은 요건 여섯 가지를 모두 충족해야 해요. 특히 농업 외 소득은 농가 구성원 각각과 합계를 함께 보니, 함께 사는 가족의 근로소득까지 확인해야 합니다. 2026년 공고에는 농업 외 종합소득 3,700만원 기준이 국회와 협의 중이라는 안내가 있었지만 확정되지 않아 이 계산에는 넣지 않았어요.</p>
+<h3>농지 구분을 정확히 나누세요</h3><p>같은 면적이라도 진흥지역 안 논·밭은 ㎡당 215원, 진흥지역 밖 밭은 150원으로 차이가 커요. 토지이용계획확인서에서 농업진흥지역 여부를 확인하고, 논인지 밭인지 나눠 넣으면 결과가 정확해져요.</p>
+<h3>계산과 달라지는 경우</h3><p>준수사항을 지키지 않으면 감액될 수 있고, 부정수급이 적발되면 지급이 제한돼요. 도시에 사는 농업인은 주업 요건이 따로 있어요. 이런 부분은 계산기가 판단하지 않으니 읍·면·동 사무소나 농관원에 확인하세요.</p>
+<h3>면적은 신청한 농지 기준이에요</h3><p>계산에 넣는 면적은 실제로 직불금을 신청해 지급대상이 되는 농지의 합이에요. 가진 땅 전체가 아니라 등록신청서에 적은 필지 면적을 구분별로 나눠 넣어야 결과가 맞아요. 1,000㎡ 미만이면 대상에서 빠진다는 점도 기억해 두세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>소농직불금은 얼마인가요?</summary><p>2026년 기준 농가당 130만원이에요. 시행령 제8조에 정해진 금액입니다.</p></details><details><summary>면적이 5,000㎡를 넘으면 소농직불을 못 받나요?</summary><p>요건을 모두 갖췄고 면적직불 계산액이 130만원보다 적다면 소농직불을 선택해 신청할 수 있어요. 예를 들어 진흥지역 밖 밭 6,000㎡는 면적직불 90만원이라 소농을 고를 수 있어요.</p></details><details><summary>직불금은 언제 들어오나요?</summary><p>농식품부 시행지침상 9월 30일 대상자 확정, 10월 금액 산정을 거쳐 11~12월에 지급돼요.</p></details><details><summary>평으로 넣어도 되나요?</summary><p>네. 면적 단위를 평으로 바꾸면 1평 = 400/121㎡(약 3.3058㎡)로 환산해 계산해요.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>농업ㆍ농촌 공익기능 증진 직접지불제도 운영에 관한 법률 제10조제3항 — 소농직불 선택 신청 — <a href="https://www.law.go.kr/법령/농업ㆍ농촌공익기능증진직접지불제도운영에관한법률" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>같은 법 시행령 제8조제1항(소농 130만원), 제9조(면적 구간·단가 순서), 제11조(상한 30ha), 별표 1의2(소농 요건), 별표 2(구간 누적) — <a href="https://www.law.go.kr/법령/농업ㆍ농촌공익기능증진직접지불제도운영에관한법률시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>농림축산식품부 「2026년도 기본형 공익직접지불금 등록신청 공고」(2026. 1. 9.) — 면적 구간별 지급단가</li><li>농림축산식품부 「2026년도 기본형 공익직불사업 시행지침서」 — 1,000㎡ 미만 제외, 사업 추진 일정</li></ul><p>기준일: 2026년 10월 15일 원문 확인(시행령 2026. 1. 2. 시행본, 농식품부 공고·지침은 지자체 게시본으로 열람).</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+var PYEONG = 400 / 121;            
+var SMALL_PAY = 1300000;           
+var MIN_AREA = 1000;               
+var SMALL_MAX = 5000;              
+var OWN_MAX = 15500;               
+var CAP = 300000;                  
+var TIERS = [20000, 60000];        
+
+var PRICE = { jin: [215, 207, 198], non: [187, 179, 170], bat: [150, 143, 136] };
+var KIND_NAME = { jin: '진흥지역 논·밭', non: '진흥지역 밖 논', bat: '진흥지역 밖 밭' };
+var ORDER = ['jin', 'non', 'bat'];
+
+function toNum(v) { var n = parseFloat(String(v == null ? '' : v).replace(/[^0-9.]/g, '')); return isFinite(n) ? n : 0; }
+function sanitize(v) { var s = String(v).replace(/[^0-9.]/g, ''); var i = s.indexOf('.'); if (i >= 0) s = s.slice(0, i + 1) + s.slice(i + 1).replace(/\./g, '').slice(0, 1); return s.slice(0, 9); }
+function toM2(v, unit) { var n = toNum(v); return unit === 'py' ? n * PYEONG : n; }
+
+
+function areaPay(a) {
+  var acc = 0, total = 0, parts = [];
+  ORDER.forEach(function (k) {
+    var rest = Math.max(0, Math.min(a[k] || 0, CAP - acc)), sum = 0, seg = [0, 0, 0];
+    while (rest > 1e-9) {
+      var t = acc < TIERS[0] ? 0 : acc < TIERS[1] ? 1 : 2;
+      var lim = t < 2 ? TIERS[t] - acc : Infinity;
+      var take = Math.min(rest, lim);
+      seg[t] += take; sum += take * PRICE[k][t];
+      acc += take; rest -= take;
+    }
+    parts.push({ k: k, area: a[k] || 0, seg: seg, pay: Math.floor(sum) });
+    total += Math.floor(sum);
+  });
+  return { total: total, parts: parts, counted: acc };
+}
+
+
+var REQ_KEYS = ['farm3', 'live3', 'inc20', 'inc45', 'biz', 'own'];
+function judge(a, c) {
+  var area = ORDER.reduce(function (s, k) { return s + (a[k] || 0); }, 0);
+  var ap = areaPay(a);
+  var reqs = REQ_KEYS.every(function (k) { return !!(c && c[k]); });
+  var kind, pay;
+  if (area < MIN_AREA) { kind = 'none'; pay = 0; }
+  else if (area <= SMALL_MAX && reqs) { kind = 'small'; pay = SMALL_PAY; }
+  else if (area > SMALL_MAX && reqs && ap.total < SMALL_PAY) { kind = 'choose'; pay = SMALL_PAY; }   
+  else { kind = 'area'; pay = ap.total; }
+  return { kind: kind, pay: pay, area: area, areaPay: ap, reqs: reqs };
+}
+
+(function(){var u=document.getElementById('unit');function lab(){Array.prototype.forEach.call(document.querySelectorAll('#calcForm .inp span'),function(s,i){if(i>0)s.textContent=u.value==='py'?'평':'㎡'})}u.addEventListener('change',lab);lab()})();
+function compute(){var un=N('unit'),a={};ORDER.forEach(function(k){a[k]=toM2(N('a_'+k),un)});var c={};REQ_KEYS.forEach(function(k){c[k]=C('r_'+k)});
+var j=judge(a,c);var rows=[];
+j.areaPay.parts.forEach(function(p){if(p.area>0)rows.push([KIND_NAME[p.k]+' '+won(p.area)+'㎡',won(p.pay)+'원'])});
+rows.push(['면적직불 계산액',won(j.areaPay.total)+'원']);rows.push(['소농직불 (농가당)',won(SMALL_PAY)+'원']);
+rows.push(['소농 요건 6가지',j.reqs?'모두 충족':'미충족',j.reqs?'ok':'no']);rows.push(['예상 지급액',won(j.pay)+'원',1]);
+var m={none:'지급대상 농지가 1,000㎡ 미만이라 대상이 아니에요',small:'소농직불금 대상이에요 (면적 5,000㎡ 이하·요건 충족)',choose:'면적직불이 130만원보다 적어 소농직불을 골라 신청할 수 있어요',area:'면적직불금으로 받아요'}[j.kind];
+return {label:{none:'대상 아님',small:'소농직불금',choose:'소농직불 선택 가능',area:'면적직불금'}[j.kind],big:won(j.pay),unit:'원',interp:m,rows:rows,
+note:'총 면적 '+won(j.area)+'㎡ ('+(Math.round(j.area/100)/100)+'ha) 기준. 30ha 상한, 감액·부정수급 제재는 반영하지 않았어요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+function D(id){var v=parseFloat(String(document.getElementById(id).value).replace(/[^0-9.]/g,''));return isFinite(v)?v:0}
+function C(id){return !!document.getElementById(id).checked}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'');i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+Array.prototype.forEach.call(document.querySelectorAll('input.dec'),function(i){
+ function fm(){var v=i.value.replace(/[^0-9.]/g,''),k=v.indexOf('.');if(k>=0)v=v.slice(0,k+1)+v.slice(k+1).replace(/\./g,'').slice(0,2);var a=v.split('.');a[0]=a[0].replace(/^0+(?=\d)/,'');if(a[0])a[0]=Number(a[0]).toLocaleString('en-US');i.value=a.join('.')}
+ i.addEventListener('input',fm);fm()});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big"><div class="l">'+esc(r.label)+'</div><div class="v'+(r.text?' t':'')+'">'+esc(r.big)+'<small>'+esc(r.unit||'')+'</small></div><div class="s">'+esc(r.interp)+'</div></div>';
+ h+='<table><thead><tr><th>'+esc(r.h1||'항목')+'</th><th class="n">'+esc(r.h2||'금액')+'</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){var c=x[2]===1?' class="tot"':'';var tc=x[2]==='ok'?' ok':x[2]==='no'?' no':'';h+='<tr'+c+'><td>'+esc(x[0])+'</td><td class="n'+tc+'">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>'+(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+render();
+
+</script>
+</body>
+</html>
