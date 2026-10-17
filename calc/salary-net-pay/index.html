@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>월급 실수령액 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="2026년 국민연금 4.75%, 건강보험 7.19%, 장기요양, 고용보험 0.9%와 소득세·지방소득세를 반영해 세전 월급에서 실제로 받는 월 실수령액을 바로 계산합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/salary-net-pay/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="월급 실수령액 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="2026년 국민연금 4.75%, 건강보험 7.19%, 장기요양, 고용보험 0.9%와 소득세·지방소득세를 반영해 세전 월급에서 실제로 받는 월 실수령액을 바로 계산합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/salary-net-pay/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "국민연금은 왜 4.5%가 아니라 4.75%인가요?", "acceptedAnswer": {"@type": "Answer", "text": "국민연금법 개정으로 2026년부터 보험료율이 단계적으로 오르고, 2026년 근로자 몫은 기준소득월액의 4.75%예요. 회사도 같은 비율을 부담합니다."}}, {"@type": "Question", "name": "식대 20만원은 꼭 비과세인가요?", "acceptedAnswer": {"@type": "Answer", "text": "회사가 식사를 따로 제공하지 않고 식대로 지급할 때 월 20만원까지 비과세예요. 회사가 급여명세서에 비과세로 처리했는지 확인하세요."}}, {"@type": "Question", "name": "계산 결과가 실제 월급과 다르면 어떻게 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "매달 떼는 소득세는 간이세액표 기준이라 조금 차이가 날 수 있고, 연말정산 때 정산돼요. 큰 차이가 나면 회사 급여 담당자에게 공제 항목을 물어보세요."}}, {"@type": "Question", "name": "입력한 월급이 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">2026년 보험료율 반영</span><h1>월급 실수령액 계산기</h1><p>세전 월급을 넣으면 국민연금·건강보험·고용보험과 소득세를 빼고 통장에 남는 돈을 보여 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="pay">세전 월급</label><small>기본급과 각종 수당을 모두 더한 금액</small><div class="inp"><input id="pay" class="num" inputmode="numeric" autocomplete="off" value="3000000" aria-label="세전 월급"><span>원</span></div></div><div class="field"><label for="free">비과세 금액</label><small>식대는 월 20만원까지 비과세</small><div class="inp"><input id="free" class="num" inputmode="numeric" autocomplete="off" value="200000" aria-label="비과세 금액"><span>원</span></div></div><div class="field"><label for="fam">기본공제 인원</label><small>본인 포함, 1명당 연 150만원 공제</small><div class="inp"><select id="fam"><option value="1">1명 (본인만)</option><option value="2">2명</option><option value="3">3명</option><option value="4">4명</option><option value="5">5명</option></select><span>▾</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>회사가 월급에서 떼는 돈은 크게 <strong>4대보험 근로자 몫</strong>과 <strong>세금</strong> 두 묶음이에요. 이 계산기는 세전 월급에서 비과세 금액(식대 등)을 먼저 빼서 <strong>과세 월급</strong>을 만들고, 거기에 법령에 적힌 요율을 곱합니다.</p>
+<table><thead><tr><th>항목</th><th class="n">근로자 부담</th></tr></thead><tbody>
+<tr><td>국민연금</td><td class="n">4.75%</td></tr><tr><td>건강보험</td><td class="n">7.19%의 절반</td></tr>
+<tr><td>장기요양보험</td><td class="n">건강보험료 × 0.1314</td></tr><tr><td>고용보험(실업급여)</td><td class="n">0.9%</td></tr>
+<tr><td>지방소득세</td><td class="n">소득세의 10%</td></tr></tbody></table>
+<p>국민연금 4.75%는 2026년 기여금 비율(기준소득월액의 1만분의 475)이고, 장기요양보험은 건강보험료율 대비 비율(9.448 ÷ 7.19)을 소수 넷째 자리로 맞춰 곱했어요.</p>
+<p>소득세는 1년치로 환산해 구합니다. 과세 월급 × 12에서 근로소득공제를 빼고, 기본공제(1명당 150만원)와 1년 동안 낸 보험료를 다시 뺀 금액이 과세표준이에요. 여기에 기본세율을 적용하고 근로소득세액공제와 표준세액공제 13만원을 뺀 뒤 12로 나눠 한 달 몫을 냅니다.</p>
+<table><thead><tr><th>과세표준</th><th class="n">세율</th></tr></thead><tbody>
+<tr><td>1,400만원 이하</td><td class="n">6%</td></tr><tr><td>1,400만원 초과 ~ 5,000만원</td><td class="n">15%</td></tr>
+<tr><td>5,000만원 초과 ~ 8,800만원</td><td class="n">24%</td></tr><tr><td>8,800만원 초과 ~ 1억5천만원</td><td class="n">35%</td></tr>
+<tr><td>1억5천만원 초과 ~ 3억원</td><td class="n">38%</td></tr><tr><td>3억원 초과 ~ 5억원</td><td class="n">40%</td></tr>
+<tr><td>5억원 초과 ~ 10억원</td><td class="n">42%</td></tr><tr><td>10억원 초과</td><td class="n">45%</td></tr></tbody></table>
+<div class="ex"><p><strong>예시: 세전 300만원, 식대 20만원, 본인 1명</strong></p>
+<p>과세 월급은 280만원이에요. 국민연금 133,000원, 건강보험 100,660원, 장기요양 13,220원, 고용보험 25,200원이 빠집니다.</p>
+<p>1년 과세 급여 3,360만원에서 근로소득공제 1,029만원과 기본공제·보험료를 빼면 과세표준은 약 1,854만원, 산출세액 약 152만원에서 공제를 빼면 연 결정세액 656,556원이에요. 한 달 소득세 54,710원, 지방소득세 5,470원.</p>
+<p>공제 합계 332,260원 → <strong>실수령액 2,667,740원</strong> (세전의 약 88.9%)</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>회사 명세서와 몇천 원 차이가 나는 이유</h3>
+<p>실제 회사는 매달 소득세를 국세청 <strong>근로소득 간이세액표</strong>로 떼고, 연말정산 때 1년치를 다시 맞춥니다. 이 계산기는 법령 계산식으로 1년 세금을 먼저 구해 12로 나누기 때문에 간이세액표 금액과 조금 다를 수 있어요. 차이는 연말정산에서 환급이나 추가 납부로 정리됩니다.</p>
+<h3>비과세를 꼭 확인하세요</h3>
+<p>식대(월 20만원 한도), 차량유지비, 출산·보육수당처럼 비과세로 지급되는 금액은 보험료와 세금 계산에서 빠집니다. 같은 월급이라도 비과세가 크면 실수령액이 늘어나니 급여명세서에서 항목을 나눠 보세요.</p>
+<h3>부양가족을 올리면 세금이 줄어요</h3>
+<p>기본공제 인원은 본인과 소득이 적은 배우자·자녀·부모님 등 공제 대상 가족 수예요. 1명 늘 때마다 과세표준이 150만원씩 줄어 소득세가 내려갑니다. 단, 4대보험료는 인원과 관계없이 같아요.</p>
+<h3>국민연금 상·하한</h3>
+<p>국민연금은 기준소득월액에 상한과 하한이 있어 월급이 아주 높거나 낮으면 실제 보험료가 이 계산과 달라질 수 있어요. 이 계산기는 상·하한을 반영하지 않았으니 고소득자는 명세서 금액을 기준으로 보세요.</p>
+<h3>연봉 협상 때 활용법</h3>
+<p>제시받은 연봉을 12로 나눈 금액을 세전 월급에 넣으면 대략의 월 실수령을 알 수 있어요. 퇴직금이 연봉에 포함된 계약이라면 13으로 나눠 넣는 편이 실제에 가깝습니다.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>국민연금은 왜 4.5%가 아니라 4.75%인가요?</summary><p>국민연금법 개정으로 2026년부터 보험료율이 단계적으로 오르고, 2026년 근로자 몫은 기준소득월액의 4.75%예요. 회사도 같은 비율을 부담합니다.</p></details><details><summary>식대 20만원은 꼭 비과세인가요?</summary><p>회사가 식사를 따로 제공하지 않고 식대로 지급할 때 월 20만원까지 비과세예요. 회사가 급여명세서에 비과세로 처리했는지 확인하세요.</p></details><details><summary>계산 결과가 실제 월급과 다르면 어떻게 하나요?</summary><p>매달 떼는 소득세는 간이세액표 기준이라 조금 차이가 날 수 있고, 연말정산 때 정산돼요. 큰 차이가 나면 회사 급여 담당자에게 공제 항목을 물어보세요.</p></details><details><summary>입력한 월급이 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>국민연금법 제88조제3항, 부칙(법률 제20903호) 제4조제1항제1호 — 2026년 기여금 1만분의 475 — <a href="https://www.law.go.kr/법령/국민연금법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국민건강보험법 제76조제1항, 같은 법 시행령 제44조제1항 — 보험료율 1만분의 719, 근로자 50% 부담 — <a href="https://www.law.go.kr/법령/국민건강보험법시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>노인장기요양보험법 제9조제1항, 같은 법 시행령 제4조 — 100만분의 9,448 — <a href="https://www.law.go.kr/법령/노인장기요양보험법시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 제13조제2항, 시행령 제12조제1항제2호 — 1천분의 18의 2분의 1</li><li>소득세법 제47조·제50조·제51조의3·제55조·제59조·제59조의4제9항 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>지방세법 제103조의13 — 소득세의 100분의 10 — <a href="https://www.law.go.kr/법령/지방세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 원문 확인(2026년 1월 1일 시행본).</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+
+function wageDed(t){var d;if(t<=5e6)d=t*0.7;else if(t<=15e6)d=3.5e6+(t-5e6)*0.4;else if(t<=45e6)d=7.5e6+(t-15e6)*0.15;else if(t<=1e8)d=12e6+(t-45e6)*0.05;else d=14.75e6+(t-1e8)*0.02;return Math.min(d,2e7,t)}
+function taxOf(b){var T=[[14e6,0,0.06,0],[5e7,84e4,0.15,14e6],[8.8e7,624e4,0.24,5e7],[1.5e8,1536e4,0.35,8.8e7],[3e8,3706e4,0.38,1.5e8],[5e8,9406e4,0.40,3e8],[1e9,17406e4,0.42,5e8],[Infinity,38406e4,0.45,1e9]];for(var i=0;i<T.length;i++)if(b<=T[i][0])return T[i][1]+(b-T[i][3])*T[i][2];return 0}
+function wageCredit(c0,tot){var c=c0<=13e5?c0*0.55:715e3+(c0-13e5)*0.3,cap;if(tot<=33e6)cap=74e4;else if(tot<=7e7)cap=Math.max(66e4,74e4-(tot-33e6)*0.008);else if(tot<=1.2e8)cap=Math.max(50e4,66e4-(tot-7e7)/2);else cap=Math.max(20e4,50e4-(tot-1.2e8)/2);return Math.min(c,cap)}
+
+function f10(n){return Math.floor(Math.round(n*100)/1000)*10}
+function compute(){var payW=N('pay'),freeW=Math.min(N('free'),payW),fam=parseInt(N('fam'),10)||1;
+var pay=payW,free=freeW,base=pay-free;var np=f10(base*0.0475);var hi=f10(base*0.0719/2);var ltcRatio=Math.round(0.9448/7.19*10000)/10000;var ltc=f10(hi*ltcRatio);var ei=f10(base*0.009);
+var tot=base*12;var wd=wageDed(tot),wi=tot-wd;var taxBase=Math.max(0,wi-fam*150e4-np*12-(hi+ltc+ei)*12);var calcTax=taxOf(taxBase);var yearTax=Math.max(0,calcTax-wageCredit(calcTax,tot)-13e4);
+var it=f10(yearTax/12),lt=f10(it*0.1);var ded=np+hi+ltc+ei+it+lt,net=pay-ded;var pct=pay?Math.round(net/pay*1000)/10:0;
+return {label:'예상 월 실수령액',big:won(net),unit:'원',interp:pay?'세전 월급의 약 '+pct+'%를 받아요':'세전 월급을 넣어 주세요',
+rows:[['국민연금 (4.75%)',won(np)+'원'],['건강보험 (7.19% ÷ 2)',won(hi)+'원'],['장기요양보험',won(ltc)+'원'],['고용보험 (0.9%)',won(ei)+'원'],['소득세',won(it)+'원'],['지방소득세 (소득세의 10%)',won(lt)+'원'],['공제 합계',won(ded)+'원',1],['실수령액',won(net)+'원',1]],
+note:'과세 월급 '+won(base)+'원 기준, 항목마다 10원 미만 버림. 연 실수령 약 '+won(net*12)+'원.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'');i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big"><div class="l">'+esc(r.label)+'</div><div class="v">'+r.big+'<small>'+esc(r.unit)+'</small></div><div class="s">'+esc(r.interp)+'</div></div>';
+ h+='<table><thead><tr><th>항목</th><th class="n">금액</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]?' class="tot"':'')+'><td>'+esc(x[0])+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>'+(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+render();
+
+</script>
+</body>
+</html>

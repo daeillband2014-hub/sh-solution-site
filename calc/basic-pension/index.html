@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>기초연금 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="2026년 기초연금 계산기. 근로소득·재산·부채를 넣으면 소득인정액을 구해 선정기준액(단독 247만원, 부부 395만 2천원)과 비교하고 예상 월 지급액까지 바로 보여 드립니다.">
+<meta name="theme-color" content="#07090f">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/basic-pension/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="기초연금 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="2026년 기초연금 계산기. 근로소득·재산·부채를 넣으면 소득인정액을 구해 선정기준액(단독 247만원, 부부 395만 2천원)과 비교하고 예상 월 지급액까지 바로 보여 드립니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/basic-pension/">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "기초연금 선정기준액은 2026년에 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "배우자가 없는 노인가구는 월 247만원, 배우자가 있는 노인가구는 월 395만 2천원입니다. 소득인정액이 이 금액 이하이면 대상이 됩니다."}}, {"@type": "Question", "name": "부부가 함께 받으면 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "부부가 모두 받으면 각자 20%씩 감액돼 1인 279,760원, 합계 559,520원이 기준입니다."}}, {"@type": "Question", "name": "일을 해도 기초연금을 받을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "받을 수 있습니다. 근로소득은 월 116만원을 먼저 빼고 남은 금액의 70%만 소득으로 반영합니다."}}, {"@type": "Question", "name": "공무원연금을 받으면 기초연금은 안 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "공무원·군인·사학·별정우체국 연금 등을 받는 사람과 그 배우자는 원칙적으로 대상에서 제외됩니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#f87171;--shadow:0 18px 50px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#b91c1c;--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20vmax -20vmax auto auto;width:70vmax;height:70vmax;border-radius:50%;background:radial-gradient(closest-side,var(--glow-2),transparent);z-index:-1;pointer-events:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.grad{background:linear-gradient(95deg,var(--c1),var(--c3) 45%,var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;border:2px solid var(--c1);display:grid;place-items:center;font-style:normal;font-size:11px;color:var(--c1)}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-r a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 12px;border:1px solid var(--line-2);border-radius:10px;white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+main{padding:28px 0 40px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 10px}
+.crumb a{text-decoration:none}
+h1{font-size:clamp(26px,7vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;box-shadow:var(--shadow)}
+.f{margin:0 0 18px}
+.f>label,.f>.lb{display:block;font-size:14px;font-weight:700;margin:0 0 8px}
+.f small{display:block;color:var(--muted);font-size:12.5px;margin-top:6px}
+.in{display:flex;align-items:center;border:1px solid var(--line-2);border-radius:14px;background:var(--bg-2);padding:0 14px;height:52px}
+.in:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.in input,.in select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:18px;font-weight:700;text-align:right;outline:none}
+.in select{text-align:left;font-size:16px}
+.in select option{color:#0b1020}
+.in span{margin-left:8px;color:var(--muted);font-weight:600;font-size:15px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{flex:1 1 auto;min-width:0;position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 10px;border:1px solid var(--line-2);border-radius:12px;font-size:14.5px;font-weight:600;color:var(--sub);background:var(--bg-2)}
+.seg input:checked+span{border-color:var(--c1);color:var(--fg);background:var(--glow);box-shadow:0 0 0 1px var(--c1) inset}
+.seg input:focus-visible+span{outline:2px solid var(--c1);outline-offset:2px}
+.btn{display:flex;width:100%;align-items:center;justify-content:center;height:54px;border-radius:14px;border:0;cursor:pointer;font:inherit;font-size:16.5px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.btn:active{transform:scale(.99)}
+.res{margin-top:18px}
+.big{border-radius:18px;padding:20px 18px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.badge{display:inline-block;font-size:12.5px;font-weight:800;padding:4px 10px;border-radius:999px;border:1px solid currentColor;margin-bottom:8px}
+.b-ok{color:var(--ok)}.b-warn{color:var(--warn)}.b-no{color:var(--no)}
+.big .lbl{font-size:14px;color:var(--sub);font-weight:600}
+.big .num{font-size:clamp(30px,9vw,42px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:2px 0}
+.big .num small{font-size:.45em;font-weight:700;margin-left:4px;color:var(--sub)}
+.big .sub2{font-size:14px;color:var(--sub)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+.rows{margin-top:14px}
+.rows th,.rows td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rows td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:10px}
+.rows tr.tot td{font-weight:900;color:var(--ink);border-bottom:0}
+.rows td small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.say{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--c1);background:var(--surface);border-radius:0 12px 12px 0;font-size:14.5px;color:var(--sub)}
+section.txt{margin-top:40px}
+section.txt h2{font-size:22px;margin:0 0 14px;letter-spacing:-.02em}
+section.txt h3{font-size:17px;margin:22px 0 8px}
+section.txt p,section.txt li{color:var(--sub);font-size:15.5px}
+section.txt ul,section.txt ol{padding-left:20px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:12px 0}
+.tbl table th,.tbl table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
+.tbl table th{background:var(--bg-2);font-weight:700}
+.tbl table tr:last-child td{border-bottom:0}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:14px 0}
+.ex p{margin:4px 0}
+details{border:1px solid var(--line);border-radius:14px;padding:4px 16px;margin:0 0 10px;background:var(--surface-solid)}
+summary{cursor:pointer;font-weight:700;padding:12px 0;font-size:15.5px}
+details p{margin:0 0 14px}
+.src li{margin-bottom:6px}
+.src a{color:var(--ink)}
+.disc{margin-top:28px;font-size:13.5px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:13.5px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><div class="hd-r"><a href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div></div></header>
+<main><div class="wrap">
+<p class="crumb"><a href="/">홈</a> › <a href="/calc/">계산기</a> › 기초연금 계산기</p>
+<h1>2026 기초연금 계산기</h1>
+<p class="lead">소득과 재산을 넣으면 소득인정액과 예상 기초연금을 바로 계산해요.</p>
+<div class="card">
+<div class="f"><div class="lb">가구 형태</div><div class="seg" role="radiogroup"><label><input type="radio" name="couple" value="0" checked><span>혼자 살아요</span></label><label><input type="radio" name="couple" value="1"><span>부부예요</span></label></div></div><div class="f"><div class="lb">만 65세 이상인가요?</div><div class="seg" role="radiogroup"><label><input type="radio" name="age65" value="1" checked><span>네</span></label><label><input type="radio" name="age65" value="0"><span>아니요</span></label></div></div><div class="f"><div class="lb">공무원·군인·사학·별정우체국 연금을 받나요?</div><div class="seg" role="radiogroup"><label><input type="radio" name="jik" value="0" checked><span>아니요</span></label><label><input type="radio" name="jik" value="1"><span>본인 또는 배우자가 받아요</span></label></div></div><div class="f"><div class="lb"><label for="w1">본인 월 근로소득</label></div><div class="in"><input class="num" id="w1" inputmode="numeric" autocomplete="off" aria-label="본인 월 근로소득" value="0" data-max="10"><span>원</span></div><small>세전 월급 기준. 116만원까지는 반영되지 않아요.</small></div><div class="f hide" id="fw2"><div class="lb"><label for="w2">배우자 월 근로소득</label></div><div class="in"><input class="num" id="w2" inputmode="numeric" autocomplete="off" aria-label="배우자 월 근로소득" value="0" data-max="10"><span>원</span></div></div><div class="f"><div class="lb"><label for="oth">그 밖의 월 소득</label></div><div class="in"><input class="num" id="oth" inputmode="numeric" autocomplete="off" aria-label="그 밖의 월 소득" value="1000000" data-max="10"><span>원</span></div><small>국민연금·사업·임대·이자 소득 등을 합친 월 금액</small></div><div class="f"><div class="lb">사는 곳</div><div class="seg" role="radiogroup"><label><input type="radio" name="reg" value="big" checked><span>대도시</span></label><label><input type="radio" name="reg" value="mid"><span>중소도시</span></label><label><input type="radio" name="reg" value="rural"><span>농어촌</span></label></div><small>대도시: 특별시·광역시 구·특례시 / 중소도시: 도의 시·세종 / 농어촌: 도의 군</small></div><div class="f"><div class="lb"><label for="gen">일반재산(집·토지·전월세 보증금 등)</label></div><div class="in"><input class="num" id="gen" inputmode="numeric" autocomplete="off" aria-label="일반재산(집·토지·전월세 보증금 등)" value="0" data-max="10"><span>원</span></div><small>주택은 공시가격 기준</small></div><div class="f"><div class="lb"><label for="fin">금융재산(예금·적금·주식)</label></div><div class="in"><input class="num" id="fin" inputmode="numeric" autocomplete="off" aria-label="금융재산(예금·적금·주식)" value="0" data-max="10"><span>원</span></div></div><div class="f"><div class="lb"><label for="debt">부채(대출 등)</label></div><div class="in"><input class="num" id="debt" inputmode="numeric" autocomplete="off" aria-label="부채(대출 등)" value="0" data-max="10"><span>원</span></div></div>
+<button class="btn" id="go" type="button">결과 보기</button>
+<div class="res" id="res" aria-live="polite"></div>
+</div>
+<section class="txt"><h2>이렇게 계산해요</h2><p>기초연금은 「소득인정액」이라는 하나의 숫자로 대상 여부를 가립니다. 소득인정액은 매달 버는 돈을 그대로 쓰지 않고, 근로소득은 일부를 빼 주고 재산은 일정 비율로 월 소득처럼 바꿔서 더한 값입니다. 이 값이 선정기준액 이하이면 대상이고, 지급액은 기준연금액에서 시작합니다.</p>
+<div class="tbl"><table><thead><tr><th>항목</th><th>2026년 기준</th></tr></thead><tbody>
+<tr><td>선정기준액(배우자 없음)</td><td>월 2,470,000원</td></tr><tr><td>선정기준액(배우자 있음)</td><td>월 3,952,000원</td></tr>
+<tr><td>기준연금액</td><td>월 349,700원</td></tr><tr><td>근로소득 공제</td><td>월 116만원 공제 후 남은 금액의 30% 추가 공제(부부는 각자)</td></tr>
+<tr><td>기본재산액</td><td>대도시 1억 3,500만원 · 중소도시 8,500만원 · 농어촌 7,250만원</td></tr>
+<tr><td>금융재산 공제</td><td>2,000만원</td></tr><tr><td>재산 소득환산율</td><td>연 4%(12로 나눠 월로 환산)</td></tr></tbody></table></div>
+<p>계산 순서는 이렇습니다. 먼저 근로소득에서 116만원을 빼고, 남은 금액의 70%만 소득으로 칩니다. 다음으로 일반재산에서 사는 지역의 기본재산액을, 금융재산에서 2,000만원을 빼고 부채도 뺍니다. 남은 재산에 4%를 곱해 12로 나누면 재산의 월 소득환산액이 나옵니다. 여기에 연금·임대 같은 다른 소득을 더하면 소득인정액이 됩니다.</p>
+<p>부부가 함께 받으면 각자 20%씩 줄어 1인 279,760원, 둘이 합쳐 559,520원이 됩니다. 또 소득인정액에 기초연금을 더한 금액이 선정기준액을 넘으면, 넘는 만큼 연금을 줄여 소득이 기준선 위로 역전되지 않게 합니다.</p>
+<div class="ex"><p><b>예시</b> 대도시에 혼자 사는 만 67세, 월급 216만원, 공시가격 1억 6,500만원 주택, 예금 2,000만원, 다른 소득 없음</p>
+<p>근로소득: (2,160,000 − 1,160,000) × 0.7 = 700,000원</p><p>재산: (1억 6,500만 − 1억 3,500만) + (2,000만 − 2,000만) = 3,000만원 → 3,000만 × 4% ÷ 12 = 100,000원</p>
+<p>소득인정액 800,000원 ≤ 2,470,000원 → 대상, 예상 월 349,700원</p></div></section>
+<section class="txt"><h2>알아두면 좋은 점</h2><h3>언제, 어디서 신청하나요</h3><p>만 65세가 되는 생일이 속한 달의 한 달 전부터 신청할 수 있습니다. 2026년에는 1961년생이 새로 대상 나이에 들어옵니다. 주소지와 상관없이 가까운 행정복지센터(주민센터)나 국민연금공단 지사에서 접수하며, 신분증과 통장 사본을 챙기면 됩니다. 늦게 신청하면 지난달 몫을 소급해 주지 않으니 미리 접수해 두는 편이 낫습니다.</p>
+<h3>계산기가 빼 둔 항목</h3><p>이 페이지는 판단에 큰 영향을 주는 항목만 넣었습니다. 국민연금을 많이 받는 사람의 연계 감액, 고급 자동차와 회원권, 이자소득 공제, 자녀 명의 집에 무료로 사는 경우의 임차소득은 반영하지 않았습니다. 이런 사정이 있으면 실제 소득인정액이 더 높게 나올 수 있습니다.</p>
+<h3>자주 하는 실수</h3><ul><li>주택을 시세로 넣는 경우: 일반재산은 공시가격을 기준으로 봅니다. 시세로 넣으면 결과가 실제보다 불리하게 나옵니다.</li><li>부부 소득을 한쪽에만 몰아 넣는 경우: 근로소득 공제는 부부가 각각 받으므로 따로 적어야 정확합니다.</li><li>전세 보증금을 빠뜨리는 경우: 임차 보증금도 일반재산에 들어갑니다.</li></ul>
+<h3>받은 뒤에 챙길 일</h3><p>기초연금은 한 번 결정되면 끝나는 것이 아니라 소득과 재산이 바뀔 때마다 다시 따집니다. 집을 팔거나 자녀에게 증여하거나, 일을 새로 시작해 월급이 생기면 금액이 달라지거나 대상에서 빠질 수 있습니다. 이런 변화가 생기면 행정복지센터에 알려 두어야 나중에 받은 돈을 돌려주는 일을 막을 수 있습니다.</p><p>선정기준액을 조금 넘는다고 미리 포기할 필요는 없습니다. 실제 조사에서는 부채 증빙이나 재산 평가가 달라질 수 있으니 결과가 경계에 걸리면 상담을 받아 보세요.</p></section>
+<section class="txt"><h2>자주 묻는 질문</h2><details><summary>기초연금 선정기준액은 2026년에 얼마인가요?</summary><p>배우자가 없는 노인가구는 월 247만원, 배우자가 있는 노인가구는 월 395만 2천원입니다. 소득인정액이 이 금액 이하이면 대상이 됩니다.</p></details><details><summary>부부가 함께 받으면 얼마인가요?</summary><p>부부가 모두 받으면 각자 20%씩 감액돼 1인 279,760원, 합계 559,520원이 기준입니다.</p></details><details><summary>일을 해도 기초연금을 받을 수 있나요?</summary><p>받을 수 있습니다. 근로소득은 월 116만원을 먼저 빼고 남은 금액의 70%만 소득으로 반영합니다.</p></details><details><summary>공무원연금을 받으면 기초연금은 안 되나요?</summary><p>공무원·군인·사학·별정우체국 연금 등을 받는 사람과 그 배우자는 원칙적으로 대상에서 제외됩니다.</p></details></section>
+<section class="txt"><h2>근거</h2><ul class="src"><li>기초연금법 제3조(수급권자의 범위), 제8조(기초연금액의 감액) <a href="https://www.law.go.kr/법령/기초연금법" rel="nofollow noopener" target="_blank">원문 보기</a></li><li>기초연금법 시행규칙 제4조(재산의 소득환산액 산정) <a href="https://www.law.go.kr/법령/기초연금법시행규칙" rel="nofollow noopener" target="_blank">원문 보기</a></li><li>보건복지부 고시 제2026-156호 「기초연금 지급대상자 선정기준액, 기준연금액 및 소득인정액 산정 세부기준에 관한 고시」 제2조·제3조·제6조·제8조·제9조</li><li>보건복지부 보도자료(2026-01-01) 「2026년 노인 단독가구, 소득인정액 월 247만 원 이하면 기초연금 받는다」</li></ul><p>기준일: 2026-10-15 (보건복지부 고시 제2026-156호 기준)</p></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</div></main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+
+function show(badge,cls,lbl,numHtml,sub,rows,say){
+  var t='<div class="big"><span class="badge '+cls+'">'+badge+'</span><div class="lbl">'+lbl+'</div><div class="num">'+numHtml+'</div>'+(sub?'<div class="sub2">'+sub+'</div>':'')+'</div>';
+  if(rows&&rows.length){t+='<table class="rows"><tbody>';rows.forEach(function(r){t+='<tr'+(r[3]?' class="tot"':'')+'><td>'+r[0]+(r[2]?'<small>'+r[2]+'</small>':'')+'</td><td>'+r[1]+'</td></tr>'});t+='</tbody></table>'}
+  if(say)t+='<p class="say">'+say+'</p>';
+  $('res').innerHTML=t;
+}
+
+var LINE_2026={single:2470000,couple:3952000},BASE_PENSION=349700,WORK_BASIC=1160000,WORK_EXTRA_RATE=0.3,FIN_DEDUCT=20000000,ASSET_RATE=0.04,BASIC={big:135000000,mid:85000000,rural:72500000};
+function workCounted(w){w=Math.max(0,w||0);var r=w-WORK_BASIC;if(r<=0)return 0;return Math.floor(r*(1-WORK_EXTRA_RATE))}
+function assetIncome(gen,fin,debt,region){var g=Math.max(0,(gen||0)-(BASIC[region]||BASIC.rural));var f=Math.max(0,(fin||0)-FIN_DEDUCT);var s=Math.max(0,g+f-Math.max(0,debt||0));return Math.floor(s*ASSET_RATE/12)}
+function judge(p){var couple=!!p.couple;var line=couple?LINE_2026.couple:LINE_2026.single;var wc=workCounted(p.work1)+(couple?workCounted(p.work2):0);var other=Math.max(0,p.other||0);var asInc=assetIncome(p.gen,p.fin,p.debt,p.region);var inc=wc+other+asInc;var kind;
+if(!p.age65)kind='age';else if(p.jikyeok)kind='excl';else kind=inc<=line?'ok':(inc<=line*1.1?'edge':'no');
+var per=couple?Math.floor(BASE_PENSION*0.8):BASE_PENSION;var full=couple?per*2:per;var amount=0,cut=false;
+if(kind==='ok'){amount=full;if(inc+full>line){amount=Math.max(0,line-inc);cut=true}}
+return{couple:couple,line:line,workCounted:wc,other:other,asInc:asInc,inc:inc,kind:kind,per:per,full:full,amount:amount,cut:cut,gap:line-inc}}
+function run(){
+  var c=R('couple')==='1';$('fw2').classList.toggle('hide',!c);
+  var r=judge({couple:c,age65:R('age65')==='1',jikyeok:R('jik')==='1',work1:N('w1'),work2:N('w2'),other:N('oth'),gen:N('gen'),fin:N('fin'),debt:N('debt'),region:R('reg')});
+  var rows=[['근로소득 반영액',W(r.workCounted)+'원','116만원 공제 후 70%'],['그 밖의 소득',W(r.other)+'원'],['재산의 소득환산액',W(r.asInc)+'원','공제 후 재산 × 4% ÷ 12'],['소득인정액',W(r.inc)+'원','',1],['선정기준액 ('+(c?'부부':'단독')+')',W(r.line)+'원'],['기준연금액'+(c?' (부부 각 20% 감액)':''),W(r.full)+'원',c?'1인 '+W(r.per)+'원 × 2':'']];
+  var M={ok:['받을 수 있어요','b-ok'],edge:['선정기준액 근처','b-warn'],no:['기준을 넘어요','b-no'],age:['아직 대상 아님','b-no'],excl:['제외 대상','b-no']};
+  var say={ok:r.cut?'소득인정액과 연금을 더하면 선정기준액을 넘어서, 넘는 만큼 줄어든 금액으로 계산했어요.':'소득인정액이 선정기준액보다 '+W(r.gap)+'원 낮아요. 기준연금액을 그대로 받는 구간이에요.',
+   edge:'선정기준액을 '+W(-r.gap)+'원 넘었지만 차이가 작아요. 실제 조사에서는 이 계산기가 빼 둔 항목도 따지므로 상담을 받아 볼 만해요.',
+   no:'소득인정액이 선정기준액보다 '+W(-r.gap)+'원 많아요. 재산이나 부채를 다시 확인해 보세요.',
+   age:'기초연금은 만 65세 이상부터 받을 수 있어요. 생일이 속한 달 한 달 전부터 신청할 수 있어요.',
+   excl:'공무원·군인·사학·별정우체국 연금 등을 받는 사람과 그 배우자는 기초연금 대상에서 빠져요.'}[r.kind];
+  show(M[r.kind][0],M[r.kind][1],'예상 월 기초연금'+(c?' (부부 합계)':''),W(r.amount)+'<small>원</small>','1년이면 '+W(r.amount*12)+'원',rows,say);
+}
+
+
+function $(id){return document.getElementById(id)}
+function N(id){return parseInt(($(id).value||'').replace(/[^0-9]/g,''),10)||0}
+function R(n){var e=document.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+function W(n){return Math.round(n).toLocaleString('ko-KR')}
+document.querySelectorAll('input.num').forEach(function(el){
+  function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'').slice(0,el.dataset.max?+el.dataset.max:10);el.value=d?(+d).toLocaleString('ko-KR'):''}
+  f();el.addEventListener('input',function(){f();run()});
+});
+document.querySelectorAll('.card input[type=radio],.card select').forEach(function(el){el.addEventListener('change',run)});
+$('go').addEventListener('click',function(){run();$('res').scrollIntoView({behavior:'smooth',block:'nearest'})});
+(function(){var d=document.documentElement;try{if(window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light')}catch(e){}
+$('theme').addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+run();
+
+</script>
+</body>
+</html>

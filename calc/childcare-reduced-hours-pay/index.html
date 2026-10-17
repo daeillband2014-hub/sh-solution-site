@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>육아기 근로시간 단축 급여 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="육아기 근로시간 단축 급여를 계산합니다. 2026년부터 오른 상한(최초 10시간분 250만원, 나머지 160만원)을 반영해 회사 월급, 고용보험 급여, 단축 기간 합계를 한 번에 보여 줍니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/childcare-reduced-hours-pay/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="육아기 근로시간 단축 급여 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="육아기 근로시간 단축 급여를 계산합니다. 2026년부터 오른 상한(최초 10시간분 250만원, 나머지 160만원)을 반영해 회사 월급, 고용보험 급여, 단축 기간 합계를 한 번에 보여 줍니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/childcare-reduced-hours-pay/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "주 40시간에서 20시간으로 줄이면 얼마인가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "월 500만원이라면 첫 10시간분은 상한 250만원 × 10 ÷ 40 = 625,000원, 나머지 10시간분은 500만원의 80%인 400만원이 상한 160만원으로 제한돼 160만원 × 10 ÷ 40 = 400,000원이에요. 단축 급여는 합계 1,025,000원입니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "회사 월급은 정말 시간에 비례해서 줄어드나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "이 계산기는 회사 월급을 근로시간에 비례해 줄어든다고 가정했어요. 회사가 이보다 많이 주면 감액 규정 때문에 단축 급여가 줄 수 있으니, 실제 회사 지급액을 기준으로 다시 따져 보세요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "육아휴직과 같이 쓸 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "같은 자녀에 대해 육아휴직과 단축을 나눠 쓸 수 있고, 쓰지 않은 육아휴직 기간의 두 배만큼 단축 기간이 늘어나요. 같은 기간에 동시에 둘 다 받는 것은 아닙니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "부부가 같이 단축할 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "각자 근로자로서 요건을 갖추면 각각 신청할 수 있어요. 급여도 각자의 통상임금과 근로시간으로 따로 계산됩니다."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;
+--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;
+--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#8a94aa;--shadow:0 24px 60px -30px rgba(0,0,0,.8)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}}
+:root[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:520px;z-index:-1;pointer-events:none;background:radial-gradient(600px 300px at 20% 30%,var(--glow),transparent 70%),radial-gradient(500px 260px at 85% 20%,var(--glow-2),transparent 70%)}
+a{color:var(--ink)}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.logo svg{width:28px;height:28px;flex:none}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-link{font-size:14px;font-weight:600;color:var(--sub);text-decoration:none;padding:8px 12px;border:1px solid var(--line-2);border-radius:999px;white-space:nowrap}
+.hd-link:hover{color:var(--fg);border-color:var(--c1)}
+.theme{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);cursor:pointer;font-size:15px}
+main{padding:28px 0 40px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:0 0 8px}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.calc .grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:560px){.calc .grid{grid-template-columns:1fr 1fr}.calc .full{grid-column:1/-1}}
+.f label{display:block;font-size:14px;font-weight:700;color:var(--sub);margin-bottom:6px}
+.box{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:52px;transition:border-color .2s,box-shadow .2s}
+.box:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.box input,.box select{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--fg);font:inherit;font-size:17px;font-weight:600;outline:none;height:100%}
+.box select{cursor:pointer;-webkit-appearance:none;appearance:none}
+.box select option{background:var(--surface-solid);color:var(--fg)}
+.box .u{color:var(--muted);font-size:15px;font-weight:600;margin-left:8px;white-space:nowrap}
+.box.sel::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-3px);margin-left:8px;flex:none}
+.hint{font-size:13px;color:var(--muted);margin:6px 2px 0}
+.go{margin-top:18px;width:100%;height:54px;border:0;border-radius:14px;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);cursor:pointer;
+background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.go:active{transform:scale(.99)}
+#result{margin-top:18px}
+.big{border-radius:18px;padding:20px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.big span{display:block;font-size:14px;font-weight:700;color:var(--sub)}
+.big strong{display:block;font-size:34px;line-height:1.25;letter-spacing:-.03em;margin-top:4px;color:var(--fg)}
+.big small{display:block;color:var(--sub);font-size:14px;margin-top:4px}
+table.t{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+table.t th,table.t td{padding:11px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{text-align:left;font-weight:600;color:var(--sub);width:46%}
+table.t td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.note{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--bg-2);color:var(--sub);font-size:14.5px}
+.err{padding:14px;border-radius:12px;border:1px solid var(--warn);color:var(--warn);font-weight:700}
+.items{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.items li{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg-2)}
+.items b{display:block;font-size:16px}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;margin:4px 0 6px;border:1px solid currentColor}
+.tag.ok{color:var(--ok)}.tag.check{color:var(--warn)}.tag.info,.tag.no{color:var(--no)}
+.items p{margin:0;color:var(--sub);font-size:14.5px}
+.items em{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:6px}
+section.doc{margin-top:36px}
+section.doc h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;padding-left:12px;border-left:4px solid var(--c1);line-height:1.35}
+section.doc h3{font-size:17px;margin:20px 0 6px}
+section.doc p,section.doc li{color:var(--sub);font-size:16px}
+section.doc ul,section.doc ol{padding-left:20px}
+section.doc table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;background:var(--surface-solid);border-radius:12px;overflow:hidden}
+section.doc th,section.doc td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+section.doc th{background:var(--bg-2);color:var(--fg);font-weight:700}
+section.doc td{color:var(--sub)}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.ex b{color:var(--fg)}
+details{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;color:var(--fg);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q. ";color:var(--ink)}
+details p{margin:0 0 14px}
+.basis li{margin-bottom:6px}
+.disc{margin-top:28px;font-size:14px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:14px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+@media (max-width:380px){h1{font-size:25px}.big strong{font-size:30px}.logo{font-size:15px}.hd-link{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap">
+<a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>에스에이치솔루션</a>
+<div class="hd-r"><a class="hd-link" href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div>
+</div></header>
+<main class="wrap">
+<span class="eyebrow">2026년 개정 상한 반영</span>
+<h1>육아기 단축근무 급여 계산기</h1>
+<p class="lead">단축 전·후 주당 근로시간과 월 통상임금을 넣으면 회사 월급과 고용보험 단축 급여를 합쳐 한 달에 얼마를 받는지 알려 드려요.</p>
+<form class="card calc" id="f" novalidate>
+<div class="grid"><div class="f full"><label for="wage">월 통상임금 (단축 전)</label><div class="box"><input id="wage" type="text" inputmode="numeric" autocomplete="off" maxlength="12" value="3000000" data-comma><span class="u">원</span></div></div><div class="f"><label for="before">단축 전 주당 근로시간</label><div class="box"><input id="before" type="text" inputmode="numeric" autocomplete="off" maxlength="2" value="40"><span class="u">시간</span></div></div><div class="f"><label for="after">단축 후 주당 근로시간</label><div class="box"><input id="after" type="text" inputmode="numeric" autocomplete="off" maxlength="2" value="30"><span class="u">시간</span></div><p class="hint">주 15~35시간</p></div><div class="f full"><label for="months">단축 기간</label><div class="box"><input id="months" type="text" inputmode="numeric" autocomplete="off" maxlength="2" value="6"><span class="u">개월</span></div></div></div>
+<button class="go" type="submit">계산하기</button>
+<div id="result" aria-live="polite"></div>
+</form>
+<section class="doc"><h2>이렇게 계산해요</h2>
+<p>단축 급여는 줄인 시간을 두 구간으로 나눠 계산합니다. 매주 처음 10시간까지 줄인 부분은 월 통상임금을 그대로 기준으로 삼고, 10시간을 넘겨 줄인 부분은 월 통상임금의 80%를 기준으로 삼아요. 각 기준에는 2026년부터 적용되는 상한과 하한이 있습니다.</p>
+<table><thead><tr><th>구간</th><th>기준 금액</th><th>상한</th><th>하한</th></tr></thead>
+<tbody><tr><td>매주 최초 10시간 단축분</td><td>월 통상임금 100%</td><td>250만원</td><td>50만원</td></tr>
+<tr><td>10시간 초과 단축분</td><td>월 통상임금 80%</td><td>160만원</td><td>50만원</td></tr></tbody></table>
+<p>구간별 급여 = 기준 금액 × 그 구간에서 줄인 시간 ÷ 단축 전 주당 근로시간. 10시간보다 적게 줄였다면 실제로 줄인 시간만 첫 구간에 들어가요. 회사 월급은 근로시간에 비례해 줄어든다고 보고 월 통상임금 × 단축 후 시간 ÷ 단축 전 시간으로 계산했어요(원 미만 버림).</p>
+<p>마지막으로, 회사에서 받는 월급과 단축 급여를 더한 값이 단축 전 월 통상임금을 넘으면 넘는 만큼 단축 급여에서 빼요. 저임금 근로자에게 하한 50만원이 적용될 때 주로 생기는 경우입니다.</p>
+<div class="ex"><b>예시 — 월 300만원, 주 40시간 → 30시간, 6개월</b><br>
+줄인 시간은 10시간이라 첫 구간만 해당돼요. 기준 금액은 300만원이지만 상한 250만원이 적용돼 2,500,000 × 10 ÷ 40 = <b>625,000원</b>.<br>
+회사 월급은 3,000,000 × 30 ÷ 40 = <b>2,250,000원</b>. 한 달 합계 2,875,000원으로 원래 월급의 약 96%예요. 6개월 동안 받는 단축 급여는 625,000 × 6 = 3,750,000원입니다.</div>
+</section>
+<section class="doc"><h2>알아두면 좋은 점</h2>
+<h3>누가 쓸 수 있나요</h3>
+<p>만 12세 이하이거나 초등학교 6학년 이하인 자녀를 키우는 근로자가 신청할 수 있어요. 단축 후 근로시간은 주 15시간 이상 35시간 이하여야 하므로, 주 40시간 근무자라면 최소 5시간에서 최대 25시간까지 줄일 수 있습니다. 급여를 받으려면 단축을 30일 이상 하고, 시작일 이전 고용보험 피보험 단위기간이 합쳐서 180일 이상이어야 해요.</p>
+<h3>기간은 얼마나 되나요</h3>
+<p>기본은 1년 이내지만, 육아휴직을 다 쓰지 않았다면 남은 육아휴직 기간의 두 배를 단축 기간에 더할 수 있어요. 그래서 육아휴직을 전혀 쓰지 않은 경우 단축만으로 꽤 긴 기간을 쓸 수 있습니다. 이 계산기는 최대 36개월까지 넣을 수 있게 했어요.</p>
+<h3>신청 기한</h3>
+<p>단축을 시작한 날 이후 1개월부터, 끝난 날 이후 12개월 이내에 고용센터(고용24)로 신청해야 해요. 보통 한 달씩 모아서 신청하며, 회사가 작성하는 확인서가 필요하니 단축을 시작할 때 인사 담당자에게 미리 알려 두면 편합니다.</p>
+<h3>자주 하는 실수</h3>
+<p>첫째, 10시간만 줄이는 것이 가장 효율적이라고 단정하기 쉬운데, 첫 구간은 100% 기준이고 이후는 80% 기준이라 더 줄일수록 시간당 보전율이 조금 낮아지는 구조일 뿐 손해가 나는 것은 아니에요. 둘째, 단축 중 회사가 임금을 시간 비례보다 많이 주면 감액이 생길 수 있어요. 셋째, 한 달을 다 채우지 못한 달은 일할 계산되므로 이 계산기 금액보다 적게 나옵니다.</p>
+<h3>2025년 이전에 시작했다면</h3>
+<p>2026년 1월 1일 전에 단축을 시작했더라도, 그 이후 남은 기간에는 오른 상한(250만원·160만원)이 적용돼요.</p>
+</section>
+<section class="doc"><h2>자주 묻는 질문</h2><details><summary>주 40시간에서 20시간으로 줄이면 얼마인가요?</summary><p>월 500만원이라면 첫 10시간분은 상한 250만원 × 10 ÷ 40 = 625,000원, 나머지 10시간분은 500만원의 80%인 400만원이 상한 160만원으로 제한돼 160만원 × 10 ÷ 40 = 400,000원이에요. 단축 급여는 합계 1,025,000원입니다.</p></details><details><summary>회사 월급은 정말 시간에 비례해서 줄어드나요?</summary><p>이 계산기는 회사 월급을 근로시간에 비례해 줄어든다고 가정했어요. 회사가 이보다 많이 주면 감액 규정 때문에 단축 급여가 줄 수 있으니, 실제 회사 지급액을 기준으로 다시 따져 보세요.</p></details><details><summary>육아휴직과 같이 쓸 수 있나요?</summary><p>같은 자녀에 대해 육아휴직과 단축을 나눠 쓸 수 있고, 쓰지 않은 육아휴직 기간의 두 배만큼 단축 기간이 늘어나요. 같은 기간에 동시에 둘 다 받는 것은 아닙니다.</p></details><details><summary>부부가 같이 단축할 수 있나요?</summary><p>각자 근로자로서 요건을 갖추면 각각 신청할 수 있어요. 급여도 각자의 통상임금과 근로시간으로 따로 계산됩니다.</p></details></section>
+<section class="doc basis"><h2>근거</h2><ul>
+<li>고용보험법 제73조의2 — 지급 요건(30일 이상, 피보험 단위기간 180일), 신청 기한 — <a href="https://www.law.go.kr/법령/고용보험법/제73조의2" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>고용보험법 시행령 제104조의2제2항 (개정 2025.12.23, 2026.1.1 시행, 부칙 제3조 경과조치) — 구간별 기준 금액·상한·하한 — <a href="https://www.law.go.kr/법령/고용보험법시행령/제104조의2" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>고용보험법 시행령 제104조의4 — 사업주 금품과 합산한 초과분 감액 — <a href="https://www.law.go.kr/법령/고용보험법시행령/제104조의4" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조의2 — 대상 자녀, 주 15~35시간, 기간 — <a href="https://www.law.go.kr/법령/남녀고용평등과일ㆍ가정양립지원에관한법률/제19조의2" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>고용노동부 정책브리핑(2025.12.16) — 상한 220만→250만원, 150만→160만원 — <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148956574" rel="nofollow noopener" target="_blank">대한민국 정책브리핑</a></li>
+<li>기준일: 2026-10-15 법령 원문 확인</li></ul></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+/* 계산 규칙: 미니앱 src/logic.js 원문 그대로 */
+/* 육아기 근로시간 단축 급여 계산 규칙 (2026-10-15 법제처 원문 확인). 참고용 — 실제 지급액은 고용센터 결정으로 정해진다.
+
+   [근거 1] 고용보험법 제73조의2(육아기 근로시간 단축 급여) https://www.law.go.kr/법령/고용보험법/제73조의2
+     ① "육아기 근로시간 단축 … 을 30일 … 이상 실시한 피보험자 중 육아기 근로시간 단축을 시작한 날 이전에 제41조에 따른
+        피보험 단위기간이 합산하여 180일 이상인 피보험자에게 육아기 근로시간 단축 급여를 지급한다."
+     ② "… 육아기 근로시간 단축을 시작한 날 이후 1개월부터 끝난 날 이후 12개월 이내에 신청하여야 한다."
+     ③ "… 급여액은 대통령령으로 정한다."
+   [근거 2] 고용보험법 시행령 제104조의2제2항 (개정 2025.12.23, 부칙 제1조: 2026.1.1 시행)
+     https://www.law.go.kr/법령/고용보험법시행령/제104조의2
+     (매주 최초 10시간 단축분) 월 통상임금(250만원 상한, 50만원 하한) × 10(주당 단축시간이 10시간 미만이면 실제 단축시간)
+                                ÷ 단축 전 소정근로시간
+     (나머지 근로시간 단축분) 월 통상임금의 100분의 80(160만원 상한, 50만원 하한)
+                                × (단축 전 소정근로시간 − 단축 후 소정근로시간 − 10) ÷ 단축 전 소정근로시간
+     단서: 지급대상 기간이 1개월을 채우지 못하면 일할 계산 (이 앱은 개월 단위만 받는다).
+     부칙 제3조: 2026.1.1 전에 시작했어도 그 이후 남은 기간에는 개정 규정 적용.
+   [근거 3] 같은 영 제104조의4(감액) — 매월 사업주에게서 받은 금품 + 단축 급여 > 단축 시작 직전 월 통상임금이면
+     그 초과액을 단축 급여에서 뺀다. https://www.law.go.kr/법령/고용보험법시행령/제104조의4
+   [근거 4] 남녀고용평등과 일·가정 양립 지원에 관한 법률 제19조의2 — 만 12세 이하 또는 초등 6학년 이하 자녀,
+     단축 후 주 15시간 이상 35시간 이하(③), 기간 1년 이내 + 미사용 육아휴직 기간의 두 배 가산(④).
+     https://www.law.go.kr/법령/남녀고용평등과일ㆍ가정양립지원에관한법률/제19조의2
+   [근거 5] 고용노동부 정책브리핑(2025.12.16) "육아기 근로시간 단축급여 계산 때 기준금액의 상한액을 매주 최초 10시간
+     단축분은 220만 원에서 250만 원, 나머지 근로시간 단축분은 150만 원에서 160만 원으로 높인다."
+     https://www.korea.kr/news/policyNewsView.do?newsId=148956574
+   앱 가정: 회사 임금 = 월 통상임금 × 단축 후 시간 ÷ 단축 전 시간(근로시간 비례). 원 미만 버림. */
+
+var Y2026 = { cap1: 2500000, cap2: 1600000, floor: 500000, rate2: 0.8, firstHours: 10, minAfter: 15, maxAfter: 35, maxMonths: 36 };
+
+function fl(x) { return Math.floor(x + 1e-6); }
+function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
+
+/* 입력 확인 — 문제 있으면 한국어 메시지, 없으면 '' */
+function check(inp, R) {
+  R = R || Y2026;
+  if (!(inp.wage > 0)) return '월 통상임금을 넣어 주세요';
+  if (!(inp.before > 0)) return '단축 전 주당 근로시간을 넣어 주세요';
+  if (!(inp.after > 0)) return '단축 후 주당 근로시간을 넣어 주세요';
+  if (inp.after >= inp.before) return '단축 후 시간이 단축 전보다 적어야 해요';
+  if (inp.after < R.minAfter || inp.after > R.maxAfter) return '단축 후 근로시간은 주 15~35시간이어야 해요';
+  if (!(inp.months >= 1) || inp.months > R.maxMonths) return '단축 기간은 1~36개월로 넣어 주세요';
+  return '';
+}
+
+/* inp = { wage(원), before(시간), after(시간), months } */
+function calc(inp, R) {
+  R = R || Y2026;
+  var before = inp.before, after = inp.after, wage = inp.wage;
+  var cut = before - after;
+  var h1 = Math.min(R.firstHours, cut);
+  var h2 = Math.max(0, cut - R.firstHours);
+  var base1 = clamp(wage, R.floor, R.cap1);
+  var base2 = clamp(wage * R.rate2, R.floor, R.cap2);
+  var p1 = fl(base1 * h1 / before);
+  var p2 = h2 > 0 ? fl(base2 * h2 / before) : 0;
+  var company = fl(wage * after / before);
+  var raw = p1 + p2;
+  var cut4 = Math.max(0, company + raw - wage);        /* 제104조의4 감액 */
+  var gov = Math.max(0, raw - cut4);
+  var months = Math.max(0, Math.floor(inp.months || 0));
+  return { cut: cut, h1: h1, h2: h2, base1: base1, base2: base2, cap1Hit: wage > R.cap1, cap2Hit: h2 > 0 && wage * R.rate2 > R.cap2,
+    floorHit: wage < R.floor || (h2 > 0 && wage * R.rate2 < R.floor), p1: p1, p2: p2, raw: raw, reduce: cut4, gov: gov,
+    company: company, sum: company + gov, wage: wage, lost: wage - company, months: months, govTotal: gov * months, sumTotal: (company + gov) * months };
+}
+
+</script>
+<script>
+
+function $(id){return document.getElementById(id)}
+function num(id){var v=String($(id).value).replace(/[^0-9]/g,'');return v?parseInt(v,10):0}
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')}
+function won(n){return fmt(n)+'원'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function show(o){var h='';
+ if(o.err){$('result').innerHTML='<div class="err" role="alert">'+esc(o.err)+'</div>';return}
+ h+='<div class="big"><span>'+o.label+'</span><strong>'+o.big+'</strong>'+(o.sub?'<small>'+o.sub+'</small>':'')+'</div>';
+ if(o.rows&&o.rows.length){h+='<table class="t"><tbody>';o.rows.forEach(function(r){h+='<tr><th scope="row">'+r[0]+'</th><td>'+r[1]+'</td></tr>'});h+='</tbody></table>'}
+ if(o.extra)h+=o.extra;
+ if(o.note)h+='<p class="note">'+o.note+'</p>';
+ $('result').innerHTML=h}
+Array.prototype.forEach.call(document.querySelectorAll('input[data-comma]'),function(el){
+ function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'');el.value=d?Number(d).toLocaleString('ko-KR'):''}
+ el.addEventListener('input',f);f()});
+$('f').addEventListener('submit',function(e){e.preventDefault();run();$('result').scrollIntoView({behavior:'smooth',block:'nearest'})});
+$('theme').addEventListener('click',function(){var r=document.documentElement,cur=r.getAttribute('data-theme');
+ var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;r.setAttribute('data-theme',dark?'light':'dark')});
+
+
+function run(){var inp={wage:num('wage'),before:num('before'),after:num('after'),months:num('months')};
+var e=check(inp);if(e)return show({err:e});var r=calc(inp);
+var rows=[['줄인 시간','주 '+r.cut+'시간'],['회사 월급 (근로시간 비례)',won(r.company)],
+['최초 '+r.h1+'시간분 급여',won(r.p1)+(r.cap1Hit?' (상한)':'')]];
+if(r.h2>0)rows.push(['나머지 '+r.h2+'시간분 급여',won(r.p2)+(r.cap2Hit?' (상한)':'')]);
+if(r.reduce>0)rows.push(['감액 (월급 초과분)','− '+won(r.reduce)]);
+rows.push(['고용보험 단축 급여',won(r.gov)],['단축 전 월급',won(r.wage)],[r.months+'개월 급여 합계',won(r.govTotal)],[r.months+'개월 총수입',won(r.sumTotal)]);
+var keep=r.wage?Math.round(r.sum/r.wage*100):0;
+show({label:'한 달에 받는 돈 (회사 + 급여)',big:won(r.sum),sub:'회사 '+won(r.company)+' + 고용보험 '+won(r.gov),rows:rows,
+note:'주 '+r.cut+'시간을 줄여 월급이 '+won(r.lost)+' 줄지만, 단축 급여로 '+won(r.gov)+'를 채워 원래 월급의 약 '+keep+'%를 받아요.'})}
+
+run();
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sh-solution.kr/sitemap.xml

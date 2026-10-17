@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>퇴직소득세 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="퇴직금과 근속연수로 근속연수공제, 환산급여, 환산급여공제, 세율을 차례로 적용해 퇴직소득세와 세후 수령액을 계산합니다. 2026년 소득세법 원문 기준.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/retirement-income-tax/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="퇴직소득세 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="퇴직금과 근속연수로 근속연수공제, 환산급여, 환산급여공제, 세율을 차례로 적용해 퇴직소득세와 세후 수령액을 계산합니다. 2026년 소득세법 원문 기준.">
+<meta property="og:url" content="https://sh-solution.kr/calc/retirement-income-tax/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "퇴직금이 근속연수공제보다 적으면요?", "acceptedAnswer": {"@type": "Answer", "text": "퇴직금 전체가 공제돼 세금이 0원이에요(소득세법 제48조제2항)."}}, {"@type": "Question", "name": "퇴직금 중간정산을 받았으면 근속연수는 어떻게 넣나요?", "acceptedAnswer": {"@type": "Answer", "text": "중간정산 이후 다시 계산한 기간이 근속연수가 되는 것이 일반적이에요. 정확한 기간은 회사의 퇴직소득 원천징수영수증을 확인하세요."}}, {"@type": "Question", "name": "결과에 지방소득세도 포함되나요?", "acceptedAnswer": {"@type": "Answer", "text": "포함되지 않아요. 퇴직소득세의 10%가 지방소득세로 별도 부과됩니다."}}, {"@type": "Question", "name": "임원 퇴직금도 똑같이 계산되나요?", "acceptedAnswer": {"@type": "Answer", "text": "임원 퇴직금은 한도를 넘는 부분을 근로소득으로 보는 별도 규정이 있어, 이 계산기와 다를 수 있어요."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">소득세법 제48조·제55조</span><h1>퇴직소득세 계산기</h1><p>퇴직금과 근속연수만 넣으면 근속연수공제·환산급여공제를 거쳐 내야 할 퇴직소득세를 알려 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="pay">퇴직금(퇴직소득금액)</label><small>퇴직할 때 받는 퇴직급여 총액</small><div class="inp"><input id="pay" class="num" inputmode="numeric" autocomplete="off" value="50000000" aria-label="퇴직금(퇴직소득금액)"><span>원</span></div></div><div class="field"><label for="years">근속연수</label><small>1년 미만 남는 기간은 1년으로 올려 계산</small><div class="inp"><input id="years" class="num" inputmode="numeric" autocomplete="off" value="10" aria-label="근속연수"><span>년</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>퇴직금은 여러 해에 걸쳐 쌓인 돈이라 한 해 소득처럼 세율을 매기면 세금이 지나치게 커집니다. 그래서 소득세법은 <strong>1년치로 환산했다가 다시 근속연수만큼 되돌리는</strong> 방식을 씁니다. 순서는 다음과 같아요.</p>
+<ol><li>퇴직금에서 <strong>근속연수공제</strong>를 뺍니다.</li><li>남은 금액을 근속연수로 나누고 12를 곱해 <strong>환산급여</strong>를 만듭니다.</li><li>환산급여에서 <strong>환산급여공제</strong>를 빼면 과세표준이 됩니다.</li><li>과세표준에 종합소득 기본세율을 적용한 뒤, 12로 나누고 근속연수를 곱합니다.</li></ol>
+<table><thead><tr><th>근속연수</th><th class="n">근속연수공제</th></tr></thead><tbody>
+<tr><td>5년 이하</td><td class="n">100만원 × 연수</td></tr><tr><td>10년 이하</td><td class="n">500만원 + 200만원 × (연수−5)</td></tr>
+<tr><td>20년 이하</td><td class="n">1,500만원 + 250만원 × (연수−10)</td></tr><tr><td>20년 초과</td><td class="n">4,000만원 + 300만원 × (연수−20)</td></tr></tbody></table>
+<table><thead><tr><th>환산급여</th><th class="n">환산급여공제</th></tr></thead><tbody>
+<tr><td>800만원 이하</td><td class="n">전액</td></tr><tr><td>7,000만원 이하</td><td class="n">800만원 + 초과분 60%</td></tr>
+<tr><td>1억원 이하</td><td class="n">4,520만원 + 초과분 55%</td></tr><tr><td>3억원 이하</td><td class="n">6,170만원 + 초과분 45%</td></tr>
+<tr><td>3억원 초과</td><td class="n">1억5,170만원 + 초과분 35%</td></tr></tbody></table>
+<div class="ex"><p><strong>예시: 퇴직금 5,000만원, 10년 근무</strong></p>
+<p>근속연수공제 1,500만원 → 남은 3,500만원 ÷ 10 × 12 = 환산급여 4,200만원.</p>
+<p>환산급여공제 800만 + (4,200만−800만)×60% = 2,840만원 → 과세표준 1,360만원, 세율 6%로 환산산출세액 816,000원.</p>
+<p>816,000 ÷ 12 × 10 = <strong>퇴직소득세 680,000원</strong>. 퇴직금의 약 1.36%예요.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>근속연수가 세금을 크게 좌우해요</h3>
+<p>같은 퇴직금이라도 오래 일할수록 근속연수공제가 커지고, 환산급여를 나눌 때 분모도 커져 세율 구간이 낮아집니다. 5,000만원을 5년 만에 받는 경우와 10년 만에 받는 경우를 각각 넣어 보면 차이가 확연해요.</p>
+<h3>1년 미만은 올림</h3>
+<p>근속연수를 셀 때 1년이 안 되는 기간은 1년으로 봅니다. 예를 들어 9년 2개월이면 10년으로 계산해요. 입사일과 퇴사일을 확인해 정확한 연수를 넣으세요.</p>
+<h3>IRP로 받으면 바로 떼지 않아요</h3>
+<p>퇴직금을 개인형 퇴직연금(IRP) 계좌로 옮기면 퇴직 시점에 세금을 떼지 않고, 나중에 연금으로 나눠 받을 때 과세됩니다. 연금으로 받으면 일시금보다 세 부담이 줄어드는 제도가 있으니 회사·금융기관에 문의해 보세요.</p>
+<h3>지방소득세를 잊지 마세요</h3>
+<p>이 계산기가 보여 주는 금액은 국세인 퇴직소득세예요. 실제로는 그 10%가 지방소득세로 함께 원천징수되니, 통장에 들어오는 돈은 세후 수령액보다 조금 적습니다.</p>
+<h3>원천징수영수증 대조</h3>
+<p>퇴직 후 회사에서 퇴직소득 원천징수영수증을 받을 수 있어요. 영수증의 근속연수·환산급여 칸을 이 계산 결과와 맞춰 보면 잘못 처리된 부분을 쉽게 찾을 수 있습니다.</p><h3>퇴직 시기를 정할 때</h3><p>근속연수가 1년 늘어나는 시점 직후에 퇴직하면 근속연수공제가 한 단계 커져요. 퇴사일을 조정할 여지가 있다면 퇴직금과 근속연수를 바꿔 가며 세금 차이를 미리 비교해 보세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>퇴직금이 근속연수공제보다 적으면요?</summary><p>퇴직금 전체가 공제돼 세금이 0원이에요(소득세법 제48조제2항).</p></details><details><summary>퇴직금 중간정산을 받았으면 근속연수는 어떻게 넣나요?</summary><p>중간정산 이후 다시 계산한 기간이 근속연수가 되는 것이 일반적이에요. 정확한 기간은 회사의 퇴직소득 원천징수영수증을 확인하세요.</p></details><details><summary>결과에 지방소득세도 포함되나요?</summary><p>포함되지 않아요. 퇴직소득세의 10%가 지방소득세로 별도 부과됩니다.</p></details><details><summary>임원 퇴직금도 똑같이 계산되나요?</summary><p>임원 퇴직금은 한도를 넘는 부분을 근로소득으로 보는 별도 규정이 있어, 이 계산기와 다를 수 있어요.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>소득세법 제48조제1항제1호 — 근속연수공제 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제48조제1항 본문·제2호 — 환산급여와 환산급여공제 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제48조제2항 — 공제액 한도 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제55조제1항·제2항 — 세율과 퇴직소득 산출세액 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 원문 확인(2026년 1월 1일 시행본).</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+
+var M=10000;function tenureDed(n){if(n<=5)return 100*M*n;if(n<=10)return 500*M+200*M*(n-5);if(n<=20)return 1500*M+250*M*(n-10);return 4000*M+300*M*(n-20)}
+function convDed(c){if(c<=800*M)return c;if(c<=7000*M)return 800*M+(c-800*M)*0.6;if(c<=10000*M)return 4520*M+(c-7000*M)*0.55;if(c<=30000*M)return 6170*M+(c-10000*M)*0.45;return 15170*M+(c-30000*M)*0.35}
+var BR=[[1400,0,.06],[5000,84,.15],[8800,624,.24],[15000,1536,.35],[30000,3706,.38],[50000,9406,.40],[100000,17406,.42],[Infinity,38406,.45]];
+function rateTax(b){var lo=0;for(var i=0;i<BR.length;i++){if(b<=BR[i][0]*M)return{tax:BR[i][1]*M+(b-lo)*BR[i][2],rate:BR[i][2]};lo=BR[i][0]*M}}
+function rcalc(o){var pay=Math.max(0,Math.floor(o.pay||0));var n=Math.max(1,Math.ceil(o.years||1));var td=Math.min(pay,tenureDed(n));var conv=Math.floor((pay-td)/n*12);var cd=Math.floor(Math.min(conv,convDed(conv)));var base=Math.max(0,conv-cd);var rt=rateTax(base);var convTax=Math.floor(rt.tax);var tax=Math.floor(convTax/12*n);return{pay:pay,n:n,td:td,conv:conv,cd:cd,base:base,rate:rt.rate,convTax:convTax,tax:tax,net:pay-tax,eff:pay>0?tax/pay*100:0}}
+function compute(){var r=rcalc({pay:N('pay'),years:N('years')});
+return{label:'예상 퇴직소득세 (지방소득세 별도)',big:won(r.tax),unit:'원',interp:r.pay?'퇴직금의 약 '+(Math.round(r.eff*100)/100)+'%가 세금이에요':'퇴직금을 넣어 주세요',
+rows:[['퇴직금',won(r.pay)+'원'],['근속연수공제 ('+r.n+'년)','-'+won(r.td)+'원'],['환산급여 (÷'+r.n+'×12)',won(r.conv)+'원'],['환산급여공제','-'+won(r.cd)+'원'],['과세표준 (세율 '+Math.round(r.rate*100)+'%)',won(r.base)+'원'],['환산산출세액',won(r.convTax)+'원'],['퇴직소득세 (÷12×'+r.n+')',won(r.tax)+'원',1],['세후 수령액',won(r.net)+'원',1]],
+note:'지방소득세(퇴직소득세의 10%)는 별도로 붙어요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'');i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big"><div class="l">'+esc(r.label)+'</div><div class="v">'+r.big+'<small>'+esc(r.unit)+'</small></div><div class="s">'+esc(r.interp)+'</div></div>';
+ h+='<table><thead><tr><th>항목</th><th class="n">금액</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]?' class="tot"':'')+'><td>'+esc(x[0])+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>'+(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+render();
+
+</script>
+</body>
+</html>

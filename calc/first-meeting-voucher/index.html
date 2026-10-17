@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>첫만남이용권 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="첫만남이용권 지급액과 사용 기한을 계산합니다. 첫째 200만원, 둘째 이후 300만원, 출생일부터 2년이 되는 날까지인 사용 기한과 남은 일수를 아동수당법과 시행령 기준으로 보여 줍니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/first-meeting-voucher/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="첫만남이용권 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="첫만남이용권 지급액과 사용 기한을 계산합니다. 첫째 200만원, 둘째 이후 300만원, 출생일부터 2년이 되는 날까지인 사용 기한과 남은 일수를 아동수당법과 시행령 기준으로 보여 줍니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/first-meeting-voucher/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "돈은 어떤 형태로 받나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "시행령에 따라 보호자의 신용카드·직불카드 등에 이용권으로 발급돼요. 보호조치 아동은 아동 명의 계좌에 현금으로 들어갑니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "사용 기한이 지나면 남은 돈은 어떻게 되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "출생일부터 2년이 되는 날이 지나면 남은 금액은 쓸 수 없어요. 계좌로 현금을 받는 보호조치 아동은 예외예요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "둘째인데 첫째 때보다 많이 받나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "네. 시행령에서 첫째는 200만원, 둘째 이후는 300만원으로 정하고 있어요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "신청은 언제까지 해야 하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "신청 자체의 마감보다 사용 기한(출생일부터 2년)이 중요해요. 늦게 신청하면 그만큼 쓸 수 있는 기간이 줄어드니 출생신고 때 함께 신청하는 것을 권해요."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;
+--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;
+--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#8a94aa;--shadow:0 24px 60px -30px rgba(0,0,0,.8)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}}
+:root[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:520px;z-index:-1;pointer-events:none;background:radial-gradient(600px 300px at 20% 30%,var(--glow),transparent 70%),radial-gradient(500px 260px at 85% 20%,var(--glow-2),transparent 70%)}
+a{color:var(--ink)}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.logo svg{width:28px;height:28px;flex:none}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-link{font-size:14px;font-weight:600;color:var(--sub);text-decoration:none;padding:8px 12px;border:1px solid var(--line-2);border-radius:999px;white-space:nowrap}
+.hd-link:hover{color:var(--fg);border-color:var(--c1)}
+.theme{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);cursor:pointer;font-size:15px}
+main{padding:28px 0 40px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:0 0 8px}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.calc .grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:560px){.calc .grid{grid-template-columns:1fr 1fr}.calc .full{grid-column:1/-1}}
+.f label{display:block;font-size:14px;font-weight:700;color:var(--sub);margin-bottom:6px}
+.box{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:52px;transition:border-color .2s,box-shadow .2s}
+.box:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.box input,.box select{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--fg);font:inherit;font-size:17px;font-weight:600;outline:none;height:100%}
+.box select{cursor:pointer;-webkit-appearance:none;appearance:none}
+.box select option{background:var(--surface-solid);color:var(--fg)}
+.box .u{color:var(--muted);font-size:15px;font-weight:600;margin-left:8px;white-space:nowrap}
+.box.sel::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-3px);margin-left:8px;flex:none}
+.hint{font-size:13px;color:var(--muted);margin:6px 2px 0}
+.go{margin-top:18px;width:100%;height:54px;border:0;border-radius:14px;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);cursor:pointer;
+background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.go:active{transform:scale(.99)}
+#result{margin-top:18px}
+.big{border-radius:18px;padding:20px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.big span{display:block;font-size:14px;font-weight:700;color:var(--sub)}
+.big strong{display:block;font-size:34px;line-height:1.25;letter-spacing:-.03em;margin-top:4px;color:var(--fg)}
+.big small{display:block;color:var(--sub);font-size:14px;margin-top:4px}
+table.t{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+table.t th,table.t td{padding:11px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{text-align:left;font-weight:600;color:var(--sub);width:46%}
+table.t td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.note{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--bg-2);color:var(--sub);font-size:14.5px}
+.err{padding:14px;border-radius:12px;border:1px solid var(--warn);color:var(--warn);font-weight:700}
+.items{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.items li{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg-2)}
+.items b{display:block;font-size:16px}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;margin:4px 0 6px;border:1px solid currentColor}
+.tag.ok{color:var(--ok)}.tag.check{color:var(--warn)}.tag.info,.tag.no{color:var(--no)}
+.items p{margin:0;color:var(--sub);font-size:14.5px}
+.items em{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:6px}
+section.doc{margin-top:36px}
+section.doc h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;padding-left:12px;border-left:4px solid var(--c1);line-height:1.35}
+section.doc h3{font-size:17px;margin:20px 0 6px}
+section.doc p,section.doc li{color:var(--sub);font-size:16px}
+section.doc ul,section.doc ol{padding-left:20px}
+section.doc table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;background:var(--surface-solid);border-radius:12px;overflow:hidden}
+section.doc th,section.doc td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+section.doc th{background:var(--bg-2);color:var(--fg);font-weight:700}
+section.doc td{color:var(--sub)}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.ex b{color:var(--fg)}
+details{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;color:var(--fg);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q. ";color:var(--ink)}
+details p{margin:0 0 14px}
+.basis li{margin-bottom:6px}
+.disc{margin-top:28px;font-size:14px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:14px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+@media (max-width:380px){h1{font-size:25px}.big strong{font-size:30px}.logo{font-size:15px}.hd-link{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap">
+<a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>에스에이치솔루션</a>
+<div class="hd-r"><a class="hd-link" href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div>
+</div></header>
+<main class="wrap">
+<span class="eyebrow">아동수당법 2026년 개정 반영</span>
+<h1>첫만남이용권 계산기</h1>
+<p class="lead">아이의 출생 순서와 생일을 넣으면 첫만남이용권으로 얼마를 받는지, 언제까지 써야 하는지 남은 날짜와 함께 알려 드려요.</p>
+<form class="card calc" id="f" novalidate>
+<div class="grid"><div class="f full"><label for="order">몇째 아이인가요?</label><div class="box sel"><select id="order"><option value="1" selected>첫째</option><option value="2">둘째</option><option value="3">셋째 이상</option></select></div></div><div class="f"><label for="by">출생 연도</label><div class="box"><input id="by" type="text" inputmode="numeric" autocomplete="off" maxlength="4" value=""><span class="u">년</span></div></div><div class="f"><label for="bm">월</label><div class="box"><input id="bm" type="text" inputmode="numeric" autocomplete="off" maxlength="2" value=""><span class="u">월</span></div></div><div class="f"><label for="bd">일</label><div class="box"><input id="bd" type="text" inputmode="numeric" autocomplete="off" maxlength="2" value=""><span class="u">일</span></div></div><div class="f"><label for="fac">아동양육시설 등 보호조치 아동인가요?</label><div class="box sel"><select id="fac"><option value="0" selected>아니요</option><option value="1">네</option></select></div></div></div>
+<button class="go" type="submit">계산하기</button>
+<div id="result" aria-live="polite"></div>
+</form>
+<section class="doc"><h2>이렇게 계산해요</h2>
+<p>첫만남이용권은 아이가 태어나면 국가와 지방자치단체가 주는 출생 축하 지원이에요. 2026년 9월 시행된 아동수당법 개정으로 근거 조항이 아동수당법 안에 새로 들어왔고, 금액은 시행령에서 정합니다.</p>
+<table><thead><tr><th>출생 순서</th><th>지급액</th><th>지급 방식</th></tr></thead><tbody>
+<tr><td>첫째</td><td>200만원</td><td rowspan="2">보호자 신용카드·체크카드 등에 이용권으로 한 번에</td></tr>
+<tr><td>둘째 이후</td><td>300만원</td></tr></tbody></table>
+<p>사용 기한은 <b>출생한 날부터 2년이 되는 날까지</b>예요. 출생일을 첫날로 세기 때문에, 2년 뒤 같은 날짜의 전날이 마지막 날이 됩니다. 2월 29일에 태어났다면 2년 뒤 3월 1일의 전날인 2월 28일이 마지막 날이에요. 남은 날은 오늘부터 마지막 날까지의 차이로 계산합니다.</p>
+<p>아동양육시설이나 공동생활가정 등에서 보호조치를 받는 아동은 이용권 대신 아동 명의 계좌로 현금이 들어가고, 이 경우에는 사용 기한이 적용되지 않아요.</p>
+<div class="ex"><b>예시 — 둘째, 2026년 3월 15일 출생</b><br>
+지급액은 <b>300만원</b>. 사용 기한은 2028년 3월 15일의 전날인 <b>2028년 3월 14일</b>까지예요.<br>
+2026년 10월 17일 기준으로 보면 출생 후 217일째이고, 마지막 날까지 514일이 남았어요.</div>
+</section>
+<section class="doc"><h2>알아두면 좋은 점</h2>
+<h3>신청은 어디서, 무엇을 가지고</h3>
+<p>보호자(또는 대리인)가 아이의 주민등록 주소지 시·군·구에 신청해요. 출생신고를 하면서 주민센터에서 함께 신청하거나 복지로·정부24 같은 온라인 창구를 이용할 수 있어요. 신분증과 함께 가족관계증명서, 아이의 기본증명서(상세)가 필요할 수 있습니다. 출생신고와 동시에 신청하면 서류 준비가 가장 간단해요.</p>
+<h3>언제 들어오나요</h3>
+<p>신청을 받은 날부터 30일 이내에 지급 여부를 결정해 알려 주고, 특별한 사유가 있으면 60일까지 걸릴 수 있어요. 지급 결정이 나면 1개월 이내에 카드에 이용권이 들어옵니다. 그래서 출생 직후 신청해도 실제 사용까지는 몇 주가 걸릴 수 있어요.</p>
+<h3>기한을 넘기지 않는 요령</h3>
+<p>사용 기한이 2년이라 넉넉해 보이지만, 금액을 조금씩 남겨 두었다가 잊는 경우가 많아요. 카드사 앱에서 잔액을 확인할 수 있으니, 아이 돌 무렵에 한 번 잔액을 점검해 두면 좋습니다. 이 계산기는 남은 날이 90일 이하가 되면 따로 알려 드려요.</p>
+<h3>몇째인지 셀 때 주의</h3>
+<p>출생 순서는 지급액을 바꾸는 중요한 기준이에요. 쌍둥이처럼 한 번에 둘 이상 태어난 경우 등 순서가 애매하면 신청 창구에서 확인하는 것이 정확합니다. 이 계산기는 고른 순서대로 첫째 200만원, 둘째 이후 300만원을 보여 줘요.</p>
+<h3>금액은 최소 기준이에요</h3>
+<p>법은 국가와 지방자치단체가 '200만원 이상'의 첫만남이용권을 지급할 수 있다고 정하고 있어요. 지역에 따라 출산 관련 지원을 따로 하는 곳도 있으니 주소지 시·군·구에 같이 문의해 보세요.</p>
+</section>
+<section class="doc"><h2>자주 묻는 질문</h2><details><summary>돈은 어떤 형태로 받나요?</summary><p>시행령에 따라 보호자의 신용카드·직불카드 등에 이용권으로 발급돼요. 보호조치 아동은 아동 명의 계좌에 현금으로 들어갑니다.</p></details><details><summary>사용 기한이 지나면 남은 돈은 어떻게 되나요?</summary><p>출생일부터 2년이 되는 날이 지나면 남은 금액은 쓸 수 없어요. 계좌로 현금을 받는 보호조치 아동은 예외예요.</p></details><details><summary>둘째인데 첫째 때보다 많이 받나요?</summary><p>네. 시행령에서 첫째는 200만원, 둘째 이후는 300만원으로 정하고 있어요.</p></details><details><summary>신청은 언제까지 해야 하나요?</summary><p>신청 자체의 마감보다 사용 기한(출생일부터 2년)이 중요해요. 늦게 신청하면 그만큼 쓸 수 있는 기간이 줄어드니 출생신고 때 함께 신청하는 것을 권해요.</p></details></section>
+<section class="doc basis"><h2>근거</h2><ul>
+<li>아동수당법 제10조의2 (시행 2026-09-10, 본조신설 2026.6.9) — 첫만남이용권 지급, 계좌 지급, 신청 — <a href="https://www.law.go.kr/법령/아동수당법" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>아동수당법 시행령 제10조의3 (시행 2026-09-10) — 첫째 200만원·둘째 이후 300만원, 지급 시기, 이용권 발급, 사용 기한 2년 — <a href="https://www.law.go.kr/법령/아동수당법시행령" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>아동수당법 시행규칙 제9조의3·제9조의4 — 신청 서류, 30일(최대 60일) 이내 결정·통지 — <a href="https://www.law.go.kr/법령/아동수당법시행규칙" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>기준일: 2026-10-15 법령 원문 확인</li></ul></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+/* 계산 규칙: 미니앱 src/logic.js 원문 그대로 */
+/* ───────── 첫만남이용권 확인 — 계산(순수 함수, SDK 없음) ─────────
+   확인일 2026-10-15. 법제처 국가법령정보 오픈 API 원문(lawService.do target=law)으로 직접 읽음. 소관: 보건복지부.
+
+   · 아동수당법 제10조의2 (법령ID 013103, 시행 2026-09-10, 본조신설 2026.6.9)
+     ① 국가와 지방자치단체는 … 200만원 이상의 첫만남이용권을 출생아동에게 지급할 수 있다.
+     ② 아동양육시설·공동생활가정 보호조치 아동 등은 자산형성지원사업 계좌에 입금하여 지급할 수 있다.
+     ③ 보호자(또는 대리인)는 출생아동의 주민등록 주소지 관할 시장·군수·구청장에게 신청할 수 있다.
+   · 아동수당법 시행령 제10조의3 (법령ID 013126, 시행 2026-09-10, 본조신설 2026.9.9)
+     ① 첫째 출생아동 200만원, 둘째 이후 출생아동 300만원 — 일시에 지급.
+     ④ 지급 결정한 날부터 1개월 이내에 지급.
+     ⑤ 보호자의 신용카드·직불카드 등에 이용권 발급(시설 보호 아동 등은 아동 명의 계좌 현금).
+     ⑥ 사용 기한: 출생한 날부터 2년이 되는 날까지 (계좌 현금 지급은 제외).
+   · 아동수당법 시행규칙 제9조의3·제9조의4 (법령ID 013145, 시행 2026-09-10)
+     신분증, 가족관계증명서·출생아동 기본증명서(상세), 접수일부터 30일 이내 결정·통지(특별한 사유 시 60일 이내). */
+
+var AMOUNT = { 1: 2000000, 2: 3000000, 3: 3000000 };
+function amountFor(order) { return AMOUNT[order] || AMOUNT[2]; }
+
+/* 출생한 날부터 2년이 되는 날 = 2년 뒤 같은 날의 전날 (출생일 포함 셈) */
+function expiryOf(y, m, d) {
+  var t = new Date(y + 2, m - 1, d);
+  if (t.getMonth() !== (m - 1)) t = new Date(y + 2, m, 1);
+  t.setDate(t.getDate() - 1);
+  return t;
+}
+function validDate(y, m, d) {
+  var t = new Date(y, m - 1, d);
+  return t.getFullYear() === y && t.getMonth() === m - 1 && t.getDate() === d;
+}
+function dayNum(dt) { return Math.floor(Date.UTC(dt.getFullYear(), dt.getMonth(), dt.getDate()) / 86400000); }
+
+/* kind: pre(출생 전) / ok / soon(90일 이하 남음) / over(기한 지남) */
+function judge(p, today) {
+  today = today || new Date();
+  var birth = new Date(p.y, p.m - 1, p.d);
+  var exp = expiryOf(p.y, p.m, p.d);
+  var total = dayNum(exp) - dayNum(birth) + 1;
+  var left = dayNum(exp) - dayNum(today);
+  var used = dayNum(today) - dayNum(birth) + 1;
+  var kind = used < 1 ? 'pre' : left < 0 ? 'over' : left <= 90 ? 'soon' : 'ok';
+  return { amount: amountFor(p.order), birth: birth, exp: exp, left: left, total: total,
+    used: Math.max(0, Math.min(total, used)), kind: kind, facility: !!p.facility, order: p.order };
+}
+
+</script>
+<script>
+
+function $(id){return document.getElementById(id)}
+function num(id){var v=String($(id).value).replace(/[^0-9]/g,'');return v?parseInt(v,10):0}
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')}
+function won(n){return fmt(n)+'원'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function show(o){var h='';
+ if(o.err){$('result').innerHTML='<div class="err" role="alert">'+esc(o.err)+'</div>';return}
+ h+='<div class="big"><span>'+o.label+'</span><strong>'+o.big+'</strong>'+(o.sub?'<small>'+o.sub+'</small>':'')+'</div>';
+ if(o.rows&&o.rows.length){h+='<table class="t"><tbody>';o.rows.forEach(function(r){h+='<tr><th scope="row">'+r[0]+'</th><td>'+r[1]+'</td></tr>'});h+='</tbody></table>'}
+ if(o.extra)h+=o.extra;
+ if(o.note)h+='<p class="note">'+o.note+'</p>';
+ $('result').innerHTML=h}
+Array.prototype.forEach.call(document.querySelectorAll('input[data-comma]'),function(el){
+ function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'');el.value=d?Number(d).toLocaleString('ko-KR'):''}
+ el.addEventListener('input',f);f()});
+$('f').addEventListener('submit',function(e){e.preventDefault();run();$('result').scrollIntoView({behavior:'smooth',block:'nearest'})});
+$('theme').addEventListener('click',function(){var r=document.documentElement,cur=r.getAttribute('data-theme');
+ var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;r.setAttribute('data-theme',dark?'light':'dark')});
+
+
+(function(){var t=new Date();t.setDate(t.getDate()-60);$('by').value=t.getFullYear();$('bm').value=t.getMonth()+1;$('bd').value=t.getDate()})();
+function ymd(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일'}
+function run(){var y=num('by'),m=num('bm'),d=num('bd');if(!validDate(y,m,d)||y<2000)return show({err:'출생일을 올바르게 넣어 주세요.'});
+var fac=$('fac').value==='1',r=judge({y:y,m:m,d:d,order:num('order'),facility:fac});
+var rows=[['출생일',ymd(r.birth)],['지급 방식',fac?'아동 명의 계좌에 현금 입금':'보호자 카드에 이용권 발급']];
+if(!fac){rows.push(['사용 기한',ymd(r.exp)]);if(r.kind!=='pre')rows.push(['남은 날',r.left>=0?r.left.toLocaleString('ko-KR')+'일':'기한 지남'],['지난 날',r.used.toLocaleString('ko-KR')+' / '+r.total.toLocaleString('ko-KR')+'일'])}
+var note={pre:'아직 태어나기 전이에요. 출생신고 뒤 주소지 시·군·구에 신청하면 돼요.',ok:'넉넉히 남았어요. 산후조리원, 기저귀, 병원비 등 생활에 필요한 곳에 나눠 쓰면 돼요.',soon:'사용 기한이 90일 이하로 남았어요. 남은 금액을 기한 안에 쓰지 않으면 사라지니 서두르세요.',over:'사용 기한이 지났어요. 남은 금액은 더 이상 쓸 수 없어요.'}[r.kind];
+if(fac)note='보호조치 아동은 자산형성지원사업 계좌 등 아동 명의 계좌에 현금으로 넣어 주고, 이 경우 사용 기한이 따로 없어요.';
+show({label:(r.order===1?'첫째':'둘째 이후')+' 아이 지급액',big:won(r.amount),sub:'한 번에 지급',rows:rows,note:note})}
+
+run();
+</script>
+</body>
+</html>

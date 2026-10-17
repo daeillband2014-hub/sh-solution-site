@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>상여금 세금 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="연봉과 성과급·상여금을 넣으면 근로소득공제와 세율, 근로소득세액공제를 적용해 상여금으로 늘어나는 연간 소득세와 실제로 남는 금액을 계산합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/bonus-tax/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="상여금 세금 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="연봉과 성과급·상여금을 넣으면 근로소득공제와 세율, 근로소득세액공제를 적용해 상여금으로 늘어나는 연간 소득세와 실제로 남는 금액을 계산합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/bonus-tax/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "상여금 세율은 몇 %인가요?", "acceptedAnswer": {"@type": "Answer", "text": "정해진 세율은 없어요. 연봉에 합쳐 기본세율로 계산되므로 사람마다 다르고, 이 계산기로 본인 기준 추가 세금을 확인할 수 있어요."}}, {"@type": "Question", "name": "성과급도 같은 방식인가요?", "acceptedAnswer": {"@type": "Answer", "text": "회사에서 근로의 대가로 받는 성과급·인센티브는 상여와 같이 근로소득으로 과세돼요."}}, {"@type": "Question", "name": "부양가족이 있으면 결과가 달라지나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 이 계산기는 본인 기본공제만 가정해서, 부양가족이나 각종 공제가 있으면 실제 세금이 더 적을 수 있어요."}}, {"@type": "Question", "name": "상여 달에 많이 뗀 세금은 돌려받나요?", "acceptedAnswer": {"@type": "Answer", "text": "연말정산에서 1년 전체로 다시 계산해 더 낸 만큼은 환급됩니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">연간 기준 추가 세금</span><h1>상여금 세금 계산기</h1><p>연봉과 받을 상여금을 넣으면 상여금 때문에 1년 소득세가 얼마나 늘어나는지 보여 드려요.</p></section>
+<section class="card"><form id="calcForm" novalidate><div class="field"><label for="salary">연봉 (상여 제외)</label><small>1년 총급여, 비과세 제외</small><div class="inp"><input id="salary" class="num" inputmode="numeric" autocomplete="off" value="40000000" aria-label="연봉 (상여 제외)"><span>원</span></div></div><div class="field"><label for="bonus">상여금·성과급</label><small>올해 받을 상여 총액</small><div class="inp"><input id="bonus" class="num" inputmode="numeric" autocomplete="off" value="5000000" aria-label="상여금·성과급"><span>원</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
+<article class="card"><h2>이렇게 계산해요</h2><p>상여금에는 따로 정해진 세율이 없어요. 상여는 소득세법상 <strong>근로소득</strong>이라 1년 급여에 합쳐져 똑같은 방식으로 과세됩니다. 그래서 이 계산기는 <strong>상여가 없을 때의 1년 세금</strong>과 <strong>상여를 더했을 때의 1년 세금</strong>을 각각 구해 그 차이를 상여금의 세금으로 봅니다.</p>
+<p>각 경우의 세금은 다음 순서로 구해요.</p>
+<ol><li>총급여에서 근로소득공제(구간별 70%~2%, 최대 2,000만원)를 뺍니다.</li><li>본인 기본공제 150만원을 빼서 과세표준을 만듭니다.</li><li>기본세율(6~45%)을 적용해 산출세액을 냅니다.</li><li>근로소득세액공제(산출세액 130만원까지 55%, 초과분 30%, 총급여별 한도)를 뺍니다.</li></ol>
+<table><thead><tr><th>과세표준</th><th class="n">세율</th></tr></thead><tbody>
+<tr><td>1,400만원 이하</td><td class="n">6%</td></tr><tr><td>1,400만원 초과 ~ 5,000만원</td><td class="n">15%</td></tr>
+<tr><td>5,000만원 초과 ~ 8,800만원</td><td class="n">24%</td></tr><tr><td>8,800만원 초과 ~ 1억5천만원</td><td class="n">35%</td></tr>
+<tr><td>1억5천만원 초과 ~ 3억원</td><td class="n">38%</td></tr><tr><td>3억원 초과 ~ 5억원</td><td class="n">40%</td></tr>
+<tr><td>5억원 초과 ~ 10억원</td><td class="n">42%</td></tr><tr><td>10억원 초과</td><td class="n">45%</td></tr></tbody></table>
+<div class="ex"><p><strong>예시: 연봉 4,000만원, 상여금 500만원</strong></p>
+<p>상여 전: 근로소득공제 1,125만원, 과세표준 2,725만원, 산출세액 2,827,500원, 세액공제 684,000원 → 결정세액 2,143,500원.</p>
+<p>상여 후(4,500만원): 근로소득공제 1,200만원, 과세표준 3,150만원, 산출세액 3,465,000원, 세액공제 660,000원 → 결정세액 2,805,000원.</p>
+<p>차이 <strong>661,500원</strong>이 상여금 몫의 소득세예요. 500만원의 약 13.2%, 손에 남는 돈은 4,338,500원입니다.</p></div></article>
+<article class="card"><h2>알아두면 좋은 점</h2><h3>상여 달에 세금이 유독 많이 떼이는 이유</h3>
+<p>회사는 상여를 지급하는 달에 원천징수를 따로 계산해서 그 달만 보면 세금이 크게 느껴질 수 있어요. 하지만 최종 세금은 연말정산에서 1년 급여 전체로 다시 계산되니, 많이 뗐다면 돌려받고 적게 뗐다면 더 냅니다. 이 계산기는 그 최종 금액을 미리 가늠하는 용도예요.</p>
+<h3>세율 구간 경계 확인</h3>
+<p>상여를 더하면서 과세표준이 1,400만원·5,000만원·8,800만원 같은 경계를 넘으면, 넘은 부분부터 높은 세율이 붙어요. 결과의 '상여 후 한계세율'이 상여 전보다 올라갔다면 상여 일부가 높은 구간에 들어간 거예요. 세율이 오른다고 전체 소득에 높은 세율이 붙는 것은 아닙니다.</p>
+<h3>근로소득세액공제 한도도 줄어요</h3>
+<p>총급여가 3,300만원을 넘으면 근로소득세액공제 한도가 조금씩 줄어듭니다. 예시처럼 상여로 총급여가 오르면 공제가 684,000원에서 660,000원으로 줄어 세금이 그만큼 더 늘어요.</p>
+<h3>실제 손에 쥐는 돈은 더 적어요</h3>
+<p>상여금에도 국민연금·건강보험·고용보험료가 붙고, 소득세의 10%인 지방소득세도 있어요. 이 계산은 소득세만 다루므로 실제 수령액은 조금 더 줄어듭니다.</p><h3>상여 지급 시기와 세금</h3><p>같은 해에 받은 상여는 모두 그해 총급여에 합쳐져요. 연말에 받느냐 이듬해 초에 받느냐에 따라 귀속 연도가 바뀌어 세율 구간이 달라질 수 있으니, 지급일이 해를 넘기는지 회사에 확인해 보세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>상여금 세율은 몇 %인가요?</summary><p>정해진 세율은 없어요. 연봉에 합쳐 기본세율로 계산되므로 사람마다 다르고, 이 계산기로 본인 기준 추가 세금을 확인할 수 있어요.</p></details><details><summary>성과급도 같은 방식인가요?</summary><p>회사에서 근로의 대가로 받는 성과급·인센티브는 상여와 같이 근로소득으로 과세돼요.</p></details><details><summary>부양가족이 있으면 결과가 달라지나요?</summary><p>네. 이 계산기는 본인 기본공제만 가정해서, 부양가족이나 각종 공제가 있으면 실제 세금이 더 적을 수 있어요.</p></details><details><summary>상여 달에 많이 뗀 세금은 돌려받나요?</summary><p>연말정산에서 1년 전체로 다시 계산해 더 낸 만큼은 환급됩니다.</p></details></article>
+<article class="card law"><h2>근거</h2><ul><li>소득세법 제20조제1항제1호 — 상여는 근로소득 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제47조제1항 — 근로소득공제 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제50조제1항 — 기본공제 1명당 150만원 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제55조제1항 — 기본세율 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제59조제1항·제2항 — 근로소득세액공제와 한도 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 원문 확인(2026년 1월 1일 시행본).</p></article>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>
+
+function wageDeduction(G){var d;if(G<=5000000)d=G*0.7;else if(G<=15000000)d=3500000+(G-5000000)*0.4;else if(G<=45000000)d=7500000+(G-15000000)*0.15;else if(G<=100000000)d=12000000+(G-45000000)*0.05;else d=14750000+(G-100000000)*0.02;return Math.floor(Math.min(d,20000000,G))}
+var BR=[[14000000,0,0.06,0],[50000000,840000,0.15,14000000],[88000000,6240000,0.24,50000000],[150000000,15360000,0.35,88000000],[300000000,37060000,0.38,150000000],[500000000,94060000,0.40,300000000],[1000000000,174060000,0.42,500000000],[Infinity,384060000,0.45,1000000000]];
+function baseTax(T){if(T<=0)return 0;for(var i=0;i<BR.length;i++)if(T<=BR[i][0])return Math.floor(BR[i][1]+(T-BR[i][3])*BR[i][2]);return 0}
+function marginalRate(T){for(var i=0;i<BR.length;i++)if(T<=BR[i][0])return BR[i][2];return 0.45}
+function wageCredit(t,G){var c=t<=1300000?t*0.55:715000+(t-1300000)*0.30;var lim;if(G<=33000000)lim=740000;else if(G<=70000000)lim=Math.max(660000,740000-(G-33000000)*8/1000);else if(G<=120000000)lim=Math.max(500000,660000-(G-70000000)/2);else lim=Math.max(200000,500000-(G-120000000)/2);return Math.floor(Math.min(c,lim))}
+function yearTax(G){var wd=wageDeduction(G);var base=Math.max(0,G-wd-1500000);var c=baseTax(base);var cr=Math.min(c,wageCredit(c,G));return{G:G,wd:wd,base:base,calc:c,cr:cr,tax:c-cr,rate:marginalRate(base)}}
+function bcalc(o){var a=yearTax(o.salary),b=yearTax(o.salary+o.bonus);var extra=Math.max(0,b.tax-a.tax);return{a:a,b:b,extra:extra,net:o.bonus-extra,eff:o.bonus>0?extra/o.bonus*100:0}}
+function compute(){var s=N('salary'),bo=N('bonus'),r=bcalc({salary:s,bonus:bo});
+return{label:'상여금으로 늘어나는 소득세',big:won(r.extra),unit:'원',interp:bo?'상여금의 약 '+(Math.round(r.eff*10)/10)+'%가 세금, '+won(r.net)+'원이 남아요':'상여금을 넣어 주세요',
+rows:[['상여 전 총급여',won(r.a.G)+'원'],['상여 전 결정세액',won(r.a.tax)+'원'],['상여 후 총급여',won(r.b.G)+'원'],['상여 후 결정세액',won(r.b.tax)+'원'],['상여 후 한계세율',Math.round(r.b.rate*100)+'%'],['늘어난 소득세',won(r.extra)+'원',1],['세후 상여금',won(r.net)+'원',1]],
+note:'본인 기본공제만 있는 근로소득자 가정. 4대보험·지방소득세·다른 공제는 넣지 않았어요.'}}
+
+
+(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+function won(n){return Math.round(n).toLocaleString('ko-KR')}
+function N(id){var e=document.getElementById(id);if(e.tagName==='SELECT')return e.value;var v=parseInt(String(e.value).replace(/\D/g,''),10);return isNaN(v)?0:v}
+Array.prototype.forEach.call(document.querySelectorAll('input.num'),function(i){
+ function fm(){var v=i.value.replace(/\D/g,'').replace(/^0+(?=\d)/,'');i.value=v?Number(v).toLocaleString('ko-KR'):''}
+ i.addEventListener('input',fm);fm()});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function render(){var r=compute();var h='<div class="big"><div class="l">'+esc(r.label)+'</div><div class="v">'+r.big+'<small>'+esc(r.unit)+'</small></div><div class="s">'+esc(r.interp)+'</div></div>';
+ h+='<table><thead><tr><th>항목</th><th class="n">금액</th></tr></thead><tbody>';
+ r.rows.forEach(function(x){h+='<tr'+(x[2]?' class="tot"':'')+'><td>'+esc(x[0])+'</td><td class="n">'+esc(x[1])+'</td></tr>'});
+ h+='</tbody></table>'+(r.note?'<p class="note">'+esc(r.note)+'</p>':'');document.getElementById('out').innerHTML=h}
+document.getElementById('calcForm').addEventListener('submit',function(e){e.preventDefault();render();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'nearest'})});
+render();
+
+</script>
+</body>
+</html>

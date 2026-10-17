@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>산재 장해급여 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="산재 장해급여를 장해등급별로 계산합니다. 산재보험법 별표 2의 연금·일시금 일수와 2026년 최고·최저 보상기준을 반영해 연금 연액·월액, 일시금, 손익분기 시점, 선급금을 보여 줍니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/industrial-disability-pay/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="산재 장해급여 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="산재 장해급여를 장해등급별로 계산합니다. 산재보험법 별표 2의 연금·일시금 일수와 2026년 최고·최저 보상기준을 반영해 연금 연액·월액, 일시금, 손익분기 시점, 선급금을 보여 줍니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/industrial-disability-pay/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "장해등급은 누가 정하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "근로복지공단이 장해진단서와 검사 자료를 보고 심사해서 정해요. 결과에 이의가 있으면 심사청구 절차를 밟을 수 있습니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "연금을 받다가 사망하면 어떻게 되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "연금 수급권이 없어졌을 때 그때까지 받은 연금 일수 합계가 일시금 일수보다 적으면, 차이 일수에 평균임금을 곱한 금액을 일시금으로 지급하도록 법에 정해져 있어요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "평균임금이 낮아도 최소한은 보장되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "네. 장해급여에는 최저 보상기준 금액이 적용돼 평균임금이 82,560원보다 낮으면 82,560원으로 계산해요(2026년)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "장해급여는 언제까지 청구해야 하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "장해급여를 받을 권리는 5년간 행사하지 않으면 시효로 사라져요(제112조제1항 단서). 치유 판정을 받은 뒤 서류를 갖춰 바로 청구하는 것이 좋습니다."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;
+--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;
+--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#8a94aa;--shadow:0 24px 60px -30px rgba(0,0,0,.8)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}}
+:root[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:520px;z-index:-1;pointer-events:none;background:radial-gradient(600px 300px at 20% 30%,var(--glow),transparent 70%),radial-gradient(500px 260px at 85% 20%,var(--glow-2),transparent 70%)}
+a{color:var(--ink)}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.logo svg{width:28px;height:28px;flex:none}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-link{font-size:14px;font-weight:600;color:var(--sub);text-decoration:none;padding:8px 12px;border:1px solid var(--line-2);border-radius:999px;white-space:nowrap}
+.hd-link:hover{color:var(--fg);border-color:var(--c1)}
+.theme{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);cursor:pointer;font-size:15px}
+main{padding:28px 0 40px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:0 0 8px}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.calc .grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:560px){.calc .grid{grid-template-columns:1fr 1fr}.calc .full{grid-column:1/-1}}
+.f label{display:block;font-size:14px;font-weight:700;color:var(--sub);margin-bottom:6px}
+.box{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:52px;transition:border-color .2s,box-shadow .2s}
+.box:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.box input,.box select{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--fg);font:inherit;font-size:17px;font-weight:600;outline:none;height:100%}
+.box select{cursor:pointer;-webkit-appearance:none;appearance:none}
+.box select option{background:var(--surface-solid);color:var(--fg)}
+.box .u{color:var(--muted);font-size:15px;font-weight:600;margin-left:8px;white-space:nowrap}
+.box.sel::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-3px);margin-left:8px;flex:none}
+.hint{font-size:13px;color:var(--muted);margin:6px 2px 0}
+.go{margin-top:18px;width:100%;height:54px;border:0;border-radius:14px;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);cursor:pointer;
+background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.go:active{transform:scale(.99)}
+#result{margin-top:18px}
+.big{border-radius:18px;padding:20px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.big span{display:block;font-size:14px;font-weight:700;color:var(--sub)}
+.big strong{display:block;font-size:34px;line-height:1.25;letter-spacing:-.03em;margin-top:4px;color:var(--fg)}
+.big small{display:block;color:var(--sub);font-size:14px;margin-top:4px}
+table.t{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+table.t th,table.t td{padding:11px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{text-align:left;font-weight:600;color:var(--sub);width:46%}
+table.t td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.note{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--bg-2);color:var(--sub);font-size:14.5px}
+.err{padding:14px;border-radius:12px;border:1px solid var(--warn);color:var(--warn);font-weight:700}
+.items{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.items li{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg-2)}
+.items b{display:block;font-size:16px}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;margin:4px 0 6px;border:1px solid currentColor}
+.tag.ok{color:var(--ok)}.tag.check{color:var(--warn)}.tag.info,.tag.no{color:var(--no)}
+.items p{margin:0;color:var(--sub);font-size:14.5px}
+.items em{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:6px}
+section.doc{margin-top:36px}
+section.doc h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;padding-left:12px;border-left:4px solid var(--c1);line-height:1.35}
+section.doc h3{font-size:17px;margin:20px 0 6px}
+section.doc p,section.doc li{color:var(--sub);font-size:16px}
+section.doc ul,section.doc ol{padding-left:20px}
+section.doc table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;background:var(--surface-solid);border-radius:12px;overflow:hidden}
+section.doc th,section.doc td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+section.doc th{background:var(--bg-2);color:var(--fg);font-weight:700}
+section.doc td{color:var(--sub)}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.ex b{color:var(--fg)}
+details{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;color:var(--fg);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q. ";color:var(--ink)}
+details p{margin:0 0 14px}
+.basis li{margin-bottom:6px}
+.disc{margin-top:28px;font-size:14px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:14px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+@media (max-width:380px){h1{font-size:25px}.big strong{font-size:30px}.logo{font-size:15px}.hd-link{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap">
+<a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>에스에이치솔루션</a>
+<div class="hd-r"><a class="hd-link" href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div>
+</div></header>
+<main class="wrap">
+<span class="eyebrow">별표 2 장해급여표 기준</span>
+<h1>산재 장해급여 계산기</h1>
+<p class="lead">장해등급과 월급을 넣으면 장해보상연금과 일시금이 각각 얼마인지, 몇 년을 받아야 연금이 일시금보다 많아지는지 비교해 드려요.</p>
+<form class="card calc" id="f" novalidate>
+<div class="grid"><div class="f"><label for="grade">장해등급</label><div class="box sel"><select id="grade"><option value="1">1급</option><option value="2">2급</option><option value="3">3급</option><option value="4">4급</option><option value="5">5급</option><option value="6">6급</option><option value="7" selected>7급</option><option value="8">8급</option><option value="9">9급</option><option value="10">10급</option><option value="11">11급</option><option value="12">12급</option><option value="13">13급</option><option value="14">14급</option></select></div></div><div class="f"><label for="age">현재 나이</label><div class="box"><input id="age" type="text" inputmode="numeric" autocomplete="off" maxlength="3" value="45"><span class="u">세</span></div></div><div class="f full"><label for="wage">다치기 전 월 임금</label><div class="box"><input id="wage" type="text" inputmode="numeric" autocomplete="off" maxlength="12" value="3000000" data-comma><span class="u">원</span></div><p class="hint">세전, 고정 수당 포함</p></div><div class="f full"><label for="days3">평균임금 계산 기간 날수</label><div class="box sel"><select id="days3"><option value="89">89일</option><option value="90">90일</option><option value="91" selected>91일</option><option value="92">92일</option></select></div></div></div>
+<button class="go" type="submit">계산하기</button>
+<div id="result" aria-live="polite"></div>
+</form>
+<section class="doc"><h2>이렇게 계산해요</h2>
+<p>장해급여는 치료가 끝난 뒤에도 몸에 장해가 남았을 때 그 정도(1~14급)에 따라 주는 돈이에요. 금액은 <b>평균임금 × 등급별 일수</b>로 정해집니다. 등급별 일수는 산재보험법 별표 2에 나와 있어요.</p>
+<table><thead><tr><th>등급</th><th>연금 (연간)</th><th>일시금</th></tr></thead><tbody>
+<tr><td>1급</td><td>329일분</td><td>1,474일분</td></tr><tr><td>2급</td><td>291일분</td><td>1,309일분</td></tr>
+<tr><td>3급</td><td>257일분</td><td>1,155일분</td></tr><tr><td>4급</td><td>224일분</td><td>1,012일분</td></tr>
+<tr><td>5급</td><td>193일분</td><td>869일분</td></tr><tr><td>6급</td><td>164일분</td><td>737일분</td></tr>
+<tr><td>7급</td><td>138일분</td><td>616일분</td></tr><tr><td>8~14급</td><td>없음</td><td>495·385·297·220·154·99·55일분</td></tr></tbody></table>
+<p>평균임금은 다친 날 이전 3개월 임금 총액을 그 기간 날수로 나눠요. 이 계산기는 월 임금 × 3 ÷ 날수로 구합니다. 장해급여에는 2026년 최고 보상기준 268,299원과 최저 보상기준 82,560원이 모두 적용돼, 평균임금이 이 범위를 벗어나면 경계값으로 맞춰요. 연금 월액은 연액을 12로 나눈 값이고 원 미만은 버렸어요.</p>
+<div class="ex"><b>예시 — 7급, 월 300만원, 91일 기준</b><br>
+평균임금 3,000,000 × 3 ÷ 91 ≈ 98,901원.<br>
+· 연금: 98,901 × 138일 ≈ <b>연 13,648,351원</b> (월 약 1,137,362원)<br>
+· 일시금: 98,901 × 616일 ≈ <b>60,923,076원</b><br>
+616 ÷ 138 ≈ 4.5이므로, 연금을 약 4년 반 넘게 받으면 일시금보다 누적액이 많아져요(평균임금 변동 무시).</div>
+</section>
+<section class="doc"><h2>알아두면 좋은 점</h2>
+<h3>연금과 일시금, 고를 수 있는 등급</h3>
+<p>1~3급은 노동력을 완전히 잃은 등급으로 보고 연금으로만 지급해요. 4~7급은 본인이 연금과 일시금 중에서 고를 수 있고, 8~14급은 연금이 없어 일시금만 받습니다. 외국에 사는 경우에는 일시금으로 지급돼요.</p>
+<h3>4~7급이라면 무엇을 고를까</h3>
+<p>연금은 살아 있는 동안 매년 평균임금 변동에 맞춰 조정되며 계속 나오고, 일시금은 한 번에 큰돈을 받는 대신 그것으로 끝이에요. 계산기의 '연금 누적이 일시금을 넘는 때'가 판단의 출발점입니다. 예를 들어 7급은 약 4.5년, 4급은 1,012 ÷ 224 ≈ 4.5년이 기준이에요. 목돈이 꼭 필요하다면 연금을 고르면서 선급금을 신청하는 방법도 있습니다.</p>
+<h3>선급금</h3>
+<p>연금을 고른 사람은 신청하면 최초 1년분 또는 2년분(1~3급은 1~4년분)의 절반을 미리 받을 수 있어요. 미리 받는 금액에는 연 5% 범위에서 이자가 공제될 수 있는데, 이 계산기는 이자 공제 전 금액을 보여 줍니다.</p>
+<h3>청구 방법과 기한</h3>
+<p>치료가 끝나면(치유 판정) 장해급여청구서와 의사의 장해진단서, 영상 검사 자료 등을 근로복지공단에 내요. 등급은 공단의 심사로 정해지며, 내가 예상한 등급과 다를 수 있습니다. 장해급여를 받을 권리는 5년 동안 행사하지 않으면 사라져요. 연금은 1년치를 12번으로 나눠 매달 25일에 들어옵니다.</p>
+<h3>계산기가 빼놓은 것</h3>
+<p>매년 평균임금 증감에 따른 연금액 변화, 이미 장해가 있던 부위가 더 나빠진 가중장해, 직업병 특례는 반영하지 않았어요.</p>
+</section>
+<section class="doc"><h2>자주 묻는 질문</h2><details><summary>장해등급은 누가 정하나요?</summary><p>근로복지공단이 장해진단서와 검사 자료를 보고 심사해서 정해요. 결과에 이의가 있으면 심사청구 절차를 밟을 수 있습니다.</p></details><details><summary>연금을 받다가 사망하면 어떻게 되나요?</summary><p>연금 수급권이 없어졌을 때 그때까지 받은 연금 일수 합계가 일시금 일수보다 적으면, 차이 일수에 평균임금을 곱한 금액을 일시금으로 지급하도록 법에 정해져 있어요.</p></details><details><summary>평균임금이 낮아도 최소한은 보장되나요?</summary><p>네. 장해급여에는 최저 보상기준 금액이 적용돼 평균임금이 82,560원보다 낮으면 82,560원으로 계산해요(2026년).</p></details><details><summary>장해급여는 언제까지 청구해야 하나요?</summary><p>장해급여를 받을 권리는 5년간 행사하지 않으면 시효로 사라져요(제112조제1항 단서). 치유 판정을 받은 뒤 서류를 갖춰 바로 청구하는 것이 좋습니다.</p></details></section>
+<section class="doc basis"><h2>근거</h2><ul>
+<li>산업재해보상보험법 제57조(장해급여) ②~⑤, 별표 2(장해급여표), 제36조제7항, 제70조, 제112조 — <a href="https://www.law.go.kr/법령/산업재해보상보험법" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>산업재해보상보험법 시행령 제53조제5항 — 1~3급 연금 지급 — <a href="https://www.law.go.kr/법령/산업재해보상보험법시행령" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>근로기준법 제2조제1항제6호 — 평균임금 — <a href="https://www.law.go.kr/법령/근로기준법" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>고용노동부고시 제2025-84호 「최고·최저 보상기준 금액」 (시행 2026.1.1) — 최고 268,299원, 최저 82,560원</li>
+<li>기준일: 2026-10-15 법령 원문 확인</li></ul></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+/* 계산 규칙: 미니앱 src/logic.js 원문 그대로 */
+/* 장해급여 계산 규칙 (2026-10-15 법제처 원문 확인). 참고용 — 실제 등급·금액은 근로복지공단 결정으로 정해진다.
+
+   [근거 1] 산업재해보상보험법 제57조(장해급여)  https://www.law.go.kr/법령/산업재해보상보험법/제57조
+     ② "장해급여는 장해등급에 따라 별표 2에 따른 장해보상연금 또는 장해보상일시금으로 하되, 그 장해등급의 기준은 대통령령으로 정한다."
+     ③ "장해보상연금 또는 장해보상일시금은 수급권자의 선택에 따라 지급한다. 다만, 대통령령으로 정하는 노동력을 완전히 상실한
+        장해등급의 근로자에게는 장해보상연금을 지급하고, … 외국에서 거주하고 있는 근로자에게는 장해보상일시금을 지급한다."
+     ④ "장해보상연금은 수급권자가 신청하면 그 연금의 최초 1년분 또는 2년분(제3항 단서에 따른 근로자에게는 그 연금의 최초 1년분부터
+        4년분까지)의 2분의 1에 상당하는 금액을 미리 지급할 수 있다. 이 경우 미리 지급하는 금액에 대하여는 100분의 5의 비율 범위에서
+        대통령령으로 정하는 바에 따라 이자를 공제할 수 있다."
+     ⑤ 연금 수급권이 제58조로 소멸했을 때 이미 받은 연금 일수 합계가 일시금 일수에 못 미치면 그 차이 일수 × 소멸 당시 평균임금을 일시금으로 지급.
+   [근거 2] 같은 법 별표 2 장해급여표(평균임금기준) — 법제처 별표 PDF 원문
+     연금 일수: 1급 329, 2급 291, 3급 257, 4급 224, 5급 193, 6급 164, 7급 138 (8~14급은 연금 칸 없음)
+     일시금 일수: 1급 1,474 · 2급 1,309 · 3급 1,155 · 4급 1,012 · 5급 869 · 6급 737 · 7급 616 · 8급 495 · 9급 385 · 10급 297 · 11급 220 · 12급 154 · 13급 99 · 14급 55
+   [근거 3] 같은 법 시행령 제53조⑤ "법 제57조제3항 단서에서 '대통령령으로 정하는 노동력을 완전히 상실한 장해등급'이란 별표 6의
+     제1급부터 제3급까지의 장해등급을 말한다."  https://www.law.go.kr/법령/산업재해보상보험법시행령
+   [근거 4] 같은 법 제36조제7항 — 평균임금이 최고 보상기준 금액을 넘으면 그 금액, 최저 보상기준 금액보다 적으면 그 금액을 평균임금으로.
+     (같은 항 단서의 최저 보상기준 미적용 대상에 장해급여는 없음 → 상·하한 모두 적용)
+   [근거 5] 고용노동부고시 제2025-84호(시행 2026.1.1) "최고 보상기준 금액은 1일 268,299원으로 하고, 최저 보상기준 금액은 1일 82,560원으로 한다."
+     https://www.law.go.kr/행정규칙/최고·최저보상기준금액
+   [근거 6] 평균임금 = 산정 사유 발생일 이전 3개월 임금 총액 ÷ 그 기간 총일수 (근로기준법 제2조제1항제6호, 산재법 제5조제2호).
+   [근거 7] 산재법 제112조① 단서 — 장해급여를 받을 권리는 5년간 행사하지 않으면 시효로 소멸.
+   빠진 것: 평균임금 증감(제36조③)에 따른 연금액 변동, 가중장해(시행령 제53조④), 직업병 특례, 선급금 이자 공제액. 원 미만 버림. */
+
+var Y2026 = { maxBase: 268299, minBase: 82560 };
+var PENSION_DAYS = { 1: 329, 2: 291, 3: 257, 4: 224, 5: 193, 6: 164, 7: 138 };
+var LUMP_DAYS = { 1: 1474, 2: 1309, 3: 1155, 4: 1012, 5: 869, 6: 737, 7: 616, 8: 495, 9: 385, 10: 297, 11: 220, 12: 154, 13: 99, 14: 55 };
+
+function fl(x) { return Math.floor(x + 1e-9); }
+
+/* 지급 방식: 1~3급 연금만(제57조③단서·시행령 제53조⑤), 4~7급 선택, 8~14급 일시금만(별표 2 연금 칸 없음) */
+function payType(grade) { return grade <= 3 ? 'pension' : grade <= 7 ? 'choice' : 'lump'; }
+
+/* 평균임금(1일)에 상한·하한 적용 (제36조제7항) */
+function baseWage(rawDaily, R) {
+  R = R || Y2026;
+  if (rawDaily > R.maxBase) return { avg: R.maxBase, raw: rawDaily, clamp: 'max' };
+  if (rawDaily < R.minBase) return { avg: R.minBase, raw: rawDaily, clamp: 'min' };
+  return { avg: rawDaily, raw: rawDaily, clamp: '' };
+}
+
+/* 월급(원) → 평균임금: 월급 × 3 ÷ 3개월 일수 */
+function dailyFromMonthly(monthly, days3) { return days3 > 0 ? monthly * 3 / days3 : 0; }
+
+/* inp = { grade, rawDaily, age } */
+function calc(inp, R) {
+  R = R || Y2026;
+  var g = Math.max(1, Math.min(14, Math.floor(inp.grade || 0)));
+  var b = baseWage(inp.rawDaily || 0, R);
+  var pd = PENSION_DAYS[g] || 0, ld = LUMP_DAYS[g];
+  var lump = fl(b.avg * ld);
+  var yearly = pd ? fl(b.avg * pd) : 0;
+  var monthly = pd ? fl(yearly / 12) : 0;
+  var breakEven = pd ? ld / pd : 0;
+  var age = Math.floor(inp.age || 0);
+  var advMax = g <= 3 ? 4 : 2;
+  var advance = [];
+  if (pd) for (var n = 1; n <= advMax; n++) advance.push({ years: n, amount: fl(yearly * n / 2) });
+  return { grade: g, type: payType(g), avg: b.avg, raw: b.raw, clamp: b.clamp, pensionDays: pd, lumpDays: ld,
+    lump: lump, yearly: yearly, monthly: monthly, breakEven: breakEven,
+    breakEvenAge: pd && age ? age + breakEven : 0, age: age, advance: advance };
+}
+
+/* n년 받았을 때 연금 누적 (명목 금액, 평균임금 증감 무시) */
+function cumulative(yearly, years) { return fl(yearly * years); }
+
+</script>
+<script>
+
+function $(id){return document.getElementById(id)}
+function num(id){var v=String($(id).value).replace(/[^0-9]/g,'');return v?parseInt(v,10):0}
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')}
+function won(n){return fmt(n)+'원'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function show(o){var h='';
+ if(o.err){$('result').innerHTML='<div class="err" role="alert">'+esc(o.err)+'</div>';return}
+ h+='<div class="big"><span>'+o.label+'</span><strong>'+o.big+'</strong>'+(o.sub?'<small>'+o.sub+'</small>':'')+'</div>';
+ if(o.rows&&o.rows.length){h+='<table class="t"><tbody>';o.rows.forEach(function(r){h+='<tr><th scope="row">'+r[0]+'</th><td>'+r[1]+'</td></tr>'});h+='</tbody></table>'}
+ if(o.extra)h+=o.extra;
+ if(o.note)h+='<p class="note">'+o.note+'</p>';
+ $('result').innerHTML=h}
+Array.prototype.forEach.call(document.querySelectorAll('input[data-comma]'),function(el){
+ function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'');el.value=d?Number(d).toLocaleString('ko-KR'):''}
+ el.addEventListener('input',f);f()});
+$('f').addEventListener('submit',function(e){e.preventDefault();run();$('result').scrollIntoView({behavior:'smooth',block:'nearest'})});
+$('theme').addEventListener('click',function(){var r=document.documentElement,cur=r.getAttribute('data-theme');
+ var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;r.setAttribute('data-theme',dark?'light':'dark')});
+
+
+var TYPE={pension:'연금만 받을 수 있어요',choice:'연금과 일시금 중 선택',lump:'일시금만 받을 수 있어요'};
+function run(){var w=num('wage');if(w<=0)return show({err:'월 임금을 넣어 주세요.'});
+var r=calc({grade:num('grade'),rawDaily:dailyFromMonthly(w,num('days3')),age:num('age')});
+var rows=[['평균임금 (1일)',won(Math.floor(r.raw))+(r.clamp==='max'?'<br>→ 상한 '+won(r.avg):r.clamp==='min'?'<br>→ 하한 '+won(r.avg):'')],['지급 방식',TYPE[r.type]]];
+if(r.pensionDays)rows.push(['연금 (연 '+r.pensionDays+'일분)','연 '+won(r.yearly)+'<br>월 '+won(r.monthly)]);
+rows.push(['일시금 ('+r.lumpDays.toLocaleString('ko-KR')+'일분)',won(r.lump)]);
+if(r.pensionDays)rows.push(['연금 누적이 일시금을 넘는 때','약 '+r.breakEven.toFixed(1)+'년 뒤'+(r.breakEvenAge?' (약 '+Math.floor(r.breakEvenAge)+'세)':'')]);
+r.advance.forEach(function(a){rows.push(['선급금 ('+a.years+'년분의 절반)',won(a.amount)])});
+var big,label,sub,note;
+if(r.type==='lump'){label='장해보상일시금';big=won(r.lump);note=r.grade+'급은 연금 칸이 없어 한 번에 받는 일시금만 있어요.'}
+else{label='장해보상연금 (1년)';big=won(r.yearly);sub='매달 약 '+won(r.monthly);
+ note=r.type==='pension'?r.grade+'급은 노동력을 완전히 잃은 등급이라 연금으로만 받아요. 원하면 최초 1~4년분의 절반을 미리 받을 수 있어요.':'연금을 약 '+r.breakEven.toFixed(1)+'년 넘게 받으면 일시금('+won(r.lump)+')보다 많아져요. 건강 상태와 생활 계획을 함께 고려해 고르세요.'}
+show({label:label,big:big,sub:sub,rows:rows,note:note})}
+
+run();
+</script>
+</body>
+</html>

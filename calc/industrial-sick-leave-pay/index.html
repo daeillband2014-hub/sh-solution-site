@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>산재 휴업급여 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="산재 휴업급여를 계산합니다. 3개월 임금으로 평균임금을 구해 70% 지급, 저소득 근로자 특례, 2026년 최고 보상기준 268,299원, 부분휴업급여와 3일 대기기간까지 반영합니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/industrial-sick-leave-pay/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="산재 휴업급여 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="산재 휴업급여를 계산합니다. 3개월 임금으로 평균임금을 구해 70% 지급, 저소득 근로자 특례, 2026년 최고 보상기준 268,299원, 부분휴업급여와 3일 대기기간까지 반영합니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/industrial-sick-leave-pay/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "이틀이나 사흘만 쉬었으면 못 받나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "산재보험법 제52조 단서에 따라 취업하지 못한 기간이 3일 이내면 휴업급여를 지급하지 않아요. 4일 이상이면 첫날부터 계산됩니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "월급이 아주 많으면 그만큼 받나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "평균임금이 2026년 최고 보상기준 268,299원을 넘으면 268,299원으로 계산해요. 그래서 하루 휴업급여는 최대 187,809원(70%, 원 미만 버림)입니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "휴업급여를 언제까지 청구할 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "보험급여를 받을 권리는 3년간 행사하지 않으면 시효로 사라져요(제112조). 요양이 길어지면 한 달 단위로 나눠 청구하는 편이 안전합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "평균임금이 아주 낮으면 얼마를 받나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "70%가 66,048원 이하인 저소득 근로자는 특례가 적용돼 하루 66,048원 또는 최저임금액 82,560원을 받을 수 있어요. 계산기의 '적용 기준' 줄에서 어떤 규칙이 쓰였는지 확인할 수 있습니다."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;
+--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;
+--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#8a94aa;--shadow:0 24px 60px -30px rgba(0,0,0,.8)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}}
+:root[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:520px;z-index:-1;pointer-events:none;background:radial-gradient(600px 300px at 20% 30%,var(--glow),transparent 70%),radial-gradient(500px 260px at 85% 20%,var(--glow-2),transparent 70%)}
+a{color:var(--ink)}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.logo svg{width:28px;height:28px;flex:none}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-link{font-size:14px;font-weight:600;color:var(--sub);text-decoration:none;padding:8px 12px;border:1px solid var(--line-2);border-radius:999px;white-space:nowrap}
+.hd-link:hover{color:var(--fg);border-color:var(--c1)}
+.theme{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);cursor:pointer;font-size:15px}
+main{padding:28px 0 40px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:0 0 8px}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.calc .grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:560px){.calc .grid{grid-template-columns:1fr 1fr}.calc .full{grid-column:1/-1}}
+.f label{display:block;font-size:14px;font-weight:700;color:var(--sub);margin-bottom:6px}
+.box{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:52px;transition:border-color .2s,box-shadow .2s}
+.box:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.box input,.box select{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--fg);font:inherit;font-size:17px;font-weight:600;outline:none;height:100%}
+.box select{cursor:pointer;-webkit-appearance:none;appearance:none}
+.box select option{background:var(--surface-solid);color:var(--fg)}
+.box .u{color:var(--muted);font-size:15px;font-weight:600;margin-left:8px;white-space:nowrap}
+.box.sel::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-3px);margin-left:8px;flex:none}
+.hint{font-size:13px;color:var(--muted);margin:6px 2px 0}
+.go{margin-top:18px;width:100%;height:54px;border:0;border-radius:14px;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);cursor:pointer;
+background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.go:active{transform:scale(.99)}
+#result{margin-top:18px}
+.big{border-radius:18px;padding:20px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.big span{display:block;font-size:14px;font-weight:700;color:var(--sub)}
+.big strong{display:block;font-size:34px;line-height:1.25;letter-spacing:-.03em;margin-top:4px;color:var(--fg)}
+.big small{display:block;color:var(--sub);font-size:14px;margin-top:4px}
+table.t{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+table.t th,table.t td{padding:11px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{text-align:left;font-weight:600;color:var(--sub);width:46%}
+table.t td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.note{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--bg-2);color:var(--sub);font-size:14.5px}
+.err{padding:14px;border-radius:12px;border:1px solid var(--warn);color:var(--warn);font-weight:700}
+.items{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.items li{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg-2)}
+.items b{display:block;font-size:16px}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;margin:4px 0 6px;border:1px solid currentColor}
+.tag.ok{color:var(--ok)}.tag.check{color:var(--warn)}.tag.info,.tag.no{color:var(--no)}
+.items p{margin:0;color:var(--sub);font-size:14.5px}
+.items em{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:6px}
+section.doc{margin-top:36px}
+section.doc h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;padding-left:12px;border-left:4px solid var(--c1);line-height:1.35}
+section.doc h3{font-size:17px;margin:20px 0 6px}
+section.doc p,section.doc li{color:var(--sub);font-size:16px}
+section.doc ul,section.doc ol{padding-left:20px}
+section.doc table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;background:var(--surface-solid);border-radius:12px;overflow:hidden}
+section.doc th,section.doc td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+section.doc th{background:var(--bg-2);color:var(--fg);font-weight:700}
+section.doc td{color:var(--sub)}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.ex b{color:var(--fg)}
+details{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;color:var(--fg);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q. ";color:var(--ink)}
+details p{margin:0 0 14px}
+.basis li{margin-bottom:6px}
+.disc{margin-top:28px;font-size:14px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:14px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+@media (max-width:380px){h1{font-size:25px}.big strong{font-size:30px}.logo{font-size:15px}.hd-link{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap">
+<a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>에스에이치솔루션</a>
+<div class="hd-r"><a class="hd-link" href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div>
+</div></header>
+<main class="wrap">
+<span class="eyebrow">2026년 보상기준 금액</span>
+<h1>산재 휴업급여 계산기</h1>
+<p class="lead">다치기 전 3개월 임금과 요양으로 쉰 날짜를 넣으면 근로복지공단에서 받을 휴업급여를 하루 금액과 총액으로 보여 드려요.</p>
+<form class="card calc" id="f" novalidate>
+<div class="grid"><div class="f full"><label for="total3m">다치기 전 3개월 임금 총액</label><div class="box"><input id="total3m" type="text" inputmode="numeric" autocomplete="off" maxlength="12" value="12000000" data-comma><span class="u">원</span></div><p class="hint">세전, 상여·수당 포함. 월급이면 월급 × 3</p></div><div class="f"><label for="days3m">그 3개월의 날수</label><div class="box sel"><select id="days3m"><option value="89">89일</option><option value="90">90일</option><option value="91">91일</option><option value="92" selected>92일</option></select></div></div><div class="f"><label for="leaveDays">요양으로 일하지 못한 날</label><div class="box"><input id="leaveDays" type="text" inputmode="numeric" autocomplete="off" maxlength="4" value="60"><span class="u">일</span></div></div><div class="f"><label for="partDays">그중 짧게 일한 날</label><div class="box"><input id="partDays" type="text" inputmode="numeric" autocomplete="off" maxlength="4" value="0"><span class="u">일</span></div><p class="hint">없으면 0</p></div><div class="f"><label for="partPay">짧게 일한 날 하루 임금</label><div class="box"><input id="partPay" type="text" inputmode="numeric" autocomplete="off" maxlength="12" value="0" data-comma><span class="u">원</span></div><p class="hint">부분휴업이 없으면 0</p></div></div>
+<button class="go" type="submit">계산하기</button>
+<div id="result" aria-live="polite"></div>
+</form>
+<section class="doc"><h2>이렇게 계산해요</h2>
+<p>휴업급여는 업무상 다치거나 병에 걸려 요양하느라 일하지 못한 기간에 주는 돈이에요. 기본 공식은 간단합니다. <b>하루 휴업급여 = 평균임금 × 70%</b>, 총액은 여기에 일하지 못한 날수를 곱해요.</p>
+<p>평균임금은 다친 날(사유가 생긴 날) 이전 3개월 동안 받은 임금 총액을 그 3개월의 달력상 날수(89~92일)로 나눈 금액이에요. 평균임금이 2026년 최고 보상기준 금액 268,299원을 넘으면 268,299원으로 계산합니다. 휴업급여에는 최저 보상기준 금액(하한)을 평균임금에 적용하지 않는 대신, 아래의 저소득 특례가 따로 있어요.</p>
+<table><thead><tr><th>조건</th><th>하루 지급액</th></tr></thead><tbody>
+<tr><td>평균임금 × 70%가 66,048원보다 많을 때</td><td>평균임금 × 70%</td></tr>
+<tr><td>70%가 66,048원 이하이고, 90%가 66,048원보다 많을 때</td><td>66,048원 (최저 보상기준 82,560원의 80%)</td></tr>
+<tr><td>90%도 66,048원 이하이고, 90%가 최저임금액보다 적을 때</td><td>최저임금액 82,560원</td></tr></tbody></table>
+<p>요양 중 일부 날에 짧게 일했다면 그날은 부분휴업급여로 (평균임금 − 그날 받은 임금) × 80%를 받아요. 원 미만은 버렸습니다.</p>
+<div class="ex"><b>예시 — 3개월 임금 1,200만원(92일), 60일 요양</b><br>
+평균임금 12,000,000 ÷ 92 ≈ 130,434원. 70%는 91,304원으로 66,048원보다 많아 그대로 적용돼요.<br>
+91,304원 × 60일 = <b>5,478,240원</b>. 만약 60일 중 10일은 하루 5만원을 받고 짧게 일했다면, 그 10일은 (130,434 − 50,000) × 80% ≈ 64,347원씩 계산돼요.</div>
+</section>
+<section class="doc"><h2>알아두면 좋은 점</h2>
+<h3>3일 이내 요양은 지급되지 않아요</h3>
+<p>일하지 못한 기간이 3일 이내면 산재보험 휴업급여는 나오지 않아요. 4일 이상이면 첫날부터 휴업급여 대상이 되므로, 짧은 요양이라도 날수를 정확히 확인해 두세요.</p>
+<h3>청구는 근로복지공단에</h3>
+<p>요양 승인을 받은 뒤 휴업급여 청구서를 근로복지공단 지사에 내거나 공단 누리집으로 신청해요. 보통 한 달 단위로 묶어서 청구하고, 병원에서 요양 기간을 확인받아야 합니다. 보험급여를 받을 권리는 3년 동안 행사하지 않으면 시효로 사라지니, 늦어도 그 안에 청구하세요.</p>
+<h3>평균임금을 넣을 때 주의할 점</h3>
+<p>3개월 임금 총액에는 기본급뿐 아니라 그 기간에 받은 연장근로 수당, 각종 수당이 들어가요. 어떤 항목이 들어가는지 애매하면 정확한 반영은 공단이 결정한다는 점을 기억하세요. 다친 달이 2월이 포함된 3개월이면 날수가 89~90일로 줄어 평균임금이 조금 올라가요.</p>
+<h3>이 계산기가 반영하지 않은 것</h3>
+<ul><li>61세 이후 휴업급여 감액</li><li>직업병 환자의 평균임금 특례</li><li>요양이 길어질 때의 평균임금 증감(재산정)</li><li>노무제공자(특수형태근로종사자 등) 특례</li></ul>
+<p>저소득 특례 구간에서는 조문을 문언 그대로 적용했기 때문에 평균임금이 약 73,000원 이하일 때 하루 금액이 82,560원, 그보다 조금 높을 때 66,048원이 되는 구간이 생깁니다. 실제 공단 결정과 다를 수 있으니 이 구간에 해당하면 공단에 꼭 문의해 보세요.</p>
+</section>
+<section class="doc"><h2>자주 묻는 질문</h2><details><summary>이틀이나 사흘만 쉬었으면 못 받나요?</summary><p>산재보험법 제52조 단서에 따라 취업하지 못한 기간이 3일 이내면 휴업급여를 지급하지 않아요. 4일 이상이면 첫날부터 계산됩니다.</p></details><details><summary>월급이 아주 많으면 그만큼 받나요?</summary><p>평균임금이 2026년 최고 보상기준 268,299원을 넘으면 268,299원으로 계산해요. 그래서 하루 휴업급여는 최대 187,809원(70%, 원 미만 버림)입니다.</p></details><details><summary>휴업급여를 언제까지 청구할 수 있나요?</summary><p>보험급여를 받을 권리는 3년간 행사하지 않으면 시효로 사라져요(제112조). 요양이 길어지면 한 달 단위로 나눠 청구하는 편이 안전합니다.</p></details><details><summary>평균임금이 아주 낮으면 얼마를 받나요?</summary><p>70%가 66,048원 이하인 저소득 근로자는 특례가 적용돼 하루 66,048원 또는 최저임금액 82,560원을 받을 수 있어요. 계산기의 '적용 기준' 줄에서 어떤 규칙이 쓰였는지 확인할 수 있습니다.</p></details></section>
+<section class="doc basis"><h2>근거</h2><ul>
+<li>산업재해보상보험법 제52조(휴업급여), 제53조(부분휴업급여), 제54조(저소득 근로자의 휴업급여), 제36조제7항(보상기준 금액), 제112조(시효) — <a href="https://www.law.go.kr/법령/산업재해보상보험법" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>근로기준법 제2조제1항제6호 — 평균임금의 정의 (산재법 제5조제2호 준용) — <a href="https://www.law.go.kr/법령/근로기준법" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>고용노동부고시 제2025-84호 「최고·최저 보상기준 금액」 (2026.1.1~12.31) — 최고 1일 268,299원, 최저 1일 82,560원</li>
+<li>고용노동부고시 제2025-47호 「2026년 적용 최저임금 고시」 — 시간급 10,320원(× 8시간 = 82,560원)</li>
+<li>기준일: 2026-10-15 법령 원문 확인</li></ul></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+/* 계산 규칙: 미니앱 src/logic.js 원문 그대로 */
+/* 휴업급여 계산 규칙 (2026-10-15 확인). 참고용 — 실제 지급액은 근로복지공단 결정으로 정해진다.
+
+   [근거 1] 근로기준법 제2조제1항제6호 (산재법 제5조제2호가 준용)
+     "평균임금"이란 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을
+     그 기간의 총일수로 나눈 금액. https://www.law.go.kr/법령/근로기준법
+   [근거 2] 산업재해보상보험법 제52조(휴업급여)
+     "1일당 지급액은 평균임금의 100분의 70에 상당하는 금액으로 한다. 다만, 취업하지 못한 기간이 3일 이내이면
+     지급하지 아니한다." https://www.law.go.kr/법령/산업재해보상보험법
+   [근거 3] 같은 법 제54조(저소득 근로자의 휴업급여)
+     ① 제52조에 따라 산정한 1일당 휴업급여 지급액이 최저 보상기준 금액의 100분의 80보다 적거나 같으면 … 평균임금의
+        100분의 90 … 다만, 평균임금의 100분의 90이 최저 보상기준 금액의 100분의 80보다 많은 경우에는 최저 보상기준
+        금액의 100분의 80에 상당하는 금액을 1일당 휴업급여 지급액으로 한다.
+     ② 제1항 본문에 따라 산정한 휴업급여 지급액이 최저임금액보다 적으면 그 최저임금액을 … 1일당 휴업급여 지급액으로 한다.
+     → 조문 그대로 적용: ②는 「제1항 본문(90%)」 결과에만 붙고, 단서(최저보상 80%) 결과에는 붙지 않는다.
+   [근거 4] 같은 법 제36조제7항 — 평균임금이 최고 보상기준 금액을 넘으면 최고 보상기준 금액을 평균임금으로.
+     "다만, 휴업급여 및 상병보상연금을 산정할 때에는 최저 보상기준 금액을 적용하지 아니한다."(하한만 제외, 상한은 적용)
+   [근거 5] 같은 법 제53조(부분휴업급여) ① 단시간 취업한 날: (평균임금 − 그날 임금) × 100분의 80.
+     다만 제54조제2항에 따라 최저임금액을 1일당 휴업급여로 하는 경우에는 (최저임금액 − 그날 임금).
+   [근거 6] 고용노동부고시 제2025-84호(최고·최저 보상기준 금액, 2026.1.1~12.31):
+     최고 보상기준 금액 1일 268,299원, 최저 보상기준 금액 1일 82,560원.
+     https://www.law.go.kr/행정규칙/최고·최저보상기준금액
+   [근거 7] 고용노동부고시 제2025-47호(2026년 적용 최저임금): 시간급 10,320원 → 최저임금액(×8, 제36조제7항) 82,560원.
+     https://www.law.go.kr/행정규칙/2026년적용최저임금고시
+   빠진 것: 61세 이후 감액(제55조·별표1), 직업병 평균임금 특례(제36조제6항), 평균임금 증감(제36조제3항),
+            노무제공자 특례. 원 미만은 버림(앱 표시 방식). */
+
+var Y2026 = { maxBase: 268299, minBase: 82560, minWageDay: 82560, rate: 0.7, lowRate: 0.9, lowCapRate: 0.8, partRate: 0.8, waitDays: 3 };
+
+function fl(x) { return Math.floor(x + 1e-9); }
+
+/* 평균임금: 3개월 임금 총액 ÷ 그 기간 총일수, 최고 보상기준으로 상한 */
+function averageWage(total3m, days3m, R) {
+  R = R || Y2026;
+  var raw = days3m > 0 ? total3m / days3m : 0;
+  var capped = raw > R.maxBase;
+  return { raw: raw, avg: capped ? R.maxBase : raw, capped: capped };
+}
+
+/* 1일 휴업급여 (전부 휴업한 날) */
+function dailyBenefit(avg, R) {
+  R = R || Y2026;
+  var basic = fl(avg * R.rate);
+  var lowLine = fl(R.minBase * R.lowCapRate);   /* 최저보상기준의 80% = 66,048원 */
+  if (basic > lowLine) return { basic: basic, lowLine: lowLine, daily: basic, rule: 'basic' };
+  var ninety = fl(avg * R.lowRate);
+  if (ninety > lowLine) return { basic: basic, lowLine: lowLine, ninety: ninety, daily: lowLine, rule: 'lowCap' };
+  if (ninety < R.minWageDay) return { basic: basic, lowLine: lowLine, ninety: ninety, daily: R.minWageDay, rule: 'minWage' };
+  return { basic: basic, lowLine: lowLine, ninety: ninety, daily: ninety, rule: 'low90' };
+}
+
+/* 부분휴업 1일 금액 */
+function partialDaily(avg, workPay, rule, R) {
+  R = R || Y2026;
+  if (rule === 'minWage') return Math.max(0, fl(R.minWageDay - workPay));
+  return Math.max(0, fl((avg - workPay) * R.partRate));
+}
+
+/* inp = { total3m, days3m, leaveDays, partDays, partPay }  leaveDays: 요양으로 일하지 못한 전체 일수, partDays: 그중 단시간 취업한 날 */
+function calc(inp, R) {
+  R = R || Y2026;
+  var a = averageWage(inp.total3m || 0, inp.days3m || 0, R);
+  var d = dailyBenefit(a.avg, R);
+  var leave = Math.max(0, Math.floor(inp.leaveDays || 0));
+  var part = Math.min(leave, Math.max(0, Math.floor(inp.partDays || 0)));
+  var full = leave - part;
+  var pd = part ? partialDaily(a.avg, inp.partPay || 0, d.rule, R) : 0;
+  var eligible = leave > R.waitDays;
+  var fullSum = eligible ? full * d.daily : 0;
+  var partSum = eligible ? part * pd : 0;
+  return { avgRaw: a.raw, avg: a.avg, capped: a.capped, daily: d.daily, basic: d.basic, ninety: d.ninety || 0, lowLine: d.lowLine, rule: d.rule,
+    leave: leave, full: full, part: part, partDaily: pd, eligible: eligible, fullSum: fullSum, partSum: partSum, total: fullSum + partSum };
+}
+
+</script>
+<script>
+
+function $(id){return document.getElementById(id)}
+function num(id){var v=String($(id).value).replace(/[^0-9]/g,'');return v?parseInt(v,10):0}
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')}
+function won(n){return fmt(n)+'원'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function show(o){var h='';
+ if(o.err){$('result').innerHTML='<div class="err" role="alert">'+esc(o.err)+'</div>';return}
+ h+='<div class="big"><span>'+o.label+'</span><strong>'+o.big+'</strong>'+(o.sub?'<small>'+o.sub+'</small>':'')+'</div>';
+ if(o.rows&&o.rows.length){h+='<table class="t"><tbody>';o.rows.forEach(function(r){h+='<tr><th scope="row">'+r[0]+'</th><td>'+r[1]+'</td></tr>'});h+='</tbody></table>'}
+ if(o.extra)h+=o.extra;
+ if(o.note)h+='<p class="note">'+o.note+'</p>';
+ $('result').innerHTML=h}
+Array.prototype.forEach.call(document.querySelectorAll('input[data-comma]'),function(el){
+ function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'');el.value=d?Number(d).toLocaleString('ko-KR'):''}
+ el.addEventListener('input',f);f()});
+$('f').addEventListener('submit',function(e){e.preventDefault();run();$('result').scrollIntoView({behavior:'smooth',block:'nearest'})});
+$('theme').addEventListener('click',function(){var r=document.documentElement,cur=r.getAttribute('data-theme');
+ var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;r.setAttribute('data-theme',dark?'light':'dark')});
+
+
+var RULE={basic:'평균임금의 70%',lowCap:'최저 보상기준의 80% (저소득 특례)',low90:'평균임금의 90% (저소득 특례)',minWage:'최저임금액 (저소득 특례)'};
+function run(){var inp={total3m:num('total3m'),days3m:num('days3m'),leaveDays:num('leaveDays'),partDays:num('partDays'),partPay:num('partPay')};
+if(inp.total3m<=0)return show({err:'3개월 임금 총액을 넣어 주세요.'});if(inp.leaveDays<=0)return show({err:'요양으로 쉰 날수를 넣어 주세요.'});
+var r=calc(inp);
+var rows=[['평균임금 (1일)',won(Math.floor(r.avgRaw))+(r.capped?'<br>→ 상한 '+won(r.avg):'')],['하루 휴업급여',won(r.daily)],['적용 기준',RULE[r.rule]],
+['전부 쉰 날',r.full+'일 × '+won(r.daily)+'<br>= '+won(r.fullSum)]];
+if(r.part)rows.push(['짧게 일한 날',r.part+'일 × '+won(r.partDaily)+'<br>= '+won(r.partSum)]);
+var note=r.eligible?'요양 기간 '+r.leave+'일에 대해 하루 '+won(r.daily)+'씩 계산했어요. 실제로는 근로복지공단이 평균임금을 다시 산정해 결정해요.':'일하지 못한 기간이 3일 이내라 휴업급여가 나오지 않아요. 4일 이상이면 첫날부터 계산됩니다.';
+show({label:'받을 휴업급여 총액',big:won(r.total),sub:r.eligible?'하루 '+won(r.daily)+' 기준':'3일 이내는 지급 없음',rows:rows,note:note})}
+
+run();
+</script>
+</body>
+</html>

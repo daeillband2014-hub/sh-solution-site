@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>장애인연금 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="2026년 장애인연금 계산기. 장애 정도·나이·가구 소득 수준을 고르면 기초급여와 부가급여를 나눠 예상 월액을 계산하고, 선정기준액 140만원·224만원과 비교해 드립니다.">
+<meta name="theme-color" content="#07090f">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/disability-pension/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="장애인연금 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="2026년 장애인연금 계산기. 장애 정도·나이·가구 소득 수준을 고르면 기초급여와 부가급여를 나눠 예상 월액을 계산하고, 선정기준액 140만원·224만원과 비교해 드립니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/disability-pension/">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "장애인연금은 한 달에 최대 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년 기준 65세 미만 생계·의료급여 수급자는 기초급여 349,700원과 부가급여 90,000원을 합쳐 월 439,700원이고, 65세 이상 생계·의료급여 수급자는 부가급여만 439,700원입니다."}}, {"@type": "Question", "name": "장애인연금 선정기준액은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년에는 배우자가 없으면 월 140만원, 배우자가 있으면 월 224만원입니다."}}, {"@type": "Question", "name": "경증장애인도 장애인연금을 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "장애인연금은 장애 정도가 심한 장애인만 대상입니다. 심하지 않은 장애인은 소득 기준에 맞으면 장애수당을 받을 수 있습니다."}}, {"@type": "Question", "name": "기초연금과 장애인연금을 같이 받을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "기초연금을 받는 사람에게는 기초급여를 주지 않지만 부가급여는 받을 수 있습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#f87171;--shadow:0 18px 50px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#b91c1c;--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20vmax -20vmax auto auto;width:70vmax;height:70vmax;border-radius:50%;background:radial-gradient(closest-side,var(--glow-2),transparent);z-index:-1;pointer-events:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.grad{background:linear-gradient(95deg,var(--c1),var(--c3) 45%,var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;border:2px solid var(--c1);display:grid;place-items:center;font-style:normal;font-size:11px;color:var(--c1)}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-r a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 12px;border:1px solid var(--line-2);border-radius:10px;white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+main{padding:28px 0 40px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 10px}
+.crumb a{text-decoration:none}
+h1{font-size:clamp(26px,7vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;box-shadow:var(--shadow)}
+.f{margin:0 0 18px}
+.f>label,.f>.lb{display:block;font-size:14px;font-weight:700;margin:0 0 8px}
+.f small{display:block;color:var(--muted);font-size:12.5px;margin-top:6px}
+.in{display:flex;align-items:center;border:1px solid var(--line-2);border-radius:14px;background:var(--bg-2);padding:0 14px;height:52px}
+.in:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.in input,.in select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:18px;font-weight:700;text-align:right;outline:none}
+.in select{text-align:left;font-size:16px}
+.in select option{color:#0b1020}
+.in span{margin-left:8px;color:var(--muted);font-weight:600;font-size:15px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{flex:1 1 auto;min-width:0;position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 10px;border:1px solid var(--line-2);border-radius:12px;font-size:14.5px;font-weight:600;color:var(--sub);background:var(--bg-2)}
+.seg input:checked+span{border-color:var(--c1);color:var(--fg);background:var(--glow);box-shadow:0 0 0 1px var(--c1) inset}
+.seg input:focus-visible+span{outline:2px solid var(--c1);outline-offset:2px}
+.btn{display:flex;width:100%;align-items:center;justify-content:center;height:54px;border-radius:14px;border:0;cursor:pointer;font:inherit;font-size:16.5px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.btn:active{transform:scale(.99)}
+.res{margin-top:18px}
+.big{border-radius:18px;padding:20px 18px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.badge{display:inline-block;font-size:12.5px;font-weight:800;padding:4px 10px;border-radius:999px;border:1px solid currentColor;margin-bottom:8px}
+.b-ok{color:var(--ok)}.b-warn{color:var(--warn)}.b-no{color:var(--no)}
+.big .lbl{font-size:14px;color:var(--sub);font-weight:600}
+.big .num{font-size:clamp(30px,9vw,42px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:2px 0}
+.big .num small{font-size:.45em;font-weight:700;margin-left:4px;color:var(--sub)}
+.big .sub2{font-size:14px;color:var(--sub)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+.rows{margin-top:14px}
+.rows th,.rows td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rows td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:10px}
+.rows tr.tot td{font-weight:900;color:var(--ink);border-bottom:0}
+.rows td small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.say{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--c1);background:var(--surface);border-radius:0 12px 12px 0;font-size:14.5px;color:var(--sub)}
+section.txt{margin-top:40px}
+section.txt h2{font-size:22px;margin:0 0 14px;letter-spacing:-.02em}
+section.txt h3{font-size:17px;margin:22px 0 8px}
+section.txt p,section.txt li{color:var(--sub);font-size:15.5px}
+section.txt ul,section.txt ol{padding-left:20px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:12px 0}
+.tbl table th,.tbl table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
+.tbl table th{background:var(--bg-2);font-weight:700}
+.tbl table tr:last-child td{border-bottom:0}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:14px 0}
+.ex p{margin:4px 0}
+details{border:1px solid var(--line);border-radius:14px;padding:4px 16px;margin:0 0 10px;background:var(--surface-solid)}
+summary{cursor:pointer;font-weight:700;padding:12px 0;font-size:15.5px}
+details p{margin:0 0 14px}
+.src li{margin-bottom:6px}
+.src a{color:var(--ink)}
+.disc{margin-top:28px;font-size:13.5px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:13.5px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><div class="hd-r"><a href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div></div></header>
+<main><div class="wrap">
+<p class="crumb"><a href="/">홈</a> › <a href="/calc/">계산기</a> › 장애인연금 계산기</p>
+<h1>2026 장애인연금 계산기</h1>
+<p class="lead">기초급여와 부가급여를 나눠서 예상 장애인연금을 보여 드려요.</p>
+<div class="card">
+<div class="f"><div class="lb">장애 정도</div><div class="seg" role="radiogroup"><label><input type="radio" name="sev" value="y" checked><span>심한 장애(중증)</span></label><label><input type="radio" name="sev" value="n"><span>심하지 않은 장애</span></label><label><input type="radio" name="sev" value="u"><span>아직 몰라요</span></label></div></div><div class="f"><div class="lb">나이</div><div class="seg" role="radiogroup"><label><input type="radio" name="age" value="u18"><span>18세 미만</span></label><label><input type="radio" name="age" value="u65" checked><span>18~64세</span></label><label><input type="radio" name="age" value="o65"><span>65세 이상</span></label></div></div><div class="f"><div class="lb">결혼 여부</div><div class="seg" role="radiogroup"><label><input type="radio" name="cp" value="0" checked><span>배우자 없음</span></label><label><input type="radio" name="cp" value="1"><span>배우자 있음</span></label></div></div><div class="f hide" id="fboth"><div class="lb">배우자도 장애인연금을 받나요?</div><div class="seg" role="radiogroup"><label><input type="radio" name="both" value="0" checked><span>아니요</span></label><label><input type="radio" name="both" value="1"><span>네, 함께 받아요</span></label></div></div><div class="f"><div class="lb">가구 소득 수준</div><div class="seg" role="radiogroup"><label><input type="radio" name="tier" value="livmed"><span>생계·의료급여</span></label><label><input type="radio" name="tier" value="near"><span>차상위(주거·교육 포함)</span></label><label><input type="radio" name="tier" value="over" checked><span>그 외</span></label></div></div><div class="f"><div class="lb"><label for="inc">월 소득인정액</label></div><div class="in"><input class="num" id="inc" inputmode="numeric" autocomplete="off" aria-label="월 소득인정액" value="800000" data-max="10"><span>원</span></div><small>소득과 재산을 월 소득으로 환산한 금액. 모르면 대략적인 월 소득을 넣어 보세요.</small></div><div class="f"><div class="lb">공무원·군인·사학·별정우체국 퇴직연금을 받나요?</div><div class="seg" role="radiogroup"><label><input type="radio" name="jik" value="0" checked><span>아니요</span></label><label><input type="radio" name="jik" value="1"><span>본인 또는 배우자가 받아요</span></label></div></div>
+<button class="btn" id="go" type="button">결과 보기</button>
+<div class="res" id="res" aria-live="polite"></div>
+</div>
+<section class="txt"><h2>이렇게 계산해요</h2><p>장애인연금은 두 덩어리로 나뉩니다. 하나는 근로능력을 잃거나 크게 줄어든 데 따른 소득을 메워 주는 <b>기초급여</b>, 다른 하나는 장애 때문에 더 드는 비용을 보태 주는 <b>부가급여</b>입니다. 기초급여는 기초연금의 기준연금액과 같은 금액이고, 부가급여는 소득 수준과 나이에 따라 정해진 월정액입니다.</p>
+<div class="tbl"><table><thead><tr><th>구분</th><th>65세 미만</th><th>65세 이상</th></tr></thead><tbody>
+<tr><td>기초급여</td><td>349,700원 (부부 모두 받으면 각 279,760원)</td><td>지급하지 않음(기초연금으로 대신)</td></tr>
+<tr><td>부가급여 · 생계·의료급여 수급자</td><td>90,000원</td><td>439,700원</td></tr>
+<tr><td>부가급여 · 차상위(주거·교육급여 포함)</td><td>80,000원</td><td>80,000원</td></tr>
+<tr><td>부가급여 · 차상위 초과</td><td>30,000원</td><td>50,000원</td></tr></tbody></table></div>
+<p>대상 여부는 선정기준액으로 가립니다. 2026년에는 배우자가 없으면 월 140만원, 있으면 월 224만원입니다. 소득인정액이 이 금액 이하여야 하고, 소득인정액에 기초급여를 더한 금액이 선정기준액 이상이 되면 기초급여 일부가 줄어들 수 있습니다. 생계·의료급여 수급자나 차상위계층은 이미 소득이 낮다고 확인된 사람이므로 계산기에서는 소득 비교를 생략합니다.</p>
+<div class="ex"><p><b>예시</b> 40세 중증장애인, 배우자 없음, 차상위 초과, 소득인정액 월 80만원</p><p>80만원 ≤ 140만원 → 대상</p><p>기초급여 349,700원 + 부가급여 30,000원 = 월 379,700원, 연 4,556,400원</p>
+<p>같은 사람이 생계급여 수급자라면 부가급여가 90,000원으로 바뀌어 월 439,700원이 됩니다.</p></div></section>
+<section class="txt"><h2>알아두면 좋은 점</h2><h3>누가 받을 수 있나요</h3><p>18세 이상이면서 장애인복지법상 장애 정도가 심한 장애인(중증장애인)이 대상입니다. 심하지 않은 장애로 등록된 성인은 장애인연금 대신 장애수당을 살펴보는 것이 맞습니다. 공무원·군인·사학·별정우체국 퇴직연금을 받는 사람과 그 배우자는 제외됩니다.</p>
+<h3>65세가 되면 달라지는 점</h3><p>65세가 되면 기초연금을 받게 되므로 장애인연금의 기초급여는 나오지 않습니다. 대신 부가급여는 계속 받을 수 있고, 생계·의료급여 수급자는 65세 이상 부가급여가 439,700원으로 커집니다. 64세에서 65세로 넘어가는 시점에 총액이 어떻게 바뀌는지 미리 확인해 두면 생활비 계획을 세우기 쉽습니다.</p>
+<h3>신청과 심사</h3><p>주민등록 주소지의 읍·면·동 행정복지센터에서 신청합니다. 장애 정도가 아직 확정되지 않았다면 장애 정도 심사를 함께 거쳐야 하므로 시간이 걸릴 수 있습니다. 소득인정액은 소득과 재산을 함께 따지기 때문에 월급만 보고 판단하면 틀리기 쉽습니다. 집이나 예금이 있다면 실제 소득인정액은 월 소득보다 높게 나올 수 있습니다.</p>
+<h3>자주 하는 실수</h3><ul><li>부부 중 한 사람만 받는데 감액을 적용하는 경우: 20% 감액은 부부가 모두 받을 때만 해당합니다.</li><li>주거·교육급여 수급자를 「그 외」로 고르는 경우: 이분들은 차상위 칸의 부가급여를 받습니다.</li></ul></section>
+<section class="txt"><h2>자주 묻는 질문</h2><details><summary>장애인연금은 한 달에 최대 얼마인가요?</summary><p>2026년 기준 65세 미만 생계·의료급여 수급자는 기초급여 349,700원과 부가급여 90,000원을 합쳐 월 439,700원이고, 65세 이상 생계·의료급여 수급자는 부가급여만 439,700원입니다.</p></details><details><summary>장애인연금 선정기준액은 얼마인가요?</summary><p>2026년에는 배우자가 없으면 월 140만원, 배우자가 있으면 월 224만원입니다.</p></details><details><summary>경증장애인도 장애인연금을 받나요?</summary><p>장애인연금은 장애 정도가 심한 장애인만 대상입니다. 심하지 않은 장애인은 소득 기준에 맞으면 장애수당을 받을 수 있습니다.</p></details><details><summary>기초연금과 장애인연금을 같이 받을 수 있나요?</summary><p>기초연금을 받는 사람에게는 기초급여를 주지 않지만 부가급여는 받을 수 있습니다.</p></details></section>
+<section class="txt"><h2>근거</h2><ul class="src"><li>장애인연금법 제2조·제4조(수급권자의 범위)·제5조·제6조(기초급여액)·제7조(부가급여액) <a href="https://www.law.go.kr/법령/장애인연금법" rel="nofollow noopener" target="_blank">원문 보기</a></li><li>보건복지부 정책 안내 「장애인연금 개요」(최종수정 2026-03-31) <a href="https://www.mohw.go.kr/menu.es?mid=a10710030100" rel="nofollow noopener" target="_blank">원문 보기</a></li><li>보건복지부 보도자료(2026-01-05) 「2026년 1월부터 장애인연금 월 최대 43만 9,700원 지급」</li></ul><p>기준일: 2026-10-16 (2026년 보건복지부 기준)</p></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</div></main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+
+function show(badge,cls,lbl,numHtml,sub,rows,say){
+  var t='<div class="big"><span class="badge '+cls+'">'+badge+'</span><div class="lbl">'+lbl+'</div><div class="num">'+numHtml+'</div>'+(sub?'<div class="sub2">'+sub+'</div>':'')+'</div>';
+  if(rows&&rows.length){t+='<table class="rows"><tbody>';rows.forEach(function(r){t+='<tr'+(r[3]?' class="tot"':'')+'><td>'+r[0]+(r[2]?'<small>'+r[2]+'</small>':'')+'</td><td>'+r[1]+'</td></tr>'});t+='</tbody></table>'}
+  if(say)t+='<p class="say">'+say+'</p>';
+  $('res').innerHTML=t;
+}
+
+var LINE_2026={single:1400000,couple:2240000},BASE=349700,COUPLE_CUT=0.2,EXTRA={livmed:{u65:90000,o65:439700},near:{u65:80000,o65:80000},over:{u65:30000,o65:50000}};
+var TIER_NAME={livmed:'생계·의료급여 수급자',near:'차상위계층',over:'차상위 초과'};
+function judge(p){var line=p.couple?LINE_2026.couple:LINE_2026.single;var reasons=[];
+if(p.age==='u18')reasons.push('18세 이상부터 받을 수 있어요');if(p.severe==='n')reasons.push('장애 정도가 심한 장애인(중증)만 받을 수 있어요');
+if(p.jikyeok)reasons.push('공무원·군인·사학·별정우체국 퇴직연금 등을 받는 사람과 그 배우자는 제외돼요');
+var inc=Math.max(0,p.income||0);var incomeOk=p.tier!=='over'||inc<=line;if(!incomeOk)reasons.push('소득인정액이 선정기준액('+(line/10000)+'만원)보다 많아요');
+var base=0;if(p.age==='u65')base=p.couple&&p.both?Math.round(BASE*(1-COUPLE_CUT)):BASE;
+var extra=EXTRA[p.tier]?EXTRA[p.tier][p.age==='o65'?'o65':'u65']:0;var kind=reasons.length?'over':(p.severe==='u'?'soon':'high');
+if(kind==='over'){base=0;extra=0}var nearEdge=kind!=='over'&&p.tier==='over'&&p.age==='u65'&&inc+base>=line;
+return{kind:kind,reasons:reasons,line:line,income:inc,base:base,extra:extra,total:base+extra,nearEdge:nearEdge,age:p.age,couple:p.couple,both:p.both,tier:p.tier}}
+function run(){var cp=R('cp')==='1';$('fboth').classList.toggle('hide',!cp);
+ var r=judge({severe:R('sev'),age:R('age'),couple:cp,both:R('both')==='1',tier:R('tier'),income:N('inc'),jikyeok:R('jik')==='1'});
+ var rows=[['기초급여',W(r.base)+'원',r.age==='o65'?'65세 이상은 기초연금으로 받아요':(r.couple&&r.both?'부부 각 20% 감액':'기준연금액')],['부가급여',W(r.extra)+'원',TIER_NAME[r.tier]+' · '+(r.age==='o65'?'65세 이상':'65세 미만')],['월 합계',W(r.total)+'원','',1],['선정기준액',W(r.line)+'원',r.couple?'배우자 있음':'배우자 없음']];
+ var M={high:['받을 수 있어요','b-ok'],soon:['장애 정도 확인 필요','b-warn'],over:['대상이 아니에요','b-no']}[r.kind];
+ var say=r.kind==='over'?r.reasons.join(' · '):r.kind==='soon'?'장애 정도가 심한 장애로 판정되면 이 금액을 받을 수 있어요. 국민연금공단의 장애 정도 심사로 정해져요.':(r.nearEdge?'소득인정액과 기초급여를 더하면 선정기준액에 닿아서 기초급여가 일부 줄 수 있어요.':'선정기준액 안쪽이라 기초급여와 부가급여를 함께 받는 구간이에요.');
+ show(M[0],M[1],'예상 월 장애인연금',W(r.total)+'<small>원</small>','1년이면 '+W(r.total*12)+'원',r.kind==='over'?rows.slice(3):rows,say);}
+
+
+function $(id){return document.getElementById(id)}
+function N(id){return parseInt(($(id).value||'').replace(/[^0-9]/g,''),10)||0}
+function R(n){var e=document.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+function W(n){return Math.round(n).toLocaleString('ko-KR')}
+document.querySelectorAll('input.num').forEach(function(el){
+  function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'').slice(0,el.dataset.max?+el.dataset.max:10);el.value=d?(+d).toLocaleString('ko-KR'):''}
+  f();el.addEventListener('input',function(){f();run()});
+});
+document.querySelectorAll('.card input[type=radio],.card select').forEach(function(el){el.addEventListener('change',run)});
+$('go').addEventListener('click',function(){run();$('res').scrollIntoView({behavior:'smooth',block:'nearest'})});
+(function(){var d=document.documentElement;try{if(window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light')}catch(e){}
+$('theme').addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+run();
+
+</script>
+</body>
+</html>

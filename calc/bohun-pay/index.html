@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>보훈급여 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="2026년 보훈급여 계산기. 상이등급이나 유족 구분을 고르면 국가유공자법 시행령 별표의 보상금과 전상수당·고령수당을 더해 월 지급액과 연간 합계를 바로 보여 드립니다.">
+<meta name="theme-color" content="#07090f">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/bohun-pay/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="보훈급여 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="2026년 보훈급여 계산기. 상이등급이나 유족 구분을 고르면 국가유공자법 시행령 별표의 보상금과 전상수당·고령수당을 더해 월 지급액과 연간 합계를 바로 보여 드립니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/bohun-pay/">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "상이 6급 보상금은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "시행령 별표 4 기준으로 6급 1항 1,931,000원, 2항 1,778,000원, 3항 1,194,000원입니다."}}, {"@type": "Question", "name": "보훈급여는 매월 언제 들어오나요?", "acceptedAnswer": {"@type": "Answer", "text": "보상금과 수당은 매월 15일에 지급됩니다."}}, {"@type": "Question", "name": "고령수당은 누가 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "60세 이상인 상이 국가유공자 본인과 부모·조부모는 월 97,000원, 60세 이상 배우자는 월 149,000원을 받습니다."}}, {"@type": "Question", "name": "유족 보상금은 자녀가 더 많은가요?", "acceptedAnswer": {"@type": "Answer", "text": "표에 따르면 같은 구분에서 자녀 보상금이 배우자·부모보다 조금 높게 정해져 있습니다. 다만 실제로는 지급 순위에 따라 한 사람이 받습니다."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#f87171;--shadow:0 18px 50px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#b91c1c;--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20vmax -20vmax auto auto;width:70vmax;height:70vmax;border-radius:50%;background:radial-gradient(closest-side,var(--glow-2),transparent);z-index:-1;pointer-events:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.grad{background:linear-gradient(95deg,var(--c1),var(--c3) 45%,var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;border:2px solid var(--c1);display:grid;place-items:center;font-style:normal;font-size:11px;color:var(--c1)}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-r a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 12px;border:1px solid var(--line-2);border-radius:10px;white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+main{padding:28px 0 40px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 10px}
+.crumb a{text-decoration:none}
+h1{font-size:clamp(26px,7vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;box-shadow:var(--shadow)}
+.f{margin:0 0 18px}
+.f>label,.f>.lb{display:block;font-size:14px;font-weight:700;margin:0 0 8px}
+.f small{display:block;color:var(--muted);font-size:12.5px;margin-top:6px}
+.in{display:flex;align-items:center;border:1px solid var(--line-2);border-radius:14px;background:var(--bg-2);padding:0 14px;height:52px}
+.in:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.in input,.in select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:18px;font-weight:700;text-align:right;outline:none}
+.in select{text-align:left;font-size:16px}
+.in select option{color:#0b1020}
+.in span{margin-left:8px;color:var(--muted);font-weight:600;font-size:15px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{flex:1 1 auto;min-width:0;position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:11px 10px;border:1px solid var(--line-2);border-radius:12px;font-size:14.5px;font-weight:600;color:var(--sub);background:var(--bg-2)}
+.seg input:checked+span{border-color:var(--c1);color:var(--fg);background:var(--glow);box-shadow:0 0 0 1px var(--c1) inset}
+.seg input:focus-visible+span{outline:2px solid var(--c1);outline-offset:2px}
+.btn{display:flex;width:100%;align-items:center;justify-content:center;height:54px;border-radius:14px;border:0;cursor:pointer;font:inherit;font-size:16.5px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.btn:active{transform:scale(.99)}
+.res{margin-top:18px}
+.big{border-radius:18px;padding:20px 18px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.badge{display:inline-block;font-size:12.5px;font-weight:800;padding:4px 10px;border-radius:999px;border:1px solid currentColor;margin-bottom:8px}
+.b-ok{color:var(--ok)}.b-warn{color:var(--warn)}.b-no{color:var(--no)}
+.big .lbl{font-size:14px;color:var(--sub);font-weight:600}
+.big .num{font-size:clamp(30px,9vw,42px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:2px 0}
+.big .num small{font-size:.45em;font-weight:700;margin-left:4px;color:var(--sub)}
+.big .sub2{font-size:14px;color:var(--sub)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+.rows{margin-top:14px}
+.rows th,.rows td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rows td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:10px}
+.rows tr.tot td{font-weight:900;color:var(--ink);border-bottom:0}
+.rows td small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.say{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--c1);background:var(--surface);border-radius:0 12px 12px 0;font-size:14.5px;color:var(--sub)}
+section.txt{margin-top:40px}
+section.txt h2{font-size:22px;margin:0 0 14px;letter-spacing:-.02em}
+section.txt h3{font-size:17px;margin:22px 0 8px}
+section.txt p,section.txt li{color:var(--sub);font-size:15.5px}
+section.txt ul,section.txt ol{padding-left:20px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:12px 0}
+.tbl table th,.tbl table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
+.tbl table th{background:var(--bg-2);font-weight:700}
+.tbl table tr:last-child td{border-bottom:0}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:14px 0}
+.ex p{margin:4px 0}
+details{border:1px solid var(--line);border-radius:14px;padding:4px 16px;margin:0 0 10px;background:var(--surface-solid)}
+summary{cursor:pointer;font-weight:700;padding:12px 0;font-size:15.5px}
+details p{margin:0 0 14px}
+.src li{margin-bottom:6px}
+.src a{color:var(--ink)}
+.disc{margin-top:28px;font-size:13.5px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:13.5px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><div class="hd-r"><a href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div></div></header>
+<main><div class="wrap">
+<p class="crumb"><a href="/">홈</a> › <a href="/calc/">계산기</a> › 보훈급여 계산기</p>
+<h1>2026 보훈급여 계산기</h1>
+<p class="lead">상이등급·유족 구분으로 보상금과 수당을 합쳐 계산해요.</p>
+<div class="card">
+<div class="f"><div class="lb">누가 받나요?</div><div class="seg" role="radiogroup"><label><input type="radio" name="who" value="self" checked><span>상이 국가유공자 본인</span></label><label><input type="radio" name="who" value="family"><span>유족</span></label></div></div><div class="f" id="fgrade"><div class="lb"><label for="grade">상이등급</label></div><div class="in"><select id="grade" aria-label="상이등급"><option value="1-1">1급 1항</option><option value="1-2">1급 2항</option><option value="1-3">1급 3항</option><option value="2">2급</option><option value="3">3급</option><option value="4">4급</option><option value="5">5급</option><option value="6-1" selected>6급 1항</option><option value="6-2">6급 2항</option><option value="6-3">6급 3항</option><option value="7">7급</option></select></div></div><div class="f" id="fwar"><div class="lb">전상군경인가요?</div><div class="seg" role="radiogroup"><label><input type="radio" name="war" value="n" checked><span>아니요</span></label><label><input type="radio" name="war" value="y"><span>네</span></label></div></div><div class="f hide" id="fdead"><div class="lb">돌아가신 분</div><div class="seg" role="radiogroup"><label><input type="radio" name="dead" value="a" checked><span>전몰·순직군경</span></label><label><input type="radio" name="dead" value="b"><span>4·19 사망·특별공로순직·1~5급 상이자</span></label><label><input type="radio" name="dead" value="c"><span>6급 상이자</span></label></div></div><div class="f hide" id="frel"><div class="lb">받는 분과의 관계</div><div class="seg" role="radiogroup"><label><input type="radio" name="rel" value="spouse" checked><span>배우자</span></label><label><input type="radio" name="rel" value="child"><span>자녀</span></label><label><input type="radio" name="rel" value="parent"><span>부모</span></label></div></div><div class="f"><div class="lb">받는 분이 60세 이상인가요?</div><div class="seg" role="radiogroup"><label><input type="radio" name="old" value="y" checked><span>네</span></label><label><input type="radio" name="old" value="n"><span>아니요</span></label></div></div>
+<button class="btn" id="go" type="button">결과 보기</button>
+<div class="res" id="res" aria-live="polite"></div>
+</div>
+<section class="txt"><h2>이렇게 계산해요</h2><p>보훈급여 가운데 매달 받는 핵심은 <b>보상금</b>입니다. 상이 국가유공자 본인은 상이등급에 따라, 유족은 돌아가신 분의 구분과 받는 사람의 관계에 따라 금액이 정해집니다. 여기에 조건이 맞으면 <b>전상수당</b>과 <b>고령수당</b>이 더해집니다. 금액은 국가유공자법 시행령 별표 4(보상금)와 별표 4의2(수당)에 천원 단위로 적혀 있고, 이 페이지는 그 표를 그대로 옮겨 더합니다.</p>
+<div class="tbl"><table><thead><tr><th>상이등급</th><th>월 보상금</th></tr></thead><tbody>
+<tr><td>1급 1항 / 2항 / 3항</td><td>4,058,000원 / 3,827,000원 / 3,663,000원</td></tr>
+<tr><td>2급 / 3급</td><td>3,258,000원 / 3,045,000원</td></tr><tr><td>4급 / 5급</td><td>2,555,000원 / 2,116,000원</td></tr>
+<tr><td>6급 1항 / 2항 / 3항</td><td>1,931,000원 / 1,778,000원 / 1,194,000원</td></tr><tr><td>7급</td><td>708,000원</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>유족 보상금(월)</th><th>배우자</th><th>자녀</th><th>부모</th></tr></thead><tbody>
+<tr><td>전몰·순직군경</td><td>2,138,000원</td><td>2,479,000원</td><td>2,101,000원</td></tr>
+<tr><td>4·19 사망·특별공로순직·1~5급 상이자 사망</td><td>1,853,000원</td><td>2,153,000원</td><td>1,824,000원</td></tr>
+<tr><td>6급 상이자 사망</td><td>680,000원</td><td>982,000원</td><td>645,000원</td></tr></tbody></table></div>
+<p>수당은 전상군경 본인의 전상수당 월 90,000원, 60세 이상 본인과 부모·조부모의 고령수당 월 97,000원, 60세 이상 배우자의 고령수당 월 149,000원을 반영했습니다.</p>
+<div class="ex"><p><b>예시</b> 6급 1항 상이 국가유공자 본인, 전상군경 아님, 만 70세</p><p>보상금 1,931,000원 + 고령수당 97,000원 = 월 2,028,000원</p><p>1년이면 2,028,000 × 12 = 24,336,000원</p></div></section>
+<section class="txt"><h2>알아두면 좋은 점</h2><h3>지급일과 지급 순위</h3><p>보상금은 매월 15일에 지급됩니다. 유족이 여럿이면 법에 정한 순위에 따라 한 사람에게 지급되는 것이 원칙이어서, 배우자가 있으면 보통 배우자가 먼저 받습니다. 계산기는 선택한 사람이 받는다고 가정한 금액이므로 실제 수급자가 누구인지는 보훈관서의 결정을 따라야 합니다.</p>
+<h3>계산기에 없는 급여</h3><p>보훈급여에는 보상금 외에도 간호수당, 생활조정수당, 6·25 전몰군경 자녀수당, 부양가족수당 등 여러 수당이 있습니다. 이 수당들은 생활 수준 조사나 별도 요건이 붙어 있어 단순 계산으로 판단하기 어렵기 때문에 넣지 않았습니다. 생활이 어렵다면 생활조정수당 대상인지 꼭 상담해 보세요.</p>
+<h3>등급이 바뀌었을 때</h3><p>상이등급은 재판정으로 오르내릴 수 있고, 등급이 바뀐 달부터 보상금도 달라집니다. 6급 상이자는 사망하면 유족에게 6급 기준 유족 보상금이 지급되므로, 가족과 함께 등급과 유족 보상금 차이를 미리 알아두면 좋습니다.</p>
+<h3>문의처</h3><p>등록 신청과 급여 상담은 주소지를 관할하는 지방보훈청·보훈지청에서 합니다. 국가보훈부 대표 상담 전화로도 안내를 받을 수 있습니다.</p>
+<h3>자주 하는 실수</h3><ul><li>배우자와 부모의 고령수당을 같은 금액으로 아는 경우: 배우자는 149,000원, 본인·부모는 97,000원입니다.</li><li>천원 단위 표를 원 단위로 읽는 경우: 시행령 표의 1,931은 1,931,000원입니다.</li></ul></section>
+<section class="txt"><h2>자주 묻는 질문</h2><details><summary>상이 6급 보상금은 얼마인가요?</summary><p>시행령 별표 4 기준으로 6급 1항 1,931,000원, 2항 1,778,000원, 3항 1,194,000원입니다.</p></details><details><summary>보훈급여는 매월 언제 들어오나요?</summary><p>보상금과 수당은 매월 15일에 지급됩니다.</p></details><details><summary>고령수당은 누가 받나요?</summary><p>60세 이상인 상이 국가유공자 본인과 부모·조부모는 월 97,000원, 60세 이상 배우자는 월 149,000원을 받습니다.</p></details><details><summary>유족 보상금은 자녀가 더 많은가요?</summary><p>표에 따르면 같은 구분에서 자녀 보상금이 배우자·부모보다 조금 높게 정해져 있습니다. 다만 실제로는 지급 순위에 따라 한 사람이 받습니다.</p></details></section>
+<section class="txt"><h2>근거</h2><ul class="src"><li>국가유공자 등 예우 및 지원에 관한 법률 제12조(보상금)·제13조(보상금 지급순위) (시행 2026-09-08) <a href="https://www.law.go.kr/법령/국가유공자등예우및지원에관한법률" rel="nofollow noopener" target="_blank">원문 보기</a></li><li>같은 법 시행령 제20조·제22조 및 별표 4(보상금 지급 구분표, 2026-01-06 개정)·제23조 및 별표 4의2(수당 지급 구분표)·제29조(지급일) (시행 2026-08-25) <a href="https://www.law.go.kr/법령/국가유공자등예우및지원에관한법률시행령" rel="nofollow noopener" target="_blank">원문 보기</a></li></ul><p>기준일: 2026-10-16 (시행령 시행 2026-08-25 기준)</p></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</div></main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+
+function show(badge,cls,lbl,numHtml,sub,rows,say){
+  var t='<div class="big"><span class="badge '+cls+'">'+badge+'</span><div class="lbl">'+lbl+'</div><div class="num">'+numHtml+'</div>'+(sub?'<div class="sub2">'+sub+'</div>':'')+'</div>';
+  if(rows&&rows.length){t+='<table class="rows"><tbody>';rows.forEach(function(r){t+='<tr'+(r[3]?' class="tot"':'')+'><td>'+r[0]+(r[2]?'<small>'+r[2]+'</small>':'')+'</td><td>'+r[1]+'</td></tr>'});t+='</tbody></table>'}
+  if(say)t+='<p class="say">'+say+'</p>';
+  $('res').innerHTML=t;
+}
+
+var GRADES=[['1-1','1급 1항',4058],['1-2','1급 2항',3827],['1-3','1급 3항',3663],['2','2급',3258],['3','3급',3045],['4','4급',2555],['5','5급',2116],['6-1','6급 1항',1931],['6-2','6급 2항',1778],['6-3','6급 3항',1194],['7','7급',708]];
+var FAMILY={a:{spouse:2138,child:2479,parent:2101},b:{spouse:1853,child:2153,parent:1824},c:{spouse:680,child:982,parent:645}};
+function calc(p){var items=[],base=0,label='';
+if(p.who==='self'){GRADES.forEach(function(g){if(g[0]===p.grade){base=g[2];label=g[1]}});items.push({name:'보상금',sub:'상이등급 '+label+' (별표 4)',amt:base});
+ if(p.war==='y')items.push({name:'전상수당',sub:'전상군경 (별표 4의2)',amt:90});if(p.old==='y')items.push({name:'고령수당',sub:'60세 이상 본인 (별표 4의2)',amt:97});}
+else{base=FAMILY[p.dead][p.rel];items.push({name:'보상금',sub:'유족 보상금 (별표 4)',amt:base});
+ if(p.old==='y'&&p.rel==='spouse')items.push({name:'고령수당',sub:'60세 이상 배우자 (별표 4의2)',amt:149});
+ if(p.old==='y'&&p.rel==='parent')items.push({name:'고령수당',sub:'60세 이상 부모·조부모 (별표 4의2)',amt:97});}
+var total=0;items.forEach(function(x){total+=x.amt});return{items:items,total:total,base:base,year:total*12}}
+function run(){var fam=R('who')==='family';['fdead','frel'].forEach(function(i){$(i).classList.toggle('hide',!fam)});['fgrade','fwar'].forEach(function(i){$(i).classList.toggle('hide',fam)});
+ var r=calc({who:R('who'),grade:$('grade').value,war:R('war'),dead:R('dead'),rel:R('rel'),old:R('old')});
+ var rows=r.items.map(function(x){return[x.name,W(x.amt*1000)+'원',x.sub]});rows.push(['월 합계',W(r.total*1000)+'원','',1]);
+ var say=fam&&R('old')==='y'&&R('rel')==='child'?'자녀는 고령수당 대상이 아니라 보상금만 계산했어요. 보상금은 매월 15일에 들어와요.':'보상금과 수당은 매월 15일에 지급돼요. 간호수당·생활조정수당 등 다른 수당은 따로 심사해요.';
+ show('보상금 지급 구분표 기준','b-ok','예상 월 보훈급여',W(r.total*1000)+'<small>원</small>','1년이면 '+W(r.year*1000)+'원',rows,say);}
+
+
+function $(id){return document.getElementById(id)}
+function N(id){return parseInt(($(id).value||'').replace(/[^0-9]/g,''),10)||0}
+function R(n){var e=document.querySelector('input[name="'+n+'"]:checked');return e?e.value:''}
+function W(n){return Math.round(n).toLocaleString('ko-KR')}
+document.querySelectorAll('input.num').forEach(function(el){
+  function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'').slice(0,el.dataset.max?+el.dataset.max:10);el.value=d?(+d).toLocaleString('ko-KR'):''}
+  f();el.addEventListener('input',function(){f();run()});
+});
+document.querySelectorAll('.card input[type=radio],.card select').forEach(function(el){el.addEventListener('change',run)});
+$('go').addEventListener('click',function(){run();$('res').scrollIntoView({behavior:'smooth',block:'nearest'})});
+(function(){var d=document.documentElement;try{if(window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light')}catch(e){}
+$('theme').addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();
+run();
+
+</script>
+</body>
+</html>

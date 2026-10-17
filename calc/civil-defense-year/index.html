@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>민방위 연차 계산기 | 에스에이치솔루션</title>
+<meta name="description" content="민방위 연차를 계산합니다. 출생연도와 전역 연도로 예비군 기간이 끝나는 해, 민방위대 편입 연도와 마지막 해, 올해 몇 년차이고 몇 년 남았는지를 민방위기본법과 예비군법 기준으로 보여 줍니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/calc/civil-defense-year/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="민방위 연차 계산기 | 에스에이치솔루션">
+<meta property="og:description" content="민방위 연차를 계산합니다. 출생연도와 전역 연도로 예비군 기간이 끝나는 해, 민방위대 편입 연도와 마지막 해, 올해 몇 년차이고 몇 년 남았는지를 민방위기본법과 예비군법 기준으로 보여 줍니다.">
+<meta property="og:url" content="https://sh-solution.kr/calc/civil-defense-year/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "민방위는 몇 년 동안 하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "군 미필·면제자는 20세가 되는 해부터 40세가 되는 해까지 최대 21년이고, 병으로 복무한 사람은 예비군이 끝난 다음 해부터 40세가 되는 해까지예요. 예를 들어 22세에 전역하면 대략 9~10년입니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "올해가 마지막 해인지 어떻게 아나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "출생연도에 40을 더한 해가 마지막 해예요. 계산기에 태어난 해만 넣어도 '민방위 끝' 줄에서 바로 확인할 수 있습니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "연차별 교육 시간도 알려 줄 수 있나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "연차별 교육 시간과 방식은 법령이 아니라 행정안전부의 연간 교육훈련계획으로 정해져 해마다 달라질 수 있어요. 정확한 내용은 통지서로 확인하는 것이 안전합니다."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "예비군을 하는 동안에도 민방위 교육을 받나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "아니요. 민방위기본법 제18조제1항은 예비군을 민방위대에서 제외하고 있어서, 예비군 기간이 끝난 다음 해부터 민방위가 시작돼요."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;
+--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;
+--glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#8a94aa;--shadow:0 24px 60px -30px rgba(0,0,0,.8)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}}
+:root[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
+--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:520px;z-index:-1;pointer-events:none;background:radial-gradient(600px 300px at 20% 30%,var(--glow),transparent 70%),radial-gradient(500px 260px at 85% 20%,var(--glow-2),transparent 70%)}
+a{color:var(--ink)}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.logo svg{width:28px;height:28px;flex:none}
+.hd-r{display:flex;align-items:center;gap:6px}
+.hd-link{font-size:14px;font-weight:600;color:var(--sub);text-decoration:none;padding:8px 12px;border:1px solid var(--line-2);border-radius:999px;white-space:nowrap}
+.hd-link:hover{color:var(--fg);border-color:var(--c1)}
+.theme{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);cursor:pointer;font-size:15px}
+main{padding:28px 0 40px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:0 0 8px}
+.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.calc .grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:560px){.calc .grid{grid-template-columns:1fr 1fr}.calc .full{grid-column:1/-1}}
+.f label{display:block;font-size:14px;font-weight:700;color:var(--sub);margin-bottom:6px}
+.box{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:52px;transition:border-color .2s,box-shadow .2s}
+.box:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
+.box input,.box select{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--fg);font:inherit;font-size:17px;font-weight:600;outline:none;height:100%}
+.box select{cursor:pointer;-webkit-appearance:none;appearance:none}
+.box select option{background:var(--surface-solid);color:var(--fg)}
+.box .u{color:var(--muted);font-size:15px;font-weight:600;margin-left:8px;white-space:nowrap}
+.box.sel::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-3px);margin-left:8px;flex:none}
+.hint{font-size:13px;color:var(--muted);margin:6px 2px 0}
+.go{margin-top:18px;width:100%;height:54px;border:0;border-radius:14px;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);cursor:pointer;
+background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
+.go:active{transform:scale(.99)}
+#result{margin-top:18px}
+.big{border-radius:18px;padding:20px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
+.big span{display:block;font-size:14px;font-weight:700;color:var(--sub)}
+.big strong{display:block;font-size:34px;line-height:1.25;letter-spacing:-.03em;margin-top:4px;color:var(--fg)}
+.big small{display:block;color:var(--sub);font-size:14px;margin-top:4px}
+table.t{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+table.t th,table.t td{padding:11px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{text-align:left;font-weight:600;color:var(--sub);width:46%}
+table.t td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.note{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--bg-2);color:var(--sub);font-size:14.5px}
+.err{padding:14px;border-radius:12px;border:1px solid var(--warn);color:var(--warn);font-weight:700}
+.items{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.items li{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg-2)}
+.items b{display:block;font-size:16px}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;margin:4px 0 6px;border:1px solid currentColor}
+.tag.ok{color:var(--ok)}.tag.check{color:var(--warn)}.tag.info,.tag.no{color:var(--no)}
+.items p{margin:0;color:var(--sub);font-size:14.5px}
+.items em{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:6px}
+section.doc{margin-top:36px}
+section.doc h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;padding-left:12px;border-left:4px solid var(--c1);line-height:1.35}
+section.doc h3{font-size:17px;margin:20px 0 6px}
+section.doc p,section.doc li{color:var(--sub);font-size:16px}
+section.doc ul,section.doc ol{padding-left:20px}
+section.doc table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;background:var(--surface-solid);border-radius:12px;overflow:hidden}
+section.doc th,section.doc td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+section.doc th{background:var(--bg-2);color:var(--fg);font-weight:700}
+section.doc td{color:var(--sub)}
+.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.ex b{color:var(--fg)}
+details{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;color:var(--fg);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q. ";color:var(--ink)}
+details p{margin:0 0 14px}
+.basis li{margin-bottom:6px}
+.disc{margin-top:28px;font-size:14px;color:var(--muted);text-align:center}
+.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:14px;color:var(--muted);text-align:center}
+.ft a{color:var(--sub)}
+@media (max-width:380px){h1{font-size:25px}.big strong{font-size:30px}.logo{font-size:15px}.hd-link{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap">
+<a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>에스에이치솔루션</a>
+<div class="hd-r"><a class="hd-link" href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div>
+</div></header>
+<main class="wrap">
+<span class="eyebrow">민방위기본법·예비군법 기준</span>
+<h1>민방위 연차 계산기</h1>
+<p class="lead">태어난 해와 군 복무를 마친 해를 넣으면 올해 민방위 몇 년차인지, 언제 끝나는지 바로 알려 드려요.</p>
+<form class="card calc" id="f" novalidate>
+<div class="grid"><div class="f"><label for="birth">태어난 해</label><div class="box"><input id="birth" type="text" inputmode="numeric" autocomplete="off" maxlength="4" value="1990"><span class="u">년</span></div></div><div class="f"><label for="svc">병(兵)으로 복무를 마쳤나요?</label><div class="box sel"><select id="svc"><option value="1" selected>네, 마쳤어요</option><option value="0">아니요 / 해당 없음</option></select></div></div><div class="f"><label for="done">복무를 마친 해</label><div class="box"><input id="done" type="text" inputmode="numeric" autocomplete="off" maxlength="4" value="2012"><span class="u">년</span></div><p class="hint">현역·상근예비역·사회복무요원 소집해제 연도</p></div><div class="f"><label for="dec">12월 31일에 마쳤나요?</label><div class="box sel"><select id="dec"><option value="0" selected>아니요</option><option value="1">네, 12월 31일</option></select></div></div></div>
+<button class="go" type="submit">계산하기</button>
+<div id="result" aria-live="polite"></div>
+</form>
+<section class="doc"><h2>이렇게 계산해요</h2>
+<p>민방위대는 대한민국 남성이 <b>20세가 되는 해의 1월 1일부터 40세가 되는 해의 12월 31일까지</b> 소속되는 조직이에요. 다만 예비군인 동안에는 민방위대에서 빠지기 때문에, 군대를 다녀온 사람은 예비군 기간이 끝난 다음 해부터 민방위가 시작됩니다.</p>
+<p>병으로 복무한 사람(현역·상근예비역·사회복무요원 등)의 예비군 기간은 복무를 마친 날의 다음 날부터 8년이 되는 해의 12월 31일까지예요. 그래서 계산은 이렇게 합니다.</p>
+<table><thead><tr><th>항목</th><th>계산</th></tr></thead><tbody>
+<tr><td>예비군 마지막 해</td><td>복무 마친 해 + 8 (12월 31일에 마쳤다면 + 9)</td></tr>
+<tr><td>민방위 시작 해</td><td>예비군 마지막 해 + 1과 (출생연도 + 20) 중 늦은 해</td></tr>
+<tr><td>민방위 마지막 해</td><td>출생연도 + 40</td></tr>
+<tr><td>올해 연차</td><td>올해 − 시작 해 + 1</td></tr></tbody></table>
+<p>12월 31일에 전역하면 '다음 날'이 이듬해 1월 1일이 되므로 예비군 기간이 1년 길어져요. 복무하지 않았거나 면제된 사람은 20세가 되는 해부터 바로 민방위 대상이 됩니다(현역병 입영 대상자 등 법에서 빼는 사람은 제외).</p>
+<div class="ex"><b>예시 — 1990년생, 2012년 6월 전역</b><br>
+예비군 마지막 해: 2012 + 8 = 2020년. 민방위 시작: 2021년(출생+20인 2010년보다 늦음). 민방위 끝: 1990 + 40 = 2030년.<br>
+2026년에는 2026 − 2021 + 1 = <b>6년차</b>, 전체 10년 중 4년이 남았어요.</div>
+</section>
+<section class="doc"><h2>알아두면 좋은 점</h2>
+<h3>교육훈련은 연 10일, 총 50시간 범위</h3>
+<p>민방위 대원은 법에 따라 연 10일, 총 50시간 범위에서 교육과 훈련을 받아야 해요. 이 범위 안에서 실제로 몇 시간을, 어떤 방식(집합 교육, 사이버 교육, 비상소집 등)으로 받는지는 행정안전부가 매년 다음 해 교육훈련계획을 세워 정합니다. 그래서 연차별 교육 시간은 해마다 바뀔 수 있고, 이 계산기는 정확한 시간을 보여 주지 않아요. 내 교육 일정과 방식은 주소지 읍·면·동에서 보내는 통지서나 안내 문자로 확인하세요.</p>
+<h3>선거 기간에는 교육이 없어요</h3>
+<p>대통령, 국회의원, 지방의회 의원, 지방자치단체장 선거 기간 중에는 민방위 교육과 훈련을 하지 않도록 법에 정해져 있어요. 선거가 있는 해에는 교육 일정이 앞뒤로 몰릴 수 있습니다.</p>
+<h3>자주 하는 착각</h3>
+<ul><li><b>나이를 만 나이로 계산</b>: 민방위 기간은 '20세가 되는 해', '40세가 되는 해'처럼 연도 기준이에요. 생일과 관계없이 출생연도 + 40년의 12월 31일까지입니다.</li>
+<li><b>전역 연도 + 8년까지 민방위가 아니라고만 생각</b>: 8년이 '되는 해'의 12월 31일까지가 예비군이므로 민방위는 그 다음 해부터예요.</li>
+<li><b>장교·부사관 출신</b>: 장교·부사관 예비역은 병과 예비군 기간이 달라 위 공식이 맞지 않아요. 지역 예비군 부대나 병무청에 확인하세요.</li></ul>
+<h3>이사했다면</h3>
+<p>민방위 대원 관리는 주민등록 주소지를 기준으로 하므로, 이사하면 새 주소지에서 통지가 와요. 통지서를 받지 못했는데 교육 대상인지 궁금하면 주소지 주민센터에 문의하면 됩니다.</p>
+</section>
+<section class="doc"><h2>자주 묻는 질문</h2><details><summary>민방위는 몇 년 동안 하나요?</summary><p>군 미필·면제자는 20세가 되는 해부터 40세가 되는 해까지 최대 21년이고, 병으로 복무한 사람은 예비군이 끝난 다음 해부터 40세가 되는 해까지예요. 예를 들어 22세에 전역하면 대략 9~10년입니다.</p></details><details><summary>올해가 마지막 해인지 어떻게 아나요?</summary><p>출생연도에 40을 더한 해가 마지막 해예요. 계산기에 태어난 해만 넣어도 '민방위 끝' 줄에서 바로 확인할 수 있습니다.</p></details><details><summary>연차별 교육 시간도 알려 줄 수 있나요?</summary><p>연차별 교육 시간과 방식은 법령이 아니라 행정안전부의 연간 교육훈련계획으로 정해져 해마다 달라질 수 있어요. 정확한 내용은 통지서로 확인하는 것이 안전합니다.</p></details><details><summary>예비군을 하는 동안에도 민방위 교육을 받나요?</summary><p>아니요. 민방위기본법 제18조제1항은 예비군을 민방위대에서 제외하고 있어서, 예비군 기간이 끝난 다음 해부터 민방위가 시작돼요.</p></details></section>
+<section class="doc basis"><h2>근거</h2><ul>
+<li>민방위기본법 제18조제1항(민방위대 조직, 제외 대상), 제23조제1항·제6항(교육훈련 범위, 선거 기간) — <a href="https://www.law.go.kr/법령/민방위기본법" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>민방위기본법 시행규칙 제32조제1항 — 매년 다음 해 교육훈련계획 수립 — <a href="https://www.law.go.kr/법령/민방위기본법시행규칙" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>예비군법 제3조제1항제2호·제3호 — 병의 예비군 기간(복무 마친 다음 날부터 8년이 되는 해의 12월 31일) — <a href="https://www.law.go.kr/법령/예비군법" rel="nofollow noopener" target="_blank">법제처</a></li>
+<li>기준일: 2026-10-15 법령 원문 확인</li></ul></section>
+<p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
+<script>
+/* 계산 규칙: 미니앱 src/logic.js 원문 그대로 */
+/* ───────── 민방위 연차 계산 — 계산 (순수 함수, 화면 없음) ─────────
+   [근거 — 법제처 국가법령정보 오픈 API 원문, 2026-10-15 확인]
+   · 민방위기본법 (MST 266645, 시행 2025-06-04)
+     제18조제1항 "민방위대는 20세가 되는 해의 1월 1일부터 40세가 되는 해의 12월 31일까지의 대한민국 국민인 남성으로 조직한다.
+                 다만, 다음 각 호의 자는 제외한다. … 10. 예비군 … 17. 현역병 입영 대상자(사회복무요원 소집 대상자를 포함한다) …"
+     제23조제1항 "민방위 대원은 대통령령으로 정하는 바에 따라 연 10일, 총 50시간의 범위에서 민방위에 관한 교육 및 훈련을 받아야 한다."
+     제23조제6항 "제1항에 따른 교육과 훈련은 대통령, 국회의원, 지방의회 의원과 지방자치단체의 장의 선거 기간 중에는 실시하지 아니한다."
+   · 민방위기본법 시행규칙 (MST 291003, 시행 2026-10-02)
+     제32조제1항 "행정안전부장관은 매년 다음 해의 민방위 대원 교육훈련계획을 수립하여 시ㆍ도지사에게 통보하여야 한다."
+     → 연차별 교육 형태·시간은 법령이 아니라 매년 계획으로 정해진다. 공식 원문을 확인하지 못해 앱에 넣지 않았다(_근거.md 미확인).
+   · 예비군법 (MST 283687, 시행 2026-08-28)
+     제3조제1항제2호 "현역 또는 상근예비역의 복무를 마친 사람 … 으로서 그 복무를 마친 날의 다음 날부터 8년이 되는 해의 12월 31일까지의 기간에 있는 예비역의 병"
+     제3조제1항제3호 사회복무요원 등 "복무를 마친 날의 다음 날부터 8년이 되는 해의 12월 31일까지의 기간에 있는 보충역의 병"
+   URL: https://www.law.go.kr/법령/민방위기본법 · https://www.law.go.kr/법령/민방위기본법시행규칙 · https://www.law.go.kr/법령/예비군법
+   해석: 예비군 기간(병) 끝난 다음 해 1월 1일부터 민방위대(제18조제1항제10호 예비군 제외). 복무 마친 날의 다음 날이 속한 해 + 8 = 예비군 마지막 해.
+         12월 31일에 마치면 다음 날이 다음 해이므로 +9. 앱은 「마친 해」만 받으므로 12월 31일 전역은 따로 고른다. */
+
+var MIN_AGE = 20, MAX_AGE = 40;
+function startYearBase(birth) { return birth + MIN_AGE; }
+function endYear(birth) { return birth + MAX_AGE; }
+/* doneYear: 병 복무를 마친 해(없으면 0). dec31: 12월 31일에 마쳤는지 */
+function reserveLastYear(doneYear, dec31) { return doneYear ? doneYear + (dec31 ? 1 : 0) + 8 : 0; }
+function joinYear(birth, doneYear, dec31) {
+  var r = reserveLastYear(doneYear, dec31);
+  return Math.max(startYearBase(birth), r ? r + 1 : 0);
+}
+function calc(birth, doneYear, dec31, thisYear) {
+  var j = joinYear(birth, doneYear, dec31), e = endYear(birth);
+  var res = { join: j, end: e, total: Math.max(0, e - j + 1), reserveEnd: reserveLastYear(doneYear, dec31) };
+  if (j > e) res.status = 'none';
+  else if (thisYear < j) res.status = 'before';
+  else if (thisYear > e) res.status = 'after';
+  else res.status = 'in';
+  res.nth = res.status === 'in' ? thisYear - j + 1 : 0;
+  res.left = res.status === 'in' ? e - thisYear : 0;
+  return res;
+}
+function sanitize(v) { return String(v).replace(/[^0-9]/g, '').slice(0, 4); }
+
+</script>
+<script>
+
+function $(id){return document.getElementById(id)}
+function num(id){var v=String($(id).value).replace(/[^0-9]/g,'');return v?parseInt(v,10):0}
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')}
+function won(n){return fmt(n)+'원'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function show(o){var h='';
+ if(o.err){$('result').innerHTML='<div class="err" role="alert">'+esc(o.err)+'</div>';return}
+ h+='<div class="big"><span>'+o.label+'</span><strong>'+o.big+'</strong>'+(o.sub?'<small>'+o.sub+'</small>':'')+'</div>';
+ if(o.rows&&o.rows.length){h+='<table class="t"><tbody>';o.rows.forEach(function(r){h+='<tr><th scope="row">'+r[0]+'</th><td>'+r[1]+'</td></tr>'});h+='</tbody></table>'}
+ if(o.extra)h+=o.extra;
+ if(o.note)h+='<p class="note">'+o.note+'</p>';
+ $('result').innerHTML=h}
+Array.prototype.forEach.call(document.querySelectorAll('input[data-comma]'),function(el){
+ function f(){var d=el.value.replace(/[^0-9]/g,'').replace(/^0+(?=\d)/,'');el.value=d?Number(d).toLocaleString('ko-KR'):''}
+ el.addEventListener('input',f);f()});
+$('f').addEventListener('submit',function(e){e.preventDefault();run();$('result').scrollIntoView({behavior:'smooth',block:'nearest'})});
+$('theme').addEventListener('click',function(){var r=document.documentElement,cur=r.getAttribute('data-theme');
+ var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;r.setAttribute('data-theme',dark?'light':'dark')});
+
+
+function run(){var b=num('birth'),svc=$('svc').value==='1',d=svc?num('done'):0,y=new Date().getFullYear();
+if(b<1900||b>y)return show({err:'태어난 해를 네 자리로 넣어 주세요.'});
+if(svc&&(d<b+15||d>y))return show({err:'복무를 마친 해를 확인해 주세요.'});
+var r=calc(b,d,$('dec').value==='1',y);
+var rows=[['민방위 시작','<b>'+r.join+'년</b> 1월 1일'],['민방위 끝','<b>'+r.end+'년</b> 12월 31일 (40세가 되는 해)'],['전체 기간',r.total+'년']];
+if(r.reserveEnd)rows.unshift(['예비군 마지막 해',r.reserveEnd+'년']);
+var big,label='올해('+y+'년) 기준',note;
+if(r.status==='in'){big=r.nth+'년차';note='민방위 '+r.total+'년 중 '+r.nth+'년째예요. '+(r.left?'앞으로 '+r.left+'년 더 남았어요.':'올해가 마지막 해예요.');rows.push(['남은 해',r.left+'년'])}
+else if(r.status==='before'){big=r.join+'년부터';note=r.reserveEnd&&r.reserveEnd>=y?'지금은 예비군 기간이에요. 예비군이 끝난 다음 해부터 민방위대에 들어가요.':'아직 민방위 대상 나이가 아니에요.'}
+else if(r.status==='after'){big='끝났어요';note=r.end+'년 12월 31일에 민방위대 기간이 끝났어요.'}
+else{big='해당 없음';note='예비군 기간이 40세가 되는 해를 넘겨 민방위대에 들어가지 않아요.'}
+show({label:label,big:big,rows:rows,note:note+' 장교·부사관 출신은 예비군 기간이 달라 이 계산과 맞지 않아요.'})}
+$('svc').addEventListener('change',function(){$('done').disabled=$('dec').disabled=this.value!=='1'});
+
+run();
+</script>
+</body>
+</html>
