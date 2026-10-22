@@ -14,92 +14,14 @@
 <meta property="og:description" content="자녀 출생연도와 가구 정보를 넣으면 자녀세액공제, 출산 세액공제, 전기요금 할인, 다자녀 국가장학금, 자동차 취득세 감면, 국민연금 출산크레딧을 한 번에 모아 1년 혜택을 계산합니다.">
 <meta property="og:url" content="https://sh-solution.kr/calc/multi-child-benefits/">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/site.css?v=20261023">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "자녀세액공제는 몇 살부터 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "소득세법 제59조의2에 따라 기본공제대상 자녀 중 8세 이상이 대상이고, 기본공제대상 직계비속은 20세 이하예요. 1명 연 25만원, 2명 연 55만원, 3명부터는 1명당 40만원이 더해져요."}}, {"@type": "Question", "name": "아이가 둘인데 전기요금 할인을 받을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "자녀 3명 이상, 가구원 5명 이상, 3세 미만 아이가 있는 출산가구 중 하나에 해당하면 받아요. 자녀 둘에 어른 셋이 함께 살거나 막내가 세 돌 전이면 대상이에요."}}, {"@type": "Question", "name": "출산크레딧은 언제 받나요?", "acceptedAnswer": {"@type": "Answer", "text": "지금 돈으로 받는 게 아니라 나중에 노령연금을 받을 때 가입기간을 더 쳐 주는 제도예요. 국민연금법 제19조에 따라 자녀 2명이면 24개월, 3명이면 42개월이 추가돼요."}}, {"@type": "Question", "name": "입력한 정보가 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
-<style>
-:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
-[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
-.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
-.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
-.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
-.hd nav{display:flex;align-items:center;gap:6px}
-.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
-.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
-.intro{padding:32px 0 8px}
-.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
-.intro p{margin:0;color:var(--sub);font-size:16px}
-.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
-.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
-.field{margin-bottom:16px}
-.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
-.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
-.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
-.inp:focus-within{border-color:var(--c1)}
-.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
-.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
-.inp select option{background:var(--surface-solid);color:var(--fg)}
-.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
-[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
-.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
-.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
-.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
-.big .l{font-size:14px;color:var(--sub);font-weight:700}
-.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
-.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
-.big .s{font-size:15px;color:var(--ink);font-weight:700}
-table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
-th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
-tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
-th{color:var(--muted);font-size:13px;font-weight:700}
-.note{font-size:13px;color:var(--muted);margin:12px 0 0}
-article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
-article h3{font-size:17px;margin:20px 0 6px}
-article p,article li{color:var(--sub);font-size:16px}
-article p{margin:0 0 12px}
-article ul{padding-left:20px;margin:0 0 12px}
-article strong{color:var(--fg)}
-.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
-.ex p{margin:0 0 6px}
-details{border-bottom:1px solid var(--line);padding:14px 0}
-details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
-details p{margin:10px 0 0}
-.law a{color:var(--ink)}
-.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
-footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
-
-.big .v.t{font-size:clamp(28px,8.4vw,38px)}
-.big.ok{border-color:rgba(52,211,153,.45)}.big.ok .s{color:#10b981}
-.big.mid{border-color:rgba(251,191,36,.5)}
-.big.no{background:linear-gradient(135deg,rgba(248,113,113,.13),transparent);border-color:rgba(248,113,113,.4)}
-.chk{display:flex;flex-wrap:wrap;gap:8px}
-.chk label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:15px;background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;margin:0;cursor:pointer}
-.chk input{width:18px;height:18px;accent-color:var(--c1)}
-.inp input[type=date]{text-align:right;font-size:17px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.yrs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.yrs .inp{height:50px;padding:0 10px}.yrs .inp input{font-size:17px;text-align:center}
-.rl{margin:12px 0 0;padding-left:18px}.rl li{font-size:14px;color:var(--sub);margin:4px 0}
-.st{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:4px;vertical-align:1px}
-.st.ok{background:rgba(52,211,153,.16);color:#10b981}.st.check{background:rgba(251,191,36,.18);color:#d97706}.st.no{background:var(--line);color:var(--muted)}
-.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.tw table{font-size:14px;min-width:0}.tw td,.tw th{padding:10px 4px}.tw td:first-child{word-break:break-all}
-tr.grp td{background:var(--bg-2);font-weight:800;color:var(--fg)}
-[hidden]{display:none!important}
-.yrs>*,.row2>*{min-width:0}.inp input{width:100%}
-article td.n{white-space:normal}.tw td.n{white-space:nowrap}
-</style>
 </head>
-<body>
-<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<body class="fa calc-page v-birth">
+<header class="hd"><div class="wrap hd-in"><a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg><b>SH Solution</b><span>에스에이치솔루션</span></a><nav class="nav" aria-label="주요 메뉴"><a href="/calc/" aria-current="page">계산기 전체</a><a class="nav-guide" href="/guide/">생활 가이드</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button></nav></div></header>
 <main class="wrap">
+<nav class="crumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/calc/">계산기</a></li><li><span aria-current="page">다자녀 혜택 계산기</span></li></ol></nav>
 <section class="intro"><span class="tag">2026년 세법·약관 기준</span><h1>다자녀 혜택 계산기</h1><p>아이들 출생연도만 넣으면 세금·전기요금·장학금·취득세·국민연금에서 받을 수 있는 다자녀 혜택을 모아 보여 드려요.</p></section>
 <section class="card"><form id="calcForm" novalidate><div class="field"><label>자녀 출생연도</label><small>최대 5명까지, 없는 칸은 비워 두세요 (예: 2016)</small><div class="yrs"><div class="inp"><input id="y1" class="yr" inputmode="numeric" maxlength="4" autocomplete="off" value="2016" aria-label="1번째 자녀 출생연도" placeholder="1째"></div><div class="inp"><input id="y2" class="yr" inputmode="numeric" maxlength="4" autocomplete="off" value="2019" aria-label="2번째 자녀 출생연도" placeholder="2째"></div><div class="inp"><input id="y3" class="yr" inputmode="numeric" maxlength="4" autocomplete="off" value="2023" aria-label="3번째 자녀 출생연도" placeholder="3째"></div><div class="inp"><input id="y4" class="yr" inputmode="numeric" maxlength="4" autocomplete="off" value="" aria-label="4번째 자녀 출생연도" placeholder="4째"></div><div class="inp"><input id="y5" class="yr" inputmode="numeric" maxlength="4" autocomplete="off" value="" aria-label="5번째 자녀 출생연도" placeholder="5째"></div></div></div><div class="field"><label for="adults">함께 사는 어른</label><small>부모 등 자녀 외 가구원 수</small><div class="inp"><select id="adults"><option value="1">1명</option><option value="2" selected>2명</option><option value="3">3명</option><option value="4">4명</option></select><span>▾</span></div></div><div class="field"><label for="inc">가구 월 소득</label><small>세액공제를 다 받을 수 있는지 가늠하는 데만 써요</small><div class="inp"><select id="inc"><option value="lt200">월 200만원 미만</option><option value="200-400">월 200~400만원</option><option value="400-700" selected>월 400~700만원</option><option value="ge700">월 700만원 이상</option></select><span>▾</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
 <article class="card"><h2>이렇게 계산해요</h2><p>이 계산기는 지자체마다 다른 혜택은 빼고, <strong>전국 어디서나 같은 기준</strong>으로 적용되는 여섯 가지만 모았어요. 자녀의 출생연도로 올해 나이를 어림한 뒤 제도마다 정한 나이와 인원 조건에 맞춰 금액을 셉니다.</p>
@@ -127,6 +49,7 @@ article td.n{white-space:normal}.tw td.n{white-space:nowrap}
 <p>성인이 된 자녀를 빼고 입력하면 「자녀 3명 이상」 조건이 사라져 전기요금 할인이나 장학금이 안 나오는 것처럼 보여요. 함께 사는 자녀는 나이와 상관없이 모두 넣으세요.</p></article>
 <article class="card"><h2>자주 묻는 질문</h2><details><summary>자녀세액공제는 몇 살부터 받나요?</summary><p>소득세법 제59조의2에 따라 기본공제대상 자녀 중 8세 이상이 대상이고, 기본공제대상 직계비속은 20세 이하예요. 1명 연 25만원, 2명 연 55만원, 3명부터는 1명당 40만원이 더해져요.</p></details><details><summary>아이가 둘인데 전기요금 할인을 받을 수 있나요?</summary><p>자녀 3명 이상, 가구원 5명 이상, 3세 미만 아이가 있는 출산가구 중 하나에 해당하면 받아요. 자녀 둘에 어른 셋이 함께 살거나 막내가 세 돌 전이면 대상이에요.</p></details><details><summary>출산크레딧은 언제 받나요?</summary><p>지금 돈으로 받는 게 아니라 나중에 노령연금을 받을 때 가입기간을 더 쳐 주는 제도예요. 국민연금법 제19조에 따라 자녀 2명이면 24개월, 3명이면 42개월이 추가돼요.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
 <article class="card law"><h2>근거</h2><ul><li>소득세법 제59조의2(자녀세액공제) 제1항·제3항, 제50조제1항제3호 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>지방세특례제한법 제22조의2(출산 및 양육 지원을 위한 감면) — <a href="https://www.law.go.kr/법령/지방세특례제한법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국민연금법 제19조(출산에 대한 가입기간 추가 산입) — <a href="https://www.law.go.kr/법령/국민연금법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>한국전력공사 기본공급약관 제67조제6항제4호, 같은 약관 시행세칙 제48조 — 월 전기요금 30%, 월 16,000원 한도</li><li>교육부 2026학년도 국가장학금 지원 단가(2025년 11월 20일 발표), 한국장학재단 다자녀 국가장학금 자격 기준</li></ul><p>기준일: 2026년 10월 15일 원문 확인(소득세법·국민연금법 2026년 1월 1일 시행본, 지방세특례제한법 2026년 6월 2일 시행본).</p></article>
+<section class="related" aria-labelledby="rel-c"><h2 id="rel-c">함께 쓰면 좋은 계산기</h2><div class="rel-grid"><a class="rel" href="/calc/maternity-leave-pay/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>출산휴가 급여 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/childcare-reduced-hours-pay/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>육아기 단축근무 급여 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/postpartum-care-support/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>산후조리 지원 확인</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/first-meeting-voucher/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>첫만남이용권 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><h2 id="rel-g">관련 생활 가이드</h2><div class="rel-grid"><a class="rel" href="/guide/earned-income-tax-credit-payday/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>근로장려금, 언제 얼마나 받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/guide/year-end-tax-refund/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>연말정산 환급, 왜 돌려받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
 <p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
 </main>
 <footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
@@ -188,5 +111,6 @@ document.getElementById('calcForm').addEventListener('submit',function(e){e.prev
 
 render();
 </script>
+<script src="/assets/site.js?v=20261023" defer></script>
 </body>
 </html>

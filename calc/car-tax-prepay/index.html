@@ -14,87 +14,14 @@
 <meta property="og:description" content="배기량과 최초 등록 연도로 2027년 자동차세 연세액, 차령 경감, 지방교육세를 계산하고 1월·3월·6월·9월 연납 때 아끼는 금액을 지방세법 기준으로 비교합니다.">
 <meta property="og:url" content="https://sh-solution.kr/calc/car-tax-prepay/">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/site.css?v=20261023">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "2027년 연납은 언제 신청하나요?", "acceptedAnswer": {"@type": "Answer", "text": "지방세법상 연세액을 한꺼번에 내는 기간은 1월·3월·6월·9월의 각 16일부터 말일까지예요. 공제가 가장 큰 때는 1월 16일~31일입니다."}}, {"@type": "Question", "name": "전기차도 연납 할인이 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 전기·수소차는 연세액 10만원에 지방교육세 3만원이 붙고, 같은 공식으로 공제돼요. 1월에 내면 5,947원을 아낍니다."}}, {"@type": "Question", "name": "차령은 어떻게 세나요?", "acceptedAnswer": {"@type": "Answer", "text": "최초 등록이 1~6월이면 과세연도 − 등록 연도 + 1년이에요. 7~12월 등록이면 제1기분은 1년 적게, 제2기분은 같은 방식으로 셉니다. 3년 차부터 해마다 5%씩 깎이고 12년 차에서 멈춰요."}}, {"@type": "Question", "name": "고지서 금액과 다르게 나와요.", "acceptedAnswer": {"@type": "Answer", "text": "지자체가 조례로 세율을 올렸거나 차종 구분이 다르면 차이가 날 수 있어요. 최종 금액은 위택스나 시·군·구 고지서를 기준으로 하세요."}}]}</script>
-<style>
-:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
-[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
-.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
-.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
-.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
-.hd nav{display:flex;align-items:center;gap:6px}
-.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
-.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
-.intro{padding:32px 0 8px}
-.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
-.intro p{margin:0;color:var(--sub);font-size:16px}
-.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
-.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
-.field{margin-bottom:16px}
-.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
-.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
-.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
-.inp:focus-within{border-color:var(--c1)}
-.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
-.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
-.inp select option{background:var(--surface-solid);color:var(--fg)}
-.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
-[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
-.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
-.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
-.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
-.big .l{font-size:14px;color:var(--sub);font-weight:700}
-.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
-.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
-.big .s{font-size:15px;color:var(--ink);font-weight:700}
-table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
-th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
-tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
-th{color:var(--muted);font-size:13px;font-weight:700}
-.note{font-size:13px;color:var(--muted);margin:12px 0 0}
-article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
-article h3{font-size:17px;margin:20px 0 6px}
-article p,article li{color:var(--sub);font-size:16px}
-article p{margin:0 0 12px}
-article ul{padding-left:20px;margin:0 0 12px}
-article strong{color:var(--fg)}
-.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
-.ex p{margin:0 0 6px}
-details{border-bottom:1px solid var(--line);padding:14px 0}
-details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
-details p{margin:10px 0 0}
-.law a{color:var(--ink)}
-.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
-footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
-
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
-.grid2 .field{min-width:0}
-.it{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
-.it .nm{flex:1;min-width:0;font-weight:700;font-size:15px}
-.it .nm small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
-.it .inp{width:128px;height:46px;flex:none}
-.it .inp input{font-size:17px}
-.chk{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15px}
-.chk input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--c1);flex:none}
-.chk span{flex:1}
-.grp{font-weight:800;font-size:15px;margin:18px 0 4px}
-.big .v.t{font-size:clamp(28px,8vw,38px)}
-td.ok{color:var(--ink)}
-td.no{color:#f87171}
-[data-theme="light"] td.no{color:#dc2626}
-</style>
 </head>
-<body>
-<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<body class="fa calc-page v-car">
+<header class="hd"><div class="wrap hd-in"><a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg><b>SH Solution</b><span>에스에이치솔루션</span></a><nav class="nav" aria-label="주요 메뉴"><a href="/calc/" aria-current="page">계산기 전체</a><a class="nav-guide" href="/guide/">생활 가이드</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button></nav></div></header>
 <main class="wrap">
+<nav class="crumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/calc/">계산기</a></li><li><span aria-current="page">자동차세 연납 할인 계산기</span></li></ol></nav>
 <section class="intro"><span class="tag">2027년 1월 연납 기준</span><h1>자동차세 연납 할인 계산기</h1><p>배기량과 처음 등록한 해만 넣으면 2027년 자동차세를 미리 낼 때 1월·3월·6월·9월에 각각 얼마를 아끼는지 비교해 드려요.</p></section>
 <section class="card"><form id="calcForm" novalidate><div class="field"><label for="fuel">연료</label><small>전기·수소차는 배기량과 관계없이 연 10만원</small><div class="inp"><select id="fuel"><option value="ice">휘발유·경유·LPG</option><option value="ev">전기·수소 등 그 밖의 승용</option></select><span>▾</span></div></div><div class="field"><label for="cc">배기량</label><small>자동차등록증의 배기량(cc)</small><div class="inp"><input id="cc" class="num" inputmode="numeric" autocomplete="off" value="1,598"><span>cc</span></div></div><div class="grid2"><div class="field"><label for="reg">최초 등록 연도</label><div class="inp"><select id="reg"><option value="2027">2027년</option><option value="2026">2026년</option><option value="2025">2025년</option><option value="2024">2024년</option><option value="2023">2023년</option><option value="2022">2022년</option><option value="2021" selected>2021년</option><option value="2020">2020년</option><option value="2019">2019년</option><option value="2018">2018년</option><option value="2017">2017년</option><option value="2016">2016년</option><option value="2015">2015년</option><option value="2014">2014년</option><option value="2013">2013년</option><option value="2012">2012년</option><option value="2011">2011년</option><option value="2010">2010년</option><option value="2009">2009년 이전</option></select><span>▾</span></div></div><div class="field"><label for="half">등록한 달</label><div class="inp"><select id="half"><option value="1">1~6월</option><option value="2">7~12월</option></select><span>▾</span></div></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
 <article class="card"><h2>이렇게 계산해요</h2><p>자동차세는 원래 6월(제1기분)과 12월(제2기분)에 반씩 나눠 냅니다. 이걸 연초에 한꺼번에 내면 남은 기간만큼 이자를 쳐서 깎아 주는 게 <strong>연납 공제</strong>예요. 계산은 세 단계로 이뤄집니다.</p>
@@ -117,6 +44,7 @@ td.no{color:#f87171}
 <h3>지역마다 고지서가 다를 수 있어요</h3><p>지방세법은 조례로 표준세율의 50%까지 올릴 수 있게 하고 있어요. 이 계산기는 표준세율 기준이라 세율을 바꾼 지역이라면 고지서 금액과 차이가 납니다. 또 영업용·승합·화물차는 세율 체계가 달라 이 계산 대상이 아니에요.</p></article>
 <article class="card"><h2>자주 묻는 질문</h2><details><summary>2027년 연납은 언제 신청하나요?</summary><p>지방세법상 연세액을 한꺼번에 내는 기간은 1월·3월·6월·9월의 각 16일부터 말일까지예요. 공제가 가장 큰 때는 1월 16일~31일입니다.</p></details><details><summary>전기차도 연납 할인이 되나요?</summary><p>네. 전기·수소차는 연세액 10만원에 지방교육세 3만원이 붙고, 같은 공식으로 공제돼요. 1월에 내면 5,947원을 아낍니다.</p></details><details><summary>차령은 어떻게 세나요?</summary><p>최초 등록이 1~6월이면 과세연도 − 등록 연도 + 1년이에요. 7~12월 등록이면 제1기분은 1년 적게, 제2기분은 같은 방식으로 셉니다. 3년 차부터 해마다 5%씩 깎이고 12년 차에서 멈춰요.</p></details><details><summary>고지서 금액과 다르게 나와요.</summary><p>지자체가 조례로 세율을 올렸거나 차종 구분이 다르면 차이가 날 수 있어요. 최종 금액은 위택스나 시·군·구 고지서를 기준으로 하세요.</p></details></article>
 <article class="card law"><h2>근거</h2><ul><li>지방세법 제127조제1항 — 비영업용 승용 cc당 80원·140원·200원, 차령 경감 계산식, 그 밖의 승용 10만원 / 제3항 — 조례로 50%까지 가감 — <a href="https://www.law.go.kr/법령/지방세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>지방세법 제128조제1항·제3항·제4항 — 납기, 연세액 일시 납부 공제 계산식, 10만원 이하 일괄 부과</li><li>지방세법 제151조제1항제7호 — 지방교육세는 자동차세액의 100분의 30</li><li>지방세법 시행령 제122조제2항(차령 계산), 제125조제6항(이자율 100분의 5) — <a href="https://www.law.go.kr/법령/지방세법시행령" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 원문 확인. 과세연도 2027년 기준.</p></article>
+<section class="related" aria-labelledby="rel-c"><h2 id="rel-c">함께 쓰면 좋은 계산기</h2><div class="rel-grid"><a class="rel" href="/calc/light-car-fuel-refund/"><span class="ic cat-car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><circle cx="7.5" cy="13.5" r=".5"/><circle cx="16.5" cy="13.5" r=".5"/></svg></span><b>경차 유류세 환급 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/disabled-car-tax/"><span class="ic cat-car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><circle cx="7.5" cy="13.5" r=".5"/><circle cx="16.5" cy="13.5" r=".5"/></svg></span><b>장애인 차량 세금 면제 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/direct-purchase-customs/"><span class="ic cat-car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3z"/><circle cx="7.5" cy="13.5" r=".5"/><circle cx="16.5" cy="13.5" r=".5"/></svg></span><b>해외직구 관세·면세한도 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><h2 id="rel-g">관련 생활 가이드</h2><div class="rel-grid"><a class="rel" href="/guide/national-tax-refund/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>국세환급금, 찾아가지 않은 세금 확인하기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/guide/dormant-deposit/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>휴면예금, 잊은 돈 돌려받기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
 <p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
 </main>
 <footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
@@ -209,5 +137,6 @@ document.getElementById('calcForm').addEventListener('submit',function(e){e.prev
 render();
 
 </script>
+<script src="/assets/site.js?v=20261023" defer></script>
 </body>
 </html>

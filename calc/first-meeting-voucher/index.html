@@ -16,6 +16,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/site.css?v=20261023">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
@@ -57,96 +58,11 @@
  ]
 }
 </script>
-<style>
-:root{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;
---line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;
---glow:rgba(34,211,238,.16);--glow-2:rgba(139,92,246,.18);--hd:rgba(7,9,15,.72);--ok:#34d399;--warn:#fbbf24;--no:#8a94aa;--shadow:0 24px 60px -30px rgba(0,0,0,.8)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
---line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}}
-:root[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;
---line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--glow-2:rgba(124,58,237,.12);--hd:rgba(246,248,252,.8);--ok:#047857;--warn:#b45309;--no:#5f6b82;--shadow:0 20px 50px -30px rgba(15,23,42,.35)}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
-line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:520px;z-index:-1;pointer-events:none;background:radial-gradient(600px 300px at 20% 30%,var(--glow),transparent 70%),radial-gradient(500px 260px at 85% 20%,var(--glow-2),transparent 70%)}
-a{color:var(--ink)}
-:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
-.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
-.hd{position:sticky;top:0;z-index:50;background:var(--hd);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
-.logo{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--fg);font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
-.logo svg{width:28px;height:28px;flex:none}
-.hd-r{display:flex;align-items:center;gap:6px}
-.hd-link{font-size:14px;font-weight:600;color:var(--sub);text-decoration:none;padding:8px 12px;border:1px solid var(--line-2);border-radius:999px;white-space:nowrap}
-.hd-link:hover{color:var(--fg);border-color:var(--c1)}
-.theme{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);cursor:pointer;font-size:15px}
-main{padding:28px 0 40px}
-.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px;margin-bottom:10px}
-h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:0 0 8px}
-.lead{color:var(--sub);font-size:16px;margin:0 0 22px}
-.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
-.calc .grid{display:grid;grid-template-columns:1fr;gap:14px}
-@media (min-width:560px){.calc .grid{grid-template-columns:1fr 1fr}.calc .full{grid-column:1/-1}}
-.f label{display:block;font-size:14px;font-weight:700;color:var(--sub);margin-bottom:6px}
-.box{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:52px;transition:border-color .2s,box-shadow .2s}
-.box:focus-within{border-color:var(--c1);box-shadow:0 0 0 3px var(--glow)}
-.box input,.box select{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--fg);font:inherit;font-size:17px;font-weight:600;outline:none;height:100%}
-.box select{cursor:pointer;-webkit-appearance:none;appearance:none}
-.box select option{background:var(--surface-solid);color:var(--fg)}
-.box .u{color:var(--muted);font-size:15px;font-weight:600;margin-left:8px;white-space:nowrap}
-.box.sel::after{content:"";width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-3px);margin-left:8px;flex:none}
-.hint{font-size:13px;color:var(--muted);margin:6px 2px 0}
-.go{margin-top:18px;width:100%;height:54px;border:0;border-radius:14px;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);cursor:pointer;
-background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1)}
-.go:active{transform:scale(.99)}
-#result{margin-top:18px}
-.big{border-radius:18px;padding:20px;background:linear-gradient(135deg,var(--glow),var(--glow-2));border:1px solid var(--line-2)}
-.big span{display:block;font-size:14px;font-weight:700;color:var(--sub)}
-.big strong{display:block;font-size:34px;line-height:1.25;letter-spacing:-.03em;margin-top:4px;color:var(--fg)}
-.big small{display:block;color:var(--sub);font-size:14px;margin-top:4px}
-table.t{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
-table.t th,table.t td{padding:11px 4px;border-bottom:1px solid var(--line);vertical-align:top}
-table.t th{text-align:left;font-weight:600;color:var(--sub);width:46%}
-table.t td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
-.note{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--bg-2);color:var(--sub);font-size:14.5px}
-.err{padding:14px;border-radius:12px;border:1px solid var(--warn);color:var(--warn);font-weight:700}
-.items{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
-.items li{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--bg-2)}
-.items b{display:block;font-size:16px}
-.tag{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;margin:4px 0 6px;border:1px solid currentColor}
-.tag.ok{color:var(--ok)}.tag.check{color:var(--warn)}.tag.info,.tag.no{color:var(--no)}
-.items p{margin:0;color:var(--sub);font-size:14.5px}
-.items em{display:block;font-style:normal;color:var(--muted);font-size:13px;margin-top:6px}
-section.doc{margin-top:36px}
-section.doc h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;padding-left:12px;border-left:4px solid var(--c1);line-height:1.35}
-section.doc h3{font-size:17px;margin:20px 0 6px}
-section.doc p,section.doc li{color:var(--sub);font-size:16px}
-section.doc ul,section.doc ol{padding-left:20px}
-section.doc table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0;background:var(--surface-solid);border-radius:12px;overflow:hidden}
-section.doc th,section.doc td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
-section.doc th{background:var(--bg-2);color:var(--fg);font-weight:700}
-section.doc td{color:var(--sub)}
-.ex{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
-.ex b{color:var(--fg)}
-details{background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:700;padding:14px 0;color:var(--fg);list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::before{content:"Q. ";color:var(--ink)}
-details p{margin:0 0 14px}
-.basis li{margin-bottom:6px}
-.disc{margin-top:28px;font-size:14px;color:var(--muted);text-align:center}
-.ft{border-top:1px solid var(--line);padding:22px 0 34px;font-size:14px;color:var(--muted);text-align:center}
-.ft a{color:var(--sub)}
-@media (max-width:380px){h1{font-size:25px}.big strong{font-size:30px}.logo{font-size:15px}.hd-link{padding:7px 10px;font-size:13px}}
-</style>
 </head>
-<body>
-<header class="hd"><div class="wrap">
-<a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" style="fill:var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg>에스에이치솔루션</a>
-<div class="hd-r"><a class="hd-link" href="/guide/">생활 가이드</a><a class="hd-link" href="/calc/">계산기 전체</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기">◐</button></div>
-</div></header>
+<body class="fc calc-page">
+<header class="hd"><div class="wrap hd-in"><a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg><b>SH Solution</b><span>에스에이치솔루션</span></a><nav class="nav" aria-label="주요 메뉴"><a href="/calc/" aria-current="page">계산기 전체</a><a class="nav-guide" href="/guide/">생활 가이드</a><button class="theme" id="theme" type="button" aria-label="화면 밝기 바꾸기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button></nav></div></header>
 <main class="wrap">
+<nav class="crumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/calc/">계산기</a></li><li><span aria-current="page">첫만남이용권 계산기</span></li></ol></nav>
 <span class="eyebrow">아동수당법 2026년 개정 반영</span>
 <h1>첫만남이용권 계산기</h1>
 <p class="lead">아이의 출생 순서와 생일을 넣으면 첫만남이용권으로 얼마를 받는지, 언제까지 써야 하는지 남은 날짜와 함께 알려 드려요.</p>
@@ -184,6 +100,7 @@ details p{margin:0 0 14px}
 <li>아동수당법 시행령 제10조의3 (시행 2026-09-10) — 첫째 200만원·둘째 이후 300만원, 지급 시기, 이용권 발급, 사용 기한 2년 — <a href="https://www.law.go.kr/법령/아동수당법시행령" rel="nofollow noopener" target="_blank">법제처</a></li>
 <li>아동수당법 시행규칙 제9조의3·제9조의4 — 신청 서류, 30일(최대 60일) 이내 결정·통지 — <a href="https://www.law.go.kr/법령/아동수당법시행규칙" rel="nofollow noopener" target="_blank">법제처</a></li>
 <li>기준일: 2026-10-15 법령 원문 확인</li></ul></section>
+<section class="related" aria-labelledby="rel-c"><h2 id="rel-c">함께 쓰면 좋은 계산기</h2><div class="rel-grid"><a class="rel" href="/calc/childcare-fee/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>영유아 보육료·양육수당 지원 확인</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/diaper-formula-voucher/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>기저귀·조제분유 지원 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/infertility-treatment/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>난임시술비 지원 확인</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/multi-child-benefits/"><span class="ic cat-baby"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><b>다자녀 혜택 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><h2 id="rel-g">관련 생활 가이드</h2><div class="rel-grid"><a class="rel" href="/guide/earned-income-tax-credit-payday/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>근로장려금, 언제 얼마나 받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/guide/year-end-tax-refund/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>연말정산 환급, 왜 돌려받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
 <p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
 </main>
 <footer class="ft"><div class="wrap">© 에스에이치솔루션 · 문의 <a href="mailto:contact@sh-solution.kr">contact@sh-solution.kr</a> · <a href="/privacy.html">개인정보처리방침</a></div></footer>
@@ -268,5 +185,6 @@ show({label:(r.order===1?'첫째':'둘째 이후')+' 아이 지급액',big:won(r
 
 run();
 </script>
+<script src="/assets/site.js?v=20261023" defer></script>
 </body>
 </html>

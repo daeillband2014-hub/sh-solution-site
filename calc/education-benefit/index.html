@@ -14,92 +14,14 @@
 <meta property="og:description" content="가구원 수와 학생의 학교급, 월 소득인정액을 넣으면 2026년 교육급여 선정기준(중위소득 50%) 이내인지 판정하고 초·중·고 교육활동지원비와 고등학생 수업료·교과서 지원을 보여 줍니다.">
 <meta property="og:url" content="https://sh-solution.kr/calc/education-benefit/">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/site.css?v=20261023">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "2026년 교육급여 선정기준은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "교육부고시 제2025-34호에 따라 기준 중위소득의 50%로, 4인 가구는 월 3,247,369원, 3인 가구는 월 2,679,518원이에요. 소득인정액이 이 금액 이하이면 대상이에요."}}, {"@type": "Question", "name": "교육활동지원비는 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "2026년 3월 1일부터 초등학생 연 502,000원, 중학생 연 699,000원, 고등학생 연 860,000원이에요. 고등학생은 교과서와 입학금·수업료도 지원받아요."}}, {"@type": "Question", "name": "조부모님 재산이 많아도 받을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "교육급여는 부양의무자 기준을 적용하지 않아서 따로 사는 조부모님의 소득·재산은 따지지 않아요. 우리 가구의 소득인정액만 봅니다."}}, {"@type": "Question", "name": "입력한 소득이 저장되나요?", "acceptedAnswer": {"@type": "Answer", "text": "저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다."}}]}</script>
-<style>
-:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
-[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
-.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
-.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
-.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
-.hd nav{display:flex;align-items:center;gap:6px}
-.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
-.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
-.intro{padding:32px 0 8px}
-.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
-.intro p{margin:0;color:var(--sub);font-size:16px}
-.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
-.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
-.field{margin-bottom:16px}
-.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
-.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
-.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
-.inp:focus-within{border-color:var(--c1)}
-.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
-.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
-.inp select option{background:var(--surface-solid);color:var(--fg)}
-.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
-[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
-.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
-.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
-.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
-.big .l{font-size:14px;color:var(--sub);font-weight:700}
-.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
-.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
-.big .s{font-size:15px;color:var(--ink);font-weight:700}
-table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
-th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
-tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
-th{color:var(--muted);font-size:13px;font-weight:700}
-.note{font-size:13px;color:var(--muted);margin:12px 0 0}
-article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
-article h3{font-size:17px;margin:20px 0 6px}
-article p,article li{color:var(--sub);font-size:16px}
-article p{margin:0 0 12px}
-article ul{padding-left:20px;margin:0 0 12px}
-article strong{color:var(--fg)}
-.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
-.ex p{margin:0 0 6px}
-details{border-bottom:1px solid var(--line);padding:14px 0}
-details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
-details p{margin:10px 0 0}
-.law a{color:var(--ink)}
-.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
-footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
-
-.big .v.t{font-size:clamp(28px,8.4vw,38px)}
-.big.ok{border-color:rgba(52,211,153,.45)}.big.ok .s{color:#10b981}
-.big.mid{border-color:rgba(251,191,36,.5)}
-.big.no{background:linear-gradient(135deg,rgba(248,113,113,.13),transparent);border-color:rgba(248,113,113,.4)}
-.chk{display:flex;flex-wrap:wrap;gap:8px}
-.chk label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:15px;background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;margin:0;cursor:pointer}
-.chk input{width:18px;height:18px;accent-color:var(--c1)}
-.inp input[type=date]{text-align:right;font-size:17px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.yrs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.yrs .inp{height:50px;padding:0 10px}.yrs .inp input{font-size:17px;text-align:center}
-.rl{margin:12px 0 0;padding-left:18px}.rl li{font-size:14px;color:var(--sub);margin:4px 0}
-.st{display:inline-block;font-size:12px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:4px;vertical-align:1px}
-.st.ok{background:rgba(52,211,153,.16);color:#10b981}.st.check{background:rgba(251,191,36,.18);color:#d97706}.st.no{background:var(--line);color:var(--muted)}
-.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.tw table{font-size:14px;min-width:0}.tw td,.tw th{padding:10px 4px}.tw td:first-child{word-break:break-all}
-tr.grp td{background:var(--bg-2);font-weight:800;color:var(--fg)}
-[hidden]{display:none!important}
-.yrs>*,.row2>*{min-width:0}.inp input{width:100%}
-article td.n{white-space:normal}.tw td.n{white-space:nowrap}
-</style>
 </head>
-<body>
-<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<body class="fa calc-page v-birth">
+<header class="hd"><div class="wrap hd-in"><a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg><b>SH Solution</b><span>에스에이치솔루션</span></a><nav class="nav" aria-label="주요 메뉴"><a href="/calc/" aria-current="page">계산기 전체</a><a class="nav-guide" href="/guide/">생활 가이드</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button></nav></div></header>
 <main class="wrap">
+<nav class="crumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/calc/">계산기</a></li><li><span aria-current="page">교육급여 대상 확인 계산기</span></li></ol></nav>
 <section class="intro"><span class="tag">2026년 교육부 고시 기준</span><h1>교육급여 대상 확인 계산기</h1><p>가구원 수와 소득인정액으로 2026년 교육급여 대상인지, 학생이 얼마를 받는지 바로 확인해요.</p></section>
 <section class="card"><form id="calcForm" novalidate><div class="field"><label for="size">가구원 수</label><small>주민등록상 같은 가구로 보는 사람 수</small><div class="inp"><select id="size"><option value="1">1인 가구</option><option value="2">2인 가구</option><option value="3">3인 가구</option><option value="4" selected>4인 가구</option><option value="5">5인 가구</option><option value="6">6인 가구</option><option value="7">7인 가구</option><option value="8">8인 가구</option><option value="9">9인 가구</option><option value="10">10인 가구</option></select><span>▾</span></div></div><div class="field"><label for="level">학생의 학교급</label><small>학교급마다 지원 항목과 금액이 달라요</small><div class="inp"><select id="level"><option value="e">초등학생</option><option value="m" selected>중학생</option><option value="h">고등학생</option></select><span>▾</span></div></div><div class="field"><label for="inc">월 소득인정액</label><small>소득평가액 + 재산의 소득환산액. 모르면 대략적인 월 소득</small><div class="inp"><input id="inc" class="num" inputmode="numeric" autocomplete="off" value="2500000" aria-label="월 소득인정액"><span>원/월</span></div></div><button class="go" type="submit">확인하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
 <article class="card"><h2>이렇게 계산해요</h2><p>교육급여는 소득인정액이 가구원 수별 <strong>선정기준 이하</strong>인 가구의 학생에게 지급돼요. 2026년 선정기준은 기준 중위소득의 50%로, 교육부 고시에 가구원 수별 금액이 정해져 있습니다. 계산기는 입력한 소득인정액을 이 표와 비교해 대상 여부를 정하고, 대상이면 학교급에 맞는 지원 항목을 보여 줘요.</p>
@@ -127,6 +49,7 @@ article td.n{white-space:normal}.tw td.n{white-space:nowrap}
 <p>가구원 수를 줄여 잡는 경우가 많아요. 주민등록상 함께 사는 가족은 모두 가구원이고, 한 명이 늘 때마다 기준이 50만원 안팎 올라갑니다. 또 학교 밖 청소년이나 대안학교 학생은 지원 방식이 다를 수 있으니 주민센터에 따로 물어보세요.</p></article>
 <article class="card"><h2>자주 묻는 질문</h2><details><summary>2026년 교육급여 선정기준은 얼마인가요?</summary><p>교육부고시 제2025-34호에 따라 기준 중위소득의 50%로, 4인 가구는 월 3,247,369원, 3인 가구는 월 2,679,518원이에요. 소득인정액이 이 금액 이하이면 대상이에요.</p></details><details><summary>교육활동지원비는 얼마인가요?</summary><p>2026년 3월 1일부터 초등학생 연 502,000원, 중학생 연 699,000원, 고등학생 연 860,000원이에요. 고등학생은 교과서와 입학금·수업료도 지원받아요.</p></details><details><summary>조부모님 재산이 많아도 받을 수 있나요?</summary><p>교육급여는 부양의무자 기준을 적용하지 않아서 따로 사는 조부모님의 소득·재산은 따지지 않아요. 우리 가구의 소득인정액만 봅니다.</p></details><details><summary>입력한 소득이 저장되나요?</summary><p>저장하지 않아요. 계산은 브라우저 안에서만 이뤄지고 어디에도 전송되지 않습니다.</p></details></article>
 <article class="card law"><h2>근거</h2><ul><li>교육부고시 제2025-34호 「2026년 교육급여의 선정기준 및 최저보장수준」(2025. 12. 17. 전부개정, 2026. 1. 1. 시행, 최저보장수준은 2026. 3. 1. 시행) — <a href="https://www.law.go.kr/행정규칙/2026년교육급여의선정기준및최저보장수준" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국민기초생활 보장법 제6조·제12조·제12조의2(교육급여의 적용기준 등) — <a href="https://www.law.go.kr/법령/국민기초생활보장법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 행정규칙 원문 확인.</p></article>
+<section class="related" aria-labelledby="rel-c"><h2 id="rel-c">함께 쓰면 좋은 계산기</h2><div class="rel-grid"><a class="rel" href="/calc/birth-funeral-benefit/"><span class="ic cat-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11z"/><path d="M9 11h6M12 8v6"/></svg></span><b>해산급여·장제급여 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/basic-pension/"><span class="ic cat-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11z"/><path d="M9 11h6M12 8v6"/></svg></span><b>2026 기초연금 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/disability-pension/"><span class="ic cat-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11z"/><path d="M9 11h6M12 8v6"/></svg></span><b>2026 장애인연금 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/disability-allowance/"><span class="ic cat-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11z"/><path d="M9 11h6M12 8v6"/></svg></span><b>2026 장애수당 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><h2 id="rel-g">관련 생활 가이드</h2><div class="rel-grid"><a class="rel" href="/guide/energy-voucher/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>에너지바우처, 누가 얼마나 받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/guide/earned-income-tax-credit-payday/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>근로장려금, 언제 얼마나 받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
 <p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
 </main>
 <footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
@@ -169,5 +92,6 @@ document.getElementById('calcForm').addEventListener('submit',function(e){e.prev
 
 render();
 </script>
+<script src="/assets/site.js?v=20261023" defer></script>
 </body>
 </html>

@@ -14,71 +14,14 @@
 <meta property="og:description" content="퇴직금과 근속연수로 근속연수공제, 환산급여, 환산급여공제, 세율을 차례로 적용해 퇴직소득세와 세후 수령액을 계산합니다. 2026년 소득세법 원문 기준.">
 <meta property="og:url" content="https://sh-solution.kr/calc/retirement-income-tax/">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/site.css?v=20261023">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "퇴직금이 근속연수공제보다 적으면요?", "acceptedAnswer": {"@type": "Answer", "text": "퇴직금 전체가 공제돼 세금이 0원이에요(소득세법 제48조제2항)."}}, {"@type": "Question", "name": "퇴직금 중간정산을 받았으면 근속연수는 어떻게 넣나요?", "acceptedAnswer": {"@type": "Answer", "text": "중간정산 이후 다시 계산한 기간이 근속연수가 되는 것이 일반적이에요. 정확한 기간은 회사의 퇴직소득 원천징수영수증을 확인하세요."}}, {"@type": "Question", "name": "결과에 지방소득세도 포함되나요?", "acceptedAnswer": {"@type": "Answer", "text": "포함되지 않아요. 퇴직소득세의 10%가 지방소득세로 별도 부과됩니다."}}, {"@type": "Question", "name": "임원 퇴직금도 똑같이 계산되나요?", "acceptedAnswer": {"@type": "Answer", "text": "임원 퇴직금은 한도를 넘는 부분을 근로소득으로 보는 별도 규정이 있어, 이 계산기와 다를 수 있어요."}}]}</script>
-<style>
-:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
-[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
-.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
-.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
-.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
-.hd nav{display:flex;align-items:center;gap:6px}
-.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
-.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
-.intro{padding:32px 0 8px}
-.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
-.intro p{margin:0;color:var(--sub);font-size:16px}
-.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
-.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
-.field{margin-bottom:16px}
-.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
-.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
-.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
-.inp:focus-within{border-color:var(--c1)}
-.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
-.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
-.inp select option{background:var(--surface-solid);color:var(--fg)}
-.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
-[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
-.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
-.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
-.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
-.big .l{font-size:14px;color:var(--sub);font-weight:700}
-.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
-.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
-.big .s{font-size:15px;color:var(--ink);font-weight:700}
-table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
-th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
-tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
-th{color:var(--muted);font-size:13px;font-weight:700}
-.note{font-size:13px;color:var(--muted);margin:12px 0 0}
-article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
-article h3{font-size:17px;margin:20px 0 6px}
-article p,article li{color:var(--sub);font-size:16px}
-article p{margin:0 0 12px}
-article ul{padding-left:20px;margin:0 0 12px}
-article strong{color:var(--fg)}
-.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
-.ex p{margin:0 0 6px}
-details{border-bottom:1px solid var(--line);padding:14px 0}
-details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
-details p{margin:10px 0 0}
-.law a{color:var(--ink)}
-.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
-footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
-</style>
 </head>
-<body>
-<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<body class="fa calc-page">
+<header class="hd"><div class="wrap hd-in"><a class="logo" href="/" aria-label="에스에이치솔루션 홈"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="var(--surface-solid)" stroke="url(#ng)" stroke-width="2"/><path d="M11 20.5c1.1 1 2.6 1.6 4.3 1.6 2.3 0 3.8-1.1 3.8-2.8 0-1.6-1.1-2.3-3.5-2.9-2.1-.5-3.2-1.2-3.2-2.6 0-1.4 1.3-2.4 3.2-2.4 1.3 0 2.5.4 3.4 1.2" fill="none" stroke="url(#ng)" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="9" r="1.8" fill="#22d3ee"/></svg><b>SH Solution</b><span>에스에이치솔루션</span></a><nav class="nav" aria-label="주요 메뉴"><a href="/calc/" aria-current="page">계산기 전체</a><a class="nav-guide" href="/guide/">생활 가이드</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button></nav></div></header>
 <main class="wrap">
+<nav class="crumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/calc/">계산기</a></li><li><span aria-current="page">퇴직소득세 계산기</span></li></ol></nav>
 <section class="intro"><span class="tag">소득세법 제48조·제55조</span><h1>퇴직소득세 계산기</h1><p>퇴직금과 근속연수만 넣으면 근속연수공제·환산급여공제를 거쳐 내야 할 퇴직소득세를 알려 드려요.</p></section>
 <section class="card"><form id="calcForm" novalidate><div class="field"><label for="pay">퇴직금(퇴직소득금액)</label><small>퇴직할 때 받는 퇴직급여 총액</small><div class="inp"><input id="pay" class="num" inputmode="numeric" autocomplete="off" value="50000000" aria-label="퇴직금(퇴직소득금액)"><span>원</span></div></div><div class="field"><label for="years">근속연수</label><small>1년 미만 남는 기간은 1년으로 올려 계산</small><div class="inp"><input id="years" class="num" inputmode="numeric" autocomplete="off" value="10" aria-label="근속연수"><span>년</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
 <article class="card"><h2>이렇게 계산해요</h2><p>퇴직금은 여러 해에 걸쳐 쌓인 돈이라 한 해 소득처럼 세율을 매기면 세금이 지나치게 커집니다. 그래서 소득세법은 <strong>1년치로 환산했다가 다시 근속연수만큼 되돌리는</strong> 방식을 씁니다. 순서는 다음과 같아요.</p>
@@ -106,6 +49,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);f
 <p>퇴직 후 회사에서 퇴직소득 원천징수영수증을 받을 수 있어요. 영수증의 근속연수·환산급여 칸을 이 계산 결과와 맞춰 보면 잘못 처리된 부분을 쉽게 찾을 수 있습니다.</p><h3>퇴직 시기를 정할 때</h3><p>근속연수가 1년 늘어나는 시점 직후에 퇴직하면 근속연수공제가 한 단계 커져요. 퇴사일을 조정할 여지가 있다면 퇴직금과 근속연수를 바꿔 가며 세금 차이를 미리 비교해 보세요.</p></article>
 <article class="card"><h2>자주 묻는 질문</h2><details><summary>퇴직금이 근속연수공제보다 적으면요?</summary><p>퇴직금 전체가 공제돼 세금이 0원이에요(소득세법 제48조제2항).</p></details><details><summary>퇴직금 중간정산을 받았으면 근속연수는 어떻게 넣나요?</summary><p>중간정산 이후 다시 계산한 기간이 근속연수가 되는 것이 일반적이에요. 정확한 기간은 회사의 퇴직소득 원천징수영수증을 확인하세요.</p></details><details><summary>결과에 지방소득세도 포함되나요?</summary><p>포함되지 않아요. 퇴직소득세의 10%가 지방소득세로 별도 부과됩니다.</p></details><details><summary>임원 퇴직금도 똑같이 계산되나요?</summary><p>임원 퇴직금은 한도를 넘는 부분을 근로소득으로 보는 별도 규정이 있어, 이 계산기와 다를 수 있어요.</p></details></article>
 <article class="card law"><h2>근거</h2><ul><li>소득세법 제48조제1항제1호 — 근속연수공제 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제48조제1항 본문·제2호 — 환산급여와 환산급여공제 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제48조제2항 — 공제액 한도 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제55조제1항·제2항 — 세율과 퇴직소득 산출세액 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li></ul><p>기준일: 2026년 10월 16일 법제처 국가법령정보센터 원문 확인(2026년 1월 1일 시행본).</p></article>
+<section class="related" aria-labelledby="rel-c"><h2 id="rel-c">함께 쓰면 좋은 계산기</h2><div class="rel-grid"><a class="rel" href="/calc/medical-expense-tax-credit/"><span class="ic cat-tax"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><b>의료비 세액공제 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/education-tax-credit/"><span class="ic cat-tax"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><b>교육비 세액공제 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/salary-net-pay/"><span class="ic cat-tax"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><b>월급 실수령액 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/calc/bonus-tax/"><span class="ic cat-tax"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><b>상여금 세금 계산기</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><h2 id="rel-g">관련 생활 가이드</h2><div class="rel-grid"><a class="rel" href="/guide/year-end-tax-refund/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>연말정산 환급, 왜 돌려받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/guide/severance-pay/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>퇴직금, 이렇게 계산해요</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="rel" href="/guide/pension-savings-tax-credit/"><span class="ic cat-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h6M8 11h6"/></svg></span><b>연금저축 세액공제, 얼마나 돌려받을까</b><svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
 <p class="disc">참고용 계산이며 실제 금액은 담당 기관 결정에 따릅니다.</p>
 </main>
 <footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
@@ -139,5 +83,6 @@ document.getElementById('calcForm').addEventListener('submit',function(e){e.prev
 render();
 
 </script>
+<script src="/assets/site.js?v=20261023" defer></script>
 </body>
 </html>
