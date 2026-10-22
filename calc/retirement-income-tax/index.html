@@ -77,7 +77,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);f
 </style>
 </head>
 <body>
-<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
 <main class="wrap">
 <section class="intro"><span class="tag">소득세법 제48조·제55조</span><h1>퇴직소득세 계산기</h1><p>퇴직금과 근속연수만 넣으면 근속연수공제·환산급여공제를 거쳐 내야 할 퇴직소득세를 알려 드려요.</p></section>
 <section class="card"><form id="calcForm" novalidate><div class="field"><label for="pay">퇴직금(퇴직소득금액)</label><small>퇴직할 때 받는 퇴직급여 총액</small><div class="inp"><input id="pay" class="num" inputmode="numeric" autocomplete="off" value="50000000" aria-label="퇴직금(퇴직소득금액)"><span>원</span></div></div><div class="field"><label for="years">근속연수</label><small>1년 미만 남는 기간은 1년으로 올려 계산</small><div class="inp"><input id="years" class="num" inputmode="numeric" autocomplete="off" value="10" aria-label="근속연수"><span>년</span></div></div><button class="go" type="submit">계산하기</button></form><div class="res" id="out" aria-live="polite"></div></section>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>연말정산 환급, 돌려받는 원리와 일정 | 에스에이치솔루션</title>
+<meta name="description" content="연말정산에서 환급이 생기는 원리(기납부세액과 결정세액), 계산 흐름과 예시, 1월 간소화 자료부터 2월 급여 정산까지 일정을 소득세법 원문 기준으로 정리했습니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/guide/year-end-tax-refund/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="연말정산 환급, 돌려받는 원리와 일정 | 에스에이치솔루션">
+<meta property="og:description" content="연말정산에서 환급이 생기는 원리(기납부세액과 결정세액), 계산 흐름과 예시, 1월 간소화 자료부터 2월 급여 정산까지 일정을 소득세법 원문 기준으로 정리했습니다.">
+<meta property="og:url" content="https://sh-solution.kr/guide/year-end-tax-refund/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "환급금은 언제 들어오나요?", "acceptedAnswer": {"@type": "Answer", "text": "회사가 2월분 급여를 지급할 때 정산합니다(소득세법 제137조). 회사 급여일에 따라 실제 입금은 2~3월이에요."}}, {"@type": "Question", "name": "작년에 환급을 많이 받았는데 올해는 왜 토해 내나요?", "acceptedAnswer": {"@type": "Answer", "text": "공제 항목이 줄었거나 급여가 올라 결정세액이 기납부세액보다 커졌기 때문이에요."}}, {"@type": "Question", "name": "회사에 내지 못한 공제가 있어요.", "acceptedAnswer": {"@type": "Answer", "text": "5월 종합소득세 확정신고 때 반영하거나, 기한이 지난 뒤에도 경정청구로 바로잡을 수 있어요."}}, {"@type": "Question", "name": "지방소득세도 환급되나요?", "acceptedAnswer": {"@type": "Answer", "text": "소득세가 환급되면 그 10%인 지방소득세도 함께 환급돼요."}}, {"@type": "Question", "name": "중간에 퇴사하면 연말정산은요?", "acceptedAnswer": {"@type": "Answer", "text": "퇴직하는 달 급여를 지급할 때 회사가 정산합니다. 재취업했다면 새 회사에 전 직장 원천징수영수증을 내 합산해요."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.cta{margin:18px 0 0;background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.cta h2{font-size:20px;margin:0 0 6px}
+.cta p{margin:0 0 6px;color:var(--sub)}
+.cta .q{display:inline-block;margin:8px 0 4px;padding:10px 16px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line-2);font-weight:800;color:var(--fg);font-size:17px}
+.btn2{display:flex;align-items:center;justify-content:center;text-decoration:none;width:100%;height:52px;border-radius:14px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));margin-top:12px}
+.glist{list-style:none;padding:0;margin:0}
+.glist li{border-bottom:1px solid var(--line);padding:14px 0}
+.glist a{text-decoration:none;font-weight:800;color:var(--fg);font-size:17px}
+.glist p{margin:4px 0 0;font-size:15px}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">소득세법 제137조</span><h1>연말정산 환급, 왜 돌려받을까</h1><p>연말정산은 한 해 동안 월급에서 미리 뗀 소득세가 실제로 내야 할 세금보다 많았는지 적었는지를 맞춰 보는 절차예요. 많이 뗐으면 돌려받고(환급), 적게 뗐으면 더 냅니다.</p></section>
+<section class="cta"><h2>토스에서 바로 계산하기</h2><p>토스 앱 검색창에 아래 이름을 입력하면 저희가 만든 미니앱이 열려요.</p><span class="q">토스 앱에서 '13월의 월급 미리보기' 검색</span><p class="note">입력한 값은 저장하지 않는 참고용 계산이에요.</p><a class="btn2" href="/calc/medical-expense-tax-credit/">의료비 세액공제 웹 계산기 열기</a><a class="btn2" href="/calc/education-tax-credit/">교육비 세액공제 웹 계산기 열기</a></section>
+<article class="card"><h2>누가 연말정산을 하나요</h2><p>회사에서 근로소득을 받는 근로자는 모두 연말정산 대상이에요. 소득세법 제137조에 따라 원천징수의무자(회사)는 <strong>다음 해 2월분 근로소득을 지급할 때</strong> 지난해 근로소득에 대한 세금을 정산합니다. 중간에 퇴직한 사람은 퇴직하는 달의 급여를 지급할 때 정산해요.</p><p>근로소득 외에 사업소득이나 기타소득이 일정 금액 넘게 있는 사람은 연말정산과 별도로 5월에 종합소득세 확정신고를 해야 할 수 있습니다. 연말정산에서 빠뜨린 공제가 있어도 5월 종합소득세 신고 기간에 바로잡거나, 이후 경정청구로 돌려받을 수 있어요.</p></article><article class="card"><h2>환급이 생기는 원리</h2><p>매달 월급에서 떼는 소득세는 <strong>근로소득 간이세액표</strong>에 따른 추정치예요. 부양가족, 의료비, 교육비, 기부금, 연금저축 같은 개인 사정은 반영하지 못합니다. 연말정산은 이것들을 반영해 1년치 세금을 정확히 다시 계산하는 과정이에요.</p><ol><li>총급여에서 근로소득공제를 빼 근로소득금액을 구합니다(소득세법 제47조).</li><li>인적공제·연금보험료공제 등 소득공제를 빼 과세표준을 만듭니다.</li><li>과세표준에 기본세율(소득세법 제55조)을 곱해 산출세액을 구합니다.</li><li>세액공제·감면을 빼면 <strong>결정세액</strong>이 됩니다.</li><li>결정세액과 1년 동안 이미 뗀 <strong>기납부세액</strong>을 비교합니다.</li></ol><p><strong>기납부세액이 결정세액보다 많으면 그 차이가 환급액</strong>, 적으면 추가 납부액이에요.</p><div class="ex"><p><strong>예시: 기납부세액 180만원인 근로자</strong></p><p>연말정산으로 계산한 결정세액이 130만원이라면 180만 − 130만 = <strong>50만원 환급</strong>. 여기에 지방소득세(소득세의 10%) 5만원도 함께 돌려받아 모두 55만원이에요.</p><p>반대로 결정세액이 200만원이면 20만원을 더 내고, 지방소득세 2만원도 추가로 냅니다.</p></div></article><article class="card"><h2>일정</h2><ul><li><strong>1월 중순</strong>: 국세청 홈택스에서 연말정산 간소화 자료(의료비·교육비·보험료·신용카드 사용액 등)가 열려요.</li><li><strong>1~2월</strong>: 회사에 공제 신고서와 증빙을 냅니다. 회사마다 마감일이 달라요.</li><li><strong>2월분 급여</strong>: 회사가 정산해 환급액을 급여에 더하거나 추가 납부액을 뺍니다(소득세법 제137조).</li><li><strong>5월</strong>: 놓친 공제는 종합소득세 확정신고로 바로잡을 수 있어요.</li></ul><p>회사가 2월 급여에서 정산하지만 실제 입금 시점은 회사의 급여일과 처리 방식에 따라 3월이 될 수도 있습니다.</p></article><article class="card"><h2>환급을 늘리는 확인 목록</h2><p>환급액은 결국 결정세액을 얼마나 줄이느냐에 달려 있어요. 간소화 자료에 자동으로 잡히지 않는 항목을 특히 챙기세요.</p><ul><li>안경·콘택트렌즈 구입비, 일부 의료기관 영수증</li><li>교복 구입비, 취학 전 아동 학원비</li><li>기부금 영수증</li><li>부양가족 공제 중복 여부(맞벌이 부부가 같은 자녀를 둘 다 넣으면 안 돼요)</li><li>연말까지 납입한 연금저축·IRP</li></ul><p>의료비와 교육비 세액공제가 얼마인지는 <a href="/calc/medical-expense-tax-credit/" style="color:var(--ink)">의료비</a>·<a href="/calc/education-tax-credit/" style="color:var(--ink)">교육비</a> 계산기로 따로 확인할 수 있어요.</p></article><article class="card"><h2>자주 하는 실수</h2><p>부양가족의 소득을 확인하지 않고 공제에 넣었다가 나중에 추가 납부하게 되는 경우가 많아요. 기본공제 대상 가족은 연간 소득 요건을 충족해야 하니 미리 확인하세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>환급금은 언제 들어오나요?</summary><p>회사가 2월분 급여를 지급할 때 정산합니다(소득세법 제137조). 회사 급여일에 따라 실제 입금은 2~3월이에요.</p></details><details><summary>작년에 환급을 많이 받았는데 올해는 왜 토해 내나요?</summary><p>공제 항목이 줄었거나 급여가 올라 결정세액이 기납부세액보다 커졌기 때문이에요.</p></details><details><summary>회사에 내지 못한 공제가 있어요.</summary><p>5월 종합소득세 확정신고 때 반영하거나, 기한이 지난 뒤에도 경정청구로 바로잡을 수 있어요.</p></details><details><summary>지방소득세도 환급되나요?</summary><p>소득세가 환급되면 그 10%인 지방소득세도 함께 환급돼요.</p></details><details><summary>중간에 퇴사하면 연말정산은요?</summary><p>퇴직하는 달 급여를 지급할 때 회사가 정산합니다. 재취업했다면 새 회사에 전 직장 원천징수영수증을 내 합산해요.</p></details></article>
+<article class="card law"><h2>근거와 기준일</h2><ul><li>소득세법 제137조 — 근로소득세액의 연말정산(다음 연도 2월분 지급 시) — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제47조 — 근로소득공제 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>소득세법 제55조 — 세율 — <a href="https://www.law.go.kr/법령/소득세법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국세청 홈택스 연말정산 간소화 서비스 — <a href="https://www.hometax.go.kr" rel="nofollow noopener" target="_blank">hometax.go.kr</a></li></ul><p>기준일: 2026년 10월 22일 법제처 국가법령정보센터 원문 확인(2026년 1월 1일 시행본).</p></article>
+<section class="cta"><h2>토스에서 바로 계산하기</h2><span class="q">토스 앱에서 '13월의 월급 미리보기' 검색</span><p><a href="/guide/" style="color:var(--ink)">다른 생활 가이드 보기</a></p></section>
+<p class="disc">이 글은 공식 자료를 정리한 참고용 안내이며, 실제 대상 여부와 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();</script>
+</body>
+</html>

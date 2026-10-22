@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>국세환급금 조회 방법과 5년 소멸시효 | 에스에이치솔루션</title>
+<meta name="description" content="국세환급금이 생기는 경우, 홈택스·손택스에서 조회하는 방법, 환급가산금과 국세 충당, 5년 소멸시효 계산 예시를 국세기본법 원문 기준으로 정리했습니다.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://sh-solution.kr/guide/national-tax-refund/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에스에이치솔루션">
+<meta property="og:title" content="국세환급금 조회 방법과 5년 소멸시효 | 에스에이치솔루션">
+<meta property="og:description" content="국세환급금이 생기는 경우, 홈택스·손택스에서 조회하는 방법, 환급가산금과 국세 충당, 5년 소멸시효 계산 예시를 국세기본법 원문 기준으로 정리했습니다.">
+<meta property="og:url" content="https://sh-solution.kr/guide/national-tax-refund/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2782310558764343" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "국세환급금 조회는 무료인가요?", "acceptedAnswer": {"@type": "Answer", "text": "네. 홈택스·손택스·세무서에서 무료로 조회하고 계좌를 신고할 수 있어요. 수수료를 요구하는 곳은 의심하세요."}}, {"@type": "Question", "name": "몇 년 전 환급금까지 받을 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "권리를 행사할 수 있는 때부터 5년이 지나면 소멸시효가 완성돼 받을 수 없어요(국세기본법 제54조)."}}, {"@type": "Question", "name": "환급금이 왜 예상보다 적나요?", "acceptedAnswer": {"@type": "Answer", "text": "체납한 국세가 있으면 먼저 그 체납액에 충당한 뒤 남은 금액만 지급해요(국세기본법 제51조)."}}, {"@type": "Question", "name": "가족 환급금도 대신 조회할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "본인 인증이 필요해 원칙적으로 본인이 조회해요. 사망한 가족의 환급금은 상속인이 세무서에 문의하면 됩니다."}}, {"@type": "Question", "name": "지방세 환급금도 같이 나오나요?", "acceptedAnswer": {"@type": "Answer", "text": "지방소득세 등 지방세 환급금은 위택스(지방세)에서 따로 조회해요."}}]}</script>
+<style>
+:root,[data-theme="dark"]{--bg:#07090f;--bg-2:#0b0e17;--surface:rgba(255,255,255,.035);--surface-solid:#0f1320;--fg:#eef2fb;--sub:#a5afc4;--muted:#8a94aa;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--c1:#22d3ee;--c2:#8b5cf6;--c3:#60a5fa;--ink:#67e8f9;--btn-ink:#041018;--glow:rgba(34,211,238,.16);--shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+[data-theme="light"]{--bg:#f6f8fc;--bg-2:#eef2f9;--surface:rgba(255,255,255,.75);--surface-solid:#ffffff;--fg:#0b1020;--sub:#475169;--muted:#5f6b82;--line:rgba(15,23,42,.09);--line-2:rgba(15,23,42,.16);--c1:#06b6d4;--c2:#7c3aed;--c3:#2563eb;--ink:#0e7490;--btn-ink:#ffffff;--glow:rgba(6,182,212,.14);--shadow:0 18px 40px -26px rgba(15,23,42,.35)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:8px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 16px}
+.hd{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;font-weight:900}
+.hd nav{display:flex;align-items:center;gap:6px}
+.hd nav a{text-decoration:none;color:var(--sub);font-size:14px;font-weight:600;padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);white-space:nowrap}
+.theme{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer;font-size:16px}
+.intro{padding:32px 0 8px}
+.intro h1{font-size:clamp(26px,6.4vw,36px);line-height:1.3;margin:0 0 10px;letter-spacing:-.03em}
+.intro p{margin:0;color:var(--sub);font-size:16px}
+.tag{display:inline-block;margin-bottom:12px;font-size:13px;font-weight:700;color:var(--ink);background:var(--glow);padding:4px 10px;border-radius:999px}
+.card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;padding:22px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:4px}
+.field small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.inp{display:flex;align-items:center;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:0 14px;height:54px}
+.inp:focus-within{border-color:var(--c1)}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;color:var(--fg);font:inherit;font-size:19px;font-weight:700;text-align:right;outline:none;height:100%}
+.inp select{text-align:left;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp select option{background:var(--surface-solid);color:var(--fg)}
+.inp span{margin-left:8px;color:var(--sub);font-weight:600;white-space:nowrap}
+[data-theme="dark"] .inp input,[data-theme="dark"] .inp select{color-scheme:dark}
+.go{width:100%;height:56px;border:0;border-radius:14px;cursor:pointer;font:inherit;font-size:17px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));box-shadow:0 10px 30px -12px var(--c1);margin-top:4px}
+.res{margin-top:22px;border-top:1px dashed var(--line-2);padding-top:20px}
+.big{background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.big .l{font-size:14px;color:var(--sub);font-weight:700}
+.big .v{font-size:clamp(32px,10vw,46px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:6px 0;font-variant-numeric:tabular-nums}
+.big .v small{font-size:20px;margin-left:4px;color:var(--sub)}
+.big .s{font-size:15px;color:var(--ink);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:14px}
+th,td{padding:11px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+tr.tot td{border-top:2px solid var(--line-2);font-weight:800}
+th{color:var(--muted);font-size:13px;font-weight:700}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0}
+article h2{font-size:22px;margin:0 0 12px;letter-spacing:-.02em}
+article h3{font-size:17px;margin:20px 0 6px}
+article p,article li{color:var(--sub);font-size:16px}
+article p{margin:0 0 12px}
+article ul{padding-left:20px;margin:0 0 12px}
+article strong{color:var(--fg)}
+.ex{background:var(--bg-2);border-left:3px solid var(--c1);border-radius:10px;padding:14px 16px;margin:14px 0}
+.ex p{margin:0 0 6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--fg);font-size:16px}
+details p{margin:10px 0 0}
+.law a{color:var(--ink)}
+.disc{text-align:center;color:var(--muted);font-size:14px;margin:24px 0}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+.cta{margin:18px 0 0;background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line-2);border-radius:18px;padding:20px 18px;text-align:center}
+.cta h2{font-size:20px;margin:0 0 6px}
+.cta p{margin:0 0 6px;color:var(--sub)}
+.cta .q{display:inline-block;margin:8px 0 4px;padding:10px 16px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line-2);font-weight:800;color:var(--fg);font-size:17px}
+.btn2{display:flex;align-items:center;justify-content:center;text-decoration:none;width:100%;height:52px;border-radius:14px;font-weight:800;color:var(--btn-ink);background:linear-gradient(95deg,var(--c1),var(--c3) 50%,var(--c2));margin-top:12px}
+.glist{list-style:none;padding:0;margin:0}
+.glist li{border-bottom:1px solid var(--line);padding:14px 0}
+.glist a{text-decoration:none;font-weight:800;color:var(--fg);font-size:17px}
+.glist p{margin:4px 0 0;font-size:15px}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<main class="wrap">
+<section class="intro"><span class="tag">국세기본법 제51조·제54조</span><h1>국세환급금, 찾아가지 않은 세금 확인하기</h1><p>세금을 실제보다 많이 냈거나 잘못 냈을 때 나라가 돌려줘야 하는 돈이 국세환급금이에요. 계좌를 신고하지 않았거나 주소가 바뀌어 안내를 못 받으면 그대로 남아 있을 수 있습니다.</p></section>
+<section class="cta"><h2>토스에서 바로 계산하기</h2><p>토스 앱 검색창에 아래 이름을 입력하면 저희가 만든 미니앱이 열려요.</p><span class="q">토스 앱에서 '13월의 월급 미리보기' 검색</span><p class="note">국세환급금 조회는 홈택스에서 하고, 환급 예상액이 궁금하다면 연말정산 미리보기 미니앱을 써 보세요.</p></section>
+<article class="card"><h2>국세환급금이 생기는 경우</h2><p>국세기본법 제51조는 납세자가 국세로 낸 금액 중 <strong>잘못 냈거나(오납) 초과해 냈거나(과납) 세법에 따라 돌려줘야 할 세액</strong>이 있으면 즉시 국세환급금으로 결정하도록 정하고 있어요. 대표적인 경우는 다음과 같습니다.</p><ul><li>종합소득세 신고 결과 미리 낸 세금이 더 많은 경우</li><li>연말정산 뒤 경정청구로 세금을 돌려받게 된 경우</li><li>부가가치세 환급, 근로·자녀장려금 등 세법에 따른 환급</li><li>세금을 두 번 낸 경우처럼 착오로 낸 경우</li></ul><p>대부분은 신고할 때 적은 계좌로 자동 입금되지만, 계좌를 적지 않았거나 계좌가 해지됐다면 환급금이 지급되지 못하고 남아 있게 돼요.</p></article><article class="card"><h2>조회하는 방법</h2><ol><li>국세청 <strong>홈택스</strong>(hometax.go.kr) 또는 모바일 앱 <strong>손택스</strong>에 로그인합니다.</li><li>조회·발급 메뉴의 <strong>국세환급금 찾기</strong>로 들어갑니다.</li><li>미수령 환급금이 있으면 금액과 발생 사유가 나와요. 그 화면에서 환급받을 계좌를 신고하면 됩니다.</li></ol><p>로그인 없이도 본인 인증만으로 조회할 수 있는 메뉴가 있고, 가까운 세무서 민원실에서도 확인할 수 있어요. 국세청을 사칭해 '환급금이 있다'며 링크를 보내는 문자가 많으니, 문자 속 링크 대신 홈택스에 직접 접속해 확인하세요.</p></article><article class="card"><h2>가산금과 충당</h2><p>국세환급금에는 <strong>국세환급가산금</strong>이 붙어요(국세기본법 제52조). 세금을 낸 날 등 법이 정한 기산일부터 환급을 결정하는 날까지의 기간에 대해 대통령령이 정하는 이율로 이자처럼 더해 주는 금액입니다. 이율은 시행규칙으로 바뀌기 때문에 여기서는 따로 적지 않았어요.</p><p>또 체납한 국세가 있으면 환급금은 먼저 그 체납액에 <strong>충당</strong>되고, 남은 금액만 돌려받습니다(국세기본법 제51조). 환급금이 예상보다 적게 들어왔다면 체납 충당 여부를 확인해 보세요.</p></article><article class="card"><h2>5년이 지나면 사라져요</h2><p>국세기본법 제54조에 따라 국세환급금과 국세환급가산금을 돌려받을 권리는 <strong>행사할 수 있는 때부터 5년간 행사하지 않으면 소멸시효가 완성</strong>돼요. 시효가 지나면 나라에 귀속되어 더는 청구할 수 없습니다.</p><div class="ex"><p><strong>예시: 2022년 5월 종합소득세 신고로 생긴 환급금</strong></p><p>2022년 6월에 환급이 결정되었지만 계좌 미신고로 받지 못했다면, 그때부터 5년이 되는 2027년 6월 무렵까지 청구해야 해요.</p><p>정확한 기산일은 환급 결정 통지일 등에 따라 달라지므로 홈택스 화면에 나오는 결정일을 기준으로 확인하세요. 기한이 가까운 환급금이 있다면 지금 바로 계좌를 신고하는 것이 안전합니다.</p></div></article><article class="card"><h2>계좌를 미리 신고해 두면</h2><p>홈택스에서 국세환급금 계좌를 미리 신고해 두면, 앞으로 생기는 환급금이 그 계좌로 바로 들어와요. 이사나 계좌 해지로 우편 안내를 못 받는 일이 줄어듭니다. 계좌가 바뀌면 신고한 계좌도 함께 바꿔 두세요.</p></article>
+<article class="card"><h2>자주 묻는 질문</h2><details><summary>국세환급금 조회는 무료인가요?</summary><p>네. 홈택스·손택스·세무서에서 무료로 조회하고 계좌를 신고할 수 있어요. 수수료를 요구하는 곳은 의심하세요.</p></details><details><summary>몇 년 전 환급금까지 받을 수 있나요?</summary><p>권리를 행사할 수 있는 때부터 5년이 지나면 소멸시효가 완성돼 받을 수 없어요(국세기본법 제54조).</p></details><details><summary>환급금이 왜 예상보다 적나요?</summary><p>체납한 국세가 있으면 먼저 그 체납액에 충당한 뒤 남은 금액만 지급해요(국세기본법 제51조).</p></details><details><summary>가족 환급금도 대신 조회할 수 있나요?</summary><p>본인 인증이 필요해 원칙적으로 본인이 조회해요. 사망한 가족의 환급금은 상속인이 세무서에 문의하면 됩니다.</p></details><details><summary>지방세 환급금도 같이 나오나요?</summary><p>지방소득세 등 지방세 환급금은 위택스(지방세)에서 따로 조회해요.</p></details></article>
+<article class="card law"><h2>근거와 기준일</h2><ul><li>국세기본법 제51조 — 국세환급금의 충당과 환급 — <a href="https://www.law.go.kr/법령/국세기본법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국세기본법 제52조 — 국세환급가산금 — <a href="https://www.law.go.kr/법령/국세기본법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국세기본법 제54조 — 국세환급금의 소멸시효(5년) — <a href="https://www.law.go.kr/법령/국세기본법" rel="nofollow noopener" target="_blank">국가법령정보센터</a></li><li>국세청 홈택스 국세환급금 찾기 — <a href="https://www.hometax.go.kr" rel="nofollow noopener" target="_blank">hometax.go.kr</a></li></ul><p>기준일: 2026년 10월 22일 법제처 국가법령정보센터 원문 확인.</p></article>
+<section class="cta"><h2>토스에서 바로 계산하기</h2><span class="q">토스 앱에서 '13월의 월급 미리보기' 검색</span><p><a href="/guide/" style="color:var(--ink)">다른 생활 가이드 보기</a></p></section>
+<p class="disc">이 글은 공식 자료를 정리한 참고용 안내이며, 실제 대상 여부와 금액은 담당 기관 결정에 따릅니다.</p>
+</main>
+<footer>© 에스에이치솔루션 · 문의 contact@sh-solution.kr · <a href="/privacy.html">개인정보처리방침</a></footer>
+<script>(function(){var d=document.documentElement,tb=document.getElementById('tb');
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)d.setAttribute('data-theme','light');
+tb.addEventListener('click',function(){d.setAttribute('data-theme',d.getAttribute('data-theme')==='light'?'dark':'light')})})();</script>
+</body>
+</html>

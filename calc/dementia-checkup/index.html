@@ -86,7 +86,7 @@ td small{display:block;color:var(--muted);font-size:13px;font-weight:500}
 </style>
 </head>
 <body>
-<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
+<header class="hd"><div class="wrap"><a class="logo" href="/"><i>SH</i>에스에이치솔루션</a><nav><a href="/guide/">생활 가이드</a><a href="/calc/">계산기 전체</a><button class="theme" id="tb" type="button" aria-label="화면 밝기 바꾸기">◐</button></nav></div></header>
 <main class="wrap">
 <section class="intro"><span class="tag">치매관리법 기준</span><h1>치매검진 지원 대상 확인</h1><p>의료보장 구분과 진단·검진 이력을 고르면 국가 치매검진 대상인지, 검진비와 치료비 지원을 받을 수 있는지 알려 드려요.</p></section>
 <section class="card"><form id="calcForm" novalidate><div class="field"><label for="ins">의료보장 구분</label><div class="inp"><select id="ins"><option value="nhis" selected>건강보험 가입자·피부양자</option><option value="aid">의료급여 수급권자</option><option value="none">둘 다 아니에요</option></select><span>▾</span></div></div><div class="field"><label for="dx">치매로 진단받은 적이 있나요?</label><small>진단받았다면 치료비 지원도 함께 확인해요</small><div class="inp"><select id="dx"><option value="no" selected>아니요</option><option value="yes">네, 진단받았어요</option></select><span>▾</span></div></div><div class="field"><label for="last">최근 치매검진</label><small>국가 치매검진 주기는 2년 이내예요</small><div class="inp"><select id="last"><option value="in">2년 안에 받았어요</option><option value="out">2년 넘게 안 받았어요</option><option value="never" selected>받은 적 없어요</option></select><span>▾</span></div></div><button class="go" type="submit">확인하기</button></form><div class="res" id="out" aria-live="polite"></div></section>
