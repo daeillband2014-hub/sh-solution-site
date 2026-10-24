@@ -353,3 +353,11 @@ footer a,.ft a{color:var(--sub)}
 @media (max-width:520px){.nav .nav-x{display:none}}
 main.wrap{padding-top:var(--s3);padding-bottom:var(--s5)}
 .cta a.btn2,a.btn2{color:#fff}
+
+/* ---------- Toss open card (2026-10-24) ---------- */
+.toss-open{display:flex;align-items:flex-start;gap:var(--s2);margin-top:var(--s4);padding:var(--s2);border-radius:var(--r-lg);background:var(--surface-solid);border:1px solid var(--line);box-shadow:var(--sh-1)}
+.toss-open .ic{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:var(--r-md);background:var(--surface-2);color:var(--accent)}
+.toss-open .ic svg{width:22px;height:22px}
+.toss-open b{display:block;font-size:var(--t-md)}
+.toss-open p{margin:2px 0 0;font-size:var(--t-sm);color:var(--sub)}
+.toss-open strong{color:var(--fg)}
