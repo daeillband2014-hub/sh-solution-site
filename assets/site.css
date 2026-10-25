@@ -361,3 +361,5 @@ main.wrap{padding-top:var(--s3);padding-bottom:var(--s5)}
 .toss-open b{display:block;font-size:var(--t-md)}
 .toss-open p{margin:2px 0 0;font-size:var(--t-sm);color:var(--sub)}
 .toss-open strong{color:var(--fg)}
+.toss-open .btn-toss{display:inline-flex;align-items:center;margin-top:10px;height:38px;padding:0 16px;border-radius:var(--r-md);background:var(--accent);color:#fff;font-weight:650;font-size:var(--t-sm);text-decoration:none}
+.toss-open .btn-toss:hover{opacity:.88}

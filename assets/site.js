@@ -91,7 +91,7 @@
         c.hidden = !ok; if (ok) shown++;
       });
       cats.forEach(function(s){ var n = s.querySelectorAll('.card:not([hidden])').length; s.hidden = !n; var b = s.querySelector('.cat-h .n'); if (b) b.textContent = n + '개'; });
-      cnt.textContent = (term || cur !== 'all') ? '계산기 ' + shown + '개를 찾았어요' : '계산기 ' + shown + '개';
+      var unit = cnt.getAttribute('data-unit') || '계산기'; cnt.textContent = (term || cur !== 'all') ? unit + ' ' + shown + '개를 찾았어요' : unit + ' ' + shown + '개';
       empty.hidden = shown > 0; clr.hidden = !q.value;
     }
     q.addEventListener('input', apply);
